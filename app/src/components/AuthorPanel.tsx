@@ -1,10 +1,16 @@
 import { useState } from "react";
-import type { Dataset, Perk, Feat } from "../types.ts";
+import type { Dataset, Perk, Feat, FeatOrFusion } from "../types.ts";
+import { isFusion } from "../types.ts";
+import type { Source } from "../../../schema/spiral.ts";
 import type { GraphLayout } from "../layout/layoutGraph.ts";
 import { Canvas } from "./Canvas.tsx";
 import { validatePerk, validateFeat, type FieldIssue } from "../validation/rules.ts";
 import { stringifyCsv } from "../../../scripts/lib/csv.ts";
 import { downloadTextFile } from "../state/mdExport.ts";
+
+function serializeSources(sources: Source[]): string {
+  return sources.map((s) => `${s.type}:${s.target ?? ""}:${s.xp_cost ?? ""}:${s.level_loss ?? ""}`).join(";");
+}
 
 interface AuthorPanelProps {
   dataset: Dataset;
@@ -28,10 +34,10 @@ function IssueList({ issues }: { issues: FieldIssue[] }) {
 
 export function AuthorPanel({ dataset, selectedNodeId, onSelectNode, layout }: AuthorPanelProps) {
   const [perkEdits, setPerkEdits] = useState<Record<string, Perk>>({});
-  const [featEdits, setFeatEdits] = useState<Record<string, Feat>>({});
+  const [featEdits, setFeatEdits] = useState<Record<string, FeatOrFusion>>({});
 
-  const feat: Feat | undefined = selectedNodeId
-    ? featEdits[selectedNodeId] ?? dataset.feats.find((f) => f.id === selectedNodeId) ?? (dataset.fusions.find((f) => f.id === selectedNodeId) as Feat | undefined)
+  const feat: FeatOrFusion | undefined = selectedNodeId
+    ? featEdits[selectedNodeId] ?? dataset.feats.find((f) => f.id === selectedNodeId) ?? dataset.fusions.find((f) => f.id === selectedNodeId)
     : undefined;
   const perk: Perk | undefined = feat?.perk_ids[0] ? perkEdits[feat.perk_ids[0]] ?? dataset.perks.find((p) => p.id === feat.perk_ids[0]) : undefined;
 
@@ -40,8 +46,8 @@ export function AuthorPanel({ dataset, selectedNodeId, onSelectNode, layout }: A
     if (!base) return;
     setPerkEdits((prev) => ({ ...prev, [id]: { ...base, ...patch } }));
   }
-  function updateFeat(id: string, patch: Partial<Feat>) {
-    const base = featEdits[id] ?? dataset.feats.find((f) => f.id === id) ?? (dataset.fusions.find((f) => f.id === id) as Feat | undefined);
+  function updateFeat(id: string, patch: Partial<FeatOrFusion>) {
+    const base = featEdits[id] ?? dataset.feats.find((f) => f.id === id) ?? dataset.fusions.find((f) => f.id === id);
     if (!base) return;
     setFeatEdits((prev) => ({ ...prev, [id]: { ...base, ...patch } }));
   }
@@ -65,17 +71,33 @@ export function AuthorPanel({ dataset, selectedNodeId, onSelectNode, layout }: A
       "id", "name", "perk_ids", "job", "authority_root_type", "authority_root_id", "practice_root_id",
       "fusion_root_id", "requirements", "sources", "rarity", "zone_id", "cp_cost", "boundary",
     ];
-    const featRows = Object.values(featEdits).map((f) => ({
+    const featRow = (f: FeatOrFusion) => ({
       id: f.id, name: f.name, perk_ids: f.perk_ids.join(";"), job: f.job.join(";"),
       authority_root_type: f.authority_root.type, authority_root_id: f.authority_root.id,
       practice_root_id: f.practice_root_id ?? "", fusion_root_id: f.fusion_root_id ?? "",
       requirements: f.requirements.map((r) => `${r.type}:${r.target}${r.threshold !== null ? `:${r.threshold}` : ""}`).join(";"),
-      sources: "", rarity: f.rarity, zone_id: f.zone_id ?? "", cp_cost: String(f.cp_cost), boundary: f.boundary,
-    }));
-    if (featRows.length > 0) {
-      downloadTextFile("feats.changed.csv", stringifyCsv(featHeader, featRows), "text/csv");
+      sources: serializeSources(f.sources), rarity: f.rarity, zone_id: f.zone_id ?? "", cp_cost: String(f.cp_cost), boundary: f.boundary,
+    });
+
+    const allEdits = Object.values(featEdits);
+    const plainFeatRows = allEdits.filter((f) => !isFusion(f)).map(featRow);
+    if (plainFeatRows.length > 0) {
+      downloadTextFile("feats.changed.csv", stringifyCsv(featHeader, plainFeatRows), "text/csv");
     }
-    if (perkRows.length === 0 && featRows.length === 0) {
+
+    const fusionHeader = [...featHeader, "operator", "parents", "target_trait_id", "cp_refund"];
+    const fusionRows = allEdits.filter(isFusion).map((f) => ({
+      ...featRow(f),
+      operator: f.operator,
+      parents: f.parents.map((p) => `${p.feat_id}:${p.disposition}`).join(";"),
+      target_trait_id: f.target_trait_id ?? "",
+      cp_refund: f.cp_refund?.toString() ?? "",
+    }));
+    if (fusionRows.length > 0) {
+      downloadTextFile("fusions.changed.csv", stringifyCsv(fusionHeader, fusionRows), "text/csv");
+    }
+
+    if (perkRows.length === 0 && plainFeatRows.length === 0 && fusionRows.length === 0) {
       alert("No edits to export yet.");
     }
   }
@@ -99,7 +121,9 @@ export function AuthorPanel({ dataset, selectedNodeId, onSelectNode, layout }: A
 
         {feat && (
           <>
-            <h3>Feat: {feat.name}</h3>
+            <h3>
+              {isFusion(feat) ? `Fusion (${feat.operator})` : "Feat"}: {feat.name}
+            </h3>
             <label>
               Boundary
               <textarea value={feat.boundary} onChange={(e) => updateFeat(feat.id, { boundary: e.target.value })} rows={2} />

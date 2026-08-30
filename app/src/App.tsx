@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { dataset } from "./data/dataset.ts";
 import { computeLayout } from "./layout/layoutGraph.ts";
 import { evaluateRequirement } from "./layout/requirementClosure.ts";
@@ -27,14 +27,24 @@ export default function App() {
 
   const layout = useMemo(() => computeLayout(dataset), []);
 
-  const allNodes = useMemo(() => [...dataset.feats, ...dataset.fusions], []);
-  const isOwned = (id: string) => build.feat_ids.includes(id);
-  const isAvailable = (id: string) => {
-    if (isOwned(id)) return false;
-    const node = allNodes.find((f) => f.id === id);
-    if (!node) return false;
-    return node.requirements.every((r) => evaluateRequirement(r, build));
-  };
+  const nodesById = useMemo(() => {
+    const map = new Map<string, (typeof dataset.feats)[number]>();
+    for (const f of dataset.feats) map.set(f.id, f);
+    for (const f of dataset.fusions) map.set(f.id, f);
+    return map;
+  }, []);
+  const ownedSet = useMemo(() => new Set(build.feat_ids), [build.feat_ids]);
+
+  const isOwned = useCallback((id: string) => ownedSet.has(id), [ownedSet]);
+  const isAvailable = useCallback(
+    (id: string) => {
+      if (ownedSet.has(id)) return false;
+      const node = nodesById.get(id);
+      if (!node) return false;
+      return node.requirements.every((r) => evaluateRequirement(r, build));
+    },
+    [ownedSet, nodesById, build],
+  );
 
   return (
     <BuildStateContext.Provider value={build}>

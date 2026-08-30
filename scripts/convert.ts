@@ -102,8 +102,8 @@ const ladderFileExists = existsSync(`${CONTENT_DIR}/effect_ladder.csv`);
 if (perksMain.rows.length === 0 && !existsSync(`${CONTENT_DIR}/perks.csv`)) {
   notes.push(`content/perks.csv not found — run scripts/extract-anti.ts first, or author it by hand.`);
 }
-if (!existsSync(`${CONTENT_DIR}/legacy_quarantine.csv`)) {
-  notes.push(`content/legacy_quarantine.csv not present — nothing to note (it is never read as input anyway).`);
+if (existsSync(`${CONTENT_DIR}/legacy_quarantine.csv`)) {
+  notes.push(`content/legacy_quarantine.csv is present and, per spec, was NOT read — it is a worklist, never an input.`);
 }
 
 // derived_tier / is_anti_perk must never be authored columns (task requirement 4 / plan decision 11)
