@@ -8,7 +8,13 @@
  * and always writes data/dataset.json (with a non-schema `_valid` flag) even when
  * validation fails, so a partial/failing run stays inspectable.
  *
- * Usage: tsx scripts/convert.ts [--strict-ladder]
+ * perks.csv/legacy_perks.csv and feats.csv/legacy_feats.csv are each treated as one
+ * combined pool — validated and merged together — while errors keep citing the real
+ * source sheet. legacy_*.csv rows also carry non-schema passthrough provenance
+ * (subject_suggested/family_suggested on perks; skill_group/block on feats) that is
+ * kept on the emitted objects but never validated.
+ *
+ * Usage: tsx scripts/convert.ts [--strict-ladder] [--draft]
  */
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -30,6 +36,11 @@ import type {
 const CONTENT_DIR = "content";
 const DATA_DIR = "data";
 const STRICT_LADDER = process.argv.includes("--strict-ladder");
+const DRAFT = process.argv.includes("--draft");
+
+// Sheets whose unresolved SKILL_LEVEL/authority_root skill references are expected
+// authoring backlog (pending content/skill_reconciliation.csv), not a defect.
+const LEGACY_SHEETS = new Set(["legacy_perks.csv", "legacy_feats.csv"]);
 
 const errors: string[] = [];
 const warnings: string[] = [];
@@ -41,38 +52,68 @@ function err(sheet: string, row: number | string, message: string) {
 function warn(sheet: string, row: number | string, message: string) {
   warnings.push(`${sheet}!${row}: ${message}`);
 }
+type Sink = (sheet: string, row: number | string, message: string) => void;
+
+/** --draft downgrades blank subject/family/boundary (any sheet) and unresolved
+ * legacy skill references to warnings. Everything else stays an error. */
+function draftSink(category: "subject" | "family" | "boundary" | "skill_ref", sheet: string): Sink {
+  if (!DRAFT) return err;
+  if (category === "subject" || category === "family" || category === "boundary") return warn;
+  if (category === "skill_ref" && LEGACY_SHEETS.has(sheet)) return warn;
+  return err;
+}
 
 // ─────────────────────────────────────────────────────────────
 // Load raw CSVs
 // ─────────────────────────────────────────────────────────────
 
-function readCsvIfExists(sheet: string): { header: string[]; rows: CsvRow[]; rowNumbers: number[] } {
-  const path = `${CONTENT_DIR}/${sheet}`;
-  if (!existsSync(path)) return { header: [], rows: [], rowNumbers: [] };
-  return parseCsv(readFileSync(path, "utf8"));
+interface SheetData {
+  sheet: string;
+  header: string[];
+  rows: CsvRow[];
+  rowNumbers: number[];
 }
 
-const perksCsv = readCsvIfExists("perks.csv");
-const featsCsv = readCsvIfExists("feats.csv");
+function readCsvIfExists(sheet: string): SheetData {
+  const path = `${CONTENT_DIR}/${sheet}`;
+  if (!existsSync(path)) return { sheet, header: [], rows: [], rowNumbers: [] };
+  const { header, rows, rowNumbers } = parseCsv(readFileSync(path, "utf8"));
+  return { sheet, header, rows, rowNumbers };
+}
+
+/** Iterate every row across a set of sheets, sheet/row already attached to each entry. */
+function eachRow(sheets: SheetData[], fn: (r: CsvRow, sheet: string, row: number) => void) {
+  for (const s of sheets) s.rows.forEach((r, i) => fn(r, s.sheet, s.rowNumbers[i]));
+}
+
+const perksMain = readCsvIfExists("perks.csv");
+const perksLegacy = readCsvIfExists("legacy_perks.csv");
+const perkSheets = [perksMain, perksLegacy];
+
+const featsMain = readCsvIfExists("feats.csv");
+const featsLegacy = readCsvIfExists("legacy_feats.csv");
+const featSheets = [featsMain, featsLegacy];
+
 const fusionsCsv = readCsvIfExists("fusions.csv");
 const subjectsCsv = readCsvIfExists("subjects.csv"); // NOT subjects.proposed.csv — that's never authoritative
 const ladderCsv = readCsvIfExists("effect_ladder.csv");
 const ladderFileExists = existsSync(`${CONTENT_DIR}/effect_ladder.csv`);
 
-if (perksCsv.rows.length === 0 && !existsSync(`${CONTENT_DIR}/perks.csv`)) {
+if (perksMain.rows.length === 0 && !existsSync(`${CONTENT_DIR}/perks.csv`)) {
   notes.push(`content/perks.csv not found — run scripts/extract-anti.ts first, or author it by hand.`);
+}
+if (!existsSync(`${CONTENT_DIR}/legacy_quarantine.csv`)) {
+  notes.push(`content/legacy_quarantine.csv not present — nothing to note (it is never read as input anyway).`);
 }
 
 // derived_tier / is_anti_perk must never be authored columns (task requirement 4 / plan decision 11)
-for (const sheet of [
-  { name: "feats.csv", header: featsCsv.header },
-  { name: "fusions.csv", header: fusionsCsv.header },
-]) {
-  if (sheet.header.includes("derived_tier")) {
-    err(sheet.name, "header", `column "derived_tier" must not be authored — the converter computes it`);
+for (const s of [...featSheets, fusionsCsv]) {
+  if (s.header.length === 0) continue;
+  if (s.header.includes("derived_tier")) {
+    err(s.sheet, "header", `column "derived_tier" must not be authored — the converter computes it`);
   }
-  if (sheet.header.includes("is_anti_perk")) {
-    err(sheet.name, "header", `column "is_anti_perk" must not be authored — the converter computes it`);
+  if (s.header.includes("is_anti_perk")) {
+    err(s.sheet, "header", `column "is_anti_perk" must not be authored — the converter computes it`);
   }
 }
 
@@ -81,51 +122,50 @@ for (const sheet of [
 // (boundary is owned by rule 8, subject is owned by rule 2 — not duplicated here)
 // ─────────────────────────────────────────────────────────────
 
-function requireField(sheet: string, row: number, r: CsvRow, field: string) {
+function requireField(sink: Sink, sheet: string, row: number, r: CsvRow, field: string) {
   if (!r[field] || r[field].trim() === "") {
-    err(sheet, row, `missing required field "${field}"`);
+    sink(sheet, row, `missing required field "${field}"`);
   }
 }
 
 const NON_NUMERIC_FAMILIES = new Set(["PERMISSION", "RELIABILITY"]);
 
-perksCsv.rows.forEach((r, i) => {
-  const row = perksCsv.rowNumbers[i];
-  for (const f of ["id", "name", "family", "tier", "text"]) requireField("perks.csv", row, r, f);
+eachRow(perkSheets, (r, sheet, row) => {
+  for (const f of ["id", "name", "tier", "text"]) requireField(err, sheet, row, r, f);
+  requireField(draftSink("family", sheet), sheet, row, r, "family");
   if (r.family && !NON_NUMERIC_FAMILIES.has(r.family)) {
-    requireField("perks.csv", row, r, "bonus_category");
-    requireField("perks.csv", row, r, "bonus_type");
+    requireField(err, sheet, row, r, "bonus_category");
+    requireField(err, sheet, row, r, "bonus_type");
   }
 });
 
-function requireFeatColumns(sheet: string, rows: CsvRow[], rowNumbers: number[]) {
-  rows.forEach((r, i) => {
-    const row = rowNumbers[i];
+function requireFeatColumns(sheets: SheetData[]) {
+  eachRow(sheets, (r, sheet, row) => {
     for (const f of ["id", "name", "perk_ids", "job", "authority_root_type", "authority_root_id", "rarity", "cp_cost"]) {
-      requireField(sheet, row, r, f);
+      requireField(err, sheet, row, r, f);
     }
   });
 }
-requireFeatColumns("feats.csv", featsCsv.rows, featsCsv.rowNumbers);
-requireFeatColumns("fusions.csv", fusionsCsv.rows, fusionsCsv.rowNumbers);
+requireFeatColumns(featSheets);
+requireFeatColumns([fusionsCsv]);
 
 fusionsCsv.rows.forEach((r, i) => {
   const row = fusionsCsv.rowNumbers[i];
-  requireField("fusions.csv", row, r, "operator");
-  requireField("fusions.csv", row, r, "parents");
+  requireField(err, "fusions.csv", row, r, "operator");
+  requireField(err, "fusions.csv", row, r, "parents");
 });
 
 if (existsSync(`${CONTENT_DIR}/subjects.csv`)) {
   subjectsCsv.rows.forEach((r, i) => {
     const row = subjectsCsv.rowNumbers[i];
-    for (const f of ["id", "name", "category"]) requireField("subjects.csv", row, r, f);
+    for (const f of ["id", "name", "category"]) requireField(err, "subjects.csv", row, r, f);
   });
 }
 
 if (ladderFileExists) {
   ladderCsv.rows.forEach((r, i) => {
     const row = ladderCsv.rowNumbers[i];
-    for (const f of ["family", "tier"]) requireField("effect_ladder.csv", row, r, f);
+    for (const f of ["family", "tier"]) requireField(err, "effect_ladder.csv", row, r, f);
   });
 }
 
@@ -150,17 +190,15 @@ function checkEnum(sheet: string, row: number, field: string, value: string, all
   if (value && !allowed.has(value)) err(sheet, row, `${field} "${value}" is not one of: ${[...allowed].join(" / ")}`);
 }
 
-perksCsv.rows.forEach((r, i) => {
-  const row = perksCsv.rowNumbers[i];
-  checkEnum("perks.csv", row, "family", r.family, FAMILIES);
-  checkEnum("perks.csv", row, "tier", r.tier, TIERS);
-  if (r.bonus_category) checkEnum("perks.csv", row, "bonus_category", r.bonus_category, BONUS_CATEGORIES);
-  if (r.bonus_type) checkEnum("perks.csv", row, "bonus_type", r.bonus_type, BONUS_TYPES);
+eachRow(perkSheets, (r, sheet, row) => {
+  checkEnum(sheet, row, "family", r.family, FAMILIES);
+  checkEnum(sheet, row, "tier", r.tier, TIERS);
+  if (r.bonus_category) checkEnum(sheet, row, "bonus_category", r.bonus_category, BONUS_CATEGORIES);
+  if (r.bonus_type) checkEnum(sheet, row, "bonus_type", r.bonus_type, BONUS_TYPES);
 });
 
-function checkFeatEnums(sheet: string, rows: CsvRow[], rowNumbers: number[]) {
-  rows.forEach((r, i) => {
-    const row = rowNumbers[i];
+function checkFeatEnums(sheets: SheetData[]) {
+  eachRow(sheets, (r, sheet, row) => {
     checkEnum(sheet, row, "rarity", r.rarity, RARITIES);
     checkEnum(sheet, row, "authority_root_type", r.authority_root_type, AUTHORITY_ROOT_TYPES);
     for (const j of (r.job ?? "").split(";").map((s) => s.trim()).filter((s) => s !== "")) {
@@ -168,61 +206,42 @@ function checkFeatEnums(sheet: string, rows: CsvRow[], rowNumbers: number[]) {
     }
   });
 }
-checkFeatEnums("feats.csv", featsCsv.rows, featsCsv.rowNumbers);
-checkFeatEnums("fusions.csv", fusionsCsv.rows, fusionsCsv.rowNumbers);
+checkFeatEnums(featSheets);
+checkFeatEnums([fusionsCsv]);
 
 fusionsCsv.rows.forEach((r, i) => {
   checkEnum("fusions.csv", fusionsCsv.rowNumbers[i], "operator", r.operator, FUSION_OPERATORS);
 });
 
 // ─────────────────────────────────────────────────────────────
-// Base layer: duplicate ids within a sheet. A silent duplicate would otherwise
-// collapse to whichever row wins the Map(...) construction below, while the
-// emitted dataset.json array still carries both — the JSON and the in-memory
-// validation state would quietly disagree with no error raised.
+// Base layer: duplicate ids. perks.csv+legacy_perks.csv share one perk-id namespace;
+// feats.csv+legacy_feats.csv+fusions.csv share one feat-id namespace (a Fusion IS a
+// Feat purchase). A silent duplicate would otherwise collapse to whichever row wins
+// the id->record Map below, while the emitted dataset.json array still carries both.
 // ─────────────────────────────────────────────────────────────
 
-function checkDuplicateIds(sheet: string, rows: CsvRow[], rowNumbers: number[]) {
-  const seen = new Map<string, number>();
-  rows.forEach((r, i) => {
+function checkDuplicateIdsAcross(sheets: SheetData[]) {
+  const seen = new Map<string, { sheet: string; row: number }>();
+  eachRow(sheets, (r, sheet, row) => {
     if (!r.id) return; // already reported by the required-column check
-    const row = rowNumbers[i];
-    if (seen.has(r.id)) {
-      err(sheet, row, `duplicate id "${r.id}" (first seen at row ${seen.get(r.id)})`);
+    const existing = seen.get(r.id);
+    if (existing) {
+      const suffix = existing.sheet === sheet ? "" : ` (a different sheet)`;
+      err(sheet, row, `duplicate id "${r.id}" — first seen at ${existing.sheet}!${existing.row}${suffix}`);
     } else {
-      seen.set(r.id, row);
+      seen.set(r.id, { sheet, row });
     }
   });
 }
-checkDuplicateIds("perks.csv", perksCsv.rows, perksCsv.rowNumbers);
-checkDuplicateIds("feats.csv", featsCsv.rows, featsCsv.rowNumbers);
-checkDuplicateIds("fusions.csv", fusionsCsv.rows, fusionsCsv.rowNumbers);
-if (existsSync(`${CONTENT_DIR}/subjects.csv`)) checkDuplicateIds("subjects.csv", subjectsCsv.rows, subjectsCsv.rowNumbers);
-// feats.csv and fusions.csv share one id namespace (a Fusion IS a Feat purchase) — a feat
-// and fusion sharing an id is exactly as broken as a duplicate within one sheet.
-{
-  const seenAcross = new Map<string, { sheet: string; row: number }>();
-  for (const { sheet, rows, rowNumbers } of [
-    { sheet: "feats.csv", rows: featsCsv.rows, rowNumbers: featsCsv.rowNumbers },
-    { sheet: "fusions.csv", rows: fusionsCsv.rows, rowNumbers: fusionsCsv.rowNumbers },
-  ]) {
-    rows.forEach((r, i) => {
-      if (!r.id) return;
-      const row = rowNumbers[i];
-      const existing = seenAcross.get(r.id);
-      if (existing && existing.sheet !== sheet) {
-        err(sheet, row, `id "${r.id}" is already used by ${existing.sheet}!${existing.row}`);
-      } else if (!existing) {
-        seenAcross.set(r.id, { sheet, row });
-      }
-    });
-  }
-}
+checkDuplicateIdsAcross(perkSheets);
+checkDuplicateIdsAcross([...featSheets, fusionsCsv]);
+if (existsSync(`${CONTENT_DIR}/subjects.csv`)) checkDuplicateIdsAcross([subjectsCsv]);
 
 // ─────────────────────────────────────────────────────────────
 // Build typed Perk[] (family/tier/subject may be legitimately blank —
 // that's the expected extraction-pending state, not a parse failure here;
-// the required-column check above already reports it)
+// the required-column check above already reports it). subject_suggested/
+// family_suggested are non-schema passthrough, carried whenever present.
 // ─────────────────────────────────────────────────────────────
 
 function parseOptionalNumericField(sheet: string, row: number, field: string, raw: string | undefined): number | null {
@@ -235,9 +254,11 @@ function parseOptionalNumericField(sheet: string, row: number, field: string, ra
   return parsed;
 }
 
-const perks: Perk[] = perksCsv.rows.map((r, i) => {
-  const row = perksCsv.rowNumbers[i];
-  return {
+type PerkOut = Perk & { subject_suggested?: string; family_suggested?: string };
+
+const perks: PerkOut[] = [];
+eachRow(perkSheets, (r, sheet, row) => {
+  const perk: PerkOut = {
     id: r.id,
     name: r.name,
     subject: r.subject ?? "",
@@ -248,15 +269,19 @@ const perks: Perk[] = perksCsv.rows.map((r, i) => {
     text: r.text ?? "",
     boundary: r.boundary ?? "",
     counterweight: r.counterweight?.trim() || null,
-    enhanced_threshold: parseOptionalNumericField("perks.csv", row, "enhanced_threshold", r.enhanced_threshold),
+    enhanced_threshold: parseOptionalNumericField(sheet, row, "enhanced_threshold", r.enhanced_threshold),
     enhanced_text: r.enhanced_text?.trim() || null,
   };
+  if (r.subject_suggested?.trim()) perk.subject_suggested = r.subject_suggested.trim();
+  if (r.family_suggested?.trim()) perk.family_suggested = r.family_suggested.trim();
+  perks.push(perk);
 });
 
 const perksById = new Map(perks.map((p) => [p.id, p]));
 
 // ─────────────────────────────────────────────────────────────
-// Build typed Feat[]/Fusion[] (parsing requirements/sources/job/parents mini-syntax)
+// Build typed Feat[]/Fusion[] (parsing requirements/sources/job/parents mini-syntax).
+// skill_group/block are non-schema passthrough, carried whenever present.
 // ─────────────────────────────────────────────────────────────
 
 function parseJob(raw: string): Feat["job"] {
@@ -266,7 +291,9 @@ function parseJob(raw: string): Feat["job"] {
     .filter((j) => j !== "") as Feat["job"];
 }
 
-function buildFeat(sheet: string, r: CsvRow, row: number): Feat {
+type FeatOut = Feat & { skill_group?: string; block?: string };
+
+function buildFeat(sheet: string, r: CsvRow, row: number): FeatOut {
   const { value: requirements, errors: reqErrors } = parseRequirements(r.requirements ?? "");
   reqErrors.forEach((m) => err(sheet, row, m));
   const { value: sources, errors: srcErrors } = parseSources(r.sources ?? "");
@@ -282,7 +309,7 @@ function buildFeat(sheet: string, r: CsvRow, row: number): Feat {
     }
   }
 
-  return {
+  const feat: FeatOut = {
     id: r.id,
     name: r.name,
     perk_ids: (r.perk_ids ?? "").split(";").map((s) => s.trim()).filter((s) => s !== ""),
@@ -300,11 +327,15 @@ function buildFeat(sheet: string, r: CsvRow, row: number): Feat {
     cp_cost,
     boundary: r.boundary ?? "",
   };
+  if (r.skill_group?.trim()) feat.skill_group = r.skill_group.trim();
+  if (r.block?.trim()) feat.block = r.block.trim();
+  return feat;
 }
 
-const feats: Feat[] = featsCsv.rows.map((r, i) => buildFeat("feats.csv", r, featsCsv.rowNumbers[i]));
+const feats: FeatOut[] = [];
+eachRow(featSheets, (r, sheet, row) => feats.push(buildFeat(sheet, r, row)));
 
-const fusions: Fusion[] = fusionsCsv.rows.map((r, i) => {
+const fusions: (FeatOut & Pick<Fusion, "operator" | "parents" | "target_trait_id" | "cp_refund">)[] = fusionsCsv.rows.map((r, i) => {
   const row = fusionsCsv.rowNumbers[i];
   const base = buildFeat("fusions.csv", r, row);
   const { value: parents, errors: parentErrors } = parseFusionParents(r.parents ?? "");
@@ -322,12 +353,12 @@ const fusions: Fusion[] = fusionsCsv.rows.map((r, i) => {
   };
 });
 
-// feats.csv row numbers keyed by id, for error messages when validating fusions/feats together
+// feat id -> sheet/row, for error messages when validating fusions/feats together
 const featRowById = new Map<string, { sheet: string; row: number }>();
-featsCsv.rows.forEach((r, i) => featRowById.set(r.id, { sheet: "feats.csv", row: featsCsv.rowNumbers[i] }));
+eachRow(featSheets, (r, sheet, row) => featRowById.set(r.id, { sheet, row }));
 fusionsCsv.rows.forEach((r, i) => featRowById.set(r.id, { sheet: "fusions.csv", row: fusionsCsv.rowNumbers[i] }));
 
-const allFeats: (Feat | Fusion)[] = [...feats, ...fusions];
+const allFeats: (FeatOut | (FeatOut & Pick<Fusion, "operator" | "parents" | "target_trait_id" | "cp_refund">))[] = [...feats, ...fusions];
 const featsById = new Map(allFeats.map((f) => [f.id, f]));
 
 // ─────────────────────────────────────────────────────────────
@@ -355,7 +386,8 @@ const subjectsById = new Map(subjects.map((s) => [s.id, s]));
 // authority_root_id (SKILL type), ATTRIBUTE/ATTRIBUTE_CEILING targets against the
 // fixed attribute code set. CLASS/CLASS_TIER/INSIGHT/TRAIT targets are checked too,
 // but classes[]/traits[] are stubbed empty this phase, so those legitimately fail
-// unless the content never uses them (Anti Perks don't).
+// unless the content never uses them. Unresolved SKILL references from legacy_*.csv
+// are downgraded to warnings under --draft (pending content/skill_reconciliation.csv).
 // ─────────────────────────────────────────────────────────────
 
 const ATTRIBUTE_CODES = new Set(["STR", "AGI", "INT", "PER", "WIL", "CHA"]);
@@ -366,7 +398,9 @@ function checkRequirementTargets(sheet: string, row: number, requirements: Requi
   for (const req of requirements) {
     switch (req.type) {
       case "SKILL_LEVEL":
-        if (!skillsById.has(req.target)) err(sheet, row, `requirement SKILL_LEVEL references unknown skill "${req.target}"`);
+        if (!skillsById.has(req.target)) {
+          draftSink("skill_ref", sheet)(sheet, row, `requirement SKILL_LEVEL references unknown skill "${req.target}"`);
+        }
         break;
       case "ATTRIBUTE":
       case "ATTRIBUTE_CEILING":
@@ -399,7 +433,7 @@ for (const f of feats) {
   }
   checkRequirementTargets(loc.sheet, loc.row, f.requirements);
   if (f.authority_root.type === "SKILL" && !skillsById.has(f.authority_root.id)) {
-    err(loc.sheet, loc.row, `authority_root references unknown skill "${f.authority_root.id}"`);
+    draftSink("skill_ref", loc.sheet)(loc.sheet, loc.row, `authority_root references unknown skill "${f.authority_root.id}"`);
   }
   if (f.authority_root.type === "ATTRIBUTE" && !ATTRIBUTE_CODES.has(f.authority_root.id)) {
     err(loc.sheet, loc.row, `authority_root references unknown attribute "${f.authority_root.id}"`);
@@ -414,19 +448,19 @@ for (const f of fusions) {
 }
 
 // ─────────────────────────────────────────────────────────────
-// Rule 2: every perks.subject is in subjects.csv
+// Rule 2: every perks.subject is in subjects.csv. A blank subject downgrades to a
+// warning under --draft; a non-blank-but-unresolved subject is a real typo and
+// always stays an error.
 // ─────────────────────────────────────────────────────────────
 
-// subject is a required column (authoring-columns.md), owned by rule 2 rather than the base layer.
-perksCsv.rows.forEach((r, i) => {
-  const row = perksCsv.rowNumbers[i];
+eachRow(perkSheets, (r, sheet, row) => {
   const subject = r.subject?.trim();
   if (!subject) {
-    err("perks.csv", row, `missing required field "subject"`);
+    draftSink("subject", sheet)(sheet, row, `missing required field "subject"`);
     return;
   }
   if (!subjectsById.has(subject)) {
-    err("perks.csv", row, `subject "${subject}" not found in subjects.csv`);
+    err(sheet, row, `subject "${subject}" not found in subjects.csv`);
   }
 });
 
@@ -434,7 +468,9 @@ perksCsv.rows.forEach((r, i) => {
 // Rule 3: every (family, tier) pair used by a perk exists in effect_ladder.csv.
 // Bootstrap behavior: authored-column pairs first; if that's empty (family/tier
 // blank, as decision 6 leaves them on fresh extraction), fall back to
-// (family_suggested, tier_suggested) pairs for the generated worklist.
+// (family_suggested, tier-or-tier_suggested) pairs for the generated worklist —
+// legacy_perks.csv has a REAL tier (no tier_suggested column at all), so it
+// contributes via its real tier once family_suggested is also present.
 // ─────────────────────────────────────────────────────────────
 
 const ladderByPair = new Map<string, EffectLadderStep>();
@@ -448,23 +484,22 @@ ladderCsv.rows.forEach((r) => {
 });
 
 const authoredPairs = new Set<string>();
-perksCsv.rows.forEach((r, i) => {
+eachRow(perkSheets, (r, sheet, row) => {
   if (!r.family || !r.tier) return;
   const key = `${r.family}|${r.tier}`;
   authoredPairs.add(key);
-  const row = perksCsv.rowNumbers[i];
   if (!ladderFileExists) {
     return; // handled by the bootstrap block below (warning, not error)
   }
   const step = ladderByPair.get(key);
   if (!step) {
-    err("perks.csv", row, `(family, tier) pair (${r.family}, ${r.tier}) not found in effect_ladder.csv`);
+    err(sheet, row, `(family, tier) pair (${r.family}, ${r.tier}) not found in effect_ladder.csv`);
     return;
   }
   const sev = STRICT_LADDER ? err : warn;
-  if (!step.value_text) sev("perks.csv", row, `effect_ladder.csv has no value_text for (${r.family}, ${r.tier})`);
+  if (!step.value_text) sev(sheet, row, `effect_ladder.csv has no value_text for (${r.family}, ${r.tier})`);
   if (step.numeric_value === null && r.family === "FLAT_BONUS") {
-    sev("perks.csv", row, `effect_ladder.csv has no numeric_value for FLAT_BONUS/${r.tier}`);
+    sev(sheet, row, `effect_ladder.csv has no numeric_value for FLAT_BONUS/${r.tier}`);
   }
 });
 
@@ -473,9 +508,9 @@ if (!ladderFileExists) {
 }
 
 const suggestedPairs = new Set<string>();
-perksCsv.rows.forEach((r) => {
+eachRow(perkSheets, (r) => {
   const fam = r.family_suggested?.trim();
-  const tier = r.tier_suggested?.trim();
+  const tier = r.tier?.trim() || r.tier_suggested?.trim();
   if (fam && tier) suggestedPairs.add(`${fam}|${tier}`);
 });
 
@@ -498,7 +533,7 @@ if (bootstrapPairs.size > 0 && !ladderFileExists) {
   );
 } else if (!ladderFileExists) {
   notes.push(
-    `effect_ladder.generated.csv NOT written: no (family, tier) pairs available to bootstrap from — neither authored family/tier nor family_suggested/tier_suggested are both populated on any perk yet (tier_suggested in particular has no signal anywhere in the Anti grid, so it is legitimately blank until tier is authored by hand)`,
+    `effect_ladder.generated.csv NOT written: no (family, tier) pairs available to bootstrap from — neither authored family/tier nor family_suggested/(tier|tier_suggested) are both populated on any perk yet`,
   );
 }
 
@@ -601,15 +636,16 @@ for (const f of allFeats) {
 }
 
 // ─────────────────────────────────────────────────────────────
-// Rule 8: every perk and feat has a non-empty boundary.
+// Rule 8: every perk and feat has a non-empty boundary. Downgraded to a warning
+// under --draft (any sheet) — the task's authoring backlog, not a defect.
 // ─────────────────────────────────────────────────────────────
 
-perksCsv.rows.forEach((r, i) => {
-  if (!r.boundary || r.boundary.trim() === "") err("perks.csv", perksCsv.rowNumbers[i], `missing required field "boundary"`);
+eachRow(perkSheets, (r, sheet, row) => {
+  if (!r.boundary || r.boundary.trim() === "") draftSink("boundary", sheet)(sheet, row, `missing required field "boundary"`);
 });
 for (const f of allFeats) {
   const loc = featRowById.get(f.id)!;
-  if (!f.boundary || f.boundary.trim() === "") err(loc.sheet, loc.row, `missing required field "boundary"`);
+  if (!f.boundary || f.boundary.trim() === "") draftSink("boundary", loc.sheet)(loc.sheet, loc.row, `missing required field "boundary"`);
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -642,7 +678,7 @@ for (const f of fusions) {
 // derived_tier / is_anti_perk (computed, never authored — decisions 6, 10, 11)
 // ─────────────────────────────────────────────────────────────
 
-function computeRootFloor(f: Feat): Tier {
+function computeRootFloor(f: FeatOut): Tier {
   if (f.authority_root.type === "SKILL") {
     const skillLevelReq = f.requirements.find((r) => r.type === "SKILL_LEVEL" && r.target === f.authority_root.id);
     if (skillLevelReq && skillLevelReq.threshold !== null) {
@@ -656,7 +692,7 @@ for (const f of allFeats) {
   const loc = featRowById.get(f.id)!;
   f.is_anti_perk = f.requirements.some((r) => r.type === "ATTRIBUTE_CEILING");
 
-  const ownedPerks = f.perk_ids.map((pid) => perksById.get(pid)).filter((p): p is Perk => !!p);
+  const ownedPerks = f.perk_ids.map((pid) => perksById.get(pid)).filter((p): p is PerkOut => !!p);
   const missingTier = ownedPerks.find((p) => !p.tier || !(["ENTRY", "INTERMEDIATE", "ADVANCED", "EXPERT", "MASTER"] as string[]).includes(p.tier));
   if (ownedPerks.length === 0 || missingTier) {
     notes.push(
@@ -690,7 +726,7 @@ for (const f of allFeats) {
 // Assemble SpiralDataset + write data/dataset.json (always — even on failure)
 // ─────────────────────────────────────────────────────────────
 
-const dataset: SpiralDataset & { _valid: boolean } = {
+const dataset: SpiralDataset & { _valid: boolean; _draft?: boolean; _error_count: number; _warning_count: number } = {
   version: "1.0",
   zones: [{ id: "universal", name: "Universal", description: "" }],
   attributes: reference.attributes,
@@ -709,7 +745,10 @@ const dataset: SpiralDataset & { _valid: boolean } = {
   skill_level_table: reference.skill_level_table,
   subjects,
   _valid: errors.length === 0,
+  _error_count: errors.length,
+  _warning_count: warnings.length,
 };
+if (DRAFT) dataset._draft = true;
 
 mkdirSync(DATA_DIR, { recursive: true });
 writeFileSync(`${DATA_DIR}/dataset.json`, JSON.stringify(dataset, null, 2) + "\n");
@@ -718,7 +757,9 @@ writeFileSync(`${DATA_DIR}/dataset.json`, JSON.stringify(dataset, null, 2) + "\n
 // Report, grouped by cause
 // ─────────────────────────────────────────────────────────────
 
-console.log(`\ndata/dataset.json written (_valid: ${dataset._valid})\n`);
+console.log(`\ndata/dataset.json written (_valid: ${dataset._valid}${DRAFT ? ", _draft: true" : ""})\n`);
+console.log(`perks: ${perks.length} (${perksMain.rows.length} + ${perksLegacy.rows.length} legacy)`);
+console.log(`feats: ${feats.length} (${featsMain.rows.length} + ${featsLegacy.rows.length} legacy), fusions: ${fusions.length}\n`);
 
 if (notes.length > 0) {
   console.log(`NOTES (${notes.length}):`);
@@ -726,7 +767,7 @@ if (notes.length > 0) {
   console.log();
 }
 if (warnings.length > 0) {
-  console.log(`WARNINGS (${warnings.length})${STRICT_LADDER ? " [--strict-ladder was NOT applied to these — already promoted above]" : ""}:`);
+  console.log(`WARNINGS (${warnings.length}):`);
   warnings.forEach((m) => console.log(`  - ${m}`));
   console.log();
 }

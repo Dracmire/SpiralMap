@@ -1,0 +1,7 @@
+# UNCONFIRMED — derived from family_suggested/tier_suggested, not authored family/tier
+family,tier,value_text,numeric_value
+PERMISSION,ENTRY,,
+FLAT_BONUS,ENTRY,,
+THRESHOLD,ENTRY,,
+RELIABILITY,ENTRY,,
+COVERAGE,ENTRY,,
