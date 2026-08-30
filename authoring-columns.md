@@ -26,6 +26,7 @@ Rules that apply everywhere:
 | `bonus_type` | if numeric | TRAINING / TERRAIN / ARMOR / DODGE / MAGIC / MORALE / SIZE / NATURAL / EQUIPMENT / REPUTATION |
 | `text` | yes | player-facing clause |
 | `boundary` | yes | **required** — the nearest thing this does NOT grant |
+| `counterweight` | no | authored drawback for unusually strong or trait-like perks; blank when none |
 
 `bonus_category` + `bonus_type` drive stacking. Two perks with the same `subject` **and** same
 `bonus_type` keep only the highest. Same `subject`, different `bonus_type` — they sum.

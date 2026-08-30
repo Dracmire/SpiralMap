@@ -1,0 +1,218 @@
+{
+  "_comment": "WORKED EXAMPLE — real content from Protofeats_Renew_1_1.xlsx 'Anti' tab, Appearance theme (CHA). Proves the schema against content that already exists. Text is abridged from source; boundaries are inferred and need author confirmation.",
+  "subjects": [
+    {
+      "id": "cha_social_reaction",
+      "name": "Social reaction rolls",
+      "category": "CIRCUMSTANTIAL"
+    },
+    {
+      "id": "cha_attack_resistance",
+      "name": "Resistance to CHA-based attacks (war cry, intimidation, charm)",
+      "category": "ABILITY"
+    },
+    {
+      "id": "cha_effective_score",
+      "name": "Effective Charisma score in a bounded context",
+      "category": "ABILITY"
+    }
+  ],
+  "perks": [
+    {
+      "id": "perk_scarecrow_menace",
+      "name": "Scarecrow",
+      "subject": "cha_social_reaction",
+      "family": "FLAT_BONUS",
+      "tier": "ENTRY",
+      "bonus_category": "CIRCUMSTANTIAL",
+      "bonus_type": "REPUTATION",
+      "text": "Your demeanour reads as dangerous. Gain a bonus on social reactions where being feared is useful.",
+      "boundary": "Does not grant Intimidation as an action, does not affect combat rolls, and cannot be suppressed at will.",
+      "counterweight": null
+    },
+    {
+      "id": "perk_harmless_fatale",
+      "name": "Harmless Fatale",
+      "subject": "cha_social_reaction",
+      "family": "SUBSTITUTION",
+      "tier": "ENTRY",
+      "bonus_category": "CIRCUMSTANTIAL",
+      "bonus_type": "REPUTATION",
+      "text": "You project harmlessness. Anyone who actively acts on that impression treats you as more persuasive than your score suggests.",
+      "boundary": "Only against targets who have already accepted the impression. Grants no Bluff action and no combat benefit.",
+      "counterweight": "You read as unreliable; rolls that require being taken seriously suffer."
+    },
+    {
+      "id": "perk_threatening_presence",
+      "name": "Threatening Presence",
+      "subject": "cha_social_reaction",
+      "family": "SUBSTITUTION",
+      "tier": "INTERMEDIATE",
+      "bonus_category": "CIRCUMSTANTIAL",
+      "bonus_type": "REPUTATION",
+      "text": "You read as a genuine threat. Animals react, guards stop you, and people avoid proximity — but fear-based leverage lands far above your score.",
+      "boundary": "Cannot be turned off. Does not grant intimidation actions, and actively penalises rolls that need trust.",
+      "counterweight": "Cannot be suppressed. Guards detain you on sight, animals panic, and any roll requiring trust or welcome is penalised."
+    },
+    {
+      "id": "perk_freakshow_aura",
+      "name": "Freakshow",
+      "subject": "cha_attack_resistance",
+      "family": "FLAT_BONUS",
+      "tier": "ADVANCED",
+      "bonus_category": "ABILITY",
+      "bonus_type": "NATURAL",
+      "text": "Natural apathy and rejection insulate you: gain resistance to CHA-based attacks such as war cry, intimidation, and charm.",
+      "boundary": "Resistance only. Does not reflect, redirect, or suppress the source, and does not apply to magical compulsion.",
+      "counterweight": "Social isolation is permanent and unswitchable; ordinary cooperation must be bought or coerced."
+    }
+  ],
+  "feats": [
+    {
+      "id": "feat_scarecrow",
+      "name": "Scarecrow",
+      "perk_ids": [
+        "perk_scarecrow_menace"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_appearance",
+      "fusion_root_id": null,
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 140
+        }
+      ],
+      "sources": [],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends entirely if CHA rises above 140. Remains owned and visible while suspended."
+    },
+    {
+      "id": "feat_harmless_fatale",
+      "name": "Harmless Fatale",
+      "perk_ids": [
+        "perk_harmless_fatale"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_appearance",
+      "fusion_root_id": null,
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 130
+        }
+      ],
+      "sources": [],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 130."
+    },
+    {
+      "id": "feat_threatening_presence",
+      "name": "Threatening Presence",
+      "perk_ids": [
+        "perk_threatening_presence"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_appearance",
+      "fusion_root_id": null,
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 120
+        }
+      ],
+      "sources": [],
+      "rarity": "UNCOMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 120."
+    }
+  ],
+  "fusions": [
+    {
+      "id": "fusion_freakshow",
+      "name": "Freakshow",
+      "perk_ids": [
+        "perk_freakshow_aura"
+      ],
+      "job": [
+        "PROGRESS",
+        "SIMPLIFICATION"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_appearance",
+      "fusion_root_id": "fusion_root_freakshow",
+      "operator": "COMPRESSION",
+      "parents": [
+        {
+          "feat_id": "feat_threatening_presence",
+          "disposition": "INTEGRATED"
+        },
+        {
+          "feat_id": "feat_stereotyping",
+          "disposition": "INTEGRATED"
+        }
+      ],
+      "target_trait_id": null,
+      "cp_refund": null,
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 110
+        },
+        {
+          "type": "PRIOR_NODE",
+          "target": "feat_threatening_presence",
+          "threshold": null
+        },
+        {
+          "type": "PRIOR_NODE",
+          "target": "feat_stereotyping",
+          "threshold": null
+        }
+      ],
+      "sources": [],
+      "rarity": "RARE",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Does not stack with its retired parents. Suspends entirely above CHA 110."
+    }
+  ],
+  "_findings": [
+    "Rare Anti Perks in the source are literally Fusions: 'REQ: Intimidating Presence + Stereotyping' is two parents, INTEGRATED, producing one rare result. Real Fusion content already exists in the dataset.",
+    "The ceiling ladder descends as rarity rises: 140/130 = Common, 120/110 = Uncommon, 110 or 'BASE' + two parents = Rare. Rarity is derivable from ceiling depth + parent count, but should stay an explicit field since the correlation may not hold outside Anti Perks.",
+    "The source Themes (Appearance, Empathy, Communication, Silence, Prejudice, Magnetism) map exactly onto Practice Root. They were already authored as practice families without being named as such.",
+    "The source carries a separate 'Counter:' line per perk, distinct from the attribute ceiling. Savepoint v0.2 §7 treats ceiling-exceeded as the only suspension condition — that is incomplete. Counter needs its own field.",
+    "SUBSTITUTION was added to the effect families because of this content. 'Your charisma works as if it was much higher' toward a bounded group is not a flat bonus (no fixed magnitude) and not coverage (no scope expansion). Three of four perks in this single theme use it, so it is not an edge case.",
+    "Source text for the Counter and rarity lines is truncated in the workbook ('* - CAR 120: cu', '* - Counter: en'). Needs re-authoring before conversion."
+  ]
+}
