@@ -66,8 +66,12 @@ function splitRecords(text: string): string[] {
 
 export function parseCsv(text: string): ParsedCsv {
   const allRecords = splitRecords(text);
-  // Skip leading `#`-comment lines (e.g. the effect_ladder.generated.csv marker).
-  const records = allRecords.filter((r) => !r.startsWith("#"));
+  // Skip ONLY a leading contiguous run of `#`-comment lines (e.g. the
+  // effect_ladder.generated.csv marker) — a `#` appearing later, as the first
+  // character of an ordinary data row, is real content and must not be dropped.
+  let leadingComments = 0;
+  while (leadingComments < allRecords.length && allRecords[leadingComments].startsWith("#")) leadingComments++;
+  const records = allRecords.slice(leadingComments);
   if (records.length === 0) return { header: [], rows: [], rowNumbers: [] };
 
   const header = parseLine(records[0]);
@@ -83,7 +87,7 @@ export function parseCsv(text: string): ParsedCsv {
       row[col] = fields[idx] ?? "";
     });
     rows.push(row);
-    rowNumbers.push(i + 1); // 1-indexed, header is row 1
+    rowNumbers.push(leadingComments + i + 1); // 1-indexed against the real file, header is row 1
   }
 
   return { header, rows, rowNumbers };

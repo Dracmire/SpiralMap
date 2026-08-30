@@ -142,6 +142,9 @@ const AUTHORITY_ROOT_TYPES = new Set(["SKILL", "CLASS_FEATURE", "TRAIT", "ATTRIB
 const FUSION_OPERATORS = new Set(["COMPRESSION", "NUMERICAL_PROGRESSION", "FEATURE_PROGRESSION", "TRANSFORMATIVE_CONVERSION", "GLUE"]);
 const FEAT_JOBS = new Set(["PROGRESS", "GLUE", "SIMPLIFICATION"]);
 const BONUS_CATEGORIES = new Set(["ABILITY", "CIRCUMSTANTIAL", "TECHNIQUE", "ENVIRONMENTAL"]);
+const BONUS_TYPES = new Set([
+  "TRAINING", "TERRAIN", "ARMOR", "DODGE", "MAGIC", "MORALE", "SIZE", "NATURAL", "EQUIPMENT", "REPUTATION",
+]);
 
 function checkEnum(sheet: string, row: number, field: string, value: string, allowed: ReadonlySet<string>) {
   if (value && !allowed.has(value)) err(sheet, row, `${field} "${value}" is not one of: ${[...allowed].join(" / ")}`);
@@ -152,6 +155,7 @@ perksCsv.rows.forEach((r, i) => {
   checkEnum("perks.csv", row, "family", r.family, FAMILIES);
   checkEnum("perks.csv", row, "tier", r.tier, TIERS);
   if (r.bonus_category) checkEnum("perks.csv", row, "bonus_category", r.bonus_category, BONUS_CATEGORIES);
+  if (r.bonus_type) checkEnum("perks.csv", row, "bonus_type", r.bonus_type, BONUS_TYPES);
 });
 
 function checkFeatEnums(sheet: string, rows: CsvRow[], rowNumbers: number[]) {
@@ -172,25 +176,82 @@ fusionsCsv.rows.forEach((r, i) => {
 });
 
 // ─────────────────────────────────────────────────────────────
+// Base layer: duplicate ids within a sheet. A silent duplicate would otherwise
+// collapse to whichever row wins the Map(...) construction below, while the
+// emitted dataset.json array still carries both — the JSON and the in-memory
+// validation state would quietly disagree with no error raised.
+// ─────────────────────────────────────────────────────────────
+
+function checkDuplicateIds(sheet: string, rows: CsvRow[], rowNumbers: number[]) {
+  const seen = new Map<string, number>();
+  rows.forEach((r, i) => {
+    if (!r.id) return; // already reported by the required-column check
+    const row = rowNumbers[i];
+    if (seen.has(r.id)) {
+      err(sheet, row, `duplicate id "${r.id}" (first seen at row ${seen.get(r.id)})`);
+    } else {
+      seen.set(r.id, row);
+    }
+  });
+}
+checkDuplicateIds("perks.csv", perksCsv.rows, perksCsv.rowNumbers);
+checkDuplicateIds("feats.csv", featsCsv.rows, featsCsv.rowNumbers);
+checkDuplicateIds("fusions.csv", fusionsCsv.rows, fusionsCsv.rowNumbers);
+if (existsSync(`${CONTENT_DIR}/subjects.csv`)) checkDuplicateIds("subjects.csv", subjectsCsv.rows, subjectsCsv.rowNumbers);
+// feats.csv and fusions.csv share one id namespace (a Fusion IS a Feat purchase) — a feat
+// and fusion sharing an id is exactly as broken as a duplicate within one sheet.
+{
+  const seenAcross = new Map<string, { sheet: string; row: number }>();
+  for (const { sheet, rows, rowNumbers } of [
+    { sheet: "feats.csv", rows: featsCsv.rows, rowNumbers: featsCsv.rowNumbers },
+    { sheet: "fusions.csv", rows: fusionsCsv.rows, rowNumbers: fusionsCsv.rowNumbers },
+  ]) {
+    rows.forEach((r, i) => {
+      if (!r.id) return;
+      const row = rowNumbers[i];
+      const existing = seenAcross.get(r.id);
+      if (existing && existing.sheet !== sheet) {
+        err(sheet, row, `id "${r.id}" is already used by ${existing.sheet}!${existing.row}`);
+      } else if (!existing) {
+        seenAcross.set(r.id, { sheet, row });
+      }
+    });
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
 // Build typed Perk[] (family/tier/subject may be legitimately blank —
 // that's the expected extraction-pending state, not a parse failure here;
 // the required-column check above already reports it)
 // ─────────────────────────────────────────────────────────────
 
-const perks: Perk[] = perksCsv.rows.map((r) => ({
-  id: r.id,
-  name: r.name,
-  subject: r.subject ?? "",
-  family: (r.family ?? "") as EffectFamily,
-  tier: (r.tier ?? "") as Tier,
-  bonus_category: (r.bonus_category?.trim() || null) as Perk["bonus_category"],
-  bonus_type: (r.bonus_type?.trim() || null) as Perk["bonus_type"],
-  text: r.text ?? "",
-  boundary: r.boundary ?? "",
-  counterweight: r.counterweight?.trim() || null,
-  enhanced_threshold: r.enhanced_threshold?.trim() ? Number(r.enhanced_threshold) : null,
-  enhanced_text: r.enhanced_text?.trim() || null,
-}));
+function parseOptionalNumericField(sheet: string, row: number, field: string, raw: string | undefined): number | null {
+  if (raw === undefined || raw.trim() === "") return null;
+  const parsed = Number(raw);
+  if (!Number.isFinite(parsed)) {
+    err(sheet, row, `${field} "${raw}" is not a number`);
+    return null;
+  }
+  return parsed;
+}
+
+const perks: Perk[] = perksCsv.rows.map((r, i) => {
+  const row = perksCsv.rowNumbers[i];
+  return {
+    id: r.id,
+    name: r.name,
+    subject: r.subject ?? "",
+    family: (r.family ?? "") as EffectFamily,
+    tier: (r.tier ?? "") as Tier,
+    bonus_category: (r.bonus_category?.trim() || null) as Perk["bonus_category"],
+    bonus_type: (r.bonus_type?.trim() || null) as Perk["bonus_type"],
+    text: r.text ?? "",
+    boundary: r.boundary ?? "",
+    counterweight: r.counterweight?.trim() || null,
+    enhanced_threshold: parseOptionalNumericField("perks.csv", row, "enhanced_threshold", r.enhanced_threshold),
+    enhanced_text: r.enhanced_text?.trim() || null,
+  };
+});
 
 const perksById = new Map(perks.map((p) => [p.id, p]));
 
@@ -211,6 +272,16 @@ function buildFeat(sheet: string, r: CsvRow, row: number): Feat {
   const { value: sources, errors: srcErrors } = parseSources(r.sources ?? "");
   srcErrors.forEach((m) => err(sheet, row, m));
 
+  let cp_cost = 0;
+  if (r.cp_cost !== undefined && r.cp_cost.trim() !== "") {
+    const parsed = Number(r.cp_cost);
+    if (!Number.isFinite(parsed)) {
+      err(sheet, row, `cp_cost "${r.cp_cost}" is not a number`);
+    } else {
+      cp_cost = parsed;
+    }
+  }
+
   return {
     id: r.id,
     name: r.name,
@@ -226,7 +297,7 @@ function buildFeat(sheet: string, r: CsvRow, row: number): Feat {
     requirements,
     rarity: r.rarity as Feat["rarity"],
     zone_id: r.zone_id?.trim() || null,
-    cp_cost: Number(r.cp_cost) || 0,
+    cp_cost,
     boundary: r.boundary ?? "",
   };
 }
@@ -247,7 +318,7 @@ const fusions: Fusion[] = fusionsCsv.rows.map((r, i) => {
     operator,
     parents,
     target_trait_id,
-    cp_refund: r.cp_refund?.trim() ? Number(r.cp_refund) : null,
+    cp_refund: parseOptionalNumericField("fusions.csv", row, "cp_refund", r.cp_refund),
   };
 });
 

@@ -94,7 +94,7 @@ function loadSkillGroups(
   const mapCsv = parseCsv(readFileSync(`${contentDir}/${mapSheet}`, "utf8"));
 
   const skillByName = new Map(skills.map((s) => [s.name, s]));
-  const memberIdsByGroupName = new Map<string, string[]>();
+  const memberIdsByGroupName = new Map<string, { skillId: string; row: number }[]>();
 
   mapCsv.rows.forEach((r, i) => {
     const row = mapCsv.rowNumbers[i];
@@ -105,13 +105,16 @@ function loadSkillGroups(
     }
     skill.group_ids.push(""); // placeholder, replaced with real group id below once known
     const list = memberIdsByGroupName.get(r.group) ?? [];
-    list.push(skill.id);
+    list.push({ skillId: skill.id, row });
     memberIdsByGroupName.set(r.group, list);
   });
 
+  const consumedGroupNames = new Set<string>();
   const groups: SkillGroup[] = groupsCsv.rows.map((r, i) => {
     const row = groupsCsv.rowNumbers[i];
-    const memberIds = memberIdsByGroupName.get(r.name) ?? [];
+    consumedGroupNames.add(r.name);
+    const memberEntries = memberIdsByGroupName.get(r.name) ?? [];
+    const memberIds = memberEntries.map((e) => e.skillId);
     if (memberIds.length === 0) {
       errors.push(`${groupsSheet}!${row}: group "${r.name}" has no resolved members in group_skill_map.csv`);
     }
@@ -128,6 +131,16 @@ function loadSkillGroups(
       discount_pct: 25,
     };
   });
+
+  // A group_skill_map.csv row whose `group` name doesn't match any skill_groups.csv
+  // row's `name` silently orphans that membership (the skill's placeholder never
+  // gets replaced with a real group id) — report it instead of dropping it.
+  for (const [groupName, entries] of memberIdsByGroupName) {
+    if (consumedGroupNames.has(groupName)) continue;
+    for (const { skillId, row } of entries) {
+      errors.push(`${mapSheet}!${row}: group "${groupName}" (skill "${skillId}") not found in skill_groups.csv`);
+    }
+  }
 
   // Clean up the placeholder empty-string entries pushed above.
   for (const skill of skills) skill.group_ids = skill.group_ids.filter((id) => id !== "");
