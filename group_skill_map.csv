@@ -1,0 +1,101 @@
+group,skill,attribute
+ACADEMIC,Investigation,PER
+ACADEMIC,Knowledge (Specific),INT
+ACADEMIC,Linguistics,INT
+ARTISAN,Apraisal,PER
+ARTISAN,Craft,INT
+ARTISAN,Minning,STR
+BARD,Diplomacy,CAR
+BARD,Mana Sensitivity,WIL
+BARD,Melee Weapons Handling,STR
+BARD,Perform,CAR
+BARD,Sleight of Hand,AGI
+BRAWLER,Athletism,AGI
+BRAWLER,Brawling,AGI
+BRAWLER,Discipline,WIL
+BRAWLER,Rest,STR
+BRAWLER,"Still Mind, Focus",WIL
+BUTCHER,Cooking,WIL
+BUTCHER,Dismantle,AGI
+BUTCHER,HandiCraft,STR
+DRUID,Animal Empathy,CAR
+DRUID,Healing,WIL
+DRUID,Light Weapons Handling,AGI
+DRUID,"Nature, Focus",CAR
+DRUID,Rest,STR
+ENGINEER,Investigation,PER
+ENGINEER,Magic Obj,INT
+ENGINEER,Mechanics,INT
+EXPLORER,Alert,PER
+EXPLORER,Dismantle,AGI
+EXPLORER,Light Armor Handling,STR
+EXPLORER,Projectile Weapons Handling,PER
+EXPLORER,Trapper,INT
+FARMER,Animal Empathy,CAR
+FARMER,Farming,WIL
+FARMER,Minning,STR
+HIGH CLASS,Diplomacy,CAR
+HIGH CLASS,Riding,AGI
+HIGH CLASS,Sense Motive,PER
+HUNTER,Tracking,PER
+HUNTER,Trapper,INT
+HUNTER,Wilderness,WIL
+LAWMAKER,Culture Lore,INT
+LAWMAKER,Intimidation,WIL
+LAWMAKER,Investigation,PER
+LOW CLASS,Bluff,CAR
+LOW CLASS,Sleight of Hand,AGI
+LOW CLASS,Streetwise,PER
+MAGE,Basic Mana Discipline,INT
+MAGE,Magic Obj,INT
+MAGE,Mana Sensitivity,PER
+MAGE,Mental Focus,WIL
+MAGE,Spellcraft,PER
+MERC,Battle,PER
+MERC,Inclemence,STR
+MERC,Intimidation,WIL
+MERCHANT,Apraisal,PER
+MERCHANT,Haggle,CAR
+MERCHANT,Wayfarer,WIL
+MINSTREL,Culture Lore,INT
+MINSTREL,Perform,CAR
+MINSTREL,Streetwise,PER
+MYSTIC,Astrology,INT
+MYSTIC,Formal Magics,INT
+MYSTIC,Spellcraft,PER
+PHARMASCIST,Haggle,CAR
+PHARMASCIST,Healing,WIL
+PHARMASCIST,Herbalism,INT
+PRIEST,Healing,WIL
+PRIEST,"Holy Light, Faith",CAR
+PRIEST,Knowledge (Specific),INT
+PRIEST,Piety,WIL
+PRIEST,Spirit Sensitivity,CAR
+ROUGE,Alert,PER
+ROUGE,Bluff,CAR
+ROUGE,Hide,AGI
+ROUGE,Light Armor Handling,STR
+ROUGE,Light Weapons Handling,AGI
+SAVAGE,Animal Empathy,CAR
+SAVAGE,Climbing,STR
+SAVAGE,Wilderness,WIL
+SHOWMAN,Acting,CAR
+SHOWMAN,Mental Focus,WIL
+SHOWMAN,Sense Motive,PER
+SURVIVALIST,HandiCraft,STR
+SURVIVALIST,Herbalism,INT
+SURVIVALIST,Wilderness,WIL
+THIEF,Climbing,STR
+THIEF,Hide,AGI
+THIEF,Lockpick,INT
+TRAVELLER,Inclemence,STR
+TRAVELLER,Riding,AGI
+TRAVELLER,Wayfarer,WIL
+WARRIOR,Athletism,AGI
+WARRIOR,Battle,PER
+WARRIOR,Discipline,WIL
+WARRIOR,Heavy Armor Handling,STR
+WARRIOR,Melee Weapons Handling,STR
+WITCH,Astrology,INT
+WITCH,Cooking,WIL
+WITCH,Spirit Sensitivity,CAR

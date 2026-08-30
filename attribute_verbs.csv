@@ -1,0 +1,19 @@
+attribute_id,attribute,verb,verb_id
+STR,Strength,Burden,str_burden
+STR,Strength,Limb Strength,str_limb_strength
+STR,Strength,Muscle,str_muscle
+AGI,Agility,Coordination,agi_coordination
+AGI,Agility,Reaction,agi_reaction
+AGI,Agility,Mobility,agi_mobility
+INT,Intelligence,Judgement,int_judgement
+INT,Intelligence,Inspiration,int_inspiration
+INT,Intelligence,Focus,int_focus
+PER,Perception,Senses,per_senses
+PER,Perception,Estimation,per_estimation
+PER,Perception,Discovery,per_discovery
+WIL,Willpower,Poise,wil_poise
+WIL,Willpower,Fortitude,wil_fortitude
+WIL,Willpower,Instinct,wil_instinct
+CHA,Charisma,Alignment,cha_alignment
+CHA,Charisma,Empathy,cha_empathy
+CHA,Charisma,Expression,cha_expression
