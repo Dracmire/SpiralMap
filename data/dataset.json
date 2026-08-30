@@ -1,0 +1,4933 @@
+{
+  "version": "1.0",
+  "zones": [
+    {
+      "id": "universal",
+      "name": "Universal",
+      "description": ""
+    }
+  ],
+  "attributes": [
+    {
+      "id": "STR",
+      "name": "Strength",
+      "verbs": [
+        "Burden",
+        "Limb Strength",
+        "Muscle"
+      ]
+    },
+    {
+      "id": "AGI",
+      "name": "Agility",
+      "verbs": [
+        "Coordination",
+        "Reaction",
+        "Mobility"
+      ]
+    },
+    {
+      "id": "INT",
+      "name": "Intelligence",
+      "verbs": [
+        "Judgement",
+        "Inspiration",
+        "Focus"
+      ]
+    },
+    {
+      "id": "PER",
+      "name": "Perception",
+      "verbs": [
+        "Senses",
+        "Estimation",
+        "Discovery"
+      ]
+    },
+    {
+      "id": "WIL",
+      "name": "Willpower",
+      "verbs": [
+        "Poise",
+        "Fortitude",
+        "Instinct"
+      ]
+    },
+    {
+      "id": "CHA",
+      "name": "Charisma",
+      "verbs": [
+        "Alignment",
+        "Empathy",
+        "Expression"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "athletism",
+      "name": "Athletism",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "brawler",
+        "warrior"
+      ],
+      "description": "the simple handling of your body nimbleness including general cardio and gymnastics"
+    },
+    {
+      "id": "dismantle",
+      "name": "Dismantle",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "butcher",
+        "explorer"
+      ],
+      "description": "proficiency into dismantling plants, animals and monsters to extract ingredients and byproducts"
+    },
+    {
+      "id": "hide",
+      "name": "Hide",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "thief",
+        "rouge"
+      ],
+      "description": "the ability to hide efficiently, it only allows to hide without movement"
+    },
+    {
+      "id": "riding",
+      "name": "Riding",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "high_class",
+        "traveller"
+      ],
+      "description": "the proficiency into using horses and other similar land riding mounts"
+    },
+    {
+      "id": "sleight_of_hand",
+      "name": "Sleight of Hand",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "low_class",
+        "bard"
+      ],
+      "description": "the use of hand deft movements in cunning ways to peform hand tricks"
+    },
+    {
+      "id": "acting",
+      "name": "Acting",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "showman"
+      ],
+      "description": "performing a complete interpretation of a pre-made role/script"
+    },
+    {
+      "id": "animal_empathy",
+      "name": "Animal Empathy",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "farmer",
+        "savage",
+        "druid"
+      ],
+      "description": "the ability to deal with animals and manage them without the use of force"
+    },
+    {
+      "id": "bluff",
+      "name": "Bluff",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "low_class",
+        "rouge"
+      ],
+      "description": "proficiency in lying, flattering or gaslighting others in social environments"
+    },
+    {
+      "id": "diplomacy",
+      "name": "Diplomacy",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "high_class",
+        "bard"
+      ],
+      "description": "the ability to mediate or converse in a formal manner in social environments"
+    },
+    {
+      "id": "haggle",
+      "name": "Haggle",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "merchant",
+        "pharmascist"
+      ],
+      "description": "the ability to negotiate the trade of goods or advantages in a social environment"
+    },
+    {
+      "id": "intimidation",
+      "name": "Intimidation",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "lawmaker",
+        "merc"
+      ],
+      "description": "the ability to threaten others by using simple words and bodily language"
+    },
+    {
+      "id": "perform",
+      "name": "Perform",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "is_parameterized": true,
+      "instances": [],
+      "group_ids": [
+        "minstrel",
+        "bard"
+      ],
+      "description": "the ability to express yourself with body language and produce basic music improvising with sounds"
+    },
+    {
+      "id": "spirit_sensitivity",
+      "name": "Spirit Sensitivity",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "witch",
+        "priest"
+      ],
+      "description": "the ability to sense spirits and interact with the unseen supernatural world in a simple manner"
+    },
+    {
+      "id": "astrology",
+      "name": "Astrology",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "mystic",
+        "witch"
+      ],
+      "description": "the proficiency to gaze into the stars and other omens and derive some abstract fortune from it"
+    },
+    {
+      "id": "craft",
+      "name": "Craft",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "artisan"
+      ],
+      "description": "the specialized ability to craft items usign specific tools (this ability needs to be specialized)"
+    },
+    {
+      "id": "culture_lore",
+      "name": "Culture Lore",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "lawmaker",
+        "minstrel"
+      ],
+      "description": "the general knowledge of the subtleties of the current culture and common knowlesdge in your geographical zone"
+    },
+    {
+      "id": "formal_magics",
+      "name": "Formal Magics",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "mystic"
+      ],
+      "description": "the knowledge to use basic forms, traces, drawings and simple materials to perform very basic magic under the right conditions"
+    },
+    {
+      "id": "herbalism",
+      "name": "Herbalism",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "pharmascist",
+        "survivalist"
+      ],
+      "description": "the knowledge about simple herbs and other natural plant resources"
+    },
+    {
+      "id": "knowledge",
+      "name": "Knowledge",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "is_parameterized": true,
+      "instances": [],
+      "group_ids": [],
+      "description": "the specialized knowledge on a particular subject matter ( this ability needs to be specialized)"
+    },
+    {
+      "id": "linguistics",
+      "name": "Linguistics",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "academic"
+      ],
+      "description": "the ability to understand foreign languages and decipher all manners of"
+    },
+    {
+      "id": "lockpick",
+      "name": "Lockpick",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "thief"
+      ],
+      "description": "the ability to picklocks and open closed doors and other mechanism by using simple tools"
+    },
+    {
+      "id": "magic_object",
+      "name": "Magic Object",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [],
+      "description": "proficiency into all manners of mana-fueled magical objects, and the ability to use them in a safer way"
+    },
+    {
+      "id": "mechanics",
+      "name": "Mechanics",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "engineer"
+      ],
+      "description": "proficiency in all manners of simple machinery and their usage"
+    },
+    {
+      "id": "trapper",
+      "name": "Trapper",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "hunter",
+        "explorer"
+      ],
+      "description": "the ability to either use and place simple traps efficiently or disable them"
+    },
+    {
+      "id": "alert",
+      "name": "Alert",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "explorer",
+        "rouge"
+      ],
+      "description": "keen senses capable of perceiving direct threats and other unseen dangers"
+    },
+    {
+      "id": "appraisal",
+      "name": "Appraisal",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [],
+      "description": "proficiency into perceiving the value of things using money as a measurement with added information"
+    },
+    {
+      "id": "battle",
+      "name": "Battle",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "merc",
+        "warrior"
+      ],
+      "description": "basic tactical understanding and common battle practices for warriors"
+    },
+    {
+      "id": "investigation",
+      "name": "Investigation",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "academic",
+        "engineer",
+        "lawmaker"
+      ],
+      "description": "the ability to derive secrets and research related content to pursue a specific truth"
+    },
+    {
+      "id": "sense_motive",
+      "name": "Sense Motive",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "high_class",
+        "showman"
+      ],
+      "description": "the proficiency to understand social nuances and understand a person interests in a social environment"
+    },
+    {
+      "id": "spellcraft",
+      "name": "Spellcraft",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "mystic",
+        "mage"
+      ],
+      "description": "the knowledge about general spells and magical phenomena in a way where its easy to adress them"
+    },
+    {
+      "id": "streetwise",
+      "name": "Streetwise",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "low_class",
+        "minstrel"
+      ],
+      "description": "proficiency in the dealings of the low ranks as well as the ability to extract information from it"
+    },
+    {
+      "id": "tracking",
+      "name": "Tracking",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "hunter"
+      ],
+      "description": "proficiency following trails and tracks of land walking creatures in natural environments"
+    },
+    {
+      "id": "climbing",
+      "name": "Climbing",
+      "attribute": "STR",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "savage",
+        "thief"
+      ],
+      "description": "physical prowess to climb into high places by using ledges and natural terrain roughness"
+    },
+    {
+      "id": "handicraft",
+      "name": "HandiCraft",
+      "attribute": "STR",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "butcher",
+        "survivalist"
+      ],
+      "description": "proficiency in all manners of simple crafting (non-specific), useful from repairs to crafting of improvised items, the medieval equivalent of DIY"
+    },
+    {
+      "id": "inclemence",
+      "name": "Inclemence",
+      "attribute": "STR",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "merc",
+        "traveller"
+      ],
+      "description": "the physical ability to endure harsh environmental conditions and adapt to diferent"
+    },
+    {
+      "id": "minning",
+      "name": "Minning",
+      "attribute": "STR",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "artisan",
+        "farmer"
+      ],
+      "description": "proficiency on excavating soil, rock mining and general landwork in a efficient manner, its very physical work"
+    },
+    {
+      "id": "rest",
+      "name": "Rest",
+      "attribute": "STR",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "brawler",
+        "druid"
+      ],
+      "description": "the ability to rest in a deeper and more efficient manner aiming to block out disturbances"
+    },
+    {
+      "id": "cooking",
+      "name": "Cooking",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "butcher",
+        "witch"
+      ],
+      "description": "proficiency in cooking simple meals using common materials, it produces consumable items"
+    },
+    {
+      "id": "discipline",
+      "name": "Discipline",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "brawler",
+        "warrior"
+      ],
+      "description": "the ability to ignore and endure distractions and feints in combat to heighten your combat focus"
+    },
+    {
+      "id": "farming",
+      "name": "Farming",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "farmer"
+      ],
+      "description": "the production ability to work the land in order to generate produce in long terms"
+    },
+    {
+      "id": "healing",
+      "name": "Healing",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "pharmascist",
+        "druid",
+        "priest"
+      ],
+      "description": "the basic medical skill to treat simple wounds and other physical traumas"
+    },
+    {
+      "id": "mental_focus",
+      "name": "Mental Focus",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "showman",
+        "mage"
+      ],
+      "description": "the ability to keep your mental focus while enduring damages and distractions to the user"
+    },
+    {
+      "id": "wayfarer",
+      "name": "Wayfarer",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "merchant",
+        "traveller"
+      ],
+      "description": "the knowledge of the land and the ability to recognize signs of potential road dangers"
+    },
+    {
+      "id": "brawling",
+      "name": "Brawling",
+      "attribute": "AGI",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "brawler"
+      ],
+      "description": "The main proficiency of physical close quarter combat using bare hands"
+    },
+    {
+      "id": "light_weapons",
+      "name": "Light Weapons",
+      "attribute": "AGI",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [],
+      "description": "The main proficiency using light weapons that depend on nimbleness and presition"
+    },
+    {
+      "id": "faith",
+      "name": "Faith",
+      "attribute": "CHA",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [],
+      "description": "the main proficiency of using divine based miracles of different origins (requieres specialization)"
+    },
+    {
+      "id": "nature_focus",
+      "name": "Nature Focus",
+      "attribute": "CHA",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [],
+      "description": "the main proficiency of using natural abilities and commune with nature"
+    },
+    {
+      "id": "basic_mana_discipline",
+      "name": "Basic Mana Discipline",
+      "attribute": "INT",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "mage"
+      ],
+      "description": "the main proficiency of using mana based spells and abilities of mystical origin (requieres specialization)"
+    },
+    {
+      "id": "mana_sensitivity",
+      "name": "Mana Sensitivity",
+      "attribute": "PER",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "bard",
+        "mage"
+      ],
+      "description": "the main proficiency of attuning oneself with mana in your surroundings and commune with it"
+    },
+    {
+      "id": "projectile_weapons",
+      "name": "Projectile Weapons",
+      "attribute": "PER",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [],
+      "description": "The main proficiency using projectile weapons that depend on perception"
+    },
+    {
+      "id": "heavy_armor",
+      "name": "Heavy Armor",
+      "attribute": "STR",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [],
+      "description": "The main proficiency for using medium and heavy armors such as banded, plate and composite armors"
+    },
+    {
+      "id": "light_armor",
+      "name": "Light Armor",
+      "attribute": "STR",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [],
+      "description": "The main proficiency for using light and medium armors such as leather, armlets and padded armor"
+    },
+    {
+      "id": "melee_weapons",
+      "name": "Melee Weapons",
+      "attribute": "STR",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [],
+      "description": "the use of all types of melee weapons both light and heavy"
+    },
+    {
+      "id": "piety",
+      "name": "Piety",
+      "attribute": "WIL",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "priest"
+      ],
+      "description": "The main proficiency for attuning oneself with divine power and commune with it"
+    },
+    {
+      "id": "still_mind_focus",
+      "name": "Still Mind, Focus",
+      "attribute": "WIL",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "brawler"
+      ],
+      "description": "The main proficiency for self discipline and attaining clarity on combat"
+    }
+  ],
+  "skill_groups": [
+    {
+      "id": "academic",
+      "name": "ACADEMIC",
+      "kind": "SUPPORT",
+      "key_attribute": "INT",
+      "member_skill_ids": [
+        "investigation",
+        "linguistics"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "artisan",
+      "name": "ARTISAN",
+      "kind": "SUPPORT",
+      "key_attribute": "INT",
+      "member_skill_ids": [
+        "craft",
+        "minning"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "butcher",
+      "name": "BUTCHER",
+      "kind": "SUPPORT",
+      "key_attribute": "STR",
+      "member_skill_ids": [
+        "cooking",
+        "dismantle",
+        "handicraft"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "engineer",
+      "name": "ENGINEER",
+      "kind": "SUPPORT",
+      "key_attribute": "INT",
+      "member_skill_ids": [
+        "investigation",
+        "mechanics"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "farmer",
+      "name": "FARMER",
+      "kind": "SUPPORT",
+      "key_attribute": "WIL",
+      "member_skill_ids": [
+        "animal_empathy",
+        "farming",
+        "minning"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "high_class",
+      "name": "HIGH CLASS",
+      "kind": "SUPPORT",
+      "key_attribute": "CHA",
+      "member_skill_ids": [
+        "diplomacy",
+        "riding",
+        "sense_motive"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "hunter",
+      "name": "HUNTER",
+      "kind": "SUPPORT",
+      "key_attribute": "PER",
+      "member_skill_ids": [
+        "tracking",
+        "trapper"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "lawmaker",
+      "name": "LAWMAKER",
+      "kind": "SUPPORT",
+      "key_attribute": "WIL",
+      "member_skill_ids": [
+        "culture_lore",
+        "intimidation",
+        "investigation"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "low_class",
+      "name": "LOW CLASS",
+      "kind": "SUPPORT",
+      "key_attribute": "PER",
+      "member_skill_ids": [
+        "bluff",
+        "sleight_of_hand",
+        "streetwise"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "merc",
+      "name": "MERC",
+      "kind": "SUPPORT",
+      "key_attribute": "STR",
+      "member_skill_ids": [
+        "battle",
+        "inclemence",
+        "intimidation"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "merchant",
+      "name": "MERCHANT",
+      "kind": "SUPPORT",
+      "key_attribute": "PER",
+      "member_skill_ids": [
+        "haggle",
+        "wayfarer"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "minstrel",
+      "name": "MINSTREL",
+      "kind": "SUPPORT",
+      "key_attribute": "PER",
+      "member_skill_ids": [
+        "culture_lore",
+        "perform",
+        "streetwise"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "mystic",
+      "name": "MYSTIC",
+      "kind": "SUPPORT",
+      "key_attribute": "INT",
+      "member_skill_ids": [
+        "astrology",
+        "formal_magics",
+        "spellcraft"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "pharmascist",
+      "name": "PHARMASCIST",
+      "kind": "SUPPORT",
+      "key_attribute": "WIL",
+      "member_skill_ids": [
+        "haggle",
+        "healing",
+        "herbalism"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "savage",
+      "name": "SAVAGE",
+      "kind": "SUPPORT",
+      "key_attribute": "WIL",
+      "member_skill_ids": [
+        "animal_empathy",
+        "climbing"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "showman",
+      "name": "SHOWMAN",
+      "kind": "SUPPORT",
+      "key_attribute": "CHA",
+      "member_skill_ids": [
+        "acting",
+        "mental_focus",
+        "sense_motive"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "survivalist",
+      "name": "SURVIVALIST",
+      "kind": "SUPPORT",
+      "key_attribute": "STR",
+      "member_skill_ids": [
+        "handicraft",
+        "herbalism"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "thief",
+      "name": "THIEF",
+      "kind": "SUPPORT",
+      "key_attribute": "AGI",
+      "member_skill_ids": [
+        "climbing",
+        "hide",
+        "lockpick"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "traveller",
+      "name": "TRAVELLER",
+      "kind": "SUPPORT",
+      "key_attribute": "WIL",
+      "member_skill_ids": [
+        "inclemence",
+        "riding",
+        "wayfarer"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "witch",
+      "name": "WITCH",
+      "kind": "SUPPORT",
+      "key_attribute": "CHA",
+      "member_skill_ids": [
+        "astrology",
+        "cooking",
+        "spirit_sensitivity"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "bard",
+      "name": "BARD",
+      "kind": "CORE",
+      "key_attribute": "CHA",
+      "member_skill_ids": [
+        "diplomacy",
+        "mana_sensitivity",
+        "perform",
+        "sleight_of_hand"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "brawler",
+      "name": "BRAWLER",
+      "kind": "CORE",
+      "key_attribute": "AGI",
+      "member_skill_ids": [
+        "athletism",
+        "brawling",
+        "discipline",
+        "rest",
+        "still_mind_focus"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "druid",
+      "name": "DRUID",
+      "kind": "CORE",
+      "key_attribute": "CHA",
+      "member_skill_ids": [
+        "animal_empathy",
+        "healing",
+        "rest"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "explorer",
+      "name": "EXPLORER",
+      "kind": "CORE",
+      "key_attribute": "PER",
+      "member_skill_ids": [
+        "alert",
+        "dismantle",
+        "trapper"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "mage",
+      "name": "MAGE",
+      "kind": "CORE",
+      "key_attribute": "INT",
+      "member_skill_ids": [
+        "basic_mana_discipline",
+        "mana_sensitivity",
+        "mental_focus",
+        "spellcraft"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "priest",
+      "name": "PRIEST",
+      "kind": "CORE",
+      "key_attribute": "CHA",
+      "member_skill_ids": [
+        "healing",
+        "piety",
+        "spirit_sensitivity"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "rouge",
+      "name": "ROUGE",
+      "kind": "CORE",
+      "key_attribute": "AGI",
+      "member_skill_ids": [
+        "alert",
+        "bluff",
+        "hide"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "warrior",
+      "name": "WARRIOR",
+      "kind": "CORE",
+      "key_attribute": "STR",
+      "member_skill_ids": [
+        "athletism",
+        "battle",
+        "discipline"
+      ],
+      "discount_pct": 25
+    }
+  ],
+  "specializations": [
+    {
+      "id": "monster_carver_basic",
+      "name": "Monster Carver (Basic)",
+      "parent_skill_id": "dismantle",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "monster carver is the person who skins and extract every monster part to ensure maximun efficiency and that there is not any loss, unlike a dismantler a carver is capable of dismembering higher ranked monsters with tough skin and poisonous blood until its all usable, however, it needs special tools for diferent monsters"
+    },
+    {
+      "id": "salvaging_lesser",
+      "name": "Salvaging (Lesser)",
+      "parent_skill_id": "dismantle",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The skill to reclaim and restore, damaged structures and property without damaging them. In simplified terms allows to extract useful and expensive parts from dificult locations in order to sell or reuse them, also, it is specially important in either magical vessels recovery or a sea ship's recovery of their cargo as only a salvaging expert is capable of recovering sensitive materials in good conditions."
+    },
+    {
+      "id": "scavanging",
+      "name": "Scavanging",
+      "parent_skill_id": "dismantle",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "scavaning is an ability to loot and seek throughly for any usable items in a very efficient manner, the user is like a hound looking everywhere and everything for items to loot, its a skill that increases the both the amount of loot and more"
+    },
+    {
+      "id": "camoflague_intermediate",
+      "name": "Camoflague (Intermediate)",
+      "parent_skill_id": "hide",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "a rare version of hide, which adds the use of natural enviroment coverage to a greater effectivity in adition to hide basic cover qualities, it increases the cover value of a specific natural speciality which choosen upon taken this skill"
+    },
+    {
+      "id": "cloak_and_dagger_intermediate",
+      "name": "Cloak and Dagger (Intermediate)",
+      "parent_skill_id": "hide",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to perform acts of questionable nature and hide your trail, the skill is useful to counter investigation skills"
+    },
+    {
+      "id": "hide_in_plain_sight_basic",
+      "name": "Hide in Plain Sight (Basic)",
+      "parent_skill_id": "hide",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to hide in plain sight by blending with the surroundings, this means that instead of hiding by using a cover the user is capable of blending with the active environment by performing actions which are appropiate to fit in with the surroundings, hide in plain sight is greatly influenced by the user outward appereance+C62"
+    },
+    {
+      "id": "escapist_inter",
+      "name": "Escapist (Inter)",
+      "parent_skill_id": "sleight_of_hand",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skil to escape from binds such as ropes chain or simple grappling"
+    },
+    {
+      "id": "prestidigitation",
+      "name": "Prestidigitation",
+      "parent_skill_id": "sleight_of_hand",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "refers to fine motor skills when used by performing artists in different art forms to entertain or manipulate. It is closely associated with close-up magic, card magic, card flourishing and stealing. Because of its heavy use and practice by magicians, sleight of hand is often confused as a branch of magic"
+    },
+    {
+      "id": "thievery",
+      "name": "Thievery",
+      "parent_skill_id": "sleight_of_hand",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The ability to substract elements from a person without his knowledge, its a classic"
+    },
+    {
+      "id": "beast_trainer",
+      "name": "Beast Trainer",
+      "parent_skill_id": "animal_empathy",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to train beasts of different types, it will increase the INT of the animals and allows the user to teach them tricks"
+    },
+    {
+      "id": "beastmaster",
+      "name": "BeastMaster",
+      "parent_skill_id": "animal_empathy",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to manage and control beast creatures, it allows to manage and care for these animals and increases their loyalty to the user"
+    },
+    {
+      "id": "falconeer",
+      "name": "Falconeer",
+      "parent_skill_id": "animal_empathy",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to manage and control flying creatures, it allows to manage and care for these animals and increases their loyalty to the user"
+    },
+    {
+      "id": "shepherd",
+      "name": "Shepherd",
+      "parent_skill_id": "animal_empathy",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The ability to guide animals and befriend them, allowing to move large number of them"
+    },
+    {
+      "id": "fawn",
+      "name": "Fawn",
+      "parent_skill_id": "bluff",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to adulate and curry into favor from people using sweet words and correct language, its imperative as a street etiquette for survival of the weak, it is limited to etiquettes known by the user. By spending time you can easily built a good relationship with most NPC. Fawn is seen as a despicable act by the more honorable or disciplined people, so be careful"
+    },
+    {
+      "id": "masquerade",
+      "name": "Masquerade",
+      "parent_skill_id": "bluff",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Some people live two lives, one in the light with a public profile and other in the shadows, this is the ability to create a double life allowing the player to separate both and never be suspected"
+    },
+    {
+      "id": "subterfuge",
+      "name": "Subterfuge",
+      "parent_skill_id": "bluff",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "You know how to conceal your own motives and project what you like. Furthermore, you can root out other people's motives, then use those motives against them"
+    },
+    {
+      "id": "basic_conversation",
+      "name": "Basic Conversation",
+      "parent_skill_id": "diplomacy",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to establish a pleasant exchange in a festive enviroment, conversation is a high class hobby of most nobbles and usually it entails long dinners, with storytelling and good wit and sharing, its important to gain friends in high society"
+    },
+    {
+      "id": "burocracy",
+      "name": "Burocracy",
+      "parent_skill_id": "diplomacy",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to work in a efficient manner in the a company or state buroucracy"
+    },
+    {
+      "id": "dignity",
+      "name": "Dignity",
+      "parent_skill_id": "diplomacy",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "little words are needed, a person with tremendous dignity is someone who can project a charming and confident self, its a basic skills to leaders and lords"
+    },
+    {
+      "id": "negociator_basic",
+      "name": "Negociator (Basic)",
+      "parent_skill_id": "haggle",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Negociator is the ability to use your haggling skills to negotiate and mediate in most instances, You're a deal maker, you make a living in through negotiating difficult trade. Whatever your background you are an expert at the art of negotiations. Either born with a silvered tong or forged skills through a teacher and experience, you have an uncanny ability to find the best deal no matter the situation"
+    },
+    {
+      "id": "salesman",
+      "name": "Salesman",
+      "parent_skill_id": "haggle",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Salesman is the skill which embodies the art of performing advances on unsuspecting people in order to offer services and productos for purchases, its really efficient to break the first barriers onto most people, but its useless with hostile targets, however, salesmen build trust upon each and every sale so their customers become sort or less their own personal network."
+    },
+    {
+      "id": "swindler",
+      "name": "Swindler",
+      "parent_skill_id": "haggle",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "A swindler, is adept into making people buy low quality items and trash for excessive amounts, they are regarded poorly by the merchant community but they still make a fair bit of dough. Also character capable of buying and selling item illegal items and substances, he knows who and where to buy and can sell small illegal goods in a few hours of work."
+    },
+    {
+      "id": "menace_inter",
+      "name": "Menace (inter)",
+      "parent_skill_id": "intimidation",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The ability to use intimidation effectively in battle related circumstances and overpower the enemy by using your body language and your actions rather than words, this skill becomes weak outside of battle"
+    },
+    {
+      "id": "undertaker_inter",
+      "name": "Undertaker (inter)",
+      "parent_skill_id": "intimidation",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Fear is a useful tool for those who know how to use it, The manipulation of others through the use of threats, both stated and implied. you can interrogate, threaten and coerce others force them by the sheer strenght of your personality, or simply instill fear into them, however this skill weakens inside of the battlefield."
+    },
+    {
+      "id": "war_cry_basic",
+      "name": "War Cry (basic)",
+      "parent_skill_id": "intimidation",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "an applied method of using intimidation by roaring or speaking loudly, its effective in the battlefield and sometimes outside of the battlefield"
+    },
+    {
+      "id": "fate_walker",
+      "name": "Fate Walker",
+      "parent_skill_id": "astrology",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to follow fate and let yourself go with the current of destiny, you are a awakening as a seer and fate is showing you visions and dreams"
+    },
+    {
+      "id": "fortune-telling",
+      "name": "Fortune-Telling",
+      "parent_skill_id": "astrology",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to glimpse the strands of fate and destiny that make up the universe, and can gain some glimmer of insight into the future as a result"
+    },
+    {
+      "id": "occultism",
+      "name": "Occultism",
+      "parent_skill_id": "astrology",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The user recognizes occult paraphernalia, words, and concepts, and identifies grimoires of magic and occult codes when he sees them. This is the skill that dives deep into superstision and obscure esoteric knowledge, some of it is bullshit some of it is the gate to the abyss"
+    },
+    {
+      "id": "basic_array_mastery",
+      "name": "Basic Array Mastery",
+      "parent_skill_id": "formal_magics",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to peform basic arrays, allowing a wide range of applications in magic based cultures, including the making of semi-permanent magic circles"
+    },
+    {
+      "id": "witchcraft",
+      "name": "Witchcraft",
+      "parent_skill_id": "formal_magics",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The ancient art of witchcraft as explained by the kabbalistic witches of the modern era, its rich in occult knowledge relating to nature and magic"
+    },
+    {
+      "id": "brewing",
+      "name": "Brewing",
+      "parent_skill_id": "herbalism",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The ability to produce distiled liquor from fruits and plants, it can be also used to ferment and distil other natural based products such as alcohol (beer, wine, etc) and any by product of distilling process."
+    },
+    {
+      "id": "horticulture",
+      "name": "Horticulture",
+      "parent_skill_id": "herbalism",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The ability to grow plants by the means of simple seeds or plant graft, ground and water. The user is capable of tending gardens or wildplants and caring for these plants to harvest useful fruits and other natural produce."
+    },
+    {
+      "id": "potion_making",
+      "name": "Potion Making",
+      "parent_skill_id": "herbalism",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The art of making potions and other products made by herbal processing products this is a large field of exploration and it is far reaching in its capacity to produce all sort of consumables"
+    },
+    {
+      "id": "basic_philosophy",
+      "name": "Basic Philosophy",
+      "parent_skill_id": "knowledge",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "A learned person is capable of understanding the concept of things and the ethereal behind the physical"
+    },
+    {
+      "id": "basic_schoolastic_mastery",
+      "name": "Basic Schoolastic Mastery",
+      "parent_skill_id": "knowledge",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The ability to research a wide variety of knowledges related to the parent knowledge, this is a ever growing skill, the more knowledge you posess the bigger its influence"
+    },
+    {
+      "id": "encyclopedia",
+      "name": "Encyclopedia",
+      "parent_skill_id": "knowledge",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "a simple generalized knowledge focused on knowing about the definition of a lot of things, its useful when traveling and has a large syngergy with appraisal skill"
+    },
+    {
+      "id": "high_knowledge",
+      "name": "High Knowledge",
+      "parent_skill_id": "knowledge",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The ability access a particular branch of a parent knowledge, unlike the parent knowledge which is rather generalistic this is a specific form of knowlege much more focused and much more detailed about a particular subject"
+    },
+    {
+      "id": "caligraphy",
+      "name": "Caligraphy",
+      "parent_skill_id": "linguistics",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Calligraphy is considered an art form by many, but it can be used in many ways as a means to deliver messages or as way to gain enlightment"
+    },
+    {
+      "id": "encoding",
+      "name": "Encoding",
+      "parent_skill_id": "linguistics",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to cipher, decipher and compress data into encoded messages, its a highly sought knowledge since most magical messages must be coded in someway. Its possible to create a cipher codex in order to create simplified cipher for common people"
+    },
+    {
+      "id": "inhuman_linguistics",
+      "name": "Inhuman Linguistics",
+      "parent_skill_id": "linguistics",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to translate ancient and lost languages provided that you have sufficient material to produce a codex. Otherwise, it also can generate a simplified codex of a language using enought data"
+    },
+    {
+      "id": "adept_lockpicking_inter",
+      "name": "Adept Lockpicking (Inter)",
+      "parent_skill_id": "lockpick",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to open adept level devises such as professional locks or 2nd tier locks"
+    },
+    {
+      "id": "sabotague",
+      "name": "Sabotague",
+      "parent_skill_id": "lockpick",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to break down and produce malfunction on simple mechanical devises"
+    },
+    {
+      "id": "security_adept_basic",
+      "name": "Security Adept (Basic)",
+      "parent_skill_id": "lockpick",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to understand security breaches and analyze how to best protect a enclosed location"
+    },
+    {
+      "id": "common_magic_object",
+      "name": "Common Magic Object",
+      "parent_skill_id": "magic_object",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "common objects such as rings and wands usually endowed with charges and commonly used by mages and commons"
+    },
+    {
+      "id": "defense_magic_object",
+      "name": "Defense Magic Object",
+      "parent_skill_id": "magic_object",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "objects specialized in defense and protection from magical rings, energy fields to structural defensive enchantments used only by mages usually by their large mana cost"
+    },
+    {
+      "id": "scrying_magic_object",
+      "name": "Scrying Magic Object",
+      "parent_skill_id": "magic_object",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "objects specialized in information transmision and detection often used by pure mages to scout large zones or informatiion visualization"
+    },
+    {
+      "id": "snare_master",
+      "name": "Snare Master",
+      "parent_skill_id": "trapper",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to use traps hidden in plain sight"
+    },
+    {
+      "id": "trap_seeker",
+      "name": "Trap Seeker",
+      "parent_skill_id": "trapper",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the proficiency to search for traps in a short amount of time"
+    },
+    {
+      "id": "trapcraft",
+      "name": "Trapcraft",
+      "parent_skill_id": "trapper",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to craft simple traps using simple natural resources"
+    },
+    {
+      "id": "danger_alert",
+      "name": "Danger Alert",
+      "parent_skill_id": "alert",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "a developed sense about perceiving danger when in alert circumstances by reading subtle changes in the ambiance"
+    },
+    {
+      "id": "heightened_senses_listening",
+      "name": "Heightened Senses (Listening)",
+      "parent_skill_id": "alert",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the proficiency to enhace your audition to distinguish small noises and perceive farther"
+    },
+    {
+      "id": "heightened_senses_smell",
+      "name": "Heightened Senses (Smell)",
+      "parent_skill_id": "alert",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the proficiency to enhace your sense of smell to distinguish and become sensitive to details"
+    },
+    {
+      "id": "heightened_senses_vision",
+      "name": "Heightened Senses (Vision)",
+      "parent_skill_id": "alert",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the proficiency to enhace your vision senses to perceive farther and more clear"
+    },
+    {
+      "id": "watchful_alert",
+      "name": "Watchful Alert",
+      "parent_skill_id": "alert",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to keep your alert in a constant state of seeking \"something\""
+    },
+    {
+      "id": "human_assessment",
+      "name": "Human Assessment",
+      "parent_skill_id": "appraisal",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The ability to appraise humanoid qualities on a target, it is used mostly by slavers and slave comerce in order to determine the \"quality\" of a humanoid target. The skill provides extra information such as a physical conditions, underlying medical details, and any superficial information."
+    },
+    {
+      "id": "judgment_item",
+      "name": "Judgment (Item)",
+      "parent_skill_id": "appraisal",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The ability to understand items and products and class them into ranks and levels, it allows the user to understand items highlights and downsides of an item, moreover, a raise will allow the user to learn about the item from the market perspective such as rumors and basic superficial lore. It can be used to uncover an items basic abilties and passives, higher levels of the skill allow the user to know more"
+    },
+    {
+      "id": "lesser_anti-forgery",
+      "name": "Lesser Anti-Forgery",
+      "parent_skill_id": "appraisal",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The ability to see throught fake items and similar counterfeit elements such as counterfeit money, smuggled items and similar items trying to pass as normal while beign imitations or fake."
+    },
+    {
+      "id": "combat_coordination_inter",
+      "name": "Combat Coordination (inter)",
+      "parent_skill_id": "battle",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to work in teams and exploit the potential of coordination in the battlefield, it includes coordinated manuvers, combination techniques or simply groupal actions. This skill bonus all forms of singular combinations where the user is part of the action at the individual level, however, groupal actions needs the user to be the leader in order for this skill to be effective"
+    },
+    {
+      "id": "guerrilla_warfare_basic",
+      "name": "Guerrilla Warfare (Basic)",
+      "parent_skill_id": "battle",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "use of specific military tactics including ambushes, sabotage, raids, petty warfare, hit-and-run tactics, and mobility, to fight a larger and less-mobile traditional military, it emphatizes heavily on sabotage and escape so it requieres certain knowledge of the battlefield and a good amount of movility."
+    },
+    {
+      "id": "tactical_trickster_inter",
+      "name": "Tactical Trickster (Inter)",
+      "parent_skill_id": "battle",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the use of tactics in order to influence the battlefield on a small unipersonal or group based conflicts. The trickster skill allows the user to perform tactical manouver in the battlefield to mislead the enemy and give him the wrong impresión, it can also be used to block other people tactical reading of a circumstance"
+    },
+    {
+      "id": "interrogation",
+      "name": "Interrogation",
+      "parent_skill_id": "investigation",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to extract information from a target using you observation power along with your skill in order break away lies and deceit"
+    },
+    {
+      "id": "lesser_enigma",
+      "name": "Lesser Enigma",
+      "parent_skill_id": "investigation",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Logic problems, puzzles and mysteries are all in the realm of Enigmas. Characters with this talent link information and hunches together to solve conundrums of all varieties, from the spiritual to the material"
+    },
+    {
+      "id": "sleuth",
+      "name": "Sleuth",
+      "parent_skill_id": "investigation",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The development of atention to fine details as well as logical deductions, its a skill used to make sharp remaks and perceive details which easily escape the common man. You've learned to notice details others might overlook, and might make an admirable detective. This knowledge represents not only a good eye for detail, but also an ability to do research and follow leads"
+    },
+    {
+      "id": "empathic_insight",
+      "name": "Empathic Insight",
+      "parent_skill_id": "sense_motive",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "You understand the emotions of others, and can sympathize with, feign sympathy for, or play on such emotions as you see fit. You are an easy hand at discerning motive, and might be able to pick up on when someone's lying to you. However, you may be so in tune with other people's feelings that your own emotions are affected"
+    },
+    {
+      "id": "judgement_person",
+      "name": "Judgement (Person)",
+      "parent_skill_id": "sense_motive",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "you have developed the ability to know instinctively when people are not telling you the truth or not telling you the whole truth. There is a way they look, a tone of voice, a movement of the eyes - you can’t analyze it, but it’s always there and your instincts rarely let you down."
+    },
+    {
+      "id": "lesser_counceling",
+      "name": "Lesser Counceling",
+      "parent_skill_id": "sense_motive",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "You are skilled in helping with mental stress and treating simple mental ailments (such as Derangements) without resorting to the use of behavior-altering drugs"
+    },
+    {
+      "id": "basic_magic_theory",
+      "name": "Basic Magic Theory",
+      "parent_skill_id": "spellcraft",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to study, disect and understand magic, its a rather technical skill used to obtain understanding magic and the laws of the world"
+    },
+    {
+      "id": "battlecraft",
+      "name": "Battlecraft",
+      "parent_skill_id": "spellcraft",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to use and apply magic during battle in a efficient manner, it makes the casting of magic more efficient by adjusting the user to chaotic enviroments, its a nesesary skill for mage knights"
+    },
+    {
+      "id": "spellbreaker",
+      "name": "SpellBreaker",
+      "parent_skill_id": "spellcraft",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to break magic apart by understanding its estructure and composition, this specialized skill would allow a non-mage to counter magic using basic physical components"
+    },
+    {
+      "id": "broker",
+      "name": "Broker",
+      "parent_skill_id": "streetwise",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to obtain assets from the street in a informal manner, you can buy drugs, illegal o forbidden materials or obtain vital information but everything has a price. Unlike \"black market\" this skill operates in the informal exchanges rather than organized transaction"
+    },
+    {
+      "id": "informant",
+      "name": "Informant",
+      "parent_skill_id": "streetwise",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to gather high class information and rummors, the user will be a able to quickly obtain news and details of happenings in a city scale region"
+    },
+    {
+      "id": "underworld",
+      "name": "Underworld",
+      "parent_skill_id": "streetwise",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to blend into the underworld, you can claim to be part of any gang or organized crime as long as you make some info gathering first"
+    },
+    {
+      "id": "hounding",
+      "name": "Hounding",
+      "parent_skill_id": "tracking",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The ability to search, seek and chase for a series of coherent marks, it is used by hunters and manhunters to search for people in dificult environments. It can also be used to search an area for specific clues where the user has a clear picture of what he is looking for."
+    },
+    {
+      "id": "hunting",
+      "name": "Hunting",
+      "parent_skill_id": "tracking",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "A skill focused on creating opportunities, it is used to enhace the chance of hunting wild animals by allowing the hunter to avoid begin discovered by the animal or prey and maximize oportunities."
+    },
+    {
+      "id": "tracing",
+      "name": "Tracing",
+      "parent_skill_id": "tracking",
+      "attribute": "PER",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The ability to read into marks and traces in order to extract information from them, it is used by people who wants to know what happened in a near-past, when enough data has been gathered a clearer picture of the past can be drawn, however it does not produce any form of deduction or elaboration."
+    },
+    {
+      "id": "bravery_inter",
+      "name": "Bravery (Inter)",
+      "parent_skill_id": "discipline",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "a trained discipline can lead to confront the natural fears, thus becoming someone with great control over one's own weakness, this is mostly focused on fear and terror inducing attacks, but it also works to counter other heart affecting events in lesser measure"
+    },
+    {
+      "id": "martial_temperance_basic",
+      "name": "Martial Temperance (Basic)",
+      "parent_skill_id": "discipline",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "A martial warrior cultivates not only the body but also their mind and spirit. This is martial temperament, skill focused on rejecting the outside influences to attain the level of abandonment of oneself"
+    },
+    {
+      "id": "soldier's_way_inter",
+      "name": "Soldier's Way (Inter)",
+      "parent_skill_id": "discipline",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The way of the soldier, a discipline trained to endure harsh conditions and stand in battle witout loosing focus despite the battlefield natural chaos."
+    },
+    {
+      "id": "astra_cultivation_basic",
+      "name": "Astra Cultivation (Basic)",
+      "parent_skill_id": "mental_focus",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Increase your astra slowly over time"
+    },
+    {
+      "id": "deep_focus_intermediate",
+      "name": "Deep Focus (Intermediate)",
+      "parent_skill_id": "mental_focus",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "A deeper state of focus you totally ignore your surroundings"
+    },
+    {
+      "id": "meditation_basic",
+      "name": "Meditation (Basic)",
+      "parent_skill_id": "mental_focus",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Recover Astra Quickly and Rest in a awake state but weak recovery power"
+    },
+    {
+      "id": "tension_focus_intermediate",
+      "name": "Tension Focus (Intermediate)",
+      "parent_skill_id": "mental_focus",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "A partial focus used to cast without loosing sight of your surroundings"
+    },
+    {
+      "id": "close_quarter_combat_basic",
+      "name": "Close Quarter Combat (Basic)",
+      "parent_skill_id": "brawling",
+      "attribute": "AGI",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "a specialized combat for very small spaces where kicks and punches are not allowed"
+    },
+    {
+      "id": "kick_boxing_basic",
+      "name": "Kick Boxing (Basic)",
+      "parent_skill_id": "brawling",
+      "attribute": "AGI",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "a style focused in kicking using great movility and outfighting moves"
+    },
+    {
+      "id": "pugilism_basic",
+      "name": "Pugilism (Basic)",
+      "parent_skill_id": "brawling",
+      "attribute": "AGI",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "fist fisting specialist a mix of defense and offense"
+    },
+    {
+      "id": "street_fighting_intermediate",
+      "name": "Street Fighting (Intermediate)",
+      "parent_skill_id": "brawling",
+      "attribute": "AGI",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Dirty fighting at its best, the cultivated strenght of the streets of rage!!"
+    },
+    {
+      "id": "traditional_martial_arts_basic",
+      "name": "Traditional Martial Arts (Basic)",
+      "parent_skill_id": "brawling",
+      "attribute": "AGI",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Clasical martial arts used by profesional practitioners of melee combat using only specific styles and weapons"
+    },
+    {
+      "id": "barbarian_scoundrel_technique",
+      "name": "Barbarian Scoundrel Technique",
+      "parent_skill_id": "light_weapons",
+      "attribute": "AGI",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the technique used by barbarians in battle where the use of armor is sacrificed for higher movility while using either Mid sized weapons of types blade and blunt. It offers bonus while not using any armor or battle cloth armor"
+    },
+    {
+      "id": "battle_hammer_technique",
+      "name": "Battle Hammer Technique",
+      "parent_skill_id": "light_weapons",
+      "attribute": "AGI",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The specialized use of one hand blunt weapons of any type weapons including both normal size and smaller sized weapons, however, only Light weapons can be used with this technique"
+    },
+    {
+      "id": "footman_technique",
+      "name": "Footman Technique",
+      "parent_skill_id": "light_weapons",
+      "attribute": "AGI",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the techique used by profesional infantry soldiers using light or middle armors, includes the use of a series of 5 weapons known as the infantry man classic weapons (Footman's Pike, Footman's Mace, Footman's Flail, Long sword and Javelin) , this technique is capable of using any variation of these 5 weapon. These weapons are rather common in any army or guardpost and this technique offers bonus while using light or middle armors"
+    },
+    {
+      "id": "light_blade_technique",
+      "name": "Light Blade Technique",
+      "parent_skill_id": "light_weapons",
+      "attribute": "AGI",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The specialized use of one hand blade weapons of any type weapons including both normal size and smaller sized weapons, however, only Light weapons can be used with this technique"
+    },
+    {
+      "id": "pikemen_technique",
+      "name": "Pikemen Technique",
+      "parent_skill_id": "light_weapons",
+      "attribute": "AGI",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The specialized use of one hand spear weapons and other piercing type weapons of any type weapons including both normal size and smaller sized weapons, however, only Light weapons can be used with this technique"
+    },
+    {
+      "id": "basic_green_blessing",
+      "name": "Basic, Green Blessing",
+      "parent_skill_id": "nature_focus",
+      "attribute": "CHA",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The power to channel energy of the \"green\" or Natural Force, this channel can be used to cast basic power. Green energy depends on the land and location, each landscape has some life and thus Green energy"
+    },
+    {
+      "id": "harmony_focus",
+      "name": "Harmony Focus",
+      "parent_skill_id": "nature_focus",
+      "attribute": "CHA",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "you turn your mind into becoming one with nature, thus your spirit becomes harmonious. Resist evil magic and influences and be welcomed by the inhabitants of nature"
+    },
+    {
+      "id": "lesser_nature_spirit_summoning",
+      "name": "Lesser Nature Spirit Summoning",
+      "parent_skill_id": "nature_focus",
+      "attribute": "CHA",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to summon spirits using Nature focus, harmony and offerings, its a classical staple of druids and rangers"
+    },
+    {
+      "id": "natural_body_focus",
+      "name": "Natural Body Focus",
+      "parent_skill_id": "nature_focus",
+      "attribute": "CHA",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to conect with nature and strenghten your body by harmonizing with the natural energy"
+    },
+    {
+      "id": "natural_sense_focus",
+      "name": "Natural Sense Focus",
+      "parent_skill_id": "nature_focus",
+      "attribute": "CHA",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to conect with nature and expand your senses spiritually"
+    },
+    {
+      "id": "basic_\"elemental\"_mana_method",
+      "name": "Basic \"Elemental\" Mana Method",
+      "parent_skill_id": "basic_mana_discipline",
+      "attribute": "INT",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Application of magic in battle, cast quicker and reduce battle penalty"
+    },
+    {
+      "id": "basic_\"iron\"_mana_method",
+      "name": "Basic \"Iron\" Mana Method",
+      "parent_skill_id": "basic_mana_discipline",
+      "attribute": "INT",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Application of magic in battle, become tougher and harder using mana"
+    },
+    {
+      "id": "elemental_commute_intermediate",
+      "name": "Elemental Commute (Intermediate)",
+      "parent_skill_id": "basic_mana_discipline",
+      "attribute": "INT",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Learn to attune your senses with the elemental energies and comute with them"
+    },
+    {
+      "id": "elemental_mana_ii_single_elemental",
+      "name": "Elemental Mana II (Single elemental)",
+      "parent_skill_id": "basic_mana_discipline",
+      "attribute": "INT",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Amplify your basic element into a stronger version of itself"
+    },
+    {
+      "id": "healing_mana_basic",
+      "name": "Healing Mana (Basic)",
+      "parent_skill_id": "basic_mana_discipline",
+      "attribute": "INT",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Reinforces the user natural healing factor into healing per round"
+    },
+    {
+      "id": "mana_conversion_basic",
+      "name": "Mana Conversion (Basic)",
+      "parent_skill_id": "basic_mana_discipline",
+      "attribute": "INT",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The principles of using mana by itself as a source of energy"
+    },
+    {
+      "id": "mental_reinforcement",
+      "name": "Mental Reinforcement",
+      "parent_skill_id": "basic_mana_discipline",
+      "attribute": "INT",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "It applies temporal feats in INT, PER or MIND when reinforcment is used"
+    },
+    {
+      "id": "physical_reinforcement",
+      "name": "Physical Reinforcement",
+      "parent_skill_id": "basic_mana_discipline",
+      "attribute": "INT",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "It applies temporal feats in STR, AGI or VIT when reinforcement is used"
+    },
+    {
+      "id": "rare_elementalism_double_elemental",
+      "name": "Rare Elementalism (Double elemental)",
+      "parent_skill_id": "basic_mana_discipline",
+      "attribute": "INT",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "You learn to use a Secondary Superior element such as Darkness, Light or Force"
+    },
+    {
+      "id": "reinforcemen_mana_ii_intermediate",
+      "name": "Reinforcemen Mana II (Intermediate)",
+      "parent_skill_id": "basic_mana_discipline",
+      "attribute": "INT",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Reinforcment applied to physical inanimate objects"
+    },
+    {
+      "id": "square_elementalism_four_elements",
+      "name": "Square Elementalism (Four Elements)",
+      "parent_skill_id": "basic_mana_discipline",
+      "attribute": "INT",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Diversify your mana magic into 4 different elements, all elements are still basic elements"
+    },
+    {
+      "id": "transmutation_mana_basic",
+      "name": "Transmutation Mana (Basic)",
+      "parent_skill_id": "basic_mana_discipline",
+      "attribute": "INT",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The principle of using mana to transmutate things in small scale"
+    },
+    {
+      "id": "mana_attunnement_i_basic",
+      "name": "Mana Attunnement I (Basic)",
+      "parent_skill_id": "mana_sensitivity",
+      "attribute": "PER",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to harness outside mana with a direct connection to you"
+    },
+    {
+      "id": "mana_body_intermediate",
+      "name": "Mana Body (Intermediate)",
+      "parent_skill_id": "mana_sensitivity",
+      "attribute": "PER",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the ability to harness the mana inside your own body"
+    },
+    {
+      "id": "mana_detection_intermediate",
+      "name": "Mana Detection (Intermediate)",
+      "parent_skill_id": "mana_sensitivity",
+      "attribute": "PER",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Allows the user to sense magic nearby"
+    },
+    {
+      "id": "mana_trance_basic",
+      "name": "Mana Trance (Basic)",
+      "parent_skill_id": "mana_sensitivity",
+      "attribute": "PER",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The ability to inmerse yourself into the flow of mana discarding your senses"
+    },
+    {
+      "id": "superior_mana_sensitivity",
+      "name": "Superior Mana Sensitivity",
+      "parent_skill_id": "mana_sensitivity",
+      "attribute": "PER",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The talent to understand mana better"
+    },
+    {
+      "id": "arbalist_technique",
+      "name": "Arbalist Technique",
+      "parent_skill_id": "projectile_weapons",
+      "attribute": "PER",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The specialized use of crossbows in all of their portatile variety from hand crossbows to heavy mounted crossbows, however, it excludes siege weapons such as ballistae or large mounted weapons. This skill attribute is PER for any rolls, however it is usable with bows with AGI attribute with no penalty"
+    },
+    {
+      "id": "barbarian_chaser_technique",
+      "name": "Barbarian Chaser Technique",
+      "parent_skill_id": "projectile_weapons",
+      "attribute": "PER",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the technique used by barbarians in battle where the use of armor is sacrificed for higher movility while using either short bow, hunting bow or throwing knives. It offers bonus while not using any armor or battle cloth armor"
+    },
+    {
+      "id": "basic_\"falcon_warrior\"_combat_method",
+      "name": "Basic \"Falcon Warrior\" Combat Method",
+      "parent_skill_id": "projectile_weapons",
+      "attribute": "PER",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "A combat method created by the Elven clans and turned into a methodical training system. It simply uses any type of short ranged projectile weapon such as the short bow, hand crossbow or the throwing blades to empower the user combat sense. Only one combat method can be active at any time"
+    },
+    {
+      "id": "bowman_technique",
+      "name": "Bowman Technique",
+      "parent_skill_id": "projectile_weapons",
+      "attribute": "PER",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The specialized use of middle and short range bows such as the short bow or the hunting bow, it excludes long range bows such as the long and great bows."
+    },
+    {
+      "id": "crossbow_infantry_technique",
+      "name": "Crossbow Infantry Technique",
+      "parent_skill_id": "projectile_weapons",
+      "attribute": "PER",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the technique used by by crossbow infantry soldiers or simply cross-bowmen, its a technique focused on the usage of light or winding crossbow and any similar crossbow in size and weight ranged, with light armor in order assamble a strong soldier unit. The technique is an all around technique and its the most popular ranged technique for soldiers and guards"
+    },
+    {
+      "id": "point_blank_technique",
+      "name": "Point Blank Technique",
+      "parent_skill_id": "projectile_weapons",
+      "attribute": "PER",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The specialized use of short and hand bows used when used under melee conditions, it excludes long range bows such as the long and great bows, medium bows such as the hunting bow."
+    },
+    {
+      "id": "basic_\"bear_guardian\"_combat_method",
+      "name": "Basic \"Bear Guardian\" Combat Method",
+      "parent_skill_id": "heavy_armor",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "A combat method created by the Orc clans and turned into a methodical training system. It simply uses any type of middle type of armor and middle type shields to develop the user combat senses. Only one combat method can be active at any time"
+    },
+    {
+      "id": "heavy_shield_technique_basic",
+      "name": "Heavy Shield Technique (Basic)",
+      "parent_skill_id": "heavy_armor",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "A technique focuses on the use of large shields such as tower, knight and kite shields, including all middle and large shields. Its popular for knights and defenders"
+    },
+    {
+      "id": "infantryman_armor_technique_inter",
+      "name": "Infantryman Armor Technique (Inter)",
+      "parent_skill_id": "heavy_armor",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "A technique used by hybrid and Middle type armor used to defend a position. Its a technique which maximizes the defense of middle armor while keeping a moderate mobility, you could call it an all around armor mechanic used by most soldiers"
+    },
+    {
+      "id": "ironclad_technique_inter",
+      "name": "IronClad Technique (Inter)",
+      "parent_skill_id": "heavy_armor",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "A technique for users combining heavy armor and shield, its a technique which armonizes both armor and shield into a single style, only midle level shields and heavy armors can be used in this style."
+    },
+    {
+      "id": "juggernaut_armor_technique_inter",
+      "name": "Juggernaut Armor Technique (Inter)",
+      "parent_skill_id": "heavy_armor",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "A technique used by heavy and colosal type of armors users, made to be slow but extremely durable, its classically refered as \"tank\" type technique"
+    },
+    {
+      "id": "basic_\"snake_trooper\"_combat_method",
+      "name": "Basic \"Snake Trooper\" Combat Method",
+      "parent_skill_id": "light_armor",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "A combat method created by the Dark Elven clans and turned into a methodical training system. It simply uses any type of Light type of armor and small shields to develop the user combat senses. Only one combat method can be active at any time"
+    },
+    {
+      "id": "blitzclad_technique_inter",
+      "name": "BlitzClad Technique (Inter)",
+      "parent_skill_id": "light_armor",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "Its called the agile defender, a technique created for troops which need high movility while keeping the advantages of a shield, it mixes partial light armor with hand shields or assambly shields, to produce a shock troops stronger defense. Its used by ambrushers and guerrilla units"
+    },
+    {
+      "id": "gladiatior_armor_technique_inter",
+      "name": "Gladiatior Armor Technique (Inter)",
+      "parent_skill_id": "light_armor",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "A technique used by partial middle type armor or partial light armor used to cover the cover in a incomplete manner to keep movement at maxium at all times. Its a technique which maximizes the movility of the user by removing pieces of armor while keeping a moderate defense, you could call it specialized defense for attackers and damage dealers"
+    },
+    {
+      "id": "light_shield_technique_basic",
+      "name": "Light Shield Technique (Basic)",
+      "parent_skill_id": "light_armor",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "A technique focuses on the use of small shields such as rodela, small and hand shields, including all small and assambly shields. Its popular for soldiers and vanguards"
+    },
+    {
+      "id": "vanguard_armor_technique_inter",
+      "name": "Vanguard Armor Technique (Inter)",
+      "parent_skill_id": "light_armor",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "A technique used by complete light armors users, made to keep movility and while keeping a high atack defense, its classically refered as the standart armor for most light infantry soldiers"
+    },
+    {
+      "id": "axeman_technique",
+      "name": "Axeman Technique",
+      "parent_skill_id": "melee_weapons",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The specialized use of heavy axe type weapons both in one hand and two hand forms, however, only heavy axes can be used with this technique"
+    },
+    {
+      "id": "barbarian_vandal_technique",
+      "name": "Barbarian Vandal Technique",
+      "parent_skill_id": "melee_weapons",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the technique used by barbarians in battle where the use of armor is sacrificed for higher movility while using either Great blades, Great Axes or Great maces. It offers bonus while not using any armor or battle cloth armor"
+    },
+    {
+      "id": "heavy_blade_technique",
+      "name": "Heavy Blade Technique",
+      "parent_skill_id": "melee_weapons",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The specialized use of heavy sword type weapons both in one hand and two hand forms, however, only heavy swords can be used with this technique"
+    },
+    {
+      "id": "heavy_spear_technique",
+      "name": "Heavy Spear Technique",
+      "parent_skill_id": "melee_weapons",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The specialized use of heavy spears type weapons both in one hand and two hand forms, however, only heavy spears can be used with this technique"
+    },
+    {
+      "id": "tower_soldier_technique",
+      "name": "Tower Soldier Technique",
+      "parent_skill_id": "melee_weapons",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the techique used by profesional heavy soldiers, who wield large weapons along with heavy armor. This is an entry level skill which uses only non-exotic two handed weapons such as great hammer, great sword, and heavy spear, it offers bonus while using heavy armor"
+    },
+    {
+      "id": "sprinter",
+      "name": "Sprinter",
+      "parent_skill_id": "athletism",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "a skill focusing athletic capacity into sprinting and running"
+    },
+    {
+      "id": "fitness",
+      "name": "Fitness",
+      "parent_skill_id": "athletism",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "a skill focusing athletic ability into extended fitness and endurance"
+    },
+    {
+      "id": "warhorse",
+      "name": "WarHorse",
+      "parent_skill_id": "riding",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill used to ride high ranking horses such as trained warhorses and similar trained mounts"
+    },
+    {
+      "id": "equestry",
+      "name": "Equestry",
+      "parent_skill_id": "riding",
+      "attribute": "AGI",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to perform all manners of manuvers while riding a mount"
+    },
+    {
+      "id": "showman",
+      "name": "Showman",
+      "parent_skill_id": "acting",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to draw atention and \"act\" in way that entertains the public"
+    },
+    {
+      "id": "theatre",
+      "name": "Theatre",
+      "parent_skill_id": "acting",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to perform acting in a established setting with greater inmersion"
+    },
+    {
+      "id": "musical_instrument",
+      "name": "Musical Instrument",
+      "parent_skill_id": "perform",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill needed to perform with a musical instrument"
+    },
+    {
+      "id": "singing",
+      "name": "Singing",
+      "parent_skill_id": "perform",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill needed to perform with a singing voice, skill does not guarantee the actual voice quality"
+    },
+    {
+      "id": "dancing",
+      "name": "Dancing",
+      "parent_skill_id": "perform",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill needed to perform using body expression and similar dancing moves"
+    },
+    {
+      "id": "anomaly_sense",
+      "name": "Anomaly Sense",
+      "parent_skill_id": "spirit_sensitivity",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill needed to perceive supernatural begins in a more consise way, still its erratic and cannot \"see\" spirits"
+    },
+    {
+      "id": "karmic_bond",
+      "name": "Karmic Bond",
+      "parent_skill_id": "spirit_sensitivity",
+      "attribute": "CHA",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill needed to bond with a spirit and feel the bonding in some degree"
+    },
+    {
+      "id": "metalwork",
+      "name": "Metalwork",
+      "parent_skill_id": "craft",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill neded to work on metal on a very rudimentary way, similar to making horseshoes or simle cookign utencils"
+    },
+    {
+      "id": "woodwork",
+      "name": "Woodwork",
+      "parent_skill_id": "craft",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill neded to work on wood on a rough way, good for making simple furniture and basic wood tools"
+    },
+    {
+      "id": "gumption",
+      "name": "Gumption",
+      "parent_skill_id": "culture_lore",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to understand the way people think within a certain zone, it allows you use local customs and prejudices to your advantage"
+    },
+    {
+      "id": "folklore",
+      "name": "Folklore",
+      "parent_skill_id": "culture_lore",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the lore of the folk, it lets you understand the common knowledge shared among the locals in a zone including their myths and trends"
+    },
+    {
+      "id": "repairs",
+      "name": "Repairs",
+      "parent_skill_id": "mechanics",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to repair mechanical items, but it cannot repair destroyed ones"
+    },
+    {
+      "id": "mechanic_operation",
+      "name": "Mechanic Operation",
+      "parent_skill_id": "mechanics",
+      "attribute": "INT",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill needed to operate mechanical devises such as vehicles or simple machines"
+    },
+    {
+      "id": "cliffhangger",
+      "name": "CliffHangger",
+      "parent_skill_id": "climbing",
+      "attribute": "STR",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to use climbing ropes and aparel in order to secure a climb where there are no natural ways"
+    },
+    {
+      "id": "freerunning",
+      "name": "Freerunning",
+      "parent_skill_id": "climbing",
+      "attribute": "STR",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to bypass obstacles using speed and rapid weight balance"
+    },
+    {
+      "id": "potionmaking",
+      "name": "PotionMaking",
+      "parent_skill_id": "cooking",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to create simple potions by cooking ingredients and storing them in small bottles, the skill does not provide recipes"
+    },
+    {
+      "id": "monster_cooking",
+      "name": "Monster Cooking",
+      "parent_skill_id": "cooking",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to cook monster meat with low toxicity in order to extract the toxic elements in the process"
+    },
+    {
+      "id": "mending",
+      "name": "Mending",
+      "parent_skill_id": "handicraft",
+      "attribute": "STR",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to mend hard structures and similar crafts using simple trash items"
+    },
+    {
+      "id": "survival_craft",
+      "name": "Survival Craft",
+      "parent_skill_id": "handicraft",
+      "attribute": "STR",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to handicraft items from the environment when there are little or no resources avalible"
+    },
+    {
+      "id": "native_climate",
+      "name": "Native Climate",
+      "parent_skill_id": "inclemence",
+      "attribute": "STR",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to adapt to specific climates and natural biomes by exposing to them on a regular basis"
+    },
+    {
+      "id": "weatherproof",
+      "name": "Weatherproof",
+      "parent_skill_id": "inclemence",
+      "attribute": "STR",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to endure and resist bad weather by toughening up the body and learning how to cope with each element"
+    },
+    {
+      "id": "tunneling",
+      "name": "Tunneling",
+      "parent_skill_id": "minning",
+      "attribute": "STR",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to dig the ground and create relatively stable pathway underground over a long period of time"
+    },
+    {
+      "id": "rockminning",
+      "name": "RockMinning",
+      "parent_skill_id": "minning",
+      "attribute": "STR",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to mine rocks and other hard ore type substances"
+    },
+    {
+      "id": "deep_slumber",
+      "name": "Deep Slumber",
+      "parent_skill_id": "rest",
+      "attribute": "STR",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to protect your rest quality against disturbances while ensuring a greater recovery"
+    },
+    {
+      "id": "meditation_basic",
+      "name": "Meditation (Basic)",
+      "parent_skill_id": "rest",
+      "attribute": "STR",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "an alternative form of rest that allows for a shallow loss of conciousness in exchange of less rest quality but larger lucidity"
+    },
+    {
+      "id": "symboloftruth_ii",
+      "name": "SymbolOfTruth II",
+      "parent_skill_id": "faith",
+      "attribute": "CHA",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the divine discipline of the Symbol of Truth"
+    },
+    {
+      "id": "scalesoftruth",
+      "name": "ScalesOfTruth",
+      "parent_skill_id": "faith",
+      "attribute": "CHA",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the use of the symbol of truth divine icon and its power to forcefully showcase the truth"
+    },
+    {
+      "id": "holylight_ii",
+      "name": "HolyLight II",
+      "parent_skill_id": "faith",
+      "attribute": "CHA",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the divine discipline of the Holy Light"
+    },
+    {
+      "id": "armoroflight",
+      "name": "ArmorOfLight",
+      "parent_skill_id": "faith",
+      "attribute": "CHA",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the use of the holy light icon and its power to increase the vitality of the user"
+    },
+    {
+      "id": "sacreddarkness_ii",
+      "name": "SacredDarkness II",
+      "parent_skill_id": "faith",
+      "attribute": "CHA",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the divine discipline of the Sacred darkness"
+    },
+    {
+      "id": "fogofdarkness",
+      "name": "FogOfDarkness",
+      "parent_skill_id": "faith",
+      "attribute": "CHA",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the use of the sacred darkness icon and its power to create a magical fog that hides all forms"
+    },
+    {
+      "id": "agriculture",
+      "name": "Agriculture",
+      "parent_skill_id": "farming",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to tend the land with cultivate multiple types of crops and tend to the fields"
+    },
+    {
+      "id": "ranching",
+      "name": "Ranching",
+      "parent_skill_id": "farming",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to tend ranch animals such as cows, goats, and others with knowledge to tend to them"
+    },
+    {
+      "id": "treatment",
+      "name": "Treatment",
+      "parent_skill_id": "healing",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to tend to a patient over a long period of time while caring for physical injuries"
+    },
+    {
+      "id": "combatmedic",
+      "name": "CombatMedic",
+      "parent_skill_id": "healing",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to tend to injuried combat personeel in the battlefield while doing bare minimal first aid"
+    },
+    {
+      "id": "prayer",
+      "name": "Prayer",
+      "parent_skill_id": "piety",
+      "attribute": "WIL",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill call upon the blessings of heaven by praying with a very small chance to bring positiveness"
+    },
+    {
+      "id": "zeal",
+      "name": "Zeal",
+      "parent_skill_id": "piety",
+      "attribute": "WIL",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to deliver oneself to the divine and protect your spirit and mind by embracing faith"
+    },
+    {
+      "id": "piety_ii",
+      "name": "Piety II",
+      "parent_skill_id": "piety",
+      "attribute": "WIL",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The main proficiency for attuning oneself with divine power and commune with it"
+    },
+    {
+      "id": "still_mind_ii",
+      "name": "Still Mind II",
+      "parent_skill_id": "still_mind_focus",
+      "attribute": "WIL",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to keep calm forcefully and strenghten your lucidity even in extreme combat circumstances"
+    },
+    {
+      "id": "combat_mind",
+      "name": "Combat Mind",
+      "parent_skill_id": "still_mind_focus",
+      "attribute": "WIL",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the skill to enhace combat senses and allow the user to enter a high pace mental state increasing"
+    },
+    {
+      "id": "caravaneer",
+      "name": "Caravaneer",
+      "parent_skill_id": "wayfarer",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "a skill focused on guiding and leading a number of people safely"
+    },
+    {
+      "id": "pathfinder",
+      "name": "Pathfinder",
+      "parent_skill_id": "wayfarer",
+      "attribute": "WIL",
+      "kind": "SUPPORT",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "a skill focused on finding lost paths in treacherous roads"
+    }
+  ],
+  "advanced_knowledge": [],
+  "perks": [
+    {
+      "id": "perk_scarecrow",
+      "name": "Scarecrow",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "Damn!, you are scary, your whole deamenor gives you that dangerous look and ungodly aura, and it can be a really useful sometimes",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 120,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_harmless_fatale",
+      "name": "Harmless Fatale",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "Despite your clear lack of charisma, you project a clear aura and image of begin has deadly as a hamster, this triggers protective instincts from people of the \"oposite sex\" which can be good or bad depending on the circumstance (bad beucase you look unreliable and good beucase you can inspire protective instincts), however anyone that falls into this image/prejudice actively will grant the user a circumstance bonus. its applied to both social and non-social bases circumstances, even a sneak attack will add a bonus. CANNOT be taken with Scarecrow Anti-Perk",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 110,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_threatening_presence",
+      "name": "Threatening Presence",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "You look as someone who is dangerous, perhaps a thug, perhaps a criminal or a madman ready to stab someone, in simple terms no one wants to be near you by simple fear of you freaking out in public, even animals will react accordingly and guards will often stop you to ask about your business",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 100,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_innocently_insensitive",
+      "name": "Innocently Insensitive",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "a Flawled capacity for emphaty in the ability to detect, decipher and comprehend emotion may be a blessing in disguise, you have a natural resistance toward charisma based attacks such as war cry, intimidation and charm",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 120,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_unbeliveable",
+      "name": "Unbeliveable",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "You try your hardest to tell someone the truth but you simply and plainly are rather shady looking and with face saying that \"im a scammer\",  you are simply unbelibeable but this can work on your advantage as people will regard you as a uncertain factor",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 110,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_natural_menace",
+      "name": "Natural Menace",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "you project THAT image, you look shady as hell, as if you are scheming something, you are clearly the villian in people's eye. You gain natural reputation toward the vilified and rejections of society, your charisma works as if it was much higher",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 100,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_motormouth",
+      "name": "Motormouth",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "you speak unnaturally fast, you mouth also moves before you think!, its easy to screw things up but in exchange you reduce the time used for the \"Verbal\" component of most actions, any pure verbal action will be reduced in execution by 60%, while any action with a partial verbal component is reduced by 30% in average.",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 120,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_noise_cancel",
+      "name": "Noise Cancel",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "Your words have a particular tone and accent which people find annoying, its like a screech in the background or a white noise that plays as you talk. However, your mouth has the power to cancel other charisma attacks or intercept sound based debacles. You got a group falling asleep for a hypnotic lullaby, then just talk normally and the effect will dminish or be cancelled altogether",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 110,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_the_bore",
+      "name": "The Bore",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "This is a person whose conversation is so dull, you would rather watch paint dry for an hour than listen to them for a minute. This works like a charm as a Charisma based attack toward the \"Willpower\" attribute, temporarily reducing the enemy attribute and even softening any mental resilence by lowering the awareness",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 100,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_whisperer_chain",
+      "name": "Whisperer Chain",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "your words lose power the more you talk, anything more than 5 words makes your words become weak and dilluited as if your voice was drowned into a whisper.",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 120,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_silence_is_gold",
+      "name": "Silence is Gold",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "When you are silent and not moving, you produce a special charisma based aura effect, this aura effect varies according to the other people mood, in other words, some people will see the person as scary and some will feel him begin imposing, while others will feel presured, its all in the imagination of the onlooker, however, the mood in the room will affect this effect in great measure. A character with high willpower score 350+ are inmune to this effect. This effect is mantained as long as the user is silent and his actions work in line with the target perception",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 110,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_stone_mask",
+      "name": "Stone Mask",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "Your face is disconected from your emotional side just enough so it becomes your personal trademark. your heart burns but your face never shows, this leads to a heightened dificulty on \"Sense motive\" against you and other skill that read the character mood a severe penalty to skills used to express your emotions",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 100,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_stereotyping",
+      "name": "Stereotyping",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "Whenever you can fall into a stereotype your mark believes in (such as that orcs are brutal and cruel, women are scared and helpless, or that halflings are all thieves, etc.), you end up fitting and flowing with it thus againing advantage in social instances.  This bonus is not cumulative if several prejudices can be used at once. For example, if your mark believes that halflings are scared and helpless, and that women are also scared and helpless you will only gain one single prejudice type even if you have both qualities (woman and halfling in the example). but this breaks once you take a clear action that defies this notion.",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 120,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_clown_ears",
+      "name": "Clown Ears",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "you apear to be a natural clown in your responses and deamenor, and due to your low charisma this makes others perceive you as a joke. However in exchange people will become talkactive and easily confide in you, sometimes beyond their own will",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 110,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_karmic_hideout",
+      "name": "Karmic Hideout",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "you have such low charisma and your actions are so clearly directed with prejudice that they hide a single truth: your alignment becomes obscured, and it cannot be exactly judged from your actions. With the exception of clear cut actions such as murder most people will classify you as morally grey and have different views on your alignment and general disposition, this not only obscures the alignment itself but also some traits such as a killer bloodlust or a paladin goodness",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 100,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_dangerous_atraction",
+      "name": "Dangerous Atraction",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "You tend to attract the attention of the wrong crowd, and even when doing nothing will become socially interwited with people of questionable nature and dangerous inclination",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 120,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_bland",
+      "name": "Bland",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "You have no features, no distinctive presence you are almost forgeteable, and this can become a blessing to you. Bland makes the user hard to identify and easily pass unnoticed when walking in a crowd. You gain a  passive stealth bonus when moving  in a group of people, moreover, you add a hard penalty to identify or mark you",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 110,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_innate_troll",
+      "name": "Innate Troll",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "you easily speak the wrong things and have the uncanny nature to call into social problems, you will make exactly the wrong comment at the wrong time, and sometimes unknownly you will simply step on the proverbial dragons tail just by doing something completly mundane, its a curse and sometimes a boon",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": 100,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_freakshow",
+      "name": "Freakshow",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "You cause natural aphaty and rejection from people, its not nesesarily your looks but also you deamenor and voice, all of it composes a very misleading image to the point where you would rather speak behind a curtain. You have a natural \"Aggro\" aura that confuses and drives anyone to be hostile toward you, this is not applicable to \"declared allies\" or allies who can identify the user, but most neutral units will be confused and disconserted",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": null,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_sociophaty_for_fun",
+      "name": "Sociophaty for Fun",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "??????",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": null,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_gargoyle_mumbling",
+      "name": "Gargoyle Mumbling",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "??????",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": null,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_silent_accomplice",
+      "name": "Silent Accomplice",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "?????",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": null,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_almost_faceless",
+      "name": "Almost Faceless",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "??????",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": null,
+      "enhanced_text": null
+    },
+    {
+      "id": "perk_storm_caller",
+      "name": "Storm Caller",
+      "subject": "",
+      "family": "",
+      "tier": "",
+      "bonus_category": null,
+      "bonus_type": null,
+      "text": "????",
+      "boundary": "",
+      "counterweight": null,
+      "enhanced_threshold": null,
+      "enhanced_text": null
+    }
+  ],
+  "feats": [
+    {
+      "id": "feat_scarecrow",
+      "name": "Scarecrow",
+      "perk_ids": [
+        "perk_scarecrow"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_appearance",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 140
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 140.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_harmless_fatale",
+      "name": "Harmless Fatale",
+      "perk_ids": [
+        "perk_harmless_fatale"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_appearance",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 130
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 130.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_threatening_presence",
+      "name": "Threatening Presence",
+      "perk_ids": [
+        "perk_threatening_presence"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_appearance",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 120
+        }
+      ],
+      "rarity": "UNCOMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 120.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_innocently_insensitive",
+      "name": "Innocently Insensitive",
+      "perk_ids": [
+        "perk_innocently_insensitive"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_empathy",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 140
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 140.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_unbeliveable",
+      "name": "Unbeliveable",
+      "perk_ids": [
+        "perk_unbeliveable"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_empathy",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 130
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 130.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_natural_menace",
+      "name": "Natural Menace",
+      "perk_ids": [
+        "perk_natural_menace"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_empathy",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 120
+        }
+      ],
+      "rarity": "UNCOMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 120.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_motormouth",
+      "name": "Motormouth",
+      "perk_ids": [
+        "perk_motormouth"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_communication",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 140
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 140.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_noise_cancel",
+      "name": "Noise Cancel",
+      "perk_ids": [
+        "perk_noise_cancel"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_communication",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 130
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 130.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_the_bore",
+      "name": "The Bore",
+      "perk_ids": [
+        "perk_the_bore"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_communication",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 120
+        }
+      ],
+      "rarity": "UNCOMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 120.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_whisperer_chain",
+      "name": "Whisperer Chain",
+      "perk_ids": [
+        "perk_whisperer_chain"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_silence",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 140
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 140.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_silence_is_gold",
+      "name": "Silence is Gold",
+      "perk_ids": [
+        "perk_silence_is_gold"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_silence",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 130
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 130.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_stone_mask",
+      "name": "Stone Mask",
+      "perk_ids": [
+        "perk_stone_mask"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_silence",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 120
+        }
+      ],
+      "rarity": "UNCOMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 120.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_stereotyping",
+      "name": "Stereotyping",
+      "perk_ids": [
+        "perk_stereotyping"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_prejudice",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 140
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 140.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_clown_ears",
+      "name": "Clown Ears",
+      "perk_ids": [
+        "perk_clown_ears"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_prejudice",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 130
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 130.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_karmic_hideout",
+      "name": "Karmic Hideout",
+      "perk_ids": [
+        "perk_karmic_hideout"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_prejudice",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 120
+        }
+      ],
+      "rarity": "UNCOMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 120.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_dangerous_atraction",
+      "name": "Dangerous Atraction",
+      "perk_ids": [
+        "perk_dangerous_atraction"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_magnetism",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 140
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 140.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_bland",
+      "name": "Bland",
+      "perk_ids": [
+        "perk_bland"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_magnetism",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 130
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 130.",
+      "is_anti_perk": true
+    },
+    {
+      "id": "feat_innate_troll",
+      "name": "Innate Troll",
+      "perk_ids": [
+        "perk_innate_troll"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_magnetism",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 120
+        }
+      ],
+      "rarity": "UNCOMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 120.",
+      "is_anti_perk": true
+    }
+  ],
+  "fusions": [
+    {
+      "id": "fusion_freakshow",
+      "name": "Freakshow",
+      "perk_ids": [
+        "perk_freakshow"
+      ],
+      "job": [
+        "PROGRESS",
+        "SIMPLIFICATION"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_appearance",
+      "fusion_root_id": "fusion_root_freakshow",
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 110
+        },
+        {
+          "type": "PRIOR_NODE",
+          "target": "feat_intimidating_presence",
+          "threshold": null
+        },
+        {
+          "type": "PRIOR_NODE",
+          "target": "feat_stereotyping",
+          "threshold": null
+        }
+      ],
+      "rarity": "RARE",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 110.",
+      "operator": "COMPRESSION",
+      "parents": [
+        {
+          "feat_id": "feat_intimidating_presence",
+          "disposition": "INTEGRATED"
+        },
+        {
+          "feat_id": "feat_stereotyping",
+          "disposition": "INTEGRATED"
+        }
+      ],
+      "target_trait_id": null,
+      "cp_refund": null,
+      "is_anti_perk": true
+    },
+    {
+      "id": "fusion_sociophaty_for_fun",
+      "name": "Sociophaty for Fun",
+      "perk_ids": [
+        "perk_sociophaty_for_fun"
+      ],
+      "job": [
+        "PROGRESS",
+        "SIMPLIFICATION"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_empathy",
+      "fusion_root_id": "fusion_root_sociophaty_for_fun",
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 110
+        },
+        {
+          "type": "PRIOR_NODE",
+          "target": "feat_natural_menace",
+          "threshold": null
+        },
+        {
+          "type": "PRIOR_NODE",
+          "target": "feat_dangerous_attraction",
+          "threshold": null
+        }
+      ],
+      "rarity": "RARE",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 110.",
+      "operator": "COMPRESSION",
+      "parents": [
+        {
+          "feat_id": "feat_natural_menace",
+          "disposition": "INTEGRATED"
+        },
+        {
+          "feat_id": "feat_dangerous_attraction",
+          "disposition": "INTEGRATED"
+        }
+      ],
+      "target_trait_id": null,
+      "cp_refund": null,
+      "is_anti_perk": true
+    },
+    {
+      "id": "fusion_gargoyle_mumbling",
+      "name": "Gargoyle Mumbling",
+      "perk_ids": [
+        "perk_gargoyle_mumbling"
+      ],
+      "job": [
+        "PROGRESS",
+        "SIMPLIFICATION"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_communication",
+      "fusion_root_id": "fusion_root_gargoyle_mumbling",
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 110
+        },
+        {
+          "type": "PRIOR_NODE",
+          "target": "feat_the_bore",
+          "threshold": null
+        },
+        {
+          "type": "PRIOR_NODE",
+          "target": "feat_scarecrow",
+          "threshold": null
+        }
+      ],
+      "rarity": "RARE",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 110.",
+      "operator": "COMPRESSION",
+      "parents": [
+        {
+          "feat_id": "feat_the_bore",
+          "disposition": "INTEGRATED"
+        },
+        {
+          "feat_id": "feat_scarecrow",
+          "disposition": "INTEGRATED"
+        }
+      ],
+      "target_trait_id": null,
+      "cp_refund": null,
+      "is_anti_perk": true
+    },
+    {
+      "id": "fusion_silent_accomplice",
+      "name": "Silent Accomplice",
+      "perk_ids": [
+        "perk_silent_accomplice"
+      ],
+      "job": [
+        "PROGRESS",
+        "SIMPLIFICATION"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_silence",
+      "fusion_root_id": "fusion_root_silent_accomplice",
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 110
+        },
+        {
+          "type": "PRIOR_NODE",
+          "target": "feat_stone_mask",
+          "threshold": null
+        },
+        {
+          "type": "PRIOR_NODE",
+          "target": "feat_clown_ears",
+          "threshold": null
+        }
+      ],
+      "rarity": "RARE",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 110.",
+      "operator": "COMPRESSION",
+      "parents": [
+        {
+          "feat_id": "feat_stone_mask",
+          "disposition": "INTEGRATED"
+        },
+        {
+          "feat_id": "feat_clown_ears",
+          "disposition": "INTEGRATED"
+        }
+      ],
+      "target_trait_id": null,
+      "cp_refund": null,
+      "is_anti_perk": true
+    },
+    {
+      "id": "fusion_almost_faceless",
+      "name": "Almost Faceless",
+      "perk_ids": [
+        "perk_almost_faceless"
+      ],
+      "job": [
+        "PROGRESS",
+        "SIMPLIFICATION"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_prejudice",
+      "fusion_root_id": "fusion_root_almost_faceless",
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 110
+        },
+        {
+          "type": "PRIOR_NODE",
+          "target": "feat_karmic_hideout",
+          "threshold": null
+        },
+        {
+          "type": "PRIOR_NODE",
+          "target": "feat_bland",
+          "threshold": null
+        }
+      ],
+      "rarity": "RARE",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 110.",
+      "operator": "COMPRESSION",
+      "parents": [
+        {
+          "feat_id": "feat_karmic_hideout",
+          "disposition": "INTEGRATED"
+        },
+        {
+          "feat_id": "feat_bland",
+          "disposition": "INTEGRATED"
+        }
+      ],
+      "target_trait_id": null,
+      "cp_refund": null,
+      "is_anti_perk": true
+    },
+    {
+      "id": "fusion_storm_caller",
+      "name": "Storm Caller",
+      "perk_ids": [
+        "perk_storm_caller"
+      ],
+      "job": [
+        "PROGRESS",
+        "SIMPLIFICATION"
+      ],
+      "authority_root": {
+        "type": "ATTRIBUTE",
+        "id": "CHA"
+      },
+      "practice_root_id": "practice_anti_magnetism",
+      "fusion_root_id": "fusion_root_storm_caller",
+      "sources": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE_CEILING",
+          "target": "CHA",
+          "threshold": 110
+        },
+        {
+          "type": "PRIOR_NODE",
+          "target": "feat_innate_troll",
+          "threshold": null
+        },
+        {
+          "type": "PRIOR_NODE",
+          "target": "feat_innocently_insensitive",
+          "threshold": null
+        }
+      ],
+      "rarity": "RARE",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "Suspends if CHA rises above 110.",
+      "operator": "COMPRESSION",
+      "parents": [
+        {
+          "feat_id": "feat_innate_troll",
+          "disposition": "INTEGRATED"
+        },
+        {
+          "feat_id": "feat_innocently_insensitive",
+          "disposition": "INTEGRATED"
+        }
+      ],
+      "target_trait_id": null,
+      "cp_refund": null,
+      "is_anti_perk": true
+    }
+  ],
+  "traits": [],
+  "classes": [],
+  "unlock_lines": [],
+  "keystones": [],
+  "effect_ladder": [],
+  "skill_level_table": [
+    {
+      "level": 1,
+      "success_tn": 15,
+      "great_tn": 40,
+      "epic_tn": null,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+6",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 0,
+      "cp_cost_accum": 0,
+      "mastery_label": null,
+      "cp_cost_mastery": 0,
+      "cp_accum_mastery": 0,
+      "knowledge_tier": "CORE"
+    },
+    {
+      "level": 2,
+      "success_tn": 14,
+      "great_tn": 39,
+      "epic_tn": null,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+7",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 5,
+      "cp_cost_accum": 5,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 5,
+      "knowledge_tier": "CORE"
+    },
+    {
+      "level": 3,
+      "success_tn": 13,
+      "great_tn": 38,
+      "epic_tn": null,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+8",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 5,
+      "cp_cost_accum": 10,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 10,
+      "knowledge_tier": "CORE"
+    },
+    {
+      "level": 4,
+      "success_tn": 12,
+      "great_tn": 37,
+      "epic_tn": null,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+9",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 5,
+      "cp_cost_accum": 15,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 15,
+      "knowledge_tier": "CORE"
+    },
+    {
+      "level": 5,
+      "success_tn": 11,
+      "great_tn": 36,
+      "epic_tn": null,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+10",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 5,
+      "cp_cost_accum": 20,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 20,
+      "knowledge_tier": "CORE"
+    },
+    {
+      "level": 6,
+      "success_tn": 10,
+      "great_tn": 35,
+      "epic_tn": null,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+11",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 10,
+      "cp_cost_accum": 30,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 25,
+      "knowledge_tier": "CORE"
+    },
+    {
+      "level": 7,
+      "success_tn": 10,
+      "great_tn": 34,
+      "epic_tn": null,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+12",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 10,
+      "cp_cost_accum": 40,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 30,
+      "knowledge_tier": "CORE"
+    },
+    {
+      "level": 8,
+      "success_tn": 10,
+      "great_tn": 33,
+      "epic_tn": null,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+13",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 10,
+      "cp_cost_accum": 50,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 35,
+      "knowledge_tier": "CORE"
+    },
+    {
+      "level": 9,
+      "success_tn": 10,
+      "great_tn": 32,
+      "epic_tn": null,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+14",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 10,
+      "cp_cost_accum": 60,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 40,
+      "knowledge_tier": "CORE"
+    },
+    {
+      "level": 10,
+      "success_tn": 10,
+      "great_tn": 31,
+      "epic_tn": null,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+15",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 10,
+      "cp_cost_accum": 70,
+      "mastery_label": "Domini (-5CP)",
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 45,
+      "knowledge_tier": "CORE"
+    },
+    {
+      "level": 11,
+      "success_tn": 10,
+      "great_tn": 30,
+      "epic_tn": 54,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+21",
+      "dice_pool": null,
+      "unlock": "Specialization (I)",
+      "cp_cost": 15,
+      "cp_cost_accum": 85,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 50,
+      "knowledge_tier": "ADVANCED"
+    },
+    {
+      "level": 12,
+      "success_tn": 9,
+      "great_tn": 29,
+      "epic_tn": 53,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+22",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 15,
+      "cp_cost_accum": 100,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 55,
+      "knowledge_tier": "ADVANCED"
+    },
+    {
+      "level": 13,
+      "success_tn": 8,
+      "great_tn": 28,
+      "epic_tn": 52,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+23",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 15,
+      "cp_cost_accum": 115,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 60,
+      "knowledge_tier": "ADVANCED"
+    },
+    {
+      "level": 14,
+      "success_tn": 7,
+      "great_tn": 27,
+      "epic_tn": 51,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+24",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 15,
+      "cp_cost_accum": 130,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 65,
+      "knowledge_tier": "ADVANCED"
+    },
+    {
+      "level": 15,
+      "success_tn": 6,
+      "great_tn": 26,
+      "epic_tn": 50,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+25",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 15,
+      "cp_cost_accum": 145,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 70,
+      "knowledge_tier": "ADVANCED"
+    },
+    {
+      "level": 16,
+      "success_tn": 5,
+      "great_tn": 25,
+      "epic_tn": 49,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+26",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 15,
+      "cp_cost_accum": 160,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 75,
+      "knowledge_tier": "ADVANCED"
+    },
+    {
+      "level": 17,
+      "success_tn": 5,
+      "great_tn": 24,
+      "epic_tn": 48,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+27",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 15,
+      "cp_cost_accum": 175,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 80,
+      "knowledge_tier": "ADVANCED"
+    },
+    {
+      "level": 18,
+      "success_tn": 5,
+      "great_tn": 23,
+      "epic_tn": 47,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+28",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 15,
+      "cp_cost_accum": 190,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 85,
+      "knowledge_tier": "ADVANCED"
+    },
+    {
+      "level": 19,
+      "success_tn": 5,
+      "great_tn": 22,
+      "epic_tn": 46,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+29",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 15,
+      "cp_cost_accum": 205,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 90,
+      "knowledge_tier": "ADVANCED"
+    },
+    {
+      "level": 20,
+      "success_tn": 5,
+      "great_tn": 21,
+      "epic_tn": 45,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+30",
+      "dice_pool": null,
+      "unlock": "Focus(Sp I)",
+      "cp_cost": 15,
+      "cp_cost_accum": 220,
+      "mastery_label": null,
+      "cp_cost_mastery": 5,
+      "cp_accum_mastery": 95,
+      "knowledge_tier": "ADVANCED"
+    },
+    {
+      "level": 21,
+      "success_tn": 5,
+      "great_tn": 20,
+      "epic_tn": 44,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+31",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 20,
+      "cp_cost_accum": 240,
+      "mastery_label": null,
+      "cp_cost_mastery": 10,
+      "cp_accum_mastery": 105,
+      "knowledge_tier": "ADVANCED"
+    },
+    {
+      "level": 22,
+      "success_tn": 5,
+      "great_tn": 19,
+      "epic_tn": 43,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+32",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 20,
+      "cp_cost_accum": 260,
+      "mastery_label": null,
+      "cp_cost_mastery": 10,
+      "cp_accum_mastery": 115,
+      "knowledge_tier": "ADVANCED"
+    },
+    {
+      "level": 23,
+      "success_tn": 5,
+      "great_tn": 18,
+      "epic_tn": 42,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+33",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 20,
+      "cp_cost_accum": 280,
+      "mastery_label": null,
+      "cp_cost_mastery": 10,
+      "cp_accum_mastery": 125,
+      "knowledge_tier": "ADVANCED"
+    },
+    {
+      "level": 24,
+      "success_tn": 5,
+      "great_tn": 17,
+      "epic_tn": 41,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+34",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 20,
+      "cp_cost_accum": 300,
+      "mastery_label": null,
+      "cp_cost_mastery": 10,
+      "cp_accum_mastery": 135,
+      "knowledge_tier": "ADVANCED"
+    },
+    {
+      "level": 25,
+      "success_tn": 5,
+      "great_tn": 16,
+      "epic_tn": 40,
+      "heroic_tn": null,
+      "explosion_gate": 10,
+      "effect_bonus": "+35",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 20,
+      "cp_cost_accum": 320,
+      "mastery_label": "Adept (-5CP)",
+      "cp_cost_mastery": 10,
+      "cp_accum_mastery": 145,
+      "knowledge_tier": "ADVANCED"
+    },
+    {
+      "level": 26,
+      "success_tn": null,
+      "great_tn": 15,
+      "epic_tn": 39,
+      "heroic_tn": 64,
+      "explosion_gate": 9,
+      "effect_bonus": "+42",
+      "dice_pool": null,
+      "unlock": "Specialization (II)",
+      "cp_cost": 25,
+      "cp_cost_accum": 345,
+      "mastery_label": null,
+      "cp_cost_mastery": 10,
+      "cp_accum_mastery": 155,
+      "knowledge_tier": "SUPERIOR"
+    },
+    {
+      "level": 27,
+      "success_tn": null,
+      "great_tn": 14,
+      "epic_tn": 38,
+      "heroic_tn": 63,
+      "explosion_gate": 9,
+      "effect_bonus": "+44",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 25,
+      "cp_cost_accum": 370,
+      "mastery_label": null,
+      "cp_cost_mastery": 10,
+      "cp_accum_mastery": 165,
+      "knowledge_tier": "SUPERIOR"
+    },
+    {
+      "level": 28,
+      "success_tn": null,
+      "great_tn": 13,
+      "epic_tn": 37,
+      "heroic_tn": 62,
+      "explosion_gate": 9,
+      "effect_bonus": "+46",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 25,
+      "cp_cost_accum": 395,
+      "mastery_label": null,
+      "cp_cost_mastery": 10,
+      "cp_accum_mastery": 175,
+      "knowledge_tier": "SUPERIOR"
+    },
+    {
+      "level": 29,
+      "success_tn": null,
+      "great_tn": 12,
+      "epic_tn": 36,
+      "heroic_tn": 61,
+      "explosion_gate": 9,
+      "effect_bonus": "+48",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 25,
+      "cp_cost_accum": 420,
+      "mastery_label": null,
+      "cp_cost_mastery": 10,
+      "cp_accum_mastery": 185,
+      "knowledge_tier": "SUPERIOR"
+    },
+    {
+      "level": 30,
+      "success_tn": null,
+      "great_tn": 11,
+      "epic_tn": 35,
+      "heroic_tn": 60,
+      "explosion_gate": 9,
+      "effect_bonus": "+50",
+      "dice_pool": null,
+      "unlock": "Focus(Sp II)",
+      "cp_cost": 25,
+      "cp_cost_accum": 445,
+      "mastery_label": null,
+      "cp_cost_mastery": 10,
+      "cp_accum_mastery": 195,
+      "knowledge_tier": "SUPERIOR"
+    },
+    {
+      "level": 31,
+      "success_tn": null,
+      "great_tn": 10,
+      "epic_tn": 34,
+      "heroic_tn": 59,
+      "explosion_gate": 9,
+      "effect_bonus": "+52",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 25,
+      "cp_cost_accum": 470,
+      "mastery_label": null,
+      "cp_cost_mastery": 10,
+      "cp_accum_mastery": 205,
+      "knowledge_tier": "SUPERIOR"
+    },
+    {
+      "level": 32,
+      "success_tn": null,
+      "great_tn": 10,
+      "epic_tn": 33,
+      "heroic_tn": 58,
+      "explosion_gate": 9,
+      "effect_bonus": "+54",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 25,
+      "cp_cost_accum": 495,
+      "mastery_label": null,
+      "cp_cost_mastery": 10,
+      "cp_accum_mastery": 215,
+      "knowledge_tier": "SUPERIOR"
+    },
+    {
+      "level": 33,
+      "success_tn": null,
+      "great_tn": 10,
+      "epic_tn": 32,
+      "heroic_tn": 57,
+      "explosion_gate": 9,
+      "effect_bonus": "+56",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 25,
+      "cp_cost_accum": 520,
+      "mastery_label": null,
+      "cp_cost_mastery": 10,
+      "cp_accum_mastery": 225,
+      "knowledge_tier": "SUPERIOR"
+    },
+    {
+      "level": 34,
+      "success_tn": null,
+      "great_tn": 10,
+      "epic_tn": 31,
+      "heroic_tn": 56,
+      "explosion_gate": 9,
+      "effect_bonus": "+58",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 25,
+      "cp_cost_accum": 545,
+      "mastery_label": null,
+      "cp_cost_mastery": 10,
+      "cp_accum_mastery": 235,
+      "knowledge_tier": "SUPERIOR"
+    },
+    {
+      "level": 35,
+      "success_tn": null,
+      "great_tn": 10,
+      "epic_tn": 30,
+      "heroic_tn": 55,
+      "explosion_gate": 9,
+      "effect_bonus": "+60",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 25,
+      "cp_cost_accum": 570,
+      "mastery_label": null,
+      "cp_cost_mastery": 10,
+      "cp_accum_mastery": 245,
+      "knowledge_tier": "SUPERIOR"
+    },
+    {
+      "level": 36,
+      "success_tn": null,
+      "great_tn": 10,
+      "epic_tn": 29,
+      "heroic_tn": 54,
+      "explosion_gate": 9,
+      "effect_bonus": "+62",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 30,
+      "cp_cost_accum": 600,
+      "mastery_label": null,
+      "cp_cost_mastery": 15,
+      "cp_accum_mastery": 260,
+      "knowledge_tier": "SUPERIOR"
+    },
+    {
+      "level": 37,
+      "success_tn": null,
+      "great_tn": 10,
+      "epic_tn": 28,
+      "heroic_tn": 53,
+      "explosion_gate": 9,
+      "effect_bonus": "+64",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 30,
+      "cp_cost_accum": 630,
+      "mastery_label": null,
+      "cp_cost_mastery": 15,
+      "cp_accum_mastery": 275,
+      "knowledge_tier": "SUPERIOR"
+    },
+    {
+      "level": 38,
+      "success_tn": null,
+      "great_tn": 10,
+      "epic_tn": 27,
+      "heroic_tn": 52,
+      "explosion_gate": 9,
+      "effect_bonus": "+66",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 30,
+      "cp_cost_accum": 660,
+      "mastery_label": null,
+      "cp_cost_mastery": 15,
+      "cp_accum_mastery": 290,
+      "knowledge_tier": "SUPERIOR"
+    },
+    {
+      "level": 39,
+      "success_tn": null,
+      "great_tn": 10,
+      "epic_tn": 26,
+      "heroic_tn": 51,
+      "explosion_gate": 9,
+      "effect_bonus": "+68",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 30,
+      "cp_cost_accum": 690,
+      "mastery_label": null,
+      "cp_cost_mastery": 15,
+      "cp_accum_mastery": 305,
+      "knowledge_tier": "SUPERIOR"
+    },
+    {
+      "level": 40,
+      "success_tn": null,
+      "great_tn": 10,
+      "epic_tn": 25,
+      "heroic_tn": 50,
+      "explosion_gate": 9,
+      "effect_bonus": "+70",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 30,
+      "cp_cost_accum": 720,
+      "mastery_label": "Expert (-5CP)",
+      "cp_cost_mastery": 15,
+      "cp_accum_mastery": 320,
+      "knowledge_tier": "SUPERIOR"
+    },
+    {
+      "level": 41,
+      "success_tn": null,
+      "great_tn": 10,
+      "epic_tn": 24,
+      "heroic_tn": 49,
+      "explosion_gate": 8,
+      "effect_bonus": "+78",
+      "dice_pool": null,
+      "unlock": "Specialization (III)",
+      "cp_cost": 35,
+      "cp_cost_accum": 755,
+      "mastery_label": null,
+      "cp_cost_mastery": 15,
+      "cp_accum_mastery": 335,
+      "knowledge_tier": "APEX"
+    },
+    {
+      "level": 42,
+      "success_tn": null,
+      "great_tn": 9,
+      "epic_tn": 23,
+      "heroic_tn": 48,
+      "explosion_gate": 8,
+      "effect_bonus": "+81",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 35,
+      "cp_cost_accum": 790,
+      "mastery_label": null,
+      "cp_cost_mastery": 15,
+      "cp_accum_mastery": 350,
+      "knowledge_tier": "APEX"
+    },
+    {
+      "level": 43,
+      "success_tn": null,
+      "great_tn": 8,
+      "epic_tn": 22,
+      "heroic_tn": 47,
+      "explosion_gate": 8,
+      "effect_bonus": "+84",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 35,
+      "cp_cost_accum": 825,
+      "mastery_label": null,
+      "cp_cost_mastery": 15,
+      "cp_accum_mastery": 365,
+      "knowledge_tier": "APEX"
+    },
+    {
+      "level": 44,
+      "success_tn": null,
+      "great_tn": 7,
+      "epic_tn": 21,
+      "heroic_tn": 46,
+      "explosion_gate": 8,
+      "effect_bonus": "+87",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 35,
+      "cp_cost_accum": 860,
+      "mastery_label": null,
+      "cp_cost_mastery": 15,
+      "cp_accum_mastery": 380,
+      "knowledge_tier": "APEX"
+    },
+    {
+      "level": 45,
+      "success_tn": null,
+      "great_tn": 6,
+      "epic_tn": 20,
+      "heroic_tn": 45,
+      "explosion_gate": 8,
+      "effect_bonus": "+90",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 35,
+      "cp_cost_accum": 895,
+      "mastery_label": null,
+      "cp_cost_mastery": 15,
+      "cp_accum_mastery": 395,
+      "knowledge_tier": "APEX"
+    },
+    {
+      "level": 46,
+      "success_tn": null,
+      "great_tn": 5,
+      "epic_tn": 19,
+      "heroic_tn": 44,
+      "explosion_gate": 8,
+      "effect_bonus": "+93",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 40,
+      "cp_cost_accum": 935,
+      "mastery_label": null,
+      "cp_cost_mastery": 20,
+      "cp_accum_mastery": 415,
+      "knowledge_tier": "APEX"
+    },
+    {
+      "level": 47,
+      "success_tn": null,
+      "great_tn": 5,
+      "epic_tn": 18,
+      "heroic_tn": 43,
+      "explosion_gate": 8,
+      "effect_bonus": "+96",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 40,
+      "cp_cost_accum": 975,
+      "mastery_label": null,
+      "cp_cost_mastery": 20,
+      "cp_accum_mastery": 435,
+      "knowledge_tier": "APEX"
+    },
+    {
+      "level": 48,
+      "success_tn": null,
+      "great_tn": 5,
+      "epic_tn": 17,
+      "heroic_tn": 42,
+      "explosion_gate": 8,
+      "effect_bonus": "+99",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 40,
+      "cp_cost_accum": 1015,
+      "mastery_label": null,
+      "cp_cost_mastery": 20,
+      "cp_accum_mastery": 455,
+      "knowledge_tier": "APEX"
+    },
+    {
+      "level": 49,
+      "success_tn": null,
+      "great_tn": 5,
+      "epic_tn": 16,
+      "heroic_tn": 41,
+      "explosion_gate": 8,
+      "effect_bonus": "+102",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 40,
+      "cp_cost_accum": 1055,
+      "mastery_label": null,
+      "cp_cost_mastery": 20,
+      "cp_accum_mastery": 475,
+      "knowledge_tier": "APEX"
+    },
+    {
+      "level": 50,
+      "success_tn": null,
+      "great_tn": 5,
+      "epic_tn": 15,
+      "heroic_tn": 40,
+      "explosion_gate": 8,
+      "effect_bonus": "+105",
+      "dice_pool": null,
+      "unlock": null,
+      "cp_cost": 40,
+      "cp_cost_accum": 1095,
+      "mastery_label": "MAstery (-5CP)",
+      "cp_cost_mastery": 20,
+      "cp_accum_mastery": 495,
+      "knowledge_tier": "APEX"
+    }
+  ],
+  "subjects": [],
+  "_valid": false
+}

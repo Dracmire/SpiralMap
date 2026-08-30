@@ -1,0 +1,17 @@
+{
+  "name": "spiralmap",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "extract-anti": "tsx scripts/extract-anti.ts",
+    "convert": "tsx scripts/convert.ts",
+    "test": "tsx --test scripts/lib/parsers.test.ts scripts/extract-anti.test.ts"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.13",
+    "typescript": "^5.7.0"
+  }
+}

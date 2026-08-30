@@ -133,6 +133,8 @@ export interface Specialization {
   id: string;
   name: string;
   parent_skill_id: string;
+  attribute: AttributeId;
+  kind: "CORE" | "SUPPORT";
   /** universal, not zone-local — opens at parent skill 10 */
   gate_level: number;
   rarity: Rarity;
@@ -176,6 +178,14 @@ export interface Perk {
    * Null when the perk needs no counterweight.
    */
   counterweight: string | null;
+  /**
+   * Anti Perks escalate as the gating attribute falls further below its ceiling.
+   * enhanced_threshold is that escalation point (distinct from the feat-level
+   * ATTRIBUTE_CEILING requirement); enhanced_text is the prose for the escalated
+   * effect. Both null when the perk has no escalation tier (including non-Anti perks).
+   */
+  enhanced_threshold: number | null;
+  enhanced_text: string | null;
 }
 
 export type FeatJob = "PROGRESS" | "GLUE" | "SIMPLIFICATION";
@@ -200,6 +210,9 @@ export interface Feat {
 
   /** DERIVED at build time as max(root_floor, effect_floor). Never authored. */
   derived_tier?: Tier;
+
+  /** DERIVED at build time: true iff `requirements` contains an ATTRIBUTE_CEILING. Never authored. */
+  is_anti_perk?: boolean;
 
   boundary: string;
 }
@@ -291,11 +304,17 @@ export interface SkillLevelRow {
   epic_tn: number | null;
   heroic_tn: number | null;
   explosion_gate: number;      // 10 -> 9 -> 8
+  /** e.g. "+6" .. "+105" — accelerates per knowledge tier. Null where unset. */
+  effect_bonus: string | null;
   dice_pool: number | null;    // milestone grants only
+  /** e.g. "Specialization (I)", "Focus(Sp I)". Null where unset. */
+  unlock: string | null;
   cp_cost: number;
   cp_cost_accum: number;
   mastery_label: string | null; // Domini / Adept / Expert / Mastery
-  cp_discount: number | null;   // mastery cashback
+  /** Discounted cost track. The discount itself is cp_cost - cp_cost_mastery, not a stored field. */
+  cp_cost_mastery: number;
+  cp_accum_mastery: number;
   knowledge_tier: KnowledgeTier;
 }
 
