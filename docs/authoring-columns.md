@@ -87,6 +87,7 @@ Example: `parents = sword_focus:INTEGRATED;sword_guard:INTEGRATED;combat_initiat
 
 ```
 SKILL_LEVEL:melee_weapons:9
+SKILL_LEVEL:craft.Woodwork:3  <- parameterized skill, specific instance (period, not colon — colon is this syntax's own field separator)
 ATTRIBUTE:STR:300
 ATTRIBUTE_CEILING:CHA:120      <- Anti Perks only
 TRAIT:elemental_affinity

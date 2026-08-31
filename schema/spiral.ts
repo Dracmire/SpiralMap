@@ -121,9 +121,14 @@ export interface Skill {
   id: string;
   name: string;
   attribute: AttributeId;
+  /** A secondary attribute the skill can draw on (e.g. Light Armor: STR primary, AGI alt). Null when there isn't one. */
+  alt_attribute: AttributeId | null;
+  /** Free-text macro-attribute/rank shorthand as authored (e.g. "MIND2", "AGI - BODY - SPRT") — not a parsed enum. */
+  macro: string | null;
   kind: "CORE" | "SUPPORT";
   /** Knowledge-based skills instantiate: Knowledge: Arcana, Perform: Flute */
   is_parameterized: boolean;
+  /** Bare instance names as authored (e.g. "Woodwork", "Drawing/Painting") — not "Skill: Instance" compounds. */
   instances: string[];
   group_ids: string[];   // drives the ~25% in-group CP discount
   description: string;

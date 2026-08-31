@@ -23,10 +23,20 @@ function skillName(dataset: Dataset, id: string): string {
   return dataset.skills.find((s) => s.id === id)?.name ?? id;
 }
 
+/** SKILL_LEVEL target is either a bare skill id or "skill_id.instance" — render the
+ * instance form as "Skill Name (Instance)". Per-instance skill-level tracking isn't
+ * built into BuildState/CharacterPanel yet, so these requirements always show unmet
+ * in Build mode for now — that's a known gap, not a display bug. */
+function skillLevelLabel(dataset: Dataset, target: string): string {
+  const dot = target.indexOf(".");
+  if (dot === -1) return skillName(dataset, target);
+  return `${skillName(dataset, target.slice(0, dot))} (${target.slice(dot + 1)})`;
+}
+
 export function describeRequirement(req: Requirement, dataset: Dataset): string {
   switch (req.type) {
     case "SKILL_LEVEL":
-      return `${skillName(dataset, req.target)} ≥ ${req.threshold}`;
+      return `${skillLevelLabel(dataset, req.target)} ≥ ${req.threshold}`;
     case "ATTRIBUTE":
       return `${req.target} ≥ ${req.threshold}`;
     case "ATTRIBUTE_CEILING":

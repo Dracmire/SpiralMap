@@ -51,7 +51,11 @@ function clusterKeyFor(feat: FeatOrFusion): string {
 }
 
 function radiusFor(feat: FeatOrFusion): number {
-  const levelReq = feat.requirements.find((r) => r.type === "SKILL_LEVEL" && r.target === feat.authority_root.id);
+  // SKILL_LEVEL target is either the bare skill id or "skill_id.instance" (see
+  // scripts/convert.ts's computeRootFloor for why) — match either form.
+  const levelReq = feat.requirements.find(
+    (r) => r.type === "SKILL_LEVEL" && (r.target === feat.authority_root.id || r.target.startsWith(`${feat.authority_root.id}.`)),
+  );
   if (levelReq && levelReq.threshold !== null) {
     return LEVEL_RADIUS[levelReq.threshold] ?? 70 + Math.min(levelReq.threshold, 10) * 20;
   }

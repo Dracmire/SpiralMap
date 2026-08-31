@@ -65,9 +65,259 @@
   ],
   "skills": [
     {
+      "id": "basic_mana_discipline",
+      "name": "Basic Mana Discipline",
+      "attribute": "INT",
+      "alt_attribute": null,
+      "macro": "MIND2",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "mage"
+      ],
+      "description": "the main proficiency of using mana based spells and abilities of mystical origin (requieres specialization)"
+    },
+    {
+      "id": "brawling",
+      "name": "Brawling",
+      "attribute": "AGI",
+      "alt_attribute": null,
+      "macro": "AGI - BODY - SPRT",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "brawler"
+      ],
+      "description": "The main proficiency of physical close quarter combat using bare hands"
+    },
+    {
+      "id": "full_armor_handling",
+      "name": "Full Armor Handling",
+      "attribute": "STR",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "warrior"
+      ],
+      "description": ""
+    },
+    {
+      "id": "holy_light_faith",
+      "name": "Holy Light, Faith",
+      "attribute": "CHA",
+      "alt_attribute": null,
+      "macro": "SPR2",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "priest"
+      ],
+      "description": ""
+    },
+    {
+      "id": "light_armor_handling",
+      "name": "Light Armor Handling",
+      "attribute": "STR",
+      "alt_attribute": "AGI",
+      "macro": null,
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "explorer",
+        "rouge"
+      ],
+      "description": ""
+    },
+    {
+      "id": "light_weapons_handling",
+      "name": "Light Weapons Handling",
+      "attribute": "AGI",
+      "alt_attribute": null,
+      "macro": "AGI -BODY - MIND",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "druid",
+        "rouge"
+      ],
+      "description": ""
+    },
+    {
+      "id": "mana_sensitivity",
+      "name": "Mana Sensitivity",
+      "attribute": "PER",
+      "alt_attribute": "WIL",
+      "macro": null,
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "bard",
+        "mage"
+      ],
+      "description": "the main proficiency of attuning oneself with mana in your surroundings and commune with it"
+    },
+    {
+      "id": "melee_weapons_handling",
+      "name": "Melee Weapons Handling",
+      "attribute": "STR",
+      "alt_attribute": "AGI",
+      "macro": "STR- BODY - SPRT",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "bard",
+        "warrior"
+      ],
+      "description": ""
+    },
+    {
+      "id": "nature_focus",
+      "name": "Nature, Focus",
+      "attribute": "CHA",
+      "alt_attribute": null,
+      "macro": "CAR - SPR-BODY",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "druid"
+      ],
+      "description": "the main proficiency of using natural abilities and commune with nature"
+    },
+    {
+      "id": "piety",
+      "name": "Piety",
+      "attribute": "WIL",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "priest"
+      ],
+      "description": "The main proficiency for attuning oneself with divine power and commune with it"
+    },
+    {
+      "id": "projectile_weapons_handling",
+      "name": "Projectile Weapons Handling",
+      "attribute": "PER",
+      "alt_attribute": null,
+      "macro": "PER - BODY - MIND",
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "explorer"
+      ],
+      "description": ""
+    },
+    {
+      "id": "still_mind_focus",
+      "name": "Still Mind, Focus",
+      "attribute": "WIL",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "CORE",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "brawler"
+      ],
+      "description": "The main proficiency for self discipline and attaining clarity on combat"
+    },
+    {
+      "id": "acting",
+      "name": "Acting",
+      "attribute": "CHA",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "showman"
+      ],
+      "description": "performing a complete interpretation of a pre-made role/script"
+    },
+    {
+      "id": "alert",
+      "name": "Alert",
+      "attribute": "PER",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "rouge",
+        "explorer"
+      ],
+      "description": "keen senses capable of perceiving direct threats and other unseen dangers"
+    },
+    {
+      "id": "animal_empathy",
+      "name": "Animal Empathy",
+      "attribute": "CHA",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "druid",
+        "farmer",
+        "savage"
+      ],
+      "description": "the ability to deal with animals and manage them without the use of force"
+    },
+    {
+      "id": "apraisal",
+      "name": "Apraisal",
+      "attribute": "PER",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "artisan",
+        "merchant"
+      ],
+      "description": ""
+    },
+    {
+      "id": "astrology",
+      "name": "Astrology",
+      "attribute": "INT",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "druid",
+        "mystic",
+        "witch"
+      ],
+      "description": "the proficiency to gaze into the stars and other omens and derive some abstract fortune from it"
+    },
+    {
       "id": "athletism",
       "name": "Athletism",
       "attribute": "AGI",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
@@ -78,9 +328,139 @@
       "description": "the simple handling of your body nimbleness including general cardio and gymnastics"
     },
     {
+      "id": "battle",
+      "name": "Battle",
+      "attribute": "PER",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "merc",
+        "warrior"
+      ],
+      "description": "basic tactical understanding and common battle practices for warriors"
+    },
+    {
+      "id": "bluff",
+      "name": "Bluff",
+      "attribute": "CHA",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "brawler",
+        "minstrel",
+        "low_class",
+        "rouge"
+      ],
+      "description": "proficiency in lying, flattering or gaslighting others in social environments"
+    },
+    {
+      "id": "climbing",
+      "name": "Climbing",
+      "attribute": "STR",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "savage",
+        "thief"
+      ],
+      "description": "physical prowess to climb into high places by using ledges and natural terrain roughness"
+    },
+    {
+      "id": "cooking",
+      "name": "Cooking",
+      "attribute": "WIL",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "butcher",
+        "witch"
+      ],
+      "description": "proficiency in cooking simple meals using common materials, it produces consumable items"
+    },
+    {
+      "id": "craft",
+      "name": "Craft",
+      "attribute": "INT",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": true,
+      "instances": [
+        "Metalwork",
+        "Drawing/Painting",
+        "Woodwork",
+        "Sculpting/Engraving"
+      ],
+      "group_ids": [
+        "artisan"
+      ],
+      "description": "must declare specialty: Metalwork, Woodwork, Drawing/Painting, Sculpting/Engraving. Specialized industries are zone-local."
+    },
+    {
+      "id": "culture_lore",
+      "name": "Culture Lore",
+      "attribute": "INT",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "bard",
+        "minstrel",
+        "lawmaker"
+      ],
+      "description": "the general knowledge of the subtleties of the current culture and common knowlesdge in your geographical zone"
+    },
+    {
+      "id": "diplomacy",
+      "name": "Diplomacy",
+      "attribute": "#N/A",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "bard",
+        "high_class"
+      ],
+      "description": "the ability to mediate or converse in a formal manner in social environments"
+    },
+    {
+      "id": "discipline",
+      "name": "Discipline",
+      "attribute": "WIL",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "priest",
+        "warrior",
+        "brawler"
+      ],
+      "description": "the ability to ignore and endure distractions and feints in combat to heighten your combat focus"
+    },
+    {
       "id": "dismantle",
       "name": "Dismantle",
-      "attribute": "AGI",
+      "attribute": "#N/A",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
@@ -91,100 +471,39 @@
       "description": "proficiency into dismantling plants, animals and monsters to extract ingredients and byproducts"
     },
     {
-      "id": "hide",
-      "name": "Hide",
-      "attribute": "AGI",
+      "id": "farming",
+      "name": "Farming",
+      "attribute": "WIL",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
       "group_ids": [
-        "thief",
-        "rouge"
+        "farmer"
       ],
-      "description": "the ability to hide efficiently, it only allows to hide without movement"
+      "description": "the production ability to work the land in order to generate produce in long terms"
     },
     {
-      "id": "riding",
-      "name": "Riding",
-      "attribute": "AGI",
+      "id": "formal_magics",
+      "name": "Formal Magics",
+      "attribute": "INT",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
       "group_ids": [
-        "high_class",
-        "traveller"
+        "mystic"
       ],
-      "description": "the proficiency into using horses and other similar land riding mounts"
-    },
-    {
-      "id": "sleight_of_hand",
-      "name": "Sleight of Hand",
-      "attribute": "AGI",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "low_class",
-        "bard"
-      ],
-      "description": "the use of hand deft movements in cunning ways to peform hand tricks"
-    },
-    {
-      "id": "acting",
-      "name": "Acting",
-      "attribute": "CHA",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "showman"
-      ],
-      "description": "performing a complete interpretation of a pre-made role/script"
-    },
-    {
-      "id": "animal_empathy",
-      "name": "Animal Empathy",
-      "attribute": "CHA",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "farmer",
-        "savage",
-        "druid"
-      ],
-      "description": "the ability to deal with animals and manage them without the use of force"
-    },
-    {
-      "id": "bluff",
-      "name": "Bluff",
-      "attribute": "CHA",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "low_class",
-        "rouge"
-      ],
-      "description": "proficiency in lying, flattering or gaslighting others in social environments"
-    },
-    {
-      "id": "diplomacy",
-      "name": "Diplomacy",
-      "attribute": "CHA",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "high_class",
-        "bard"
-      ],
-      "description": "the ability to mediate or converse in a formal manner in social environments"
+      "description": "the knowledge to use basic forms, traces, drawings and simple materials to perform very basic magic under the right conditions"
     },
     {
       "id": "haggle",
       "name": "Haggle",
       "attribute": "CHA",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
@@ -195,98 +514,42 @@
       "description": "the ability to negotiate the trade of goods or advantages in a social environment"
     },
     {
-      "id": "intimidation",
-      "name": "Intimidation",
-      "attribute": "CHA",
+      "id": "handicraft",
+      "name": "HandiCraft",
+      "attribute": "STR",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
       "group_ids": [
-        "lawmaker",
-        "merc"
+        "butcher",
+        "survivalist"
       ],
-      "description": "the ability to threaten others by using simple words and bodily language"
+      "description": "generalized crafting; Sewing/Leather and other burden-reduction work are later branches"
     },
     {
-      "id": "perform",
-      "name": "Perform",
-      "attribute": "CHA",
-      "kind": "SUPPORT",
-      "is_parameterized": true,
-      "instances": [],
-      "group_ids": [
-        "minstrel",
-        "bard"
-      ],
-      "description": "the ability to express yourself with body language and produce basic music improvising with sounds"
-    },
-    {
-      "id": "spirit_sensitivity",
-      "name": "Spirit Sensitivity",
-      "attribute": "CHA",
+      "id": "healing",
+      "name": "Healing",
+      "attribute": "WIL",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
       "group_ids": [
-        "witch",
-        "priest"
+        "priest",
+        "druid",
+        "pharmascist"
       ],
-      "description": "the ability to sense spirits and interact with the unseen supernatural world in a simple manner"
-    },
-    {
-      "id": "astrology",
-      "name": "Astrology",
-      "attribute": "INT",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "mystic",
-        "witch"
-      ],
-      "description": "the proficiency to gaze into the stars and other omens and derive some abstract fortune from it"
-    },
-    {
-      "id": "craft",
-      "name": "Craft",
-      "attribute": "INT",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "artisan"
-      ],
-      "description": "the specialized ability to craft items usign specific tools (this ability needs to be specialized)"
-    },
-    {
-      "id": "culture_lore",
-      "name": "Culture Lore",
-      "attribute": "INT",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "lawmaker",
-        "minstrel"
-      ],
-      "description": "the general knowledge of the subtleties of the current culture and common knowlesdge in your geographical zone"
-    },
-    {
-      "id": "formal_magics",
-      "name": "Formal Magics",
-      "attribute": "INT",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "mystic"
-      ],
-      "description": "the knowledge to use basic forms, traces, drawings and simple materials to perform very basic magic under the right conditions"
+      "description": "the basic medical skill to treat simple wounds and other physical traumas"
     },
     {
       "id": "herbalism",
       "name": "Herbalism",
       "attribute": "INT",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
@@ -297,19 +560,89 @@
       "description": "the knowledge about simple herbs and other natural plant resources"
     },
     {
-      "id": "knowledge",
-      "name": "Knowledge",
+      "id": "hide",
+      "name": "Hide",
+      "attribute": "AGI",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "explorer",
+        "rouge",
+        "thief"
+      ],
+      "description": "the ability to hide efficiently, it only allows to hide without movement"
+    },
+    {
+      "id": "inclemence",
+      "name": "Inclemence",
+      "attribute": "STR",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "merc",
+        "traveller"
+      ],
+      "description": "the physical ability to endure harsh environmental conditions and adapt to diferent"
+    },
+    {
+      "id": "intimidation",
+      "name": "Intimidation",
+      "attribute": "WIL",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "warrior",
+        "lawmaker",
+        "merc"
+      ],
+      "description": "the ability to threaten others by using simple words and bodily language"
+    },
+    {
+      "id": "investigation",
+      "name": "Investigation",
+      "attribute": "PER",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "academic",
+        "engineer",
+        "lawmaker"
+      ],
+      "description": "the ability to derive secrets and research related content to pursue a specific truth"
+    },
+    {
+      "id": "knowledge_specific",
+      "name": "Knowledge (Specific)",
       "attribute": "INT",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": true,
       "instances": [],
-      "group_ids": [],
-      "description": "the specialized knowledge on a particular subject matter ( this ability needs to be specialized)"
+      "group_ids": [
+        "academic",
+        "priest"
+      ],
+      "description": "must declare field"
     },
     {
       "id": "linguistics",
       "name": "Linguistics",
       "attribute": "INT",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
@@ -322,6 +655,8 @@
       "id": "lockpick",
       "name": "Lockpick",
       "attribute": "INT",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
@@ -331,19 +666,26 @@
       "description": "the ability to picklocks and open closed doors and other mechanism by using simple tools"
     },
     {
-      "id": "magic_object",
-      "name": "Magic Object",
+      "id": "magic_obj",
+      "name": "Magic Obj",
       "attribute": "INT",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
-      "group_ids": [],
-      "description": "proficiency into all manners of mana-fueled magical objects, and the ability to use them in a safer way"
+      "group_ids": [
+        "mage",
+        "engineer"
+      ],
+      "description": ""
     },
     {
       "id": "mechanics",
       "name": "Mechanics",
       "attribute": "INT",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
@@ -353,72 +695,90 @@
       "description": "proficiency in all manners of simple machinery and their usage"
     },
     {
-      "id": "trapper",
-      "name": "Trapper",
-      "attribute": "INT",
+      "id": "mental_focus",
+      "name": "Mental Focus",
+      "attribute": "WIL",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
       "group_ids": [
-        "hunter",
-        "explorer"
+        "mage",
+        "showman"
       ],
-      "description": "the ability to either use and place simple traps efficiently or disable them"
+      "description": "the ability to keep your mental focus while enduring damages and distractions to the user"
     },
     {
-      "id": "alert",
-      "name": "Alert",
-      "attribute": "PER",
+      "id": "minning",
+      "name": "Minning",
+      "attribute": "STR",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
       "group_ids": [
-        "explorer",
-        "rouge"
+        "artisan",
+        "farmer"
       ],
-      "description": "keen senses capable of perceiving direct threats and other unseen dangers"
+      "description": "proficiency on excavating soil, rock mining and general landwork in a efficient manner, its very physical work"
     },
     {
-      "id": "appraisal",
-      "name": "Appraisal",
-      "attribute": "PER",
+      "id": "perform",
+      "name": "Perform",
+      "attribute": "CHA",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [],
-      "description": "proficiency into perceiving the value of things using money as a measurement with added information"
+      "is_parameterized": true,
+      "instances": [
+        "Music Instrument",
+        "Singing",
+        "Dancing/Show"
+      ],
+      "group_ids": [
+        "bard",
+        "minstrel"
+      ],
+      "description": "must declare specialty (instrument, singing, dancing, ...)"
     },
     {
-      "id": "battle",
-      "name": "Battle",
-      "attribute": "PER",
+      "id": "rest",
+      "name": "REST",
+      "attribute": "STR",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
       "group_ids": [
-        "merc",
-        "warrior"
+        "brawler",
+        "druid"
       ],
-      "description": "basic tactical understanding and common battle practices for warriors"
+      "description": "the ability to rest in a deeper and more efficient manner aiming to block out disturbances"
     },
     {
-      "id": "investigation",
-      "name": "Investigation",
-      "attribute": "PER",
+      "id": "riding",
+      "name": "Riding",
+      "attribute": "AGI",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
       "group_ids": [
-        "academic",
-        "engineer",
-        "lawmaker"
+        "high_class",
+        "traveller"
       ],
-      "description": "the ability to derive secrets and research related content to pursue a specific truth"
+      "description": "the proficiency into using horses and other similar land riding mounts"
     },
     {
       "id": "sense_motive",
       "name": "Sense Motive",
       "attribute": "PER",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
@@ -429,22 +789,57 @@
       "description": "the proficiency to understand social nuances and understand a person interests in a social environment"
     },
     {
-      "id": "spellcraft",
-      "name": "Spellcraft",
-      "attribute": "PER",
+      "id": "sleight_of_hand",
+      "name": "Sleight of Hand",
+      "attribute": "AGI",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
       "group_ids": [
-        "mystic",
-        "mage"
+        "bard",
+        "thief",
+        "low_class"
+      ],
+      "description": "the use of hand deft movements in cunning ways to peform hand tricks"
+    },
+    {
+      "id": "spellcraft",
+      "name": "Spellcraft",
+      "attribute": "PER",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "mage",
+        "mystic"
       ],
       "description": "the knowledge about general spells and magical phenomena in a way where its easy to adress them"
+    },
+    {
+      "id": "spirit_sensitivity",
+      "name": "Spirit Sensitivity",
+      "attribute": "CHA",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
+      "is_parameterized": false,
+      "instances": [],
+      "group_ids": [
+        "priest",
+        "witch"
+      ],
+      "description": "the ability to sense spirits and interact with the unseen supernatural world in a simple manner"
     },
     {
       "id": "streetwise",
       "name": "Streetwise",
       "attribute": "PER",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
@@ -458,6 +853,8 @@
       "id": "tracking",
       "name": "Tracking",
       "attribute": "PER",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
@@ -467,139 +864,26 @@
       "description": "proficiency following trails and tracks of land walking creatures in natural environments"
     },
     {
-      "id": "climbing",
-      "name": "Climbing",
-      "attribute": "STR",
+      "id": "trapper",
+      "name": "Trapper",
+      "attribute": "INT",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
       "group_ids": [
-        "savage",
-        "thief"
+        "explorer",
+        "hunter"
       ],
-      "description": "physical prowess to climb into high places by using ledges and natural terrain roughness"
-    },
-    {
-      "id": "handicraft",
-      "name": "HandiCraft",
-      "attribute": "STR",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "butcher",
-        "survivalist"
-      ],
-      "description": "proficiency in all manners of simple crafting (non-specific), useful from repairs to crafting of improvised items, the medieval equivalent of DIY"
-    },
-    {
-      "id": "inclemence",
-      "name": "Inclemence",
-      "attribute": "STR",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "merc",
-        "traveller"
-      ],
-      "description": "the physical ability to endure harsh environmental conditions and adapt to diferent"
-    },
-    {
-      "id": "minning",
-      "name": "Minning",
-      "attribute": "STR",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "artisan",
-        "farmer"
-      ],
-      "description": "proficiency on excavating soil, rock mining and general landwork in a efficient manner, its very physical work"
-    },
-    {
-      "id": "rest",
-      "name": "Rest",
-      "attribute": "STR",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "brawler",
-        "druid"
-      ],
-      "description": "the ability to rest in a deeper and more efficient manner aiming to block out disturbances"
-    },
-    {
-      "id": "cooking",
-      "name": "Cooking",
-      "attribute": "WIL",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "butcher",
-        "witch"
-      ],
-      "description": "proficiency in cooking simple meals using common materials, it produces consumable items"
-    },
-    {
-      "id": "discipline",
-      "name": "Discipline",
-      "attribute": "WIL",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "brawler",
-        "warrior"
-      ],
-      "description": "the ability to ignore and endure distractions and feints in combat to heighten your combat focus"
-    },
-    {
-      "id": "farming",
-      "name": "Farming",
-      "attribute": "WIL",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "farmer"
-      ],
-      "description": "the production ability to work the land in order to generate produce in long terms"
-    },
-    {
-      "id": "healing",
-      "name": "Healing",
-      "attribute": "WIL",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "pharmascist",
-        "druid",
-        "priest"
-      ],
-      "description": "the basic medical skill to treat simple wounds and other physical traumas"
-    },
-    {
-      "id": "mental_focus",
-      "name": "Mental Focus",
-      "attribute": "WIL",
-      "kind": "SUPPORT",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "showman",
-        "mage"
-      ],
-      "description": "the ability to keep your mental focus while enduring damages and distractions to the user"
+      "description": "the ability to either use and place simple traps efficiently or disable them"
     },
     {
       "id": "wayfarer",
       "name": "Wayfarer",
       "attribute": "WIL",
+      "alt_attribute": null,
+      "macro": null,
       "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
@@ -610,135 +894,21 @@
       "description": "the knowledge of the land and the ability to recognize signs of potential road dangers"
     },
     {
-      "id": "brawling",
-      "name": "Brawling",
-      "attribute": "AGI",
-      "kind": "CORE",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "brawler"
-      ],
-      "description": "The main proficiency of physical close quarter combat using bare hands"
-    },
-    {
-      "id": "light_weapons",
-      "name": "Light Weapons",
-      "attribute": "AGI",
-      "kind": "CORE",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [],
-      "description": "The main proficiency using light weapons that depend on nimbleness and presition"
-    },
-    {
-      "id": "faith",
-      "name": "Faith",
-      "attribute": "CHA",
-      "kind": "CORE",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [],
-      "description": "the main proficiency of using divine based miracles of different origins (requieres specialization)"
-    },
-    {
-      "id": "nature_focus",
-      "name": "Nature Focus",
-      "attribute": "CHA",
-      "kind": "CORE",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [],
-      "description": "the main proficiency of using natural abilities and commune with nature"
-    },
-    {
-      "id": "basic_mana_discipline",
-      "name": "Basic Mana Discipline",
-      "attribute": "INT",
-      "kind": "CORE",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "mage"
-      ],
-      "description": "the main proficiency of using mana based spells and abilities of mystical origin (requieres specialization)"
-    },
-    {
-      "id": "mana_sensitivity",
-      "name": "Mana Sensitivity",
-      "attribute": "PER",
-      "kind": "CORE",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "bard",
-        "mage"
-      ],
-      "description": "the main proficiency of attuning oneself with mana in your surroundings and commune with it"
-    },
-    {
-      "id": "projectile_weapons",
-      "name": "Projectile Weapons",
-      "attribute": "PER",
-      "kind": "CORE",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [],
-      "description": "The main proficiency using projectile weapons that depend on perception"
-    },
-    {
-      "id": "heavy_armor",
-      "name": "Heavy Armor",
-      "attribute": "STR",
-      "kind": "CORE",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [],
-      "description": "The main proficiency for using medium and heavy armors such as banded, plate and composite armors"
-    },
-    {
-      "id": "light_armor",
-      "name": "Light Armor",
-      "attribute": "STR",
-      "kind": "CORE",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [],
-      "description": "The main proficiency for using light and medium armors such as leather, armlets and padded armor"
-    },
-    {
-      "id": "melee_weapons",
-      "name": "Melee Weapons",
-      "attribute": "STR",
-      "kind": "CORE",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [],
-      "description": "the use of all types of melee weapons both light and heavy"
-    },
-    {
-      "id": "piety",
-      "name": "Piety",
+      "id": "wilderness",
+      "name": "Wilderness",
       "attribute": "WIL",
-      "kind": "CORE",
+      "alt_attribute": null,
+      "macro": null,
+      "kind": "SUPPORT",
       "is_parameterized": false,
       "instances": [],
       "group_ids": [
-        "priest"
+        "druid",
+        "survivalist",
+        "hunter",
+        "savage"
       ],
-      "description": "The main proficiency for attuning oneself with divine power and commune with it"
-    },
-    {
-      "id": "still_mind_focus",
-      "name": "Still Mind, Focus",
-      "attribute": "WIL",
-      "kind": "CORE",
-      "is_parameterized": false,
-      "instances": [],
-      "group_ids": [
-        "brawler"
-      ],
-      "description": "The main proficiency for self discipline and attaining clarity on combat"
+      "description": ""
     }
   ],
   "skill_groups": [
@@ -749,6 +919,7 @@
       "key_attribute": "INT",
       "member_skill_ids": [
         "investigation",
+        "knowledge_specific",
         "linguistics"
       ],
       "discount_pct": 25
@@ -759,6 +930,7 @@
       "kind": "SUPPORT",
       "key_attribute": "INT",
       "member_skill_ids": [
+        "apraisal",
         "craft",
         "minning"
       ],
@@ -783,6 +955,7 @@
       "key_attribute": "INT",
       "member_skill_ids": [
         "investigation",
+        "magic_obj",
         "mechanics"
       ],
       "discount_pct": 25
@@ -818,7 +991,8 @@
       "key_attribute": "PER",
       "member_skill_ids": [
         "tracking",
-        "trapper"
+        "trapper",
+        "wilderness"
       ],
       "discount_pct": 25
     },
@@ -864,6 +1038,7 @@
       "kind": "SUPPORT",
       "key_attribute": "PER",
       "member_skill_ids": [
+        "apraisal",
         "haggle",
         "wayfarer"
       ],
@@ -875,6 +1050,7 @@
       "kind": "SUPPORT",
       "key_attribute": "PER",
       "member_skill_ids": [
+        "bluff",
         "culture_lore",
         "perform",
         "streetwise"
@@ -888,8 +1064,8 @@
       "key_attribute": "INT",
       "member_skill_ids": [
         "astrology",
-        "formal_magics",
-        "spellcraft"
+        "spellcraft",
+        "formal_magics"
       ],
       "discount_pct": 25
     },
@@ -912,7 +1088,8 @@
       "key_attribute": "WIL",
       "member_skill_ids": [
         "animal_empathy",
-        "climbing"
+        "climbing",
+        "wilderness"
       ],
       "discount_pct": 25
     },
@@ -922,8 +1099,8 @@
       "kind": "SUPPORT",
       "key_attribute": "CHA",
       "member_skill_ids": [
-        "acting",
         "mental_focus",
+        "acting",
         "sense_motive"
       ],
       "discount_pct": 25
@@ -934,6 +1111,7 @@
       "kind": "SUPPORT",
       "key_attribute": "STR",
       "member_skill_ids": [
+        "wilderness",
         "handicraft",
         "herbalism"
       ],
@@ -945,6 +1123,7 @@
       "kind": "SUPPORT",
       "key_attribute": "AGI",
       "member_skill_ids": [
+        "sleight_of_hand",
         "climbing",
         "hide",
         "lockpick"
@@ -981,10 +1160,12 @@
       "kind": "CORE",
       "key_attribute": "CHA",
       "member_skill_ids": [
-        "diplomacy",
         "mana_sensitivity",
+        "melee_weapons_handling",
+        "culture_lore",
         "perform",
-        "sleight_of_hand"
+        "sleight_of_hand",
+        "diplomacy"
       ],
       "discount_pct": 25
     },
@@ -994,11 +1175,12 @@
       "kind": "CORE",
       "key_attribute": "AGI",
       "member_skill_ids": [
-        "athletism",
         "brawling",
+        "still_mind_focus",
+        "athletism",
+        "bluff",
         "discipline",
-        "rest",
-        "still_mind_focus"
+        "rest"
       ],
       "discount_pct": 25
     },
@@ -1008,6 +1190,10 @@
       "kind": "CORE",
       "key_attribute": "CHA",
       "member_skill_ids": [
+        "light_weapons_handling",
+        "nature_focus",
+        "astrology",
+        "wilderness",
         "animal_empathy",
         "healing",
         "rest"
@@ -1020,9 +1206,12 @@
       "kind": "CORE",
       "key_attribute": "PER",
       "member_skill_ids": [
+        "light_armor_handling",
+        "projectile_weapons_handling",
+        "hide",
+        "trapper",
         "alert",
-        "dismantle",
-        "trapper"
+        "dismantle"
       ],
       "discount_pct": 25
     },
@@ -1034,6 +1223,7 @@
       "member_skill_ids": [
         "basic_mana_discipline",
         "mana_sensitivity",
+        "magic_obj",
         "mental_focus",
         "spellcraft"
       ],
@@ -1045,9 +1235,12 @@
       "kind": "CORE",
       "key_attribute": "CHA",
       "member_skill_ids": [
-        "healing",
+        "holy_light_faith",
         "piety",
-        "spirit_sensitivity"
+        "discipline",
+        "healing",
+        "spirit_sensitivity",
+        "knowledge_specific"
       ],
       "discount_pct": 25
     },
@@ -1057,9 +1250,11 @@
       "kind": "CORE",
       "key_attribute": "AGI",
       "member_skill_ids": [
+        "light_armor_handling",
+        "light_weapons_handling",
         "alert",
-        "bluff",
-        "hide"
+        "hide",
+        "bluff"
       ],
       "discount_pct": 25
     },
@@ -1069,9 +1264,12 @@
       "kind": "CORE",
       "key_attribute": "STR",
       "member_skill_ids": [
+        "full_armor_handling",
+        "melee_weapons_handling",
         "athletism",
-        "battle",
-        "discipline"
+        "discipline",
+        "intimidation",
+        "battle"
       ],
       "discount_pct": 25
     }
@@ -1408,46 +1606,6 @@
       "description": "The art of making potions and other products made by herbal processing products this is a large field of exploration and it is far reaching in its capacity to produce all sort of consumables"
     },
     {
-      "id": "basic_philosophy",
-      "name": "Basic Philosophy",
-      "parent_skill_id": "knowledge",
-      "attribute": "INT",
-      "kind": "SUPPORT",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "A learned person is capable of understanding the concept of things and the ethereal behind the physical"
-    },
-    {
-      "id": "basic_schoolastic_mastery",
-      "name": "Basic Schoolastic Mastery",
-      "parent_skill_id": "knowledge",
-      "attribute": "INT",
-      "kind": "SUPPORT",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "The ability to research a wide variety of knowledges related to the parent knowledge, this is a ever growing skill, the more knowledge you posess the bigger its influence"
-    },
-    {
-      "id": "encyclopedia",
-      "name": "Encyclopedia",
-      "parent_skill_id": "knowledge",
-      "attribute": "INT",
-      "kind": "SUPPORT",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "a simple generalized knowledge focused on knowing about the definition of a lot of things, its useful when traveling and has a large syngergy with appraisal skill"
-    },
-    {
-      "id": "high_knowledge",
-      "name": "High Knowledge",
-      "parent_skill_id": "knowledge",
-      "attribute": "INT",
-      "kind": "SUPPORT",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "The ability access a particular branch of a parent knowledge, unlike the parent knowledge which is rather generalistic this is a specific form of knowlege much more focused and much more detailed about a particular subject"
-    },
-    {
       "id": "caligraphy",
       "name": "Caligraphy",
       "parent_skill_id": "linguistics",
@@ -1506,36 +1664,6 @@
       "gate_level": 10,
       "rarity": "COMMON",
       "description": "the skill to understand security breaches and analyze how to best protect a enclosed location"
-    },
-    {
-      "id": "common_magic_object",
-      "name": "Common Magic Object",
-      "parent_skill_id": "magic_object",
-      "attribute": "INT",
-      "kind": "SUPPORT",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "common objects such as rings and wands usually endowed with charges and commonly used by mages and commons"
-    },
-    {
-      "id": "defense_magic_object",
-      "name": "Defense Magic Object",
-      "parent_skill_id": "magic_object",
-      "attribute": "INT",
-      "kind": "SUPPORT",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "objects specialized in defense and protection from magical rings, energy fields to structural defensive enchantments used only by mages usually by their large mana cost"
-    },
-    {
-      "id": "scrying_magic_object",
-      "name": "Scrying Magic Object",
-      "parent_skill_id": "magic_object",
-      "attribute": "INT",
-      "kind": "SUPPORT",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "objects specialized in information transmision and detection often used by pure mages to scout large zones or informatiion visualization"
     },
     {
       "id": "snare_master",
@@ -1616,36 +1744,6 @@
       "gate_level": 10,
       "rarity": "COMMON",
       "description": "the ability to keep your alert in a constant state of seeking \"something\""
-    },
-    {
-      "id": "human_assessment",
-      "name": "Human Assessment",
-      "parent_skill_id": "appraisal",
-      "attribute": "PER",
-      "kind": "SUPPORT",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "The ability to appraise humanoid qualities on a target, it is used mostly by slavers and slave comerce in order to determine the \"quality\" of a humanoid target. The skill provides extra information such as a physical conditions, underlying medical details, and any superficial information."
-    },
-    {
-      "id": "judgment_item",
-      "name": "Judgment (Item)",
-      "parent_skill_id": "appraisal",
-      "attribute": "PER",
-      "kind": "SUPPORT",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "The ability to understand items and products and class them into ranks and levels, it allows the user to understand items highlights and downsides of an item, moreover, a raise will allow the user to learn about the item from the market perspective such as rumors and basic superficial lore. It can be used to uncover an items basic abilties and passives, higher levels of the skill allow the user to know more"
-    },
-    {
-      "id": "lesser_anti-forgery",
-      "name": "Lesser Anti-Forgery",
-      "parent_skill_id": "appraisal",
-      "attribute": "PER",
-      "kind": "SUPPORT",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "The ability to see throught fake items and similar counterfeit elements such as counterfeit money, smuggled items and similar items trying to pass as normal while beign imitations or fake."
     },
     {
       "id": "combat_coordination_inter",
@@ -1948,106 +2046,6 @@
       "description": "Clasical martial arts used by profesional practitioners of melee combat using only specific styles and weapons"
     },
     {
-      "id": "barbarian_scoundrel_technique",
-      "name": "Barbarian Scoundrel Technique",
-      "parent_skill_id": "light_weapons",
-      "attribute": "AGI",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "the technique used by barbarians in battle where the use of armor is sacrificed for higher movility while using either Mid sized weapons of types blade and blunt. It offers bonus while not using any armor or battle cloth armor"
-    },
-    {
-      "id": "battle_hammer_technique",
-      "name": "Battle Hammer Technique",
-      "parent_skill_id": "light_weapons",
-      "attribute": "AGI",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "The specialized use of one hand blunt weapons of any type weapons including both normal size and smaller sized weapons, however, only Light weapons can be used with this technique"
-    },
-    {
-      "id": "footman_technique",
-      "name": "Footman Technique",
-      "parent_skill_id": "light_weapons",
-      "attribute": "AGI",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "the techique used by profesional infantry soldiers using light or middle armors, includes the use of a series of 5 weapons known as the infantry man classic weapons (Footman's Pike, Footman's Mace, Footman's Flail, Long sword and Javelin) , this technique is capable of using any variation of these 5 weapon. These weapons are rather common in any army or guardpost and this technique offers bonus while using light or middle armors"
-    },
-    {
-      "id": "light_blade_technique",
-      "name": "Light Blade Technique",
-      "parent_skill_id": "light_weapons",
-      "attribute": "AGI",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "The specialized use of one hand blade weapons of any type weapons including both normal size and smaller sized weapons, however, only Light weapons can be used with this technique"
-    },
-    {
-      "id": "pikemen_technique",
-      "name": "Pikemen Technique",
-      "parent_skill_id": "light_weapons",
-      "attribute": "AGI",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "The specialized use of one hand spear weapons and other piercing type weapons of any type weapons including both normal size and smaller sized weapons, however, only Light weapons can be used with this technique"
-    },
-    {
-      "id": "basic_green_blessing",
-      "name": "Basic, Green Blessing",
-      "parent_skill_id": "nature_focus",
-      "attribute": "CHA",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "The power to channel energy of the \"green\" or Natural Force, this channel can be used to cast basic power. Green energy depends on the land and location, each landscape has some life and thus Green energy"
-    },
-    {
-      "id": "harmony_focus",
-      "name": "Harmony Focus",
-      "parent_skill_id": "nature_focus",
-      "attribute": "CHA",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "you turn your mind into becoming one with nature, thus your spirit becomes harmonious. Resist evil magic and influences and be welcomed by the inhabitants of nature"
-    },
-    {
-      "id": "lesser_nature_spirit_summoning",
-      "name": "Lesser Nature Spirit Summoning",
-      "parent_skill_id": "nature_focus",
-      "attribute": "CHA",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "the ability to summon spirits using Nature focus, harmony and offerings, its a classical staple of druids and rangers"
-    },
-    {
-      "id": "natural_body_focus",
-      "name": "Natural Body Focus",
-      "parent_skill_id": "nature_focus",
-      "attribute": "CHA",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "the ability to conect with nature and strenghten your body by harmonizing with the natural energy"
-    },
-    {
-      "id": "natural_sense_focus",
-      "name": "Natural Sense Focus",
-      "parent_skill_id": "nature_focus",
-      "attribute": "CHA",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "the ability to conect with nature and expand your senses spiritually"
-    },
-    {
       "id": "basic_\"elemental\"_mana_method",
       "name": "Basic \"Elemental\" Mana Method",
       "parent_skill_id": "basic_mana_discipline",
@@ -2216,216 +2214,6 @@
       "gate_level": 10,
       "rarity": "COMMON",
       "description": "The talent to understand mana better"
-    },
-    {
-      "id": "arbalist_technique",
-      "name": "Arbalist Technique",
-      "parent_skill_id": "projectile_weapons",
-      "attribute": "PER",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "The specialized use of crossbows in all of their portatile variety from hand crossbows to heavy mounted crossbows, however, it excludes siege weapons such as ballistae or large mounted weapons. This skill attribute is PER for any rolls, however it is usable with bows with AGI attribute with no penalty"
-    },
-    {
-      "id": "barbarian_chaser_technique",
-      "name": "Barbarian Chaser Technique",
-      "parent_skill_id": "projectile_weapons",
-      "attribute": "PER",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "the technique used by barbarians in battle where the use of armor is sacrificed for higher movility while using either short bow, hunting bow or throwing knives. It offers bonus while not using any armor or battle cloth armor"
-    },
-    {
-      "id": "basic_\"falcon_warrior\"_combat_method",
-      "name": "Basic \"Falcon Warrior\" Combat Method",
-      "parent_skill_id": "projectile_weapons",
-      "attribute": "PER",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "A combat method created by the Elven clans and turned into a methodical training system. It simply uses any type of short ranged projectile weapon such as the short bow, hand crossbow or the throwing blades to empower the user combat sense. Only one combat method can be active at any time"
-    },
-    {
-      "id": "bowman_technique",
-      "name": "Bowman Technique",
-      "parent_skill_id": "projectile_weapons",
-      "attribute": "PER",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "The specialized use of middle and short range bows such as the short bow or the hunting bow, it excludes long range bows such as the long and great bows."
-    },
-    {
-      "id": "crossbow_infantry_technique",
-      "name": "Crossbow Infantry Technique",
-      "parent_skill_id": "projectile_weapons",
-      "attribute": "PER",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "the technique used by by crossbow infantry soldiers or simply cross-bowmen, its a technique focused on the usage of light or winding crossbow and any similar crossbow in size and weight ranged, with light armor in order assamble a strong soldier unit. The technique is an all around technique and its the most popular ranged technique for soldiers and guards"
-    },
-    {
-      "id": "point_blank_technique",
-      "name": "Point Blank Technique",
-      "parent_skill_id": "projectile_weapons",
-      "attribute": "PER",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "The specialized use of short and hand bows used when used under melee conditions, it excludes long range bows such as the long and great bows, medium bows such as the hunting bow."
-    },
-    {
-      "id": "basic_\"bear_guardian\"_combat_method",
-      "name": "Basic \"Bear Guardian\" Combat Method",
-      "parent_skill_id": "heavy_armor",
-      "attribute": "STR",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "A combat method created by the Orc clans and turned into a methodical training system. It simply uses any type of middle type of armor and middle type shields to develop the user combat senses. Only one combat method can be active at any time"
-    },
-    {
-      "id": "heavy_shield_technique_basic",
-      "name": "Heavy Shield Technique (Basic)",
-      "parent_skill_id": "heavy_armor",
-      "attribute": "STR",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "A technique focuses on the use of large shields such as tower, knight and kite shields, including all middle and large shields. Its popular for knights and defenders"
-    },
-    {
-      "id": "infantryman_armor_technique_inter",
-      "name": "Infantryman Armor Technique (Inter)",
-      "parent_skill_id": "heavy_armor",
-      "attribute": "STR",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "A technique used by hybrid and Middle type armor used to defend a position. Its a technique which maximizes the defense of middle armor while keeping a moderate mobility, you could call it an all around armor mechanic used by most soldiers"
-    },
-    {
-      "id": "ironclad_technique_inter",
-      "name": "IronClad Technique (Inter)",
-      "parent_skill_id": "heavy_armor",
-      "attribute": "STR",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "A technique for users combining heavy armor and shield, its a technique which armonizes both armor and shield into a single style, only midle level shields and heavy armors can be used in this style."
-    },
-    {
-      "id": "juggernaut_armor_technique_inter",
-      "name": "Juggernaut Armor Technique (Inter)",
-      "parent_skill_id": "heavy_armor",
-      "attribute": "STR",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "A technique used by heavy and colosal type of armors users, made to be slow but extremely durable, its classically refered as \"tank\" type technique"
-    },
-    {
-      "id": "basic_\"snake_trooper\"_combat_method",
-      "name": "Basic \"Snake Trooper\" Combat Method",
-      "parent_skill_id": "light_armor",
-      "attribute": "STR",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "A combat method created by the Dark Elven clans and turned into a methodical training system. It simply uses any type of Light type of armor and small shields to develop the user combat senses. Only one combat method can be active at any time"
-    },
-    {
-      "id": "blitzclad_technique_inter",
-      "name": "BlitzClad Technique (Inter)",
-      "parent_skill_id": "light_armor",
-      "attribute": "STR",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "Its called the agile defender, a technique created for troops which need high movility while keeping the advantages of a shield, it mixes partial light armor with hand shields or assambly shields, to produce a shock troops stronger defense. Its used by ambrushers and guerrilla units"
-    },
-    {
-      "id": "gladiatior_armor_technique_inter",
-      "name": "Gladiatior Armor Technique (Inter)",
-      "parent_skill_id": "light_armor",
-      "attribute": "STR",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "A technique used by partial middle type armor or partial light armor used to cover the cover in a incomplete manner to keep movement at maxium at all times. Its a technique which maximizes the movility of the user by removing pieces of armor while keeping a moderate defense, you could call it specialized defense for attackers and damage dealers"
-    },
-    {
-      "id": "light_shield_technique_basic",
-      "name": "Light Shield Technique (Basic)",
-      "parent_skill_id": "light_armor",
-      "attribute": "STR",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "A technique focuses on the use of small shields such as rodela, small and hand shields, including all small and assambly shields. Its popular for soldiers and vanguards"
-    },
-    {
-      "id": "vanguard_armor_technique_inter",
-      "name": "Vanguard Armor Technique (Inter)",
-      "parent_skill_id": "light_armor",
-      "attribute": "STR",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "A technique used by complete light armors users, made to keep movility and while keeping a high atack defense, its classically refered as the standart armor for most light infantry soldiers"
-    },
-    {
-      "id": "axeman_technique",
-      "name": "Axeman Technique",
-      "parent_skill_id": "melee_weapons",
-      "attribute": "STR",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "The specialized use of heavy axe type weapons both in one hand and two hand forms, however, only heavy axes can be used with this technique"
-    },
-    {
-      "id": "barbarian_vandal_technique",
-      "name": "Barbarian Vandal Technique",
-      "parent_skill_id": "melee_weapons",
-      "attribute": "STR",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "the technique used by barbarians in battle where the use of armor is sacrificed for higher movility while using either Great blades, Great Axes or Great maces. It offers bonus while not using any armor or battle cloth armor"
-    },
-    {
-      "id": "heavy_blade_technique",
-      "name": "Heavy Blade Technique",
-      "parent_skill_id": "melee_weapons",
-      "attribute": "STR",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "The specialized use of heavy sword type weapons both in one hand and two hand forms, however, only heavy swords can be used with this technique"
-    },
-    {
-      "id": "heavy_spear_technique",
-      "name": "Heavy Spear Technique",
-      "parent_skill_id": "melee_weapons",
-      "attribute": "STR",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "The specialized use of heavy spears type weapons both in one hand and two hand forms, however, only heavy spears can be used with this technique"
-    },
-    {
-      "id": "tower_soldier_technique",
-      "name": "Tower Soldier Technique",
-      "parent_skill_id": "melee_weapons",
-      "attribute": "STR",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "the techique used by profesional heavy soldiers, who wield large weapons along with heavy armor. This is an entry level skill which uses only non-exotic two handed weapons such as great hammer, great sword, and heavy spear, it offers bonus while using heavy armor"
     },
     {
       "id": "sprinter",
@@ -2716,66 +2504,6 @@
       "gate_level": 10,
       "rarity": "COMMON",
       "description": "an alternative form of rest that allows for a shallow loss of conciousness in exchange of less rest quality but larger lucidity"
-    },
-    {
-      "id": "symboloftruth_ii",
-      "name": "SymbolOfTruth II",
-      "parent_skill_id": "faith",
-      "attribute": "CHA",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "the divine discipline of the Symbol of Truth"
-    },
-    {
-      "id": "scalesoftruth",
-      "name": "ScalesOfTruth",
-      "parent_skill_id": "faith",
-      "attribute": "CHA",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "the use of the symbol of truth divine icon and its power to forcefully showcase the truth"
-    },
-    {
-      "id": "holylight_ii",
-      "name": "HolyLight II",
-      "parent_skill_id": "faith",
-      "attribute": "CHA",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "the divine discipline of the Holy Light"
-    },
-    {
-      "id": "armoroflight",
-      "name": "ArmorOfLight",
-      "parent_skill_id": "faith",
-      "attribute": "CHA",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "the use of the holy light icon and its power to increase the vitality of the user"
-    },
-    {
-      "id": "sacreddarkness_ii",
-      "name": "SacredDarkness II",
-      "parent_skill_id": "faith",
-      "attribute": "CHA",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "the divine discipline of the Sacred darkness"
-    },
-    {
-      "id": "fogofdarkness",
-      "name": "FogOfDarkness",
-      "parent_skill_id": "faith",
-      "attribute": "CHA",
-      "kind": "CORE",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "the use of the sacred darkness icon and its power to create a magical fog that hides all forms"
     },
     {
       "id": "agriculture",
@@ -8311,7 +8039,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "heavy_weapons_handling"
+        "id": "melee_weapons_handling"
       },
       "practice_root_id": "vanguard",
       "fusion_root_id": null,
@@ -8319,7 +8047,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "heavy_weapons_handling",
+          "target": "melee_weapons_handling",
           "threshold": 1
         }
       ],
@@ -8343,7 +8071,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "heavy_weapons_handling"
+        "id": "melee_weapons_handling"
       },
       "practice_root_id": "vanguard",
       "fusion_root_id": null,
@@ -8351,7 +8079,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "heavy_weapons_handling",
+          "target": "melee_weapons_handling",
           "threshold": 3
         }
       ],
@@ -8375,7 +8103,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "heavy_weapons_handling"
+        "id": "melee_weapons_handling"
       },
       "practice_root_id": "vanguard",
       "fusion_root_id": null,
@@ -8383,7 +8111,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "heavy_weapons_handling",
+          "target": "melee_weapons_handling",
           "threshold": 5
         }
       ],
@@ -8407,7 +8135,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "heavy_weapons_handling"
+        "id": "melee_weapons_handling"
       },
       "practice_root_id": "vanguard",
       "fusion_root_id": null,
@@ -8415,7 +8143,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "heavy_weapons_handling",
+          "target": "melee_weapons_handling",
           "threshold": 7
         }
       ],
@@ -8535,7 +8263,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "heavy_armor_handling"
+        "id": "full_armor_handling"
       },
       "practice_root_id": "heavy_fitted",
       "fusion_root_id": null,
@@ -8543,7 +8271,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "heavy_armor_handling",
+          "target": "full_armor_handling",
           "threshold": 1
         }
       ],
@@ -8567,7 +8295,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "heavy_armor_handling"
+        "id": "full_armor_handling"
       },
       "practice_root_id": "heavy_fitted",
       "fusion_root_id": null,
@@ -8575,7 +8303,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "heavy_armor_handling",
+          "target": "full_armor_handling",
           "threshold": 5
         }
       ],
@@ -8585,70 +8313,6 @@
       "boundary": "",
       "skill_group": "WARRIOR",
       "block": "CORE",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "influencer",
-      "name": "Influencer",
-      "perk_ids": [
-        "perk_influencer"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "court"
-      },
-      "practice_root_id": "influencer",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "court",
-          "threshold": 1
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "High Class",
-      "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "suggestion",
-      "name": "Suggestion",
-      "perk_ids": [
-        "perk_suggestion"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "court"
-      },
-      "practice_root_id": "influencer",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "court",
-          "threshold": 5
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "High Class",
-      "block": "SUPPORT",
       "is_anti_perk": false,
       "derived_tier": "ENTRY"
     },
@@ -8663,7 +8327,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "shield"
+        "id": "full_armor_handling"
       },
       "practice_root_id": "shieldbearer",
       "fusion_root_id": null,
@@ -8671,7 +8335,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "shield",
+          "target": "full_armor_handling",
           "threshold": 1
         }
       ],
@@ -8695,7 +8359,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "shield"
+        "id": "full_armor_handling"
       },
       "practice_root_id": "shieldbearer",
       "fusion_root_id": null,
@@ -8703,7 +8367,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "shield",
+          "target": "full_armor_handling",
           "threshold": 3
         }
       ],
@@ -8727,7 +8391,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "shield"
+        "id": "full_armor_handling"
       },
       "practice_root_id": "shieldbearer",
       "fusion_root_id": null,
@@ -8735,7 +8399,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "shield",
+          "target": "full_armor_handling",
           "threshold": 5
         }
       ],
@@ -8759,7 +8423,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "shield"
+        "id": "full_armor_handling"
       },
       "practice_root_id": "shieldbearer",
       "fusion_root_id": null,
@@ -8767,7 +8431,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "shield",
+          "target": "full_armor_handling",
           "threshold": 7
         }
       ],
@@ -9207,7 +8871,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "temptation"
+        "id": "bluff"
       },
       "practice_root_id": "little_devil",
       "fusion_root_id": null,
@@ -9215,7 +8879,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "temptation",
+          "target": "bluff",
           "threshold": 3
         }
       ],
@@ -9239,7 +8903,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "temptation"
+        "id": "bluff"
       },
       "practice_root_id": "little_devil",
       "fusion_root_id": null,
@@ -9247,7 +8911,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "temptation",
+          "target": "bluff",
           "threshold": 7
         }
       ],
@@ -9389,102 +9053,6 @@
       "derived_tier": "ENTRY"
     },
     {
-      "id": "shrewd_merchant",
-      "name": "Shrewd Merchant",
-      "perk_ids": [
-        "perk_shrewd_merchant"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "comerce"
-      },
-      "practice_root_id": "businessman",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "comerce",
-          "threshold": 3
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Merchant",
-      "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "trust_is_everything",
-      "name": "Trust is Everything",
-      "perk_ids": [
-        "perk_trust_is_everything"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "comerce"
-      },
-      "practice_root_id": "businessman",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "comerce",
-          "threshold": 5
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Merchant",
-      "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "midas_touch",
-      "name": "Midas Touch",
-      "perk_ids": [
-        "perk_midas_touch"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "comerce"
-      },
-      "practice_root_id": "businessman",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "comerce",
-          "threshold": 7
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Merchant",
-      "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
       "id": "knife_thrower",
       "name": "Knife Thrower",
       "perk_ids": [
@@ -9495,7 +9063,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "throwing_weapons_handling"
+        "id": "projectile_weapons_handling"
       },
       "practice_root_id": "knife_thrower",
       "fusion_root_id": null,
@@ -9503,7 +9071,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "throwing_weapons_handling",
+          "target": "projectile_weapons_handling",
           "threshold": 1
         }
       ],
@@ -9527,7 +9095,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "throwing_weapons_handling"
+        "id": "projectile_weapons_handling"
       },
       "practice_root_id": "knife_thrower",
       "fusion_root_id": null,
@@ -9535,7 +9103,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "throwing_weapons_handling",
+          "target": "projectile_weapons_handling",
           "threshold": 3
         }
       ],
@@ -9559,7 +9127,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "throwing_weapons_handling"
+        "id": "projectile_weapons_handling"
       },
       "practice_root_id": "knife_thrower",
       "fusion_root_id": null,
@@ -9567,7 +9135,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "throwing_weapons_handling",
+          "target": "projectile_weapons_handling",
           "threshold": 5
         }
       ],
@@ -9591,7 +9159,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "throwing_weapons_handling"
+        "id": "projectile_weapons_handling"
       },
       "practice_root_id": "knife_thrower",
       "fusion_root_id": null,
@@ -9599,7 +9167,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "throwing_weapons_handling",
+          "target": "projectile_weapons_handling",
           "threshold": 7
         }
       ],
@@ -10061,134 +9629,6 @@
       "derived_tier": "ENTRY"
     },
     {
-      "id": "tough",
-      "name": "Tough!",
-      "perk_ids": [
-        "perk_tough"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "inclemence"
-      },
-      "practice_root_id": "tough",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "inclemence",
-          "threshold": 1
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Survivalist",
-      "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "thick_skinned",
-      "name": "Thick Skinned",
-      "perk_ids": [
-        "perk_thick_skinned"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "inclemence"
-      },
-      "practice_root_id": "tough",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "inclemence",
-          "threshold": 3
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Survivalist",
-      "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "magic_fortitude",
-      "name": "Magic Fortitude",
-      "perk_ids": [
-        "perk_magic_fortitude"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "inclemence"
-      },
-      "practice_root_id": "tough",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "inclemence",
-          "threshold": 5
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Survivalist",
-      "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "iron_man",
-      "name": "Iron Man",
-      "perk_ids": [
-        "perk_iron_man"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "inclemence"
-      },
-      "practice_root_id": "tough",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "inclemence",
-          "threshold": 7
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Survivalist",
-      "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
       "id": "quick_hands",
       "name": "Quick Hands",
       "perk_ids": [
@@ -10391,7 +9831,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "basic_single_elementalism"
+        "id": "basic_mana_discipline"
       },
       "practice_root_id": "elemental_wand",
       "fusion_root_id": null,
@@ -10399,7 +9839,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "basic_single_elementalism",
+          "target": "basic_mana_discipline",
           "threshold": 1
         }
       ],
@@ -10423,7 +9863,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "basic_single_elementalism"
+        "id": "basic_mana_discipline"
       },
       "practice_root_id": "elemental_wand",
       "fusion_root_id": null,
@@ -10431,7 +9871,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "basic_single_elementalism",
+          "target": "basic_mana_discipline",
           "threshold": 3
         }
       ],
@@ -10455,7 +9895,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "basic_single_elementalism"
+        "id": "basic_mana_discipline"
       },
       "practice_root_id": "elemental_wand",
       "fusion_root_id": null,
@@ -10463,7 +9903,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "basic_single_elementalism",
+          "target": "basic_mana_discipline",
           "threshold": 5
         }
       ],
@@ -10487,7 +9927,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "basic_single_elementalism"
+        "id": "basic_mana_discipline"
       },
       "practice_root_id": "elemental_wand",
       "fusion_root_id": null,
@@ -10495,7 +9935,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "basic_single_elementalism",
+          "target": "basic_mana_discipline",
           "threshold": 7
         }
       ],
@@ -10615,7 +10055,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "basic_reinforcement_magic"
+        "id": "basic_mana_discipline"
       },
       "practice_root_id": "reinforcement_wand",
       "fusion_root_id": null,
@@ -10623,7 +10063,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "basic_reinforcement_magic",
+          "target": "basic_mana_discipline",
           "threshold": 1
         }
       ],
@@ -10647,7 +10087,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "basic_reinforcement_magic"
+        "id": "basic_mana_discipline"
       },
       "practice_root_id": "reinforcement_wand",
       "fusion_root_id": null,
@@ -10655,7 +10095,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "basic_reinforcement_magic",
+          "target": "basic_mana_discipline",
           "threshold": 3
         }
       ],
@@ -10679,7 +10119,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "basic_reinforcement_magic"
+        "id": "basic_mana_discipline"
       },
       "practice_root_id": "reinforcement_wand",
       "fusion_root_id": null,
@@ -10687,7 +10127,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "basic_reinforcement_magic",
+          "target": "basic_mana_discipline",
           "threshold": 5
         }
       ],
@@ -10711,7 +10151,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "basic_reinforcement_magic"
+        "id": "basic_mana_discipline"
       },
       "practice_root_id": "reinforcement_wand",
       "fusion_root_id": null,
@@ -10719,7 +10159,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "basic_reinforcement_magic",
+          "target": "basic_mana_discipline",
           "threshold": 7
         }
       ],
@@ -10729,70 +10169,6 @@
       "boundary": "",
       "skill_group": "MAGE",
       "block": "CORE",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "tanning",
-      "name": "Tanning",
-      "perk_ids": [
-        "perk_tanning"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "handcraft_sewing_leather"
-      },
-      "practice_root_id": "tanning",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "handcraft_sewing_leather",
-          "threshold": 1
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Artisan",
-      "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "monster_weaver",
-      "name": "Monster Weaver",
-      "perk_ids": [
-        "perk_monster_weaver"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "handcraft_sewing_leather"
-      },
-      "practice_root_id": "tanning",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "handcraft_sewing_leather",
-          "threshold": 7
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Artisan",
-      "block": "SUPPORT",
       "is_anti_perk": false,
       "derived_tier": "ENTRY"
     },
@@ -10807,7 +10183,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "basic_interference_magic"
+        "id": "basic_mana_discipline"
       },
       "practice_root_id": "interference_wand",
       "fusion_root_id": null,
@@ -10815,7 +10191,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "basic_interference_magic",
+          "target": "basic_mana_discipline",
           "threshold": 1
         }
       ],
@@ -10839,7 +10215,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "basic_interference_magic"
+        "id": "basic_mana_discipline"
       },
       "practice_root_id": "interference_wand",
       "fusion_root_id": null,
@@ -10847,7 +10223,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "basic_interference_magic",
+          "target": "basic_mana_discipline",
           "threshold": 3
         }
       ],
@@ -10871,7 +10247,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "basic_interference_magic"
+        "id": "basic_mana_discipline"
       },
       "practice_root_id": "interference_wand",
       "fusion_root_id": null,
@@ -10879,7 +10255,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "basic_interference_magic",
+          "target": "basic_mana_discipline",
           "threshold": 5
         }
       ],
@@ -10903,7 +10279,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "basic_interference_magic"
+        "id": "basic_mana_discipline"
       },
       "practice_root_id": "interference_wand",
       "fusion_root_id": null,
@@ -10911,7 +10287,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "basic_interference_magic",
+          "target": "basic_mana_discipline",
           "threshold": 7
         }
       ],
@@ -10935,7 +10311,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "craft_woodwork"
+        "id": "craft"
       },
       "practice_root_id": "carpenter",
       "fusion_root_id": null,
@@ -10943,7 +10319,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "craft_woodwork",
+          "target": "craft.Woodwork",
           "threshold": 3
         }
       ],
@@ -10967,7 +10343,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "craft_woodwork"
+        "id": "craft"
       },
       "practice_root_id": "carpenter",
       "fusion_root_id": null,
@@ -10975,7 +10351,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "craft_woodwork",
+          "target": "craft.Woodwork",
           "threshold": 5
         }
       ],
@@ -11063,7 +10439,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "craft_metalwork"
+        "id": "craft"
       },
       "practice_root_id": "smity",
       "fusion_root_id": null,
@@ -11071,7 +10447,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "craft_metalwork",
+          "target": "craft.Metalwork",
           "threshold": 3
         }
       ],
@@ -11095,7 +10471,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "craft_metalwork"
+        "id": "craft"
       },
       "practice_root_id": "smity",
       "fusion_root_id": null,
@@ -11103,7 +10479,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "craft_metalwork",
+          "target": "craft.Metalwork",
           "threshold": 5
         }
       ],
@@ -11127,7 +10503,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "craft_metalwork"
+        "id": "craft"
       },
       "practice_root_id": "smity",
       "fusion_root_id": null,
@@ -11135,7 +10511,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "craft_metalwork",
+          "target": "craft.Metalwork",
           "threshold": 7
         }
       ],
@@ -11159,7 +10535,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "concentration"
+        "id": "mental_focus"
       },
       "practice_root_id": "battle_focus",
       "fusion_root_id": null,
@@ -11167,7 +10543,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "concentration",
+          "target": "mental_focus",
           "threshold": 7
         }
       ],
@@ -11319,7 +10695,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "magic_obj_common"
+        "id": "magic_obj"
       },
       "practice_root_id": "mana_tools",
       "fusion_root_id": null,
@@ -11327,7 +10703,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "magic_obj_common",
+          "target": "magic_obj",
           "threshold": 1
         }
       ],
@@ -11351,7 +10727,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "magic_obj_common"
+        "id": "magic_obj"
       },
       "practice_root_id": "mana_tools",
       "fusion_root_id": null,
@@ -11359,7 +10735,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "magic_obj_common",
+          "target": "magic_obj",
           "threshold": 5
         }
       ],
@@ -11383,7 +10759,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "magic_obj_common"
+        "id": "magic_obj"
       },
       "practice_root_id": "mana_tools",
       "fusion_root_id": null,
@@ -11391,7 +10767,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "magic_obj_common",
+          "target": "magic_obj",
           "threshold": 7
         }
       ],
@@ -11401,390 +10777,6 @@
       "boundary": "",
       "skill_group": "MAGE",
       "block": "CORE",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "handyman",
-      "name": "Handyman",
-      "perk_ids": [
-        "perk_handyman"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "building_simple_building_digging_etc"
-      },
-      "practice_root_id": "handyman",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "building_simple_building_digging_etc",
-          "threshold": 1
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Engineer",
-      "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "cutting_corners",
-      "name": "Cutting Corners",
-      "perk_ids": [
-        "perk_cutting_corners"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "building_simple_building_digging_etc"
-      },
-      "practice_root_id": "handyman",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "building_simple_building_digging_etc",
-          "threshold": 3
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Engineer",
-      "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "demolition_expert",
-      "name": "Demolition Expert",
-      "perk_ids": [
-        "perk_demolition_expert"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "building_simple_building_digging_etc"
-      },
-      "practice_root_id": "handyman",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "building_simple_building_digging_etc",
-          "threshold": 5
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Engineer",
-      "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "constructor",
-      "name": "Constructor",
-      "perk_ids": [
-        "perk_constructor"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "building_simple_building_digging_etc"
-      },
-      "practice_root_id": "handyman",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "building_simple_building_digging_etc",
-          "threshold": 7
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Engineer",
-      "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "image_crystal",
-      "name": "Image Crystal",
-      "perk_ids": [
-        "perk_image_crystal"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "magic_obj_scyring"
-      },
-      "practice_root_id": "image_crystal",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "magic_obj_scyring",
-          "threshold": 1
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "MAGE",
-      "block": "CORE",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "record_crystal",
-      "name": "Record Crystal",
-      "perk_ids": [
-        "perk_record_crystal"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "magic_obj_scyring"
-      },
-      "practice_root_id": "image_crystal",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "magic_obj_scyring",
-          "threshold": 3
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "MAGE",
-      "block": "CORE",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "far_scry",
-      "name": "Far Scry",
-      "perk_ids": [
-        "perk_far_scry"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "magic_obj_scyring"
-      },
-      "practice_root_id": "image_crystal",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "magic_obj_scyring",
-          "threshold": 5
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "MAGE",
-      "block": "CORE",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "clariaudience",
-      "name": "Clariaudience",
-      "perk_ids": [
-        "perk_clariaudience"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "magic_obj_scyring"
-      },
-      "practice_root_id": "image_crystal",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "magic_obj_scyring",
-          "threshold": 7
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "MAGE",
-      "block": "CORE",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "structural_reading",
-      "name": "Structural Reading",
-      "perk_ids": [
-        "perk_structural_reading"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "observe"
-      },
-      "practice_root_id": "structural_reading",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "observe",
-          "threshold": 1
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Engineer",
-      "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "finder_of_flaws",
-      "name": "Finder of Flaws",
-      "perk_ids": [
-        "perk_finder_of_flaws"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "observe"
-      },
-      "practice_root_id": "structural_reading",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "observe",
-          "threshold": 3
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Engineer",
-      "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "structural_analyst",
-      "name": "Structural Analyst",
-      "perk_ids": [
-        "perk_structural_analyst"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "observe"
-      },
-      "practice_root_id": "structural_reading",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "observe",
-          "threshold": 5
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Engineer",
-      "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "demolition_man",
-      "name": "Demolition Man",
-      "perk_ids": [
-        "perk_demolition_man"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "observe"
-      },
-      "practice_root_id": "structural_reading",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "observe",
-          "threshold": 7
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "Engineer",
-      "block": "SUPPORT",
       "is_anti_perk": false,
       "derived_tier": "ENTRY"
     },
@@ -11799,7 +10791,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "magic_obj_shield"
+        "id": "magic_obj"
       },
       "practice_root_id": "magic_clad",
       "fusion_root_id": null,
@@ -11807,7 +10799,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "magic_obj_shield",
+          "target": "magic_obj",
           "threshold": 3
         }
       ],
@@ -11831,7 +10823,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "magic_obj_shield"
+        "id": "magic_obj"
       },
       "practice_root_id": "magic_clad",
       "fusion_root_id": null,
@@ -11839,7 +10831,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "magic_obj_shield",
+          "target": "magic_obj",
           "threshold": 5
         }
       ],
@@ -11863,7 +10855,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "magic_obj_shield"
+        "id": "magic_obj"
       },
       "practice_root_id": "magic_clad",
       "fusion_root_id": null,
@@ -11871,7 +10863,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "magic_obj_shield",
+          "target": "magic_obj",
           "threshold": 7
         }
       ],
@@ -11895,7 +10887,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform_music_instrument"
+        "id": "perform"
       },
       "practice_root_id": "performer_instruments",
       "fusion_root_id": null,
@@ -11903,7 +10895,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform_music_instrument",
+          "target": "perform.Music Instrument",
           "threshold": 1
         }
       ],
@@ -11927,7 +10919,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform_music_instrument"
+        "id": "perform"
       },
       "practice_root_id": "performer_instruments",
       "fusion_root_id": null,
@@ -11935,7 +10927,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform_music_instrument",
+          "target": "perform.Music Instrument",
           "threshold": 3
         }
       ],
@@ -11959,7 +10951,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform_music_instrument"
+        "id": "perform"
       },
       "practice_root_id": "performer_instruments",
       "fusion_root_id": null,
@@ -11967,7 +10959,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform_music_instrument",
+          "target": "perform.Music Instrument",
           "threshold": 5
         }
       ],
@@ -11991,7 +10983,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform_music_instrument"
+        "id": "perform"
       },
       "practice_root_id": "performer_instruments",
       "fusion_root_id": null,
@@ -11999,7 +10991,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform_music_instrument",
+          "target": "perform.Music Instrument",
           "threshold": 7
         }
       ],
@@ -12023,7 +11015,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "spiritism_faith"
+        "id": "piety"
       },
       "practice_root_id": "spirit_rood",
       "fusion_root_id": null,
@@ -12031,7 +11023,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "spiritism_faith",
+          "target": "piety",
           "threshold": 1
         }
       ],
@@ -12055,7 +11047,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "spiritism_faith"
+        "id": "piety"
       },
       "practice_root_id": "spirit_rood",
       "fusion_root_id": null,
@@ -12063,7 +11055,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "spiritism_faith",
+          "target": "piety",
           "threshold": 3
         }
       ],
@@ -12087,7 +11079,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "spiritism_faith"
+        "id": "piety"
       },
       "practice_root_id": "spirit_rood",
       "fusion_root_id": null,
@@ -12095,7 +11087,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "spiritism_faith",
+          "target": "piety",
           "threshold": 5
         }
       ],
@@ -12119,7 +11111,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "spiritism_faith"
+        "id": "piety"
       },
       "practice_root_id": "spirit_rood",
       "fusion_root_id": null,
@@ -12127,7 +11119,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "spiritism_faith",
+          "target": "piety",
           "threshold": 7
         }
       ],
@@ -12151,7 +11143,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform_singing"
+        "id": "perform"
       },
       "practice_root_id": "performer_singing",
       "fusion_root_id": null,
@@ -12159,7 +11151,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform_singing",
+          "target": "perform.Singing",
           "threshold": 1
         }
       ],
@@ -12183,7 +11175,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform_singing"
+        "id": "perform"
       },
       "practice_root_id": "performer_singing",
       "fusion_root_id": null,
@@ -12191,7 +11183,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform_singing",
+          "target": "perform.Singing",
           "threshold": 3
         }
       ],
@@ -12215,7 +11207,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform_singing"
+        "id": "perform"
       },
       "practice_root_id": "performer_singing",
       "fusion_root_id": null,
@@ -12223,7 +11215,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform_singing",
+          "target": "perform.Singing",
           "threshold": 5
         }
       ],
@@ -12247,7 +11239,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform_singing"
+        "id": "perform"
       },
       "practice_root_id": "performer_singing",
       "fusion_root_id": null,
@@ -12255,7 +11247,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform_singing",
+          "target": "perform.Singing",
           "threshold": 7
         }
       ],
@@ -12279,7 +11271,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "truth_faith"
+        "id": "piety"
       },
       "practice_root_id": "truth_rood",
       "fusion_root_id": null,
@@ -12287,7 +11279,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "truth_faith",
+          "target": "piety",
           "threshold": 1
         }
       ],
@@ -12311,7 +11303,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "truth_faith"
+        "id": "piety"
       },
       "practice_root_id": "truth_rood",
       "fusion_root_id": null,
@@ -12319,7 +11311,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "truth_faith",
+          "target": "piety",
           "threshold": 3
         }
       ],
@@ -12343,7 +11335,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "truth_faith"
+        "id": "piety"
       },
       "practice_root_id": "truth_rood",
       "fusion_root_id": null,
@@ -12351,7 +11343,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "truth_faith",
+          "target": "piety",
           "threshold": 5
         }
       ],
@@ -12375,7 +11367,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "truth_faith"
+        "id": "piety"
       },
       "practice_root_id": "truth_rood",
       "fusion_root_id": null,
@@ -12383,7 +11375,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "truth_faith",
+          "target": "piety",
           "threshold": 7
         }
       ],
@@ -12407,7 +11399,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform_dancing_show"
+        "id": "perform"
       },
       "practice_root_id": "performer_show",
       "fusion_root_id": null,
@@ -12415,7 +11407,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform_dancing_show",
+          "target": "perform.Dancing/Show",
           "threshold": 1
         }
       ],
@@ -12439,7 +11431,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform_dancing_show"
+        "id": "perform"
       },
       "practice_root_id": "performer_show",
       "fusion_root_id": null,
@@ -12447,7 +11439,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform_dancing_show",
+          "target": "perform.Dancing/Show",
           "threshold": 3
         }
       ],
@@ -12471,7 +11463,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform_dancing_show"
+        "id": "perform"
       },
       "practice_root_id": "performer_show",
       "fusion_root_id": null,
@@ -12479,7 +11471,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform_dancing_show",
+          "target": "perform.Dancing/Show",
           "threshold": 5
         }
       ],
@@ -12503,7 +11495,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform_dancing_show"
+        "id": "perform"
       },
       "practice_root_id": "performer_show",
       "fusion_root_id": null,
@@ -12511,7 +11503,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform_dancing_show",
+          "target": "perform.Dancing/Show",
           "threshold": 7
         }
       ],
@@ -12535,7 +11527,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "holy_light_faith"
+        "id": "piety"
       },
       "practice_root_id": "channel_rood",
       "fusion_root_id": null,
@@ -12543,7 +11535,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "holy_light_faith",
+          "target": "piety",
           "threshold": 1
         }
       ],
@@ -12567,7 +11559,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "holy_light_faith"
+        "id": "piety"
       },
       "practice_root_id": "channel_rood",
       "fusion_root_id": null,
@@ -12575,7 +11567,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "holy_light_faith",
+          "target": "piety",
           "threshold": 3
         }
       ],
@@ -12599,7 +11591,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "holy_light_faith"
+        "id": "piety"
       },
       "practice_root_id": "channel_rood",
       "fusion_root_id": null,
@@ -12607,7 +11599,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "holy_light_faith",
+          "target": "piety",
           "threshold": 5
         }
       ],
@@ -12631,7 +11623,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "artcraft_drawing_painting_etc"
+        "id": "craft"
       },
       "practice_root_id": "visual_artist",
       "fusion_root_id": null,
@@ -12639,7 +11631,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "artcraft_drawing_painting_etc",
+          "target": "craft.Drawing/Painting",
           "threshold": 3
         }
       ],
@@ -12663,7 +11655,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "artcraft_drawing_painting_etc"
+        "id": "craft"
       },
       "practice_root_id": "visual_artist",
       "fusion_root_id": null,
@@ -12671,7 +11663,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "artcraft_drawing_painting_etc",
+          "target": "craft.Drawing/Painting",
           "threshold": 5
         }
       ],
@@ -12695,7 +11687,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "artcraft_drawing_painting_etc"
+        "id": "craft"
       },
       "practice_root_id": "visual_artist",
       "fusion_root_id": null,
@@ -12703,7 +11695,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "artcraft_drawing_painting_etc",
+          "target": "craft.Drawing/Painting",
           "threshold": 7
         }
       ],
@@ -12823,7 +11815,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "artcraft_sculpting_engraving_etc"
+        "id": "craft"
       },
       "practice_root_id": "carver",
       "fusion_root_id": null,
@@ -12831,7 +11823,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "artcraft_sculpting_engraving_etc",
+          "target": "craft.Sculpting/Engraving",
           "threshold": 5
         }
       ],
@@ -12855,7 +11847,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "artcraft_sculpting_engraving_etc"
+        "id": "craft"
       },
       "practice_root_id": "carver",
       "fusion_root_id": null,
@@ -12863,7 +11855,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "artcraft_sculpting_engraving_etc",
+          "target": "craft.Sculpting/Engraving",
           "threshold": 7
         }
       ],
@@ -13015,7 +12007,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "acting_circus_entertainer"
+        "id": "acting"
       },
       "practice_root_id": "attention_magnet",
       "fusion_root_id": null,
@@ -13023,7 +12015,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "acting_circus_entertainer",
+          "target": "acting",
           "threshold": 1
         }
       ],
@@ -13047,7 +12039,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "acting_circus_entertainer"
+        "id": "acting"
       },
       "practice_root_id": "attention_magnet",
       "fusion_root_id": null,
@@ -13055,7 +12047,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "acting_circus_entertainer",
+          "target": "acting",
           "threshold": 5
         }
       ],
@@ -13079,7 +12071,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "acting_circus_entertainer"
+        "id": "acting"
       },
       "practice_root_id": "attention_magnet",
       "fusion_root_id": null,
@@ -13087,7 +12079,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "acting_circus_entertainer",
+          "target": "acting",
           "threshold": 7
         }
       ],
@@ -13239,7 +12231,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "acting_theatre_comedy_etc"
+        "id": "acting"
       },
       "practice_root_id": "other_faces",
       "fusion_root_id": null,
@@ -13247,7 +12239,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "acting_theatre_comedy_etc",
+          "target": "acting",
           "threshold": 1
         }
       ],
@@ -13271,7 +12263,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "acting_theatre_comedy_etc"
+        "id": "acting"
       },
       "practice_root_id": "other_faces",
       "fusion_root_id": null,
@@ -13279,7 +12271,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "acting_theatre_comedy_etc",
+          "target": "acting",
           "threshold": 5
         }
       ],
@@ -13303,7 +12295,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "acting_theatre_comedy_etc"
+        "id": "acting"
       },
       "practice_root_id": "other_faces",
       "fusion_root_id": null,
@@ -13311,7 +12303,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "acting_theatre_comedy_etc",
+          "target": "acting",
           "threshold": 7
         }
       ],
@@ -13399,7 +12391,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "grappling"
+        "id": "brawling"
       },
       "practice_root_id": "circular_force",
       "fusion_root_id": null,
@@ -13407,7 +12399,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "grappling",
+          "target": "brawling",
           "threshold": 1
         }
       ],
@@ -13431,7 +12423,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "grappling"
+        "id": "brawling"
       },
       "practice_root_id": "circular_force",
       "fusion_root_id": null,
@@ -13439,7 +12431,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "grappling",
+          "target": "brawling",
           "threshold": 3
         }
       ],
@@ -13463,7 +12455,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "grappling"
+        "id": "brawling"
       },
       "practice_root_id": "circular_force",
       "fusion_root_id": null,
@@ -13471,7 +12463,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "grappling",
+          "target": "brawling",
           "threshold": 5
         }
       ],
@@ -13687,7 +12679,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "farming_animal_husbandry"
+        "id": "farming"
       },
       "practice_root_id": "rancher",
       "fusion_root_id": null,
@@ -13695,7 +12687,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "farming_animal_husbandry",
+          "target": "farming",
           "threshold": 1
         }
       ],
@@ -13719,7 +12711,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "farming_animal_husbandry"
+        "id": "farming"
       },
       "practice_root_id": "rancher",
       "fusion_root_id": null,
@@ -13727,7 +12719,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "farming_animal_husbandry",
+          "target": "farming",
           "threshold": 3
         }
       ],
@@ -13751,7 +12743,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "farming_animal_husbandry"
+        "id": "farming"
       },
       "practice_root_id": "rancher",
       "fusion_root_id": null,
@@ -13759,7 +12751,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "farming_animal_husbandry",
+          "target": "farming",
           "threshold": 5
         }
       ],
@@ -13783,7 +12775,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "farming_animal_husbandry"
+        "id": "farming"
       },
       "practice_root_id": "rancher",
       "fusion_root_id": null,
@@ -13791,7 +12783,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "farming_animal_husbandry",
+          "target": "farming",
           "threshold": 7
         }
       ],
@@ -13911,7 +12903,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "farming_plant_crops"
+        "id": "farming"
       },
       "practice_root_id": "field_worker",
       "fusion_root_id": null,
@@ -13919,7 +12911,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "farming_plant_crops",
+          "target": "farming",
           "threshold": 1
         }
       ],
@@ -13943,7 +12935,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "farming_plant_crops"
+        "id": "farming"
       },
       "practice_root_id": "field_worker",
       "fusion_root_id": null,
@@ -13951,7 +12943,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "farming_plant_crops",
+          "target": "farming",
           "threshold": 3
         }
       ],
@@ -13975,7 +12967,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "farming_plant_crops"
+        "id": "farming"
       },
       "practice_root_id": "field_worker",
       "fusion_root_id": null,
@@ -13983,7 +12975,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "farming_plant_crops",
+          "target": "farming",
           "threshold": 5
         }
       ],
@@ -14007,7 +12999,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "farming_plant_crops"
+        "id": "farming"
       },
       "practice_root_id": "field_worker",
       "fusion_root_id": null,
@@ -14015,7 +13007,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "farming_plant_crops",
+          "target": "farming",
           "threshold": 7
         }
       ],
@@ -14135,7 +13127,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "farming_artisan_goods"
+        "id": "farming"
       },
       "practice_root_id": "artisan_food",
       "fusion_root_id": null,
@@ -14143,7 +13135,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "farming_artisan_goods",
+          "target": "farming",
           "threshold": 1
         }
       ],
@@ -14167,7 +13159,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "farming_artisan_goods"
+        "id": "farming"
       },
       "practice_root_id": "artisan_food",
       "fusion_root_id": null,
@@ -14175,7 +13167,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "farming_artisan_goods",
+          "target": "farming",
           "threshold": 3
         }
       ],
@@ -14199,7 +13191,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "farming_artisan_goods"
+        "id": "farming"
       },
       "practice_root_id": "artisan_food",
       "fusion_root_id": null,
@@ -14207,7 +13199,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "farming_artisan_goods",
+          "target": "farming",
           "threshold": 5
         }
       ],
@@ -14231,7 +13223,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "farming_artisan_goods"
+        "id": "farming"
       },
       "practice_root_id": "artisan_food",
       "fusion_root_id": null,
@@ -14239,7 +13231,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "farming_artisan_goods",
+          "target": "farming",
           "threshold": 7
         }
       ],
@@ -14999,7 +13991,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "taming"
+        "id": "farming"
       },
       "practice_root_id": "wild_catch",
       "fusion_root_id": null,
@@ -15007,7 +13999,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "taming",
+          "target": "farming",
           "threshold": 1
         }
       ],
@@ -15031,7 +14023,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "taming"
+        "id": "farming"
       },
       "practice_root_id": "wild_catch",
       "fusion_root_id": null,
@@ -15039,7 +14031,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "taming",
+          "target": "farming",
           "threshold": 5
         }
       ],
@@ -15063,7 +14055,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "taming"
+        "id": "farming"
       },
       "practice_root_id": "wild_catch",
       "fusion_root_id": null,
@@ -15071,7 +14063,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "taming",
+          "target": "farming",
           "threshold": 7
         }
       ],
@@ -15437,38 +14429,6 @@
       "derived_tier": "ENTRY"
     },
     {
-      "id": "keen_hearing",
-      "name": "Keen Hearing",
-      "perk_ids": [
-        "perk_keen_hearing"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "heightened_senses"
-      },
-      "practice_root_id": "keen_hearing",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "heightened_senses",
-          "threshold": 1
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "EXPLORER",
-      "block": "CORE",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
       "id": "butcher",
       "name": "Butcher",
       "perk_ids": [
@@ -15817,102 +14777,6 @@
       "boundary": "",
       "skill_group": "Mystic",
       "block": "SUPPORT",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "easy_mapping",
-      "name": "Easy-Mapping",
-      "perk_ids": [
-        "perk_easy_mapping"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "dungeoneer"
-      },
-      "practice_root_id": "seeker",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "dungeoneer",
-          "threshold": 3
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "EXPLORER",
-      "block": "CORE",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "treasure_hunter",
-      "name": "Treasure Hunter",
-      "perk_ids": [
-        "perk_treasure_hunter"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "dungeoneer"
-      },
-      "practice_root_id": "seeker",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "dungeoneer",
-          "threshold": 5
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "EXPLORER",
-      "block": "CORE",
-      "is_anti_perk": false,
-      "derived_tier": "ENTRY"
-    },
-    {
-      "id": "labyrinth_breaker",
-      "name": "Labyrinth Breaker",
-      "perk_ids": [
-        "perk_labyrinth_breaker"
-      ],
-      "job": [
-        "PROGRESS"
-      ],
-      "authority_root": {
-        "type": "SKILL",
-        "id": "dungeoneer"
-      },
-      "practice_root_id": "seeker",
-      "fusion_root_id": null,
-      "sources": [],
-      "requirements": [
-        {
-          "type": "SKILL_LEVEL",
-          "target": "dungeoneer",
-          "threshold": 7
-        }
-      ],
-      "rarity": "COMMON",
-      "zone_id": null,
-      "cp_cost": 1,
-      "boundary": "",
-      "skill_group": "EXPLORER",
-      "block": "CORE",
       "is_anti_perk": false,
       "derived_tier": "ENTRY"
     },
@@ -18605,7 +17469,7 @@
   ],
   "subjects": [],
   "_valid": false,
-  "_error_count": 139,
-  "_warning_count": 1523,
+  "_error_count": 158,
+  "_warning_count": 1253,
   "_draft": true
 }

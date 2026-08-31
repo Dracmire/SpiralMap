@@ -278,6 +278,8 @@ eachRow(perkSheets, (r, sheet, row) => {
 });
 
 const perksById = new Map(perks.map((p) => [p.id, p]));
+const perkRowById = new Map<string, { sheet: string; row: number }>();
+eachRow(perkSheets, (r, sheet, row) => perkRowById.set(r.id, { sheet, row }));
 
 // ─────────────────────────────────────────────────────────────
 // Build typed Feat[]/Fusion[] (parsing requirements/sources/job/parents mini-syntax).
@@ -367,6 +369,7 @@ const featsById = new Map(allFeats.map((f) => [f.id, f]));
 
 const reference = loadReferenceData(CONTENT_DIR);
 reference.errors.forEach((m) => errors.push(m)); // already sheet!row-formatted by the adapter
+reference.notes.forEach((m) => notes.push(m));
 const skillsById = new Map(reference.skills.map((s) => [s.id, s]));
 
 // ─────────────────────────────────────────────────────────────
@@ -394,14 +397,31 @@ const ATTRIBUTE_CODES = new Set(["STR", "AGI", "INT", "PER", "WIL", "CHA"]);
 const classesById = new Map<string, unknown>(); // stubbed []
 const traitsById = new Map<string, unknown>(); // stubbed []
 
+/**
+ * A SKILL_LEVEL target is either a bare skill id ("craft") or, for a parameterized
+ * skill's specific instance, "skill_id.instance" ("craft.Woodwork") — a period, not
+ * a colon, since colon is the requirement mini-syntax's own field separator. Splits
+ * on the FIRST period only; none of the authored instance names contain one.
+ */
 function checkRequirementTargets(sheet: string, row: number, requirements: Requirement[]) {
   for (const req of requirements) {
     switch (req.type) {
-      case "SKILL_LEVEL":
-        if (!skillsById.has(req.target)) {
-          draftSink("skill_ref", sheet)(sheet, row, `requirement SKILL_LEVEL references unknown skill "${req.target}"`);
+      case "SKILL_LEVEL": {
+        const dot = req.target.indexOf(".");
+        const skillId = dot === -1 ? req.target : req.target.slice(0, dot);
+        const instance = dot === -1 ? null : req.target.slice(dot + 1);
+        const skill = skillsById.get(skillId);
+        if (!skill) {
+          draftSink("skill_ref", sheet)(sheet, row, `requirement SKILL_LEVEL references unknown skill "${skillId}"`);
+        } else if (instance !== null && !skill.instances.includes(instance)) {
+          draftSink("skill_ref", sheet)(
+            sheet,
+            row,
+            `requirement SKILL_LEVEL references unknown instance "${instance}" of skill "${skillId}" (known instances: ${skill.instances.join(", ") || "none"})`,
+          );
         }
         break;
+      }
       case "ATTRIBUTE":
       case "ATTRIBUTE_CEILING":
         if (!ATTRIBUTE_CODES.has(req.target)) err(sheet, row, `requirement ${req.type} references unknown attribute "${req.target}"`);
@@ -566,6 +586,21 @@ for (const f of allFeats) {
 }
 
 // ─────────────────────────────────────────────────────────────
+// Orphaned-perk check (not one of the 10 numbered rules — a structural sanity
+// check surfaced by the skill-reconciliation migration, which can DISCARD a feat
+// while leaving its perk rows in place). A perk with no owning feat/fusion is
+// dead weight in the dataset: nothing can ever grant it. Warning, not an error —
+// an author may legitimately stage a perk before wiring it to a feat.
+// ─────────────────────────────────────────────────────────────
+
+for (const p of perks) {
+  if (!perkOwner.has(p.id)) {
+    const loc = perkRowById.get(p.id);
+    warn(loc?.sheet ?? "perks.csv", loc?.row ?? "?", `perk "${p.id}" (${p.name}) is not owned by any feat/fusion — unreachable`);
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
 // Rule 6: no requirement cycles (PRIOR_NODE edges among feats/fusions).
 // ─────────────────────────────────────────────────────────────
 
@@ -680,7 +715,11 @@ for (const f of fusions) {
 
 function computeRootFloor(f: FeatOut): Tier {
   if (f.authority_root.type === "SKILL") {
-    const skillLevelReq = f.requirements.find((r) => r.type === "SKILL_LEVEL" && r.target === f.authority_root.id);
+    // SKILL_LEVEL target is either the bare skill id or "skill_id.instance" — match
+    // either form against authority_root.id (which is always the bare skill id).
+    const skillLevelReq = f.requirements.find(
+      (r) => r.type === "SKILL_LEVEL" && (r.target === f.authority_root.id || r.target.startsWith(`${f.authority_root.id}.`)),
+    );
     if (skillLevelReq && skillLevelReq.threshold !== null) {
       return skillLevelToTier(skillLevelReq.threshold);
     }
