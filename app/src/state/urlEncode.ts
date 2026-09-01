@@ -34,7 +34,10 @@ export function decodeBuildFromUrl(): BuildState | null {
   try {
     const json = decodeURIComponent(atob(encoded));
     const parsed: unknown = JSON.parse(json);
-    return isValidBuildState(parsed) ? parsed : null;
+    if (!isValidBuildState(parsed)) return null;
+    // A link saved before declared_group_ids existed — default to none declared
+    // rather than rejecting the whole link.
+    return { ...parsed, declared_group_ids: Array.isArray(parsed.declared_group_ids) ? parsed.declared_group_ids : [] };
   } catch {
     return null;
   }

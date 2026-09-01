@@ -376,6 +376,10 @@ export interface BuildState {
   class_id: string | null;
   /** purchased Feat headers, in purchase order */
   feat_ids: string[];
+  /** SkillGroup ids the character has committed to — the in-group CP discount
+   * (Savepoint v0.2 §8) only applies to a skill purchase while its group is declared
+   * here; skills outside every declared group are loose purchases at full price. */
+  declared_group_ids: string[];
 }
 
 /** One row of the compound-advantages panel after stacking resolution. */

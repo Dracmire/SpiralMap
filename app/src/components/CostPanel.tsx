@@ -35,6 +35,27 @@ export function CostPanel({ dataset }: { dataset: Dataset }) {
         <span>Saved by group discount</span>
         <span>{cost.skill_discount_saved}</span>
       </div>
+
+      {cost.skill_lines.length > 0 && (
+        <>
+          <h3>Skill purchases</h3>
+          <div className="skill-cost-lines">
+            {cost.skill_lines.map((line) => (
+              <div key={line.skillId} className="cost-row skill-cost-line">
+                {line.inGroup ? (
+                  <span>
+                    {line.skillName} ({line.groupName}, in-group): {line.baseline} CP → {line.discounted} CP
+                  </span>
+                ) : (
+                  <span>
+                    {line.skillName} (loose): {line.baseline} CP
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }

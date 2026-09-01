@@ -15174,13 +15174,19 @@
         "PROGRESS"
       ],
       "authority_root": {
-        "type": "ATTRIBUTE",
-        "id": "AGI"
+        "type": "SKILL",
+        "id": "riding"
       },
       "practice_root_id": "familiar_mount",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "riding",
+          "threshold": 1
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15199,13 +15205,19 @@
         "PROGRESS"
       ],
       "authority_root": {
-        "type": "ATTRIBUTE",
-        "id": "AGI"
+        "type": "SKILL",
+        "id": "riding"
       },
       "practice_root_id": "familiar_mount",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "riding",
+          "threshold": 3
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15224,13 +15236,19 @@
         "PROGRESS"
       ],
       "authority_root": {
-        "type": "ATTRIBUTE",
-        "id": "AGI"
+        "type": "SKILL",
+        "id": "riding"
       },
       "practice_root_id": "familiar_mount",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "riding",
+          "threshold": 5
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15249,13 +15267,19 @@
         "PROGRESS"
       ],
       "authority_root": {
-        "type": "ATTRIBUTE",
-        "id": "AGI"
+        "type": "SKILL",
+        "id": "riding"
       },
       "practice_root_id": "familiar_mount",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "riding",
+          "threshold": 7
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15280,7 +15304,13 @@
       "practice_root_id": "strong_back",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "STR",
+          "threshold": 150
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15305,7 +15335,13 @@
       "practice_root_id": "strong_back",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "STR",
+          "threshold": 250
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15324,13 +15360,19 @@
         "PROGRESS"
       ],
       "authority_root": {
-        "type": "ATTRIBUTE",
-        "id": "WIL"
+        "type": "SKILL",
+        "id": "common_lore"
       },
       "practice_root_id": "popular_trends",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "common_lore",
+          "threshold": 1
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15349,13 +15391,19 @@
         "PROGRESS"
       ],
       "authority_root": {
-        "type": "ATTRIBUTE",
-        "id": "WIL"
+        "type": "SKILL",
+        "id": "common_lore"
       },
       "practice_root_id": "popular_trends",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "common_lore",
+          "threshold": 3
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15374,13 +15422,19 @@
         "PROGRESS"
       ],
       "authority_root": {
-        "type": "ATTRIBUTE",
-        "id": "WIL"
+        "type": "SKILL",
+        "id": "common_lore"
       },
       "practice_root_id": "popular_trends",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "common_lore",
+          "threshold": 5
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15399,13 +15453,19 @@
         "PROGRESS"
       ],
       "authority_root": {
-        "type": "ATTRIBUTE",
-        "id": "WIL"
+        "type": "SKILL",
+        "id": "common_lore"
       },
       "practice_root_id": "popular_trends",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "common_lore",
+          "threshold": 7
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15430,7 +15490,13 @@
       "practice_root_id": "unrestrained",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "STR",
+          "threshold": 150
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15455,7 +15521,13 @@
       "practice_root_id": "unrestrained",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "STR",
+          "threshold": 200
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15480,7 +15552,13 @@
       "practice_root_id": "unrestrained",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "STR",
+          "threshold": 250
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15505,7 +15583,13 @@
       "practice_root_id": "build_up",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "STR",
+          "threshold": 200
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15530,7 +15614,13 @@
       "practice_root_id": "build_up",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "STR",
+          "threshold": 250
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15555,7 +15645,13 @@
       "practice_root_id": "coordination",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "AGI",
+          "threshold": 150
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15580,7 +15676,13 @@
       "practice_root_id": "coordination",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "AGI",
+          "threshold": 200
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15605,7 +15707,13 @@
       "practice_root_id": "coordination",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "AGI",
+          "threshold": 250
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15625,12 +15733,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "AGI"
       },
       "practice_root_id": "adrenaline",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "AGI",
+          "threshold": 150
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15650,12 +15764,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "AGI"
       },
       "practice_root_id": "adrenaline",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "AGI",
+          "threshold": 200
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15675,12 +15795,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "AGI"
       },
       "practice_root_id": "travel_light",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "AGI",
+          "threshold": 150
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15700,12 +15826,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "AGI"
       },
       "practice_root_id": "travel_light",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "AGI",
+          "threshold": 200
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15725,12 +15857,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "AGI"
       },
       "practice_root_id": "travel_light",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "AGI",
+          "threshold": 250
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15755,7 +15893,13 @@
       "practice_root_id": "self_diagnose",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "PER",
+          "threshold": 150
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15780,7 +15924,13 @@
       "practice_root_id": "self_diagnose",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "PER",
+          "threshold": 200
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15805,7 +15955,13 @@
       "practice_root_id": "self_diagnose",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "PER",
+          "threshold": 250
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15825,12 +15981,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "PER"
       },
       "practice_root_id": "low_light_vision",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "PER",
+          "threshold": 150
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15850,12 +16012,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "PER"
       },
       "practice_root_id": "low_light_vision",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "PER",
+          "threshold": 200
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15875,12 +16043,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "PER"
       },
       "practice_root_id": "low_light_vision",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "PER",
+          "threshold": 250
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15905,7 +16079,13 @@
       "practice_root_id": "idea",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "INT",
+          "threshold": 150
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15930,7 +16110,13 @@
       "practice_root_id": "idea",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "INT",
+          "threshold": 250
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15950,12 +16136,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "INT"
       },
       "practice_root_id": "self_diagnose",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "INT",
+          "threshold": 150
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -15975,12 +16167,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "INT"
       },
       "practice_root_id": "self_diagnose",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "INT",
+          "threshold": 200
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -16000,12 +16198,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "INT"
       },
       "practice_root_id": "self_diagnose",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "INT",
+          "threshold": 250
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -16025,12 +16229,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "INT"
       },
       "practice_root_id": "voracious_reader",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "INT",
+          "threshold": 150
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -16050,12 +16260,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "INT"
       },
       "practice_root_id": "voracious_reader",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "INT",
+          "threshold": 200
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -16075,12 +16291,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "INT"
       },
       "practice_root_id": "voracious_reader",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "INT",
+          "threshold": 250
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -16105,7 +16327,13 @@
       "practice_root_id": "strong_soul",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "WIL",
+          "threshold": 150
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -16130,7 +16358,13 @@
       "practice_root_id": "strong_soul",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "WIL",
+          "threshold": 200
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -16155,7 +16389,13 @@
       "practice_root_id": "strong_soul",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "WIL",
+          "threshold": 250
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -16175,12 +16415,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "WIL"
       },
       "practice_root_id": "stoic",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "WIL",
+          "threshold": 150
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -16200,12 +16446,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "WIL"
       },
       "practice_root_id": "stoic",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "WIL",
+          "threshold": 200
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -16225,12 +16477,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "WIL"
       },
       "practice_root_id": "happy_camper",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "WIL",
+          "threshold": 150
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -16250,12 +16508,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "WIL"
       },
       "practice_root_id": "happy_camper",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "WIL",
+          "threshold": 200
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -16275,12 +16539,18 @@
       ],
       "authority_root": {
         "type": "ATTRIBUTE",
-        "id": "STR"
+        "id": "WIL"
       },
       "practice_root_id": "happy_camper",
       "fusion_root_id": null,
       "sources": [],
-      "requirements": [],
+      "requirements": [
+        {
+          "type": "ATTRIBUTE",
+          "target": "WIL",
+          "threshold": 250
+        }
+      ],
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
@@ -17469,7 +17739,7 @@
   ],
   "subjects": [],
   "_valid": false,
-  "_error_count": 158,
-  "_warning_count": 1253,
+  "_error_count": 150,
+  "_warning_count": 1261,
   "_draft": true
 }

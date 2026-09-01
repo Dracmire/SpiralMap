@@ -144,6 +144,24 @@ body {
   font-size: 12px;
 }
 
+.group-kind-label {
+  font-size: 10px;
+  margin: 8px 0 4px;
+  color: #6a6a74;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.skill-cost-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.skill-cost-line {
+  font-size: 11px;
+  color: #9a9aa4;
+}
+
 .detail-header {
   display: flex;
   align-items: center;

@@ -1,4 +1,4 @@
-id,name,perk_ids,job,authority_root_type,authority_root_id,practice_root_id,fusion_root_id,requirements,sources,rarity,zone_id,cp_cost,boundary,skill_group,block,canonical_id,note
+id,name,perk_ids,job,authority_root_type,authority_root_id,practice_root_id,fusion_root_id,requirements,sources,rarity,zone_id,cp_cost,boundary,skill_group,block,future_parent_id,note
 influencer,Influencer,perk_influencer,PROGRESS,SKILL,court,influencer,,SKILL_LEVEL:court:1,,COMMON,,1,,High Class,SUPPORT,sense_motive,"heraldry + social defence; high rank, not entry"
 suggestion,Suggestion,perk_suggestion,PROGRESS,SKILL,court,influencer,,SKILL_LEVEL:court:5,,COMMON,,1,,High Class,SUPPORT,sense_motive,"heraldry + social defence; high rank, not entry"
 shrewd_merchant,Shrewd Merchant,perk_shrewd_merchant,PROGRESS,SKILL,comerce,businessman,,SKILL_LEVEL:comerce:3,,COMMON,,1,,Merchant,SUPPORT,haggle,or derived from Knowledge

@@ -8,10 +8,51 @@ export function CharacterPanel({ dataset }: { dataset: Dataset }) {
   const dispatch = useBuildDispatch();
 
   const sortedSkills = [...dataset.skills].sort((a, b) => a.name.localeCompare(b.name));
+  const coreGroups = [...dataset.skill_groups].filter((g) => g.kind === "CORE").sort((a, b) => a.name.localeCompare(b.name));
+  const supportGroups = [...dataset.skill_groups].filter((g) => g.kind === "SUPPORT").sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <div className="panel character-panel">
       <h2>Character</h2>
+
+      <section>
+        <h3>Skill Group</h3>
+        <p className="hint">
+          The ~25% skill CP discount only applies to skills inside a declared group. Skills outside
+          every declared group are loose purchases at full price.
+        </p>
+        {dataset.skill_groups.length === 0 && <p className="hint">No skill groups authored yet.</p>}
+        {coreGroups.length > 0 && (
+          <>
+            <h4 className="group-kind-label">Core</h4>
+            {coreGroups.map((g) => (
+              <label key={g.id} className="checkbox-row">
+                <input
+                  type="checkbox"
+                  checked={build.declared_group_ids.includes(g.id)}
+                  onChange={() => dispatch({ type: "TOGGLE_GROUP", groupId: g.id })}
+                />
+                {g.name}
+              </label>
+            ))}
+          </>
+        )}
+        {supportGroups.length > 0 && (
+          <>
+            <h4 className="group-kind-label">Support</h4>
+            {supportGroups.map((g) => (
+              <label key={g.id} className="checkbox-row">
+                <input
+                  type="checkbox"
+                  checked={build.declared_group_ids.includes(g.id)}
+                  onChange={() => dispatch({ type: "TOGGLE_GROUP", groupId: g.id })}
+                />
+                {g.name}
+              </label>
+            ))}
+          </>
+        )}
+      </section>
 
       <section>
         <h3>Class</h3>

@@ -9,6 +9,7 @@ export function exportBuildToMarkdown(state: BuildState): string {
   lines.push(`- zone_id: ${state.zone_id}`);
   lines.push(`- class_id: ${state.class_id ?? ""}`);
   lines.push(`- traits: ${state.trait_ids.join(", ")}`);
+  lines.push(`- declared_groups: ${state.declared_group_ids.join(", ")}`);
   lines.push("");
   lines.push("## Skill Levels");
   for (const [id, level] of Object.entries(state.skill_levels)) {
@@ -60,6 +61,9 @@ export function importBuildFromMarkdown(text: string): BuildState {
     } else if (line.startsWith("- traits:")) {
       const v = line.slice("- traits:".length).trim();
       state.trait_ids = v ? v.split(",").map((s) => s.trim()).filter(Boolean) : [];
+    } else if (line.startsWith("- declared_groups:")) {
+      const v = line.slice("- declared_groups:".length).trim();
+      state.declared_group_ids = v ? v.split(",").map((s) => s.trim()).filter(Boolean) : [];
     } else if (section === "skills" && kv) {
       state.skill_levels[kv[1]] = Number(kv[2]) || 0;
     } else if (section === "attributes" && kv) {
