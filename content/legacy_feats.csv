@@ -1,269 +1,296 @@
-id,name,perk_ids,job,authority_root_type,authority_root_id,practice_root_id,fusion_root_id,requirements,sources,rarity,zone_id,cp_cost,boundary,skill_group,block,skill_instance
-vanguard,Vanguard,perk_vanguard,PROGRESS,SKILL,melee_weapons_handling,vanguard,,SKILL_LEVEL:melee_weapons_handling:1,,COMMON,,1,,WARRIOR,CORE,
-bigger_is_better,Bigger is Better,perk_bigger_is_better,PROGRESS,SKILL,melee_weapons_handling,vanguard,,SKILL_LEVEL:melee_weapons_handling:3,,COMMON,,1,,WARRIOR,CORE,
-thundering,Thundering,perk_thundering,PROGRESS,SKILL,melee_weapons_handling,vanguard,,SKILL_LEVEL:melee_weapons_handling:5,,COMMON,,1,,WARRIOR,CORE,
-penetrating_force,Penetrating Force,perk_penetrating_force,PROGRESS,SKILL,melee_weapons_handling,vanguard,,SKILL_LEVEL:melee_weapons_handling:7,,COMMON,,1,,WARRIOR,CORE,
-emphatic,Emphatic,perk_emphatic,PROGRESS,SKILL,sense_motive,emphatic,,SKILL_LEVEL:sense_motive:1,,COMMON,,1,,High Class,SUPPORT,
-false_bane,False Bane,perk_false_bane,PROGRESS,SKILL,sense_motive,emphatic,,SKILL_LEVEL:sense_motive:3,,COMMON,,1,,High Class,SUPPORT,
-deep_reading,Deep Reading,perk_deep_reading,PROGRESS,SKILL,sense_motive,emphatic,,SKILL_LEVEL:sense_motive:7,,COMMON,,1,,High Class,SUPPORT,
-heavy_fitted,Heavy Fitted,perk_heavy_fitted,PROGRESS,SKILL,full_armor_handling,heavy_fitted,,SKILL_LEVEL:full_armor_handling:1,,COMMON,,1,,WARRIOR,CORE,
-stout_defender,Stout Defender,perk_stout_defender,PROGRESS,SKILL,full_armor_handling,heavy_fitted,,SKILL_LEVEL:full_armor_handling:5,,COMMON,,1,,WARRIOR,CORE,
-shieldbearer,Shieldbearer,perk_shieldbearer,PROGRESS,SKILL,full_armor_handling,shieldbearer,,SKILL_LEVEL:full_armor_handling:1,,COMMON,,1,,WARRIOR,CORE,
-stone_block,Stone Block,perk_stone_block,PROGRESS,SKILL,full_armor_handling,shieldbearer,,SKILL_LEVEL:full_armor_handling:3,,COMMON,,1,,WARRIOR,CORE,
-moving_block,Moving Block,perk_moving_block,PROGRESS,SKILL,full_armor_handling,shieldbearer,,SKILL_LEVEL:full_armor_handling:5,,COMMON,,1,,WARRIOR,CORE,
-stubborn_shield,Stubborn Shield,perk_stubborn_shield,PROGRESS,SKILL,full_armor_handling,shieldbearer,,SKILL_LEVEL:full_armor_handling:7,,COMMON,,1,,WARRIOR,CORE,
-attitude_change,Attitude Change,perk_attitude_change,PROGRESS,SKILL,diplomacy,etiquette,,SKILL_LEVEL:diplomacy:5,,COMMON,,1,,High Class,SUPPORT,
-corageous_heart,Corageous Heart,perk_corageous_heart,PROGRESS,SKILL,discipline,corageous_heart,,SKILL_LEVEL:discipline:1,,COMMON,,1,,WARRIOR,CORE,
-nerves_of_steel,Nerves of Steel,perk_nerves_of_steel,PROGRESS,SKILL,discipline,corageous_heart,,SKILL_LEVEL:discipline:5,,COMMON,,1,,WARRIOR,CORE,
-fighting_spirit,Fighting Spirit,perk_fighting_spirit,PROGRESS,SKILL,discipline,corageous_heart,,SKILL_LEVEL:discipline:7,,COMMON,,1,,WARRIOR,CORE,
-word_in_the_street,Word in the Street,perk_word_in_the_street,PROGRESS,SKILL,streetwise,all_ears,,SKILL_LEVEL:streetwise:3,,COMMON,,1,,Low Class,SUPPORT,
-street_vigilance,Street Vigilance,perk_street_vigilance,PROGRESS,SKILL,streetwise,all_ears,,SKILL_LEVEL:streetwise:5,,COMMON,,1,,Low Class,SUPPORT,
-background_check,Background Check,perk_background_check,PROGRESS,SKILL,streetwise,all_ears,,SKILL_LEVEL:streetwise:7,,COMMON,,1,,Low Class,SUPPORT,
-lasting_impression,Lasting Impression,perk_lasting_impression,PROGRESS,SKILL,intimidation,undertaker,,SKILL_LEVEL:intimidation:5,,COMMON,,1,,WARRIOR,CORE,
-terrifying_presence,Terrifying Presence,perk_terrifying_presence,PROGRESS,SKILL,intimidation,undertaker,,SKILL_LEVEL:intimidation:7,,COMMON,,1,,WARRIOR,CORE,
-pokerface,Pokerface,perk_pokerface,PROGRESS,SKILL,bluff,con_man,,SKILL_LEVEL:bluff:5,,COMMON,,1,,Low Class,SUPPORT,
-spin_a_tale,Spin a Tale,perk_spin_a_tale,PROGRESS,SKILL,bluff,con_man,,SKILL_LEVEL:bluff:7,,COMMON,,1,,Low Class,SUPPORT,
-teamwork,Teamwork,perk_teamwork,PROGRESS,SKILL,battle,teamwork,,SKILL_LEVEL:battle:1,,COMMON,,1,,WARRIOR,CORE,
-flow_of_battle,Flow of Battle,perk_flow_of_battle,PROGRESS,SKILL,battle,teamwork,,SKILL_LEVEL:battle:3,,COMMON,,1,,WARRIOR,CORE,
-a_subtle_push,A Subtle Push,perk_a_subtle_push,PROGRESS,SKILL,bluff,little_devil,,SKILL_LEVEL:bluff:3,,COMMON,,1,,Low Class,SUPPORT,
-charmer,Charmer,perk_charmer,PROGRESS,SKILL,bluff,little_devil,,SKILL_LEVEL:bluff:7,,COMMON,,1,,Low Class,SUPPORT,
-fencer,Fencer,perk_fencer,PROGRESS,SKILL,light_weapons_handling,fencer,,SKILL_LEVEL:light_weapons_handling:1,,COMMON,,1,,ROUGE,CORE,
-weapon_finnesse,Weapon Finnesse,perk_weapon_finnesse,PROGRESS,SKILL,light_weapons_handling,fencer,,SKILL_LEVEL:light_weapons_handling:3,,COMMON,,1,,ROUGE,CORE,
-blade_of_lightness,Blade of Lightness,perk_blade_of_lightness,PROGRESS,SKILL,light_weapons_handling,fencer,,SKILL_LEVEL:light_weapons_handling:5,,COMMON,,1,,ROUGE,CORE,
-sharpened,Sharpened,perk_sharpened,PROGRESS,SKILL,light_weapons_handling,fencer,,SKILL_LEVEL:light_weapons_handling:7,,COMMON,,1,,ROUGE,CORE,
-knife_thrower,Knife Thrower,perk_knife_thrower,PROGRESS,SKILL,projectile_weapons_handling,knife_thrower,,SKILL_LEVEL:projectile_weapons_handling:1,,COMMON,,1,,ROUGE,CORE,
-bullseye,Bullseye,perk_bullseye,PROGRESS,SKILL,projectile_weapons_handling,knife_thrower,,SKILL_LEVEL:projectile_weapons_handling:3,,COMMON,,1,,ROUGE,CORE,
-trick_throw,Trick Throw,perk_trick_throw,PROGRESS,SKILL,projectile_weapons_handling,knife_thrower,,SKILL_LEVEL:projectile_weapons_handling:5,,COMMON,,1,,ROUGE,CORE,
-blinding_speed,Blinding Speed,perk_blinding_speed,PROGRESS,SKILL,projectile_weapons_handling,knife_thrower,,SKILL_LEVEL:projectile_weapons_handling:7,,COMMON,,1,,ROUGE,CORE,
-reserved_warez,Reserved Warez,perk_reserved_warez,PROGRESS,SKILL,haggle,pack_rat,,SKILL_LEVEL:haggle:5,,COMMON,,1,,Merchant,SUPPORT,
-black_market,Black Market,perk_black_market,PROGRESS,SKILL,haggle,pack_rat,,SKILL_LEVEL:haggle:7,,COMMON,,1,,Merchant,SUPPORT,
-light_fitted,Light Fitted,perk_light_fitted,PROGRESS,SKILL,light_armor_handling,light_fitted,,SKILL_LEVEL:light_armor_handling:1,,COMMON,,1,,ROUGE,CORE,
-elastic_defense,Elastic Defense,perk_elastic_defense,PROGRESS,SKILL,light_armor_handling,light_fitted,,SKILL_LEVEL:light_armor_handling:3,,COMMON,,1,,ROUGE,CORE,
-unhindered,Unhindered,perk_unhindered,PROGRESS,SKILL,light_armor_handling,light_fitted,,SKILL_LEVEL:light_armor_handling:7,,COMMON,,1,,ROUGE,CORE,
-identify,Identify,perk_identify,PROGRESS,SKILL,apraisal,money_valuation,,SKILL_LEVEL:apraisal:3,,COMMON,,1,,Merchant,SUPPORT,
-eye_of_judgement,Eye of Judgement,perk_eye_of_judgement,PROGRESS,SKILL,apraisal,money_valuation,,SKILL_LEVEL:apraisal:7,,COMMON,,1,,Merchant,SUPPORT,
-trap_locks,Trap-Locks,perk_trap_locks,PROGRESS,SKILL,lockpick,lock_pick,,SKILL_LEVEL:lockpick:3,,COMMON,,1,,ROUGE,CORE,
-great_outdoors,Great Outdoors,perk_great_outdoors,PROGRESS,SKILL,wilderness,great_outdoors,,SKILL_LEVEL:wilderness:1,,COMMON,,1,,Survivalist,SUPPORT,
-rudimentary_wisdom,Rudimentary Wisdom,perk_rudimentary_wisdom,PROGRESS,SKILL,wilderness,great_outdoors,,SKILL_LEVEL:wilderness:5,,COMMON,,1,,Survivalist,SUPPORT,
-explorer,Explorer,perk_explorer,PROGRESS,SKILL,wilderness,great_outdoors,,SKILL_LEVEL:wilderness:7,,COMMON,,1,,Survivalist,SUPPORT,
-ambusher,Ambusher,perk_ambusher,PROGRESS,SKILL,hide,silent,,SKILL_LEVEL:hide:3,,COMMON,,1,,ROUGE,CORE,
-reaper,Reaper,perk_reaper,PROGRESS,SKILL,hide,silent,,SKILL_LEVEL:hide:5,,COMMON,,1,,ROUGE,CORE,
-presence_concealment,Presence Concealment,perk_presence_concealment,PROGRESS,SKILL,hide,silent,,SKILL_LEVEL:hide:7,,COMMON,,1,,ROUGE,CORE,
-quick_hands,Quick Hands,perk_quick_hands,PROGRESS,SKILL,sleight_of_hand,quick_hands,,SKILL_LEVEL:sleight_of_hand:1,,COMMON,,1,,ROUGE,CORE,
-hidden_weapons,Hidden Weapons,perk_hidden_weapons,PROGRESS,SKILL,sleight_of_hand,quick_hands,,SKILL_LEVEL:sleight_of_hand:3,,COMMON,,1,,ROUGE,CORE,
-ilutionism,Ilutionism,perk_ilutionism,PROGRESS,SKILL,sleight_of_hand,quick_hands,,SKILL_LEVEL:sleight_of_hand:7,,COMMON,,1,,ROUGE,CORE,
-spider_climb,Spider Climb,perk_spider_climb,PROGRESS,SKILL,climbing,clift_hanger,,SKILL_LEVEL:climbing:3,,COMMON,,1,,Survivalist,SUPPORT,
-action_goat,Action Goat,perk_action_goat,PROGRESS,SKILL,climbing,clift_hanger,,SKILL_LEVEL:climbing:5,,COMMON,,1,,Survivalist,SUPPORT,
-windbreaker,WindBreaker,perk_windbreaker,PROGRESS,SKILL,climbing,clift_hanger,,SKILL_LEVEL:climbing:7,,COMMON,,1,,Survivalist,SUPPORT,
-elemental_wand,Elemental Wand,perk_elemental_wand,PROGRESS,SKILL,basic_mana_discipline,elemental_wand,,SKILL_LEVEL:basic_mana_discipline:1,,COMMON,,1,,MAGE,CORE,
-elemental_attunement,Elemental Attunement,perk_elemental_attunement,PROGRESS,SKILL,basic_mana_discipline,elemental_wand,,SKILL_LEVEL:basic_mana_discipline:3,,COMMON,,1,,MAGE,CORE,
-nature_elemental,Nature Elemental,perk_nature_elemental,PROGRESS,SKILL,basic_mana_discipline,elemental_wand,,SKILL_LEVEL:basic_mana_discipline:5,,COMMON,,1,,MAGE,CORE,
-piercing_elemental,Piercing Elemental,perk_piercing_elemental,PROGRESS,SKILL,basic_mana_discipline,elemental_wand,,SKILL_LEVEL:basic_mana_discipline:7,,COMMON,,1,,MAGE,CORE,
-hard_worker,Hard Worker,perk_hard_worker,PROGRESS,SKILL,minning,hard_worker,,SKILL_LEVEL:minning:1,,COMMON,,1,,Artisan,SUPPORT,
-stonebreaker,Stonebreaker,perk_stonebreaker,PROGRESS,SKILL,minning,hard_worker,,SKILL_LEVEL:minning:3,,COMMON,,1,,Artisan,SUPPORT,
-tireless_worker,Tireless Worker,perk_tireless_worker,PROGRESS,SKILL,minning,hard_worker,,SKILL_LEVEL:minning:7,,COMMON,,1,,Artisan,SUPPORT,
-reinforcement_wand,Reinforcement Wand,perk_reinforcement_wand,PROGRESS,SKILL,basic_mana_discipline,reinforcement_wand,,SKILL_LEVEL:basic_mana_discipline:1,,COMMON,,1,,MAGE,CORE,
-physical_attunement,Physical Attunement,perk_physical_attunement,PROGRESS,SKILL,basic_mana_discipline,reinforcement_wand,,SKILL_LEVEL:basic_mana_discipline:3,,COMMON,,1,,MAGE,CORE,
-personal_aura,Personal Aura,perk_personal_aura,PROGRESS,SKILL,basic_mana_discipline,reinforcement_wand,,SKILL_LEVEL:basic_mana_discipline:5,,COMMON,,1,,MAGE,CORE,
-reinforcemnt_expert,Reinforcemnt Expert,perk_reinforcemnt_expert,PROGRESS,SKILL,basic_mana_discipline,reinforcement_wand,,SKILL_LEVEL:basic_mana_discipline:7,,COMMON,,1,,MAGE,CORE,
-interference_wand,Interference Wand,perk_interference_wand,PROGRESS,SKILL,basic_mana_discipline,interference_wand,,SKILL_LEVEL:basic_mana_discipline:1,,COMMON,,1,,MAGE,CORE,
-void_attunement,Void Attunement,perk_void_attunement,PROGRESS,SKILL,basic_mana_discipline,interference_wand,,SKILL_LEVEL:basic_mana_discipline:3,,COMMON,,1,,MAGE,CORE,
-disruptor,Disruptor,perk_disruptor,PROGRESS,SKILL,basic_mana_discipline,interference_wand,,SKILL_LEVEL:basic_mana_discipline:5,,COMMON,,1,,MAGE,CORE,
-multicast_splitting,Multicast Splitting,perk_multicast_splitting,PROGRESS,SKILL,basic_mana_discipline,interference_wand,,SKILL_LEVEL:basic_mana_discipline:7,,COMMON,,1,,MAGE,CORE,
-stronger_wood,Stronger Wood,perk_stronger_wood,PROGRESS,SKILL,craft,carpenter,,SKILL_LEVEL:craft.Woodwork:3,,COMMON,,1,,Artisan,SUPPORT,Woodwork
-efficient_chippy,Efficient Chippy,perk_efficient_chippy,PROGRESS,SKILL,craft,carpenter,,SKILL_LEVEL:craft.Woodwork:5,,COMMON,,1,,Artisan,SUPPORT,Woodwork
-chanting,Chanting,perk_chanting,PROGRESS,SKILL,mana_sensitivity,mana_trance,,SKILL_LEVEL:mana_sensitivity:3,,COMMON,,1,,MAGE,CORE,
-prescise_casting,Prescise Casting,perk_prescise_casting,PROGRESS,SKILL,mana_sensitivity,mana_trance,,SKILL_LEVEL:mana_sensitivity:7,,COMMON,,1,,MAGE,CORE,
-tempering_hack,Tempering Hack,perk_tempering_hack,PROGRESS,SKILL,craft,smity,,SKILL_LEVEL:craft.Metalwork:3,,COMMON,,1,,Artisan,SUPPORT,Metalwork
-adept_smelter,Adept Smelter,perk_adept_smelter,PROGRESS,SKILL,craft,smity,,SKILL_LEVEL:craft.Metalwork:5,,COMMON,,1,,Artisan,SUPPORT,Metalwork
-advanced_materials,Advanced Materials,perk_advanced_materials,PROGRESS,SKILL,craft,smity,,SKILL_LEVEL:craft.Metalwork:7,,COMMON,,1,,Artisan,SUPPORT,Metalwork
-divided_focus,Divided Focus,perk_divided_focus,PROGRESS,SKILL,mental_focus,battle_focus,,SKILL_LEVEL:mental_focus:7,,COMMON,,1,,MAGE,CORE,
-grease_monkey,Grease Monkey,perk_grease_monkey,PROGRESS,SKILL,mechanics,grease_monkey,,SKILL_LEVEL:mechanics:1,,COMMON,,1,,Engineer,SUPPORT,
-quick_fix,Quick-Fix,perk_quick_fix,PROGRESS,SKILL,mechanics,grease_monkey,,SKILL_LEVEL:mechanics:3,,COMMON,,1,,Engineer,SUPPORT,
-jury_rig,Jury Rig,perk_jury_rig,PROGRESS,SKILL,mechanics,grease_monkey,,SKILL_LEVEL:mechanics:5,,COMMON,,1,,Engineer,SUPPORT,
-mechanist,Mechanist,perk_mechanist,PROGRESS,SKILL,mechanics,grease_monkey,,SKILL_LEVEL:mechanics:7,,COMMON,,1,,Engineer,SUPPORT,
-mana_tools,Mana Tools,perk_mana_tools,PROGRESS,SKILL,magic_obj,mana_tools,,SKILL_LEVEL:magic_obj:1,,COMMON,,1,,MAGE,CORE,
-multi_magic_tools,Multi Magic Tools,perk_multi_magic_tools,PROGRESS,SKILL,magic_obj,mana_tools,,SKILL_LEVEL:magic_obj:5,,COMMON,,1,,MAGE,CORE,
-mana_overload,Mana Overload,perk_mana_overload,PROGRESS,SKILL,magic_obj,mana_tools,,SKILL_LEVEL:magic_obj:7,,COMMON,,1,,MAGE,CORE,
-boost_clading,Boost Clading,perk_boost_clading,PROGRESS,SKILL,magic_obj,magic_clad,,SKILL_LEVEL:magic_obj:3,,COMMON,,1,,MAGE,CORE,
-magic_bulkward,Magic Bulkward,perk_magic_bulkward,PROGRESS,SKILL,magic_obj,magic_clad,,SKILL_LEVEL:magic_obj:5,,COMMON,,1,,MAGE,CORE,
-magic_defense,Magic Defense,perk_magic_defense,PROGRESS,SKILL,magic_obj,magic_clad,,SKILL_LEVEL:magic_obj:7,,COMMON,,1,,MAGE,CORE,
-performer_instruments,Performer (Instruments),perk_performer_instruments,PROGRESS,SKILL,perform,performer_instruments,,SKILL_LEVEL:perform.Music Instrument:1,,COMMON,,1,,Bard,SUPPORT,Music Instrument
-fascinate,Fascinate,perk_fascinate,PROGRESS,SKILL,perform,performer_instruments,,SKILL_LEVEL:perform.Music Instrument:3,,COMMON,,1,,Bard,SUPPORT,Music Instrument
-inspiring_peformance,Inspiring Peformance,perk_inspiring_peformance,PROGRESS,SKILL,perform,performer_instruments,,SKILL_LEVEL:perform.Music Instrument:5,,COMMON,,1,,Bard,SUPPORT,Music Instrument
-countersong,Countersong,perk_countersong,PROGRESS,SKILL,perform,performer_instruments,,SKILL_LEVEL:perform.Music Instrument:7,,COMMON,,1,,Bard,SUPPORT,Music Instrument
-spirit_rood,Spirit Rood,perk_spirit_rood,PROGRESS,SKILL,piety,spirit_rood,,SKILL_LEVEL:piety:1,,COMMON,,1,,PRIEST,CORE,
-shamanism,Shamanism,perk_shamanism,PROGRESS,SKILL,piety,spirit_rood,,SKILL_LEVEL:piety:3,,COMMON,,1,,PRIEST,CORE,
-spirit_familiar,Spirit Familiar,perk_spirit_familiar,PROGRESS,SKILL,piety,spirit_rood,,SKILL_LEVEL:piety:5,,COMMON,,1,,PRIEST,CORE,
-caller,Caller,perk_caller,PROGRESS,SKILL,piety,spirit_rood,,SKILL_LEVEL:piety:7,,COMMON,,1,,PRIEST,CORE,
-performer_singing,Performer (Singing),perk_performer_singing,PROGRESS,SKILL,perform,performer_singing,,SKILL_LEVEL:perform.Singing:1,,COMMON,,1,,Bard,SUPPORT,Singing
-booming_voice,Booming Voice,perk_booming_voice,PROGRESS,SKILL,perform,performer_singing,,SKILL_LEVEL:perform.Singing:3,,COMMON,,1,,Bard,SUPPORT,Singing
-charming_peformance,Charming Peformance,perk_charming_peformance,PROGRESS,SKILL,perform,performer_singing,,SKILL_LEVEL:perform.Singing:5,,COMMON,,1,,Bard,SUPPORT,Singing
-heartfelt,Heartfelt,perk_heartfelt,PROGRESS,SKILL,perform,performer_singing,,SKILL_LEVEL:perform.Singing:7,,COMMON,,1,,Bard,SUPPORT,Singing
-truth_rood,Truth Rood,perk_truth_rood,PROGRESS,SKILL,piety,truth_rood,,SKILL_LEVEL:piety:1,,COMMON,,1,,PRIEST,CORE,
-truth_scale,Truth Scale,perk_truth_scale,PROGRESS,SKILL,piety,truth_rood,,SKILL_LEVEL:piety:3,,COMMON,,1,,PRIEST,CORE,
-mana_burn,Mana Burn,perk_mana_burn,PROGRESS,SKILL,piety,truth_rood,,SKILL_LEVEL:piety:5,,COMMON,,1,,PRIEST,CORE,
-divine_oath,Divine Oath,perk_divine_oath,PROGRESS,SKILL,piety,truth_rood,,SKILL_LEVEL:piety:7,,COMMON,,1,,PRIEST,CORE,
-performer_show,Performer (Show),perk_performer_show,PROGRESS,SKILL,perform,performer_show,,SKILL_LEVEL:perform.Dancing/Show:1,,COMMON,,1,,Bard,SUPPORT,Dancing/Show
-hands_and_feet,Hands and Feet,perk_hands_and_feet,PROGRESS,SKILL,perform,performer_show,,SKILL_LEVEL:perform.Dancing/Show:3,,COMMON,,1,,Bard,SUPPORT,Dancing/Show
-elegance_in_motion,Elegance in Motion,perk_elegance_in_motion,PROGRESS,SKILL,perform,performer_show,,SKILL_LEVEL:perform.Dancing/Show:5,,COMMON,,1,,Bard,SUPPORT,Dancing/Show
-delirium,Delirium,perk_delirium,PROGRESS,SKILL,perform,performer_show,,SKILL_LEVEL:perform.Dancing/Show:7,,COMMON,,1,,Bard,SUPPORT,Dancing/Show
-channel_rood,Channel Rood,perk_channel_rood,PROGRESS,SKILL,piety,channel_rood,,SKILL_LEVEL:piety:1,,COMMON,,1,,PRIEST,CORE,
-divine_focus,Divine Focus,perk_divine_focus,PROGRESS,SKILL,piety,channel_rood,,SKILL_LEVEL:piety:3,,COMMON,,1,,PRIEST,CORE,
-positive_channel,Positive Channel,perk_positive_channel,PROGRESS,SKILL,piety,channel_rood,,SKILL_LEVEL:piety:5,,COMMON,,1,,PRIEST,CORE,
-visual_interpretation,Visual Interpretation,perk_visual_interpretation,PROGRESS,SKILL,craft,visual_artist,,SKILL_LEVEL:craft.Drawing/Painting:3,,COMMON,,1,,Bard,SUPPORT,Drawing/Painting
-enthraling_artwork,Enthraling Artwork,perk_enthraling_artwork,PROGRESS,SKILL,craft,visual_artist,,SKILL_LEVEL:craft.Drawing/Painting:5,,COMMON,,1,,Bard,SUPPORT,Drawing/Painting
-weird,Weird,perk_weird,PROGRESS,SKILL,craft,visual_artist,,SKILL_LEVEL:craft.Drawing/Painting:7,,COMMON,,1,,Bard,SUPPORT,Drawing/Painting
-first_aid,First Aid,perk_first_aid,PROGRESS,SKILL,healing,first_aid,,SKILL_LEVEL:healing:1,,COMMON,,1,,PRIEST,CORE,
-flesh_blood,Flesh & Blood,perk_flesh_blood,PROGRESS,SKILL,healing,first_aid,,SKILL_LEVEL:healing:5,,COMMON,,1,,PRIEST,CORE,
-re_vitalize,Re-Vitalize,perk_re_vitalize,PROGRESS,SKILL,healing,first_aid,,SKILL_LEVEL:healing:7,,COMMON,,1,,PRIEST,CORE,
-finecraft,Finecraft,perk_finecraft,PROGRESS,SKILL,craft,carver,,SKILL_LEVEL:craft.Sculpting/Engraving:5,,COMMON,,1,,Bard,SUPPORT,Sculpting/Engraving
-jewelry,Jewelry,perk_jewelry,PROGRESS,SKILL,craft,carver,,SKILL_LEVEL:craft.Sculpting/Engraving:7,,COMMON,,1,,Bard,SUPPORT,Sculpting/Engraving
-spirit_sensitivity,Spirit Sensitivity,perk_spirit_sensitivity,PROGRESS,SKILL,spirit_sensitivity,spirit_sensitivity,,SKILL_LEVEL:spirit_sensitivity:1,,COMMON,,1,,PRIEST,CORE,
-medium,Medium,perk_medium,PROGRESS,SKILL,spirit_sensitivity,spirit_sensitivity,,SKILL_LEVEL:spirit_sensitivity:3,,COMMON,,1,,PRIEST,CORE,
-spirit_gate,Spirit Gate,perk_spirit_gate,PROGRESS,SKILL,spirit_sensitivity,spirit_sensitivity,,SKILL_LEVEL:spirit_sensitivity:5,,COMMON,,1,,PRIEST,CORE,
-spiritual_force,Spiritual Force,perk_spiritual_force,PROGRESS,SKILL,spirit_sensitivity,spirit_sensitivity,,SKILL_LEVEL:spirit_sensitivity:7,,COMMON,,1,,PRIEST,CORE,
-attention_magnet,Attention Magnet,perk_attention_magnet,PROGRESS,SKILL,acting,attention_magnet,,SKILL_LEVEL:acting:1,,COMMON,,1,,Bard,SUPPORT,
-riling_the_audience,Riling the Audience,perk_riling_the_audience,PROGRESS,SKILL,acting,attention_magnet,,SKILL_LEVEL:acting:5,,COMMON,,1,,Bard,SUPPORT,
-leading_the_audience,Leading the Audience,perk_leading_the_audience,PROGRESS,SKILL,acting,attention_magnet,,SKILL_LEVEL:acting:7,,COMMON,,1,,Bard,SUPPORT,
-karmic_balance,Karmic Balance,perk_karmic_balance,PROGRESS,SKILL,piety,karmic_balance,,SKILL_LEVEL:piety:1,,COMMON,,1,,PRIEST,CORE,
-blessed,Blessed,perk_blessed,PROGRESS,SKILL,piety,karmic_balance,,SKILL_LEVEL:piety:3,,COMMON,,1,,PRIEST,CORE,
-karmic_piety,Karmic Piety,perk_karmic_piety,PROGRESS,SKILL,piety,karmic_balance,,SKILL_LEVEL:piety:5,,COMMON,,1,,PRIEST,CORE,
-zeal,Zeal,perk_zeal,PROGRESS,SKILL,piety,karmic_balance,,SKILL_LEVEL:piety:7,,COMMON,,1,,PRIEST,CORE,
-other_faces,Other Faces,perk_other_faces,PROGRESS,SKILL,acting,other_faces,,SKILL_LEVEL:acting:1,,COMMON,,1,,Bard,SUPPORT,
-compelling_acting,Compelling Acting,perk_compelling_acting,PROGRESS,SKILL,acting,other_faces,,SKILL_LEVEL:acting:5,,COMMON,,1,,Bard,SUPPORT,
-persona,Persona,perk_persona,PROGRESS,SKILL,acting,other_faces,,SKILL_LEVEL:acting:7,,COMMON,,1,,Bard,SUPPORT,
-stone_fisted,Stone Fisted,perk_stone_fisted,PROGRESS,SKILL,brawling,stone_fisted,,SKILL_LEVEL:brawling:1,,COMMON,,1,,BRAWLER,CORE,
-slam_down,Slam Down!,perk_slam_down,PROGRESS,SKILL,brawling,stone_fisted,,SKILL_LEVEL:brawling:5,,COMMON,,1,,BRAWLER,CORE,
-circular_force,Circular Force,perk_circular_force,PROGRESS,SKILL,brawling,circular_force,,SKILL_LEVEL:brawling:1,,COMMON,,1,,BRAWLER,CORE,
-quick_recover,Quick Recover,perk_quick_recover,PROGRESS,SKILL,brawling,circular_force,,SKILL_LEVEL:brawling:3,,COMMON,,1,,BRAWLER,CORE,
-ground_fight,Ground Fight,perk_ground_fight,PROGRESS,SKILL,brawling,circular_force,,SKILL_LEVEL:brawling:5,,COMMON,,1,,BRAWLER,CORE,
-cook,Cook,perk_cook,PROGRESS,SKILL,cooking,cook,,SKILL_LEVEL:cooking:1,,COMMON,,1,,Farmer,SUPPORT,
-exotic_gourmet,Exotic Gourmet,perk_exotic_gourmet,PROGRESS,SKILL,cooking,cook,,SKILL_LEVEL:cooking:5,,COMMON,,1,,Farmer,SUPPORT,
-supernatural_cuisine,Supernatural Cuisine,perk_supernatural_cuisine,PROGRESS,SKILL,cooking,cook,,SKILL_LEVEL:cooking:7,,COMMON,,1,,Farmer,SUPPORT,
-calm_will,Calm Will,perk_calm_will,PROGRESS,SKILL,still_mind_focus,calm_will,,SKILL_LEVEL:still_mind_focus:1,,COMMON,,1,,BRAWLER,CORE,
-inner_balance,Inner Balance,perk_inner_balance,PROGRESS,SKILL,still_mind_focus,calm_will,,SKILL_LEVEL:still_mind_focus:5,,COMMON,,1,,BRAWLER,CORE,
-heavenbound,Heavenbound,perk_heavenbound,PROGRESS,SKILL,still_mind_focus,calm_will,,SKILL_LEVEL:still_mind_focus:7,,COMMON,,1,,BRAWLER,CORE,
-rancher,Rancher,perk_rancher,PROGRESS,SKILL,farming,rancher,,SKILL_LEVEL:farming:1,,COMMON,,1,,Farmer,SUPPORT,
-cattle_care,Cattle Care,perk_cattle_care,PROGRESS,SKILL,farming,rancher,,SKILL_LEVEL:farming:3,,COMMON,,1,,Farmer,SUPPORT,
-expert_herder,Expert Herder,perk_expert_herder,PROGRESS,SKILL,farming,rancher,,SKILL_LEVEL:farming:5,,COMMON,,1,,Farmer,SUPPORT,
-champion_cattle,Champion Cattle,perk_champion_cattle,PROGRESS,SKILL,farming,rancher,,SKILL_LEVEL:farming:7,,COMMON,,1,,Farmer,SUPPORT,
-enemy_sonar,Enemy Sonar,perk_enemy_sonar,PROGRESS,SKILL,alert,cautious,,SKILL_LEVEL:alert:3,,COMMON,,1,,BRAWLER,CORE,
-threat_reading,Threat Reading,perk_threat_reading,PROGRESS,SKILL,alert,cautious,,SKILL_LEVEL:alert:5,,COMMON,,1,,BRAWLER,CORE,
-eyes_in_the_back,Eyes in the Back,perk_eyes_in_the_back,PROGRESS,SKILL,alert,cautious,,SKILL_LEVEL:alert:7,,COMMON,,1,,BRAWLER,CORE,
-field_worker,Field Worker,perk_field_worker,PROGRESS,SKILL,farming,field_worker,,SKILL_LEVEL:farming:1,,COMMON,,1,,Farmer,SUPPORT,
-enrich_soil,Enrich Soil,perk_enrich_soil,PROGRESS,SKILL,farming,field_worker,,SKILL_LEVEL:farming:3,,COMMON,,1,,Farmer,SUPPORT,
-expert_tiller,Expert Tiller,perk_expert_tiller,PROGRESS,SKILL,farming,field_worker,,SKILL_LEVEL:farming:5,,COMMON,,1,,Farmer,SUPPORT,
-quality_crops,Quality Crops,perk_quality_crops,PROGRESS,SKILL,farming,field_worker,,SKILL_LEVEL:farming:7,,COMMON,,1,,Farmer,SUPPORT,
-sprinter,Sprinter,perk_sprinter,PROGRESS,SKILL,athletism,athletic,,SKILL_LEVEL:athletism:3,,COMMON,,1,,BRAWLER,CORE,
-vaulter,Vaulter,perk_vaulter,PROGRESS,SKILL,athletism,athletic,,SKILL_LEVEL:athletism:5,,COMMON,,1,,BRAWLER,CORE,
-free_running,Free Running,perk_free_running,PROGRESS,SKILL,athletism,athletic,,SKILL_LEVEL:athletism:7,,COMMON,,1,,BRAWLER,CORE,
-artisan_food,Artisan Food,perk_artisan_food,PROGRESS,SKILL,farming,artisan_food,,SKILL_LEVEL:farming:1,,COMMON,,1,,Farmer,SUPPORT,
-food_worker,Food Worker,perk_food_worker,PROGRESS,SKILL,farming,artisan_food,,SKILL_LEVEL:farming:3,,COMMON,,1,,Farmer,SUPPORT,
-quality_craft,Quality Craft,perk_quality_craft,PROGRESS,SKILL,farming,artisan_food,,SKILL_LEVEL:farming:5,,COMMON,,1,,Farmer,SUPPORT,
-aging,Aging,perk_aging,PROGRESS,SKILL,farming,artisan_food,,SKILL_LEVEL:farming:7,,COMMON,,1,,Farmer,SUPPORT,
-power_nap,Power Nap,perk_power_nap,PROGRESS,SKILL,rest,slug,,SKILL_LEVEL:rest:3,,COMMON,,1,,BRAWLER,CORE,
-deep_sleep,Deep Sleep,perk_deep_sleep,PROGRESS,SKILL,rest,slug,,SKILL_LEVEL:rest:5,,COMMON,,1,,BRAWLER,CORE,
-rest_kneading,Rest Kneading,perk_rest_kneading,PROGRESS,SKILL,rest,slug,,SKILL_LEVEL:rest:7,,COMMON,,1,,BRAWLER,CORE,
-animal_magnetism,Animal Magnetism,perk_animal_magnetism,PROGRESS,SKILL,animal_empathy,animal_magnetism,,SKILL_LEVEL:animal_empathy:1,,COMMON,,1,,Farmer,SUPPORT,
-animal_understanding,Animal Understanding,perk_animal_understanding,PROGRESS,SKILL,animal_empathy,animal_magnetism,,SKILL_LEVEL:animal_empathy:3,,COMMON,,1,,Farmer,SUPPORT,
-feroucious_loyalty,Feroucious Loyalty,perk_feroucious_loyalty,PROGRESS,SKILL,animal_empathy,animal_magnetism,,SKILL_LEVEL:animal_empathy:5,,COMMON,,1,,Farmer,SUPPORT,
-shepherd,Shepherd,perk_shepherd,PROGRESS,SKILL,animal_empathy,animal_magnetism,,SKILL_LEVEL:animal_empathy:7,,COMMON,,1,,Farmer,SUPPORT,
-bowman,Bowman,perk_bowman,PROGRESS,SKILL,projectile_weapons_handling,bowman,,SKILL_LEVEL:projectile_weapons_handling:1,,COMMON,,1,,EXPLORER,CORE,
-run_gun,Run & Gun,perk_run_gun,PROGRESS,SKILL,projectile_weapons_handling,bowman,,SKILL_LEVEL:projectile_weapons_handling:3,,COMMON,,1,,EXPLORER,CORE,
-ranger,Ranger,perk_ranger,PROGRESS,SKILL,projectile_weapons_handling,bowman,,SKILL_LEVEL:projectile_weapons_handling:5,,COMMON,,1,,EXPLORER,CORE,
-long_range,Long Range,perk_long_range,PROGRESS,SKILL,projectile_weapons_handling,bowman,,SKILL_LEVEL:projectile_weapons_handling:7,,COMMON,,1,,EXPLORER,CORE,
-bookworm,Bookworm,perk_bookworm,PROGRESS,SKILL,knowledge_specific,bookworm,,SKILL_LEVEL:knowledge_specific:1,,COMMON,,1,,Academic,SUPPORT,
-learned,Learned,perk_learned,PROGRESS,SKILL,knowledge_specific,bookworm,,SKILL_LEVEL:knowledge_specific:3,,COMMON,,1,,Academic,SUPPORT,
-researcher,Researcher,perk_researcher,PROGRESS,SKILL,knowledge_specific,bookworm,,SKILL_LEVEL:knowledge_specific:5,,COMMON,,1,,Academic,SUPPORT,
-eidetic_memory,Eidetic Memory,perk_eidetic_memory,PROGRESS,SKILL,knowledge_specific,bookworm,,SKILL_LEVEL:knowledge_specific:7,,COMMON,,1,,Academic,SUPPORT,
-natural_circle,Natural Circle,perk_natural_circle,PROGRESS,SKILL,nature_focus,natural_circle,,SKILL_LEVEL:nature_focus:1,,COMMON,,1,,EXPLORER,CORE,
-green_purity,Green Purity,perk_green_purity,PROGRESS,SKILL,nature_focus,natural_circle,,SKILL_LEVEL:nature_focus:3,,COMMON,,1,,EXPLORER,CORE,
-spirit_guide,Spirit Guide,perk_spirit_guide,PROGRESS,SKILL,nature_focus,natural_circle,,SKILL_LEVEL:nature_focus:5,,COMMON,,1,,EXPLORER,CORE,
-natural_harmony,Natural Harmony,perk_natural_harmony,PROGRESS,SKILL,nature_focus,natural_circle,,SKILL_LEVEL:nature_focus:7,,COMMON,,1,,EXPLORER,CORE,
-eye_to_detail,Eye to Detail,perk_eye_to_detail,PROGRESS,SKILL,investigation,eye_to_detail,,SKILL_LEVEL:investigation:1,,COMMON,,1,,Academic,SUPPORT,
-inspector,Inspector,perk_inspector,PROGRESS,SKILL,investigation,eye_to_detail,,SKILL_LEVEL:investigation:3,,COMMON,,1,,Academic,SUPPORT,
-reveal_secret,Reveal Secret,perk_reveal_secret,PROGRESS,SKILL,investigation,eye_to_detail,,SKILL_LEVEL:investigation:5,,COMMON,,1,,Academic,SUPPORT,
-master_of_details,Master of Details,perk_master_of_details,PROGRESS,SKILL,investigation,eye_to_detail,,SKILL_LEVEL:investigation:7,,COMMON,,1,,Academic,SUPPORT,
-wild_catch,Wild Catch,perk_wild_catch,PROGRESS,SKILL,farming,wild_catch,,SKILL_LEVEL:farming:1,,COMMON,,1,,EXPLORER,CORE,
-tame_specialist,Tame Specialist,perk_tame_specialist,PROGRESS,SKILL,farming,wild_catch,,SKILL_LEVEL:farming:5,,COMMON,,1,,EXPLORER,CORE,
-growth_correction,Growth Correction,perk_growth_correction,PROGRESS,SKILL,farming,wild_catch,,SKILL_LEVEL:farming:7,,COMMON,,1,,EXPLORER,CORE,
-multi_cultural,Multi Cultural,perk_multi_cultural,PROGRESS,SKILL,linguistics,multi_cultural,,SKILL_LEVEL:linguistics:1,,COMMON,,1,,Academic,SUPPORT,
-cipher,Cipher,perk_cipher,PROGRESS,SKILL,linguistics,multi_cultural,,SKILL_LEVEL:linguistics:3,,COMMON,,1,,Academic,SUPPORT,
-ancient_culture,Ancient Culture,perk_ancient_culture,PROGRESS,SKILL,linguistics,multi_cultural,,SKILL_LEVEL:linguistics:5,,COMMON,,1,,Academic,SUPPORT,
-cultural_assimilation,Cultural Assimilation,perk_cultural_assimilation,PROGRESS,SKILL,linguistics,multi_cultural,,SKILL_LEVEL:linguistics:7,,COMMON,,1,,Academic,SUPPORT,
-hidden_traps,Hidden Traps,perk_hidden_traps,PROGRESS,SKILL,trapper,hidden_traps,,SKILL_LEVEL:trapper:1,,COMMON,,1,,EXPLORER,CORE,
-trap_sence,Trap-Sence,perk_trap_sence,PROGRESS,SKILL,trapper,hidden_traps,,SKILL_LEVEL:trapper:5,,COMMON,,1,,EXPLORER,CORE,
-trap_maker,Trap-Maker,perk_trap_maker,PROGRESS,SKILL,trapper,hidden_traps,,SKILL_LEVEL:trapper:7,,COMMON,,1,,EXPLORER,CORE,
-green_thumb,Green Thumb,perk_green_thumb,PROGRESS,SKILL,herbalism,green_thumb,,SKILL_LEVEL:herbalism:1,,COMMON,,1,,Hunter,SUPPORT,
-horticulture_101,Horticulture 101,perk_horticulture_101,PROGRESS,SKILL,herbalism,green_thumb,,SKILL_LEVEL:herbalism:3,,COMMON,,1,,Hunter,SUPPORT,
-verdant_folklore,Verdant Folklore,perk_verdant_folklore,PROGRESS,SKILL,herbalism,green_thumb,,SKILL_LEVEL:herbalism:5,,COMMON,,1,,Hunter,SUPPORT,
-gathering_zone,Gathering Zone,perk_gathering_zone,PROGRESS,SKILL,herbalism,green_thumb,,SKILL_LEVEL:herbalism:7,,COMMON,,1,,Hunter,SUPPORT,
-butcher,Butcher,perk_butcher,PROGRESS,SKILL,dismantle,butcher,,SKILL_LEVEL:dismantle:1,,COMMON,,1,,Hunter,SUPPORT,
-harvester,Harvester,perk_harvester,PROGRESS,SKILL,dismantle,butcher,,SKILL_LEVEL:dismantle:3,,COMMON,,1,,Hunter,SUPPORT,
-old_way_gourmet,Old Way Gourmet,perk_old_way_gourmet,PROGRESS,SKILL,dismantle,butcher,,SKILL_LEVEL:dismantle:7,,COMMON,,1,,Hunter,SUPPORT,
-targetting,Targetting,perk_targetting,PROGRESS,SKILL,tracking,targetting,,SKILL_LEVEL:tracking:1,,COMMON,,1,,Hunter,SUPPORT,
-hunter_vision,Hunter Vision,perk_hunter_vision,PROGRESS,SKILL,tracking,targetting,,SKILL_LEVEL:tracking:3,,COMMON,,1,,Hunter,SUPPORT,
-old_way_reading,Old Way Reading,perk_old_way_reading,PROGRESS,SKILL,tracking,targetting,,SKILL_LEVEL:tracking:5,,COMMON,,1,,Hunter,SUPPORT,
-long_range_tracking,Long Range Tracking,perk_long_range_tracking,PROGRESS,SKILL,tracking,targetting,,SKILL_LEVEL:tracking:7,,COMMON,,1,,Hunter,SUPPORT,
-the_ancient_ways,The Ancient Ways,perk_the_ancient_ways,PROGRESS,SKILL,formal_magics,the_ancient_ways,,SKILL_LEVEL:formal_magics:1,,COMMON,,1,,Mystic,SUPPORT,
-occult_fan,Occult Fan,perk_occult_fan,PROGRESS,SKILL,formal_magics,the_ancient_ways,,SKILL_LEVEL:formal_magics:3,,COMMON,,1,,Mystic,SUPPORT,
-ritualist,Ritualist,perk_ritualist,PROGRESS,SKILL,formal_magics,the_ancient_ways,,SKILL_LEVEL:formal_magics:5,,COMMON,,1,,Mystic,SUPPORT,
-witchcraft,Witchcraft,perk_witchcraft,PROGRESS,SKILL,formal_magics,the_ancient_ways,,SKILL_LEVEL:formal_magics:7,,COMMON,,1,,Mystic,SUPPORT,
-eye_for_magic,Eye for Magic,perk_eye_for_magic,PROGRESS,SKILL,spellcraft,eye_for_magic,,SKILL_LEVEL:spellcraft:1,,COMMON,,1,,Mystic,SUPPORT,
-magic_analyst,Magic Analyst,perk_magic_analyst,PROGRESS,SKILL,spellcraft,eye_for_magic,,SKILL_LEVEL:spellcraft:3,,COMMON,,1,,Mystic,SUPPORT,
-counterspell,CounterSpell,perk_counterspell,PROGRESS,SKILL,spellcraft,eye_for_magic,,SKILL_LEVEL:spellcraft:5,,COMMON,,1,,Mystic,SUPPORT,
-spell_hacker,Spell Hacker,perk_spell_hacker,PROGRESS,SKILL,spellcraft,eye_for_magic,,SKILL_LEVEL:spellcraft:7,,COMMON,,1,,Mystic,SUPPORT,
-star_compass,Star Compass,perk_star_compass,PROGRESS,SKILL,astrology,star_compass,,SKILL_LEVEL:astrology:1,,COMMON,,1,,Mystic,SUPPORT,
-star_reader,Star Reader,perk_star_reader,PROGRESS,SKILL,astrology,star_compass,,SKILL_LEVEL:astrology:3,,COMMON,,1,,Mystic,SUPPORT,
-fate_reading,Fate Reading,perk_fate_reading,PROGRESS,SKILL,astrology,star_compass,,SKILL_LEVEL:astrology:5,,COMMON,,1,,Mystic,SUPPORT,
-omens,Omens,perk_omens,PROGRESS,SKILL,astrology,star_compass,,SKILL_LEVEL:astrology:7,,COMMON,,1,,Mystic,SUPPORT,
-traveler,Traveler,perk_traveler,PROGRESS,SKILL,wayfarer,traveler,,SKILL_LEVEL:wayfarer:1,,COMMON,,1,,Traveller,SUPPORT,
-long_walker,Long Walker,perk_long_walker,PROGRESS,SKILL,wayfarer,traveler,,SKILL_LEVEL:wayfarer:3,,COMMON,,1,,Traveller,SUPPORT,
-pathguide,PathGuide,perk_pathguide,PROGRESS,SKILL,wayfarer,traveler,,SKILL_LEVEL:wayfarer:5,,COMMON,,1,,Traveller,SUPPORT,
-thousand_steps,Thousand Steps,perk_thousand_steps,PROGRESS,SKILL,wayfarer,traveler,,SKILL_LEVEL:wayfarer:7,,COMMON,,1,,Traveller,SUPPORT,
-familiar_mount,Familiar Mount,perk_familiar_mount,PROGRESS,SKILL,riding,familiar_mount,,SKILL_LEVEL:riding:1,,COMMON,,1,,,VERB,
-experienced_rider,Experienced Rider,perk_experienced_rider,PROGRESS,SKILL,riding,familiar_mount,,SKILL_LEVEL:riding:3,,COMMON,,1,,,VERB,
-one_hand_riding,One Hand Riding,perk_one_hand_riding,PROGRESS,SKILL,riding,familiar_mount,,SKILL_LEVEL:riding:5,,COMMON,,1,,,VERB,
-mount_aptitude,Mount Aptitude,perk_mount_aptitude,PROGRESS,SKILL,riding,familiar_mount,,SKILL_LEVEL:riding:7,,COMMON,,1,,,VERB,
-strong_back,Strong Back,perk_strong_back,PROGRESS,ATTRIBUTE,STR,strong_back,,ATTRIBUTE:STR:150,,COMMON,,1,,,VERB,
-inner_strenght,Inner Strenght,perk_inner_strenght,PROGRESS,ATTRIBUTE,STR,strong_back,,ATTRIBUTE:STR:250,,COMMON,,1,,,VERB,
-popular_trends,Popular Trends,perk_popular_trends,PROGRESS,SKILL,common_lore,popular_trends,,SKILL_LEVEL:common_lore:1,,COMMON,,1,,,VERB,
-common_sense,Common Sense,perk_common_sense,PROGRESS,SKILL,common_lore,popular_trends,,SKILL_LEVEL:common_lore:3,,COMMON,,1,,,VERB,
-popular_folklore,Popular Folklore,perk_popular_folklore,PROGRESS,SKILL,common_lore,popular_trends,,SKILL_LEVEL:common_lore:5,,COMMON,,1,,,VERB,
-old_wisdom,Old Wisdom,perk_old_wisdom,PROGRESS,SKILL,common_lore,popular_trends,,SKILL_LEVEL:common_lore:7,,COMMON,,1,,,VERB,
-unrestrained,Unrestrained,perk_unrestrained,PROGRESS,ATTRIBUTE,STR,unrestrained,,ATTRIBUTE:STR:150,,COMMON,,1,,,VERB,
-hand_cannon,Hand Cannon,perk_hand_cannon,PROGRESS,ATTRIBUTE,STR,unrestrained,,ATTRIBUTE:STR:200,,COMMON,,1,,,VERB,
-iron_bender,Iron Bender,perk_iron_bender,PROGRESS,ATTRIBUTE,STR,unrestrained,,ATTRIBUTE:STR:250,,COMMON,,1,,,VERB,
-great_fortitude,Great Fortitude,perk_great_fortitude,PROGRESS,ATTRIBUTE,STR,build_up,,ATTRIBUTE:STR:200,,COMMON,,1,,,VERB,
-rubbery_muscles,Rubbery Muscles,perk_rubbery_muscles,PROGRESS,ATTRIBUTE,STR,build_up,,ATTRIBUTE:STR:250,,COMMON,,1,,,VERB,
-coordination,Coordination,perk_coordination,PROGRESS,ATTRIBUTE,AGI,coordination,,ATTRIBUTE:AGI:150,,COMMON,,1,,,VERB,
-heightened_balance,Heightened Balance,perk_heightened_balance,PROGRESS,ATTRIBUTE,AGI,coordination,,ATTRIBUTE:AGI:200,,COMMON,,1,,,VERB,
-ambidiextry,Ambidiextry,perk_ambidiextry,PROGRESS,ATTRIBUTE,AGI,coordination,,ATTRIBUTE:AGI:250,,COMMON,,1,,,VERB,
-adrenaline,Adrenaline,perk_adrenaline,PROGRESS,ATTRIBUTE,AGI,adrenaline,,ATTRIBUTE:AGI:150,,COMMON,,1,,,VERB,
-heightened_reflex,Heightened Reflex,perk_heightened_reflex,PROGRESS,ATTRIBUTE,AGI,adrenaline,,ATTRIBUTE:AGI:200,,COMMON,,1,,,VERB,
-travel_light,Travel Light,perk_travel_light,PROGRESS,ATTRIBUTE,AGI,travel_light,,ATTRIBUTE:AGI:150,,COMMON,,1,,,VERB,
-manouverability,Manouverability,perk_manouverability,PROGRESS,ATTRIBUTE,AGI,travel_light,,ATTRIBUTE:AGI:200,,COMMON,,1,,,VERB,
-tunnel_serpent,Tunnel Serpent,perk_tunnel_serpent,PROGRESS,ATTRIBUTE,AGI,travel_light,,ATTRIBUTE:AGI:250,,COMMON,,1,,,VERB,
-self_diagnose,Self-Diagnose,perk_self_diagnose,PROGRESS,ATTRIBUTE,PER,self_diagnose,,ATTRIBUTE:PER:150,,COMMON,,1,,,VERB,
-anatomy_101,Anatomy 101,perk_anatomy_101,PROGRESS,ATTRIBUTE,PER,self_diagnose,,ATTRIBUTE:PER:200,,COMMON,,1,,,VERB,
-death_sense,Death Sense,perk_death_sense,PROGRESS,ATTRIBUTE,PER,self_diagnose,,ATTRIBUTE:PER:250,,COMMON,,1,,,VERB,
-low_light_vision,Low-Light Vision,perk_low_light_vision,PROGRESS,ATTRIBUTE,PER,low_light_vision,,ATTRIBUTE:PER:150,,COMMON,,1,,,VERB,
-pitch,Pitch,perk_pitch,PROGRESS,ATTRIBUTE,PER,low_light_vision,,ATTRIBUTE:PER:200,,COMMON,,1,,,VERB,
-blind_fighting,Blind Fighting,perk_blind_fighting,PROGRESS,ATTRIBUTE,PER,low_light_vision,,ATTRIBUTE:PER:250,,COMMON,,1,,,VERB,
-idea,Idea,perk_idea,PROGRESS,ATTRIBUTE,INT,idea,,ATTRIBUTE:INT:150,,COMMON,,1,,,VERB,
-calculus,Calculus,perk_calculus,PROGRESS,ATTRIBUTE,INT,idea,,ATTRIBUTE:INT:250,,COMMON,,1,,,VERB,
-sharp_mind,Sharp Mind,perk_sharp_mind,PROGRESS,ATTRIBUTE,INT,self_diagnose,,ATTRIBUTE:INT:150,,COMMON,,1,,,VERB,
-scrounger,Scrounger,perk_scrounger,PROGRESS,ATTRIBUTE,INT,self_diagnose,,ATTRIBUTE:INT:200,,COMMON,,1,,,VERB,
-mental_strenght,Mental Strenght,perk_mental_strenght,PROGRESS,ATTRIBUTE,INT,self_diagnose,,ATTRIBUTE:INT:250,,COMMON,,1,,,VERB,
-voracious_reader,Voracious Reader,perk_voracious_reader,PROGRESS,ATTRIBUTE,INT,voracious_reader,,ATTRIBUTE:INT:150,,COMMON,,1,,,VERB,
-high_focus,High Focus,perk_high_focus,PROGRESS,ATTRIBUTE,INT,voracious_reader,,ATTRIBUTE:INT:200,,COMMON,,1,,,VERB,
-photo_memory,Photo Memory,perk_photo_memory,PROGRESS,ATTRIBUTE,INT,voracious_reader,,ATTRIBUTE:INT:250,,COMMON,,1,,,VERB,
-strong_soul,Strong Soul,perk_strong_soul,PROGRESS,ATTRIBUTE,WIL,strong_soul,,ATTRIBUTE:WIL:150,,COMMON,,1,,,VERB,
-power_spot,Power Spot,perk_power_spot,PROGRESS,ATTRIBUTE,WIL,strong_soul,,ATTRIBUTE:WIL:200,,COMMON,,1,,,VERB,
-mana_rejection,Mana Rejection,perk_mana_rejection,PROGRESS,ATTRIBUTE,WIL,strong_soul,,ATTRIBUTE:WIL:250,,COMMON,,1,,,VERB,
-stoic,Stoic,perk_stoic,PROGRESS,ATTRIBUTE,WIL,stoic,,ATTRIBUTE:WIL:150,,COMMON,,1,,,VERB,
-impartial_belief,Impartial Belief,perk_impartial_belief,PROGRESS,ATTRIBUTE,WIL,stoic,,ATTRIBUTE:WIL:200,,COMMON,,1,,,VERB,
-happy_camper,Happy Camper,perk_happy_camper,PROGRESS,ATTRIBUTE,WIL,happy_camper,,ATTRIBUTE:WIL:150,,COMMON,,1,,,VERB,
-pain_tolerance,Pain Tolerance,perk_pain_tolerance,PROGRESS,ATTRIBUTE,WIL,happy_camper,,ATTRIBUTE:WIL:200,,COMMON,,1,,,VERB,
-iron_will,Iron Will,perk_iron_will,PROGRESS,ATTRIBUTE,WIL,happy_camper,,ATTRIBUTE:WIL:250,,COMMON,,1,,,VERB,
+id,name,perk_ids,job,authority_root_type,authority_root_id,practice_root_id,fusion_root_id,requirements,sources,rarity,zone_id,cp_cost,boundary,skill_group,block
+vanguard,Vanguard,perk_vanguard,PROGRESS,SKILL,melee_weapons_handling,vanguard,,SKILL_LEVEL:melee_weapons_handling:1,,COMMON,,1,,WARRIOR,CORE
+bigger_is_better,Bigger is Better,perk_bigger_is_better,PROGRESS,SKILL,melee_weapons_handling,vanguard,,SKILL_LEVEL:melee_weapons_handling:3,,COMMON,,1,,WARRIOR,CORE
+thundering,Thundering,perk_thundering,PROGRESS,SKILL,melee_weapons_handling,vanguard,,SKILL_LEVEL:melee_weapons_handling:5,,COMMON,,1,,WARRIOR,CORE
+penetrating_force,Penetrating Force,perk_penetrating_force,PROGRESS,SKILL,melee_weapons_handling,vanguard,,SKILL_LEVEL:melee_weapons_handling:7,,COMMON,,1,,WARRIOR,CORE
+emphatic,Emphatic,perk_emphatic,PROGRESS,SKILL,sense_motive,emphatic,,SKILL_LEVEL:sense_motive:1,,COMMON,,1,,High Class,SUPPORT
+false_bane,False Bane,perk_false_bane,PROGRESS,SKILL,sense_motive,emphatic,,SKILL_LEVEL:sense_motive:3,,COMMON,,1,,High Class,SUPPORT
+deep_reading,Deep Reading,perk_deep_reading,PROGRESS,SKILL,sense_motive,emphatic,,SKILL_LEVEL:sense_motive:7,,COMMON,,1,,High Class,SUPPORT
+heavy_fitted,Heavy Fitted,perk_heavy_fitted,PROGRESS,SKILL,full_armor_handling,heavy_fitted,,SKILL_LEVEL:full_armor_handling:1,,COMMON,,1,,WARRIOR,CORE
+stout_defender,Stout Defender,perk_stout_defender,PROGRESS,SKILL,full_armor_handling,heavy_fitted,,SKILL_LEVEL:full_armor_handling:5,,COMMON,,1,,WARRIOR,CORE
+influencer,Influencer,perk_influencer,PROGRESS,SKILL,court,influencer,,SKILL_LEVEL:court:1,,COMMON,,1,,High Class,SUPPORT
+suggestion,Suggestion,perk_suggestion,PROGRESS,SKILL,court,influencer,,SKILL_LEVEL:court:5,,COMMON,,1,,High Class,SUPPORT
+shieldbearer,Shieldbearer,perk_shieldbearer,PROGRESS,SKILL,full_armor_handling,shieldbearer,,SKILL_LEVEL:full_armor_handling:1,,COMMON,,1,,WARRIOR,CORE
+stone_block,Stone Block,perk_stone_block,PROGRESS,SKILL,full_armor_handling,shieldbearer,,SKILL_LEVEL:full_armor_handling:3,,COMMON,,1,,WARRIOR,CORE
+moving_block,Moving Block,perk_moving_block,PROGRESS,SKILL,full_armor_handling,shieldbearer,,SKILL_LEVEL:full_armor_handling:5,,COMMON,,1,,WARRIOR,CORE
+stubborn_shield,Stubborn Shield,perk_stubborn_shield,PROGRESS,SKILL,full_armor_handling,shieldbearer,,SKILL_LEVEL:full_armor_handling:7,,COMMON,,1,,WARRIOR,CORE
+attitude_change,Attitude Change,perk_attitude_change,PROGRESS,SKILL,diplomacy,etiquette,,SKILL_LEVEL:diplomacy:5,,COMMON,,1,,High Class,SUPPORT
+corageous_heart,Corageous Heart,perk_corageous_heart,PROGRESS,SKILL,discipline,corageous_heart,,SKILL_LEVEL:discipline:1,,COMMON,,1,,WARRIOR,CORE
+nerves_of_steel,Nerves of Steel,perk_nerves_of_steel,PROGRESS,SKILL,discipline,corageous_heart,,SKILL_LEVEL:discipline:5,,COMMON,,1,,WARRIOR,CORE
+fighting_spirit,Fighting Spirit,perk_fighting_spirit,PROGRESS,SKILL,discipline,corageous_heart,,SKILL_LEVEL:discipline:7,,COMMON,,1,,WARRIOR,CORE
+word_in_the_street,Word in the Street,perk_word_in_the_street,PROGRESS,SKILL,streetwise,all_ears,,SKILL_LEVEL:streetwise:3,,COMMON,,1,,Low Class,SUPPORT
+street_vigilance,Street Vigilance,perk_street_vigilance,PROGRESS,SKILL,streetwise,all_ears,,SKILL_LEVEL:streetwise:5,,COMMON,,1,,Low Class,SUPPORT
+background_check,Background Check,perk_background_check,PROGRESS,SKILL,streetwise,all_ears,,SKILL_LEVEL:streetwise:7,,COMMON,,1,,Low Class,SUPPORT
+lasting_impression,Lasting Impression,perk_lasting_impression,PROGRESS,SKILL,intimidation,undertaker,,SKILL_LEVEL:intimidation:5,,COMMON,,1,,WARRIOR,CORE
+terrifying_presence,Terrifying Presence,perk_terrifying_presence,PROGRESS,SKILL,intimidation,undertaker,,SKILL_LEVEL:intimidation:7,,COMMON,,1,,WARRIOR,CORE
+pokerface,Pokerface,perk_pokerface,PROGRESS,SKILL,bluff,con_man,,SKILL_LEVEL:bluff:5,,COMMON,,1,,Low Class,SUPPORT
+spin_a_tale,Spin a Tale,perk_spin_a_tale,PROGRESS,SKILL,bluff,con_man,,SKILL_LEVEL:bluff:7,,COMMON,,1,,Low Class,SUPPORT
+teamwork,Teamwork,perk_teamwork,PROGRESS,SKILL,battle,teamwork,,SKILL_LEVEL:battle:1,,COMMON,,1,,WARRIOR,CORE
+flow_of_battle,Flow of Battle,perk_flow_of_battle,PROGRESS,SKILL,battle,teamwork,,SKILL_LEVEL:battle:3,,COMMON,,1,,WARRIOR,CORE
+a_subtle_push,A Subtle Push,perk_a_subtle_push,PROGRESS,SKILL,bluff,little_devil,,SKILL_LEVEL:bluff:3,,COMMON,,1,,Low Class,SUPPORT
+charmer,Charmer,perk_charmer,PROGRESS,SKILL,bluff,little_devil,,SKILL_LEVEL:bluff:7,,COMMON,,1,,Low Class,SUPPORT
+fencer,Fencer,perk_fencer,PROGRESS,SKILL,light_weapons_handling,fencer,,SKILL_LEVEL:light_weapons_handling:1,,COMMON,,1,,ROUGE,CORE
+weapon_finnesse,Weapon Finnesse,perk_weapon_finnesse,PROGRESS,SKILL,light_weapons_handling,fencer,,SKILL_LEVEL:light_weapons_handling:3,,COMMON,,1,,ROUGE,CORE
+blade_of_lightness,Blade of Lightness,perk_blade_of_lightness,PROGRESS,SKILL,light_weapons_handling,fencer,,SKILL_LEVEL:light_weapons_handling:5,,COMMON,,1,,ROUGE,CORE
+sharpened,Sharpened,perk_sharpened,PROGRESS,SKILL,light_weapons_handling,fencer,,SKILL_LEVEL:light_weapons_handling:7,,COMMON,,1,,ROUGE,CORE
+shrewd_merchant,Shrewd Merchant,perk_shrewd_merchant,PROGRESS,SKILL,comerce,businessman,,SKILL_LEVEL:comerce:3,,COMMON,,1,,Merchant,SUPPORT
+trust_is_everything,Trust is Everything,perk_trust_is_everything,PROGRESS,SKILL,comerce,businessman,,SKILL_LEVEL:comerce:5,,COMMON,,1,,Merchant,SUPPORT
+midas_touch,Midas Touch,perk_midas_touch,PROGRESS,SKILL,comerce,businessman,,SKILL_LEVEL:comerce:7,,COMMON,,1,,Merchant,SUPPORT
+knife_thrower,Knife Thrower,perk_knife_thrower,PROGRESS,SKILL,projectile_weapons_handling,knife_thrower,,SKILL_LEVEL:projectile_weapons_handling:1,,COMMON,,1,,ROUGE,CORE
+bullseye,Bullseye,perk_bullseye,PROGRESS,SKILL,projectile_weapons_handling,knife_thrower,,SKILL_LEVEL:projectile_weapons_handling:3,,COMMON,,1,,ROUGE,CORE
+trick_throw,Trick Throw,perk_trick_throw,PROGRESS,SKILL,projectile_weapons_handling,knife_thrower,,SKILL_LEVEL:projectile_weapons_handling:5,,COMMON,,1,,ROUGE,CORE
+blinding_speed,Blinding Speed,perk_blinding_speed,PROGRESS,SKILL,projectile_weapons_handling,knife_thrower,,SKILL_LEVEL:projectile_weapons_handling:7,,COMMON,,1,,ROUGE,CORE
+reserved_warez,Reserved Warez,perk_reserved_warez,PROGRESS,SKILL,haggle,pack_rat,,SKILL_LEVEL:haggle:5,,COMMON,,1,,Merchant,SUPPORT
+black_market,Black Market,perk_black_market,PROGRESS,SKILL,haggle,pack_rat,,SKILL_LEVEL:haggle:7,,COMMON,,1,,Merchant,SUPPORT
+light_fitted,Light Fitted,perk_light_fitted,PROGRESS,SKILL,light_armor_handling,light_fitted,,SKILL_LEVEL:light_armor_handling:1,,COMMON,,1,,ROUGE,CORE
+elastic_defense,Elastic Defense,perk_elastic_defense,PROGRESS,SKILL,light_armor_handling,light_fitted,,SKILL_LEVEL:light_armor_handling:3,,COMMON,,1,,ROUGE,CORE
+unhindered,Unhindered,perk_unhindered,PROGRESS,SKILL,light_armor_handling,light_fitted,,SKILL_LEVEL:light_armor_handling:7,,COMMON,,1,,ROUGE,CORE
+identify,Identify,perk_identify,PROGRESS,SKILL,apraisal,money_valuation,,SKILL_LEVEL:apraisal:3,,COMMON,,1,,Merchant,SUPPORT
+eye_of_judgement,Eye of Judgement,perk_eye_of_judgement,PROGRESS,SKILL,apraisal,money_valuation,,SKILL_LEVEL:apraisal:7,,COMMON,,1,,Merchant,SUPPORT
+trap_locks,Trap-Locks,perk_trap_locks,PROGRESS,SKILL,lockpick,lock_pick,,SKILL_LEVEL:lockpick:3,,COMMON,,1,,ROUGE,CORE
+great_outdoors,Great Outdoors,perk_great_outdoors,PROGRESS,SKILL,wilderness,great_outdoors,,SKILL_LEVEL:wilderness:1,,COMMON,,1,,Survivalist,SUPPORT
+rudimentary_wisdom,Rudimentary Wisdom,perk_rudimentary_wisdom,PROGRESS,SKILL,wilderness,great_outdoors,,SKILL_LEVEL:wilderness:5,,COMMON,,1,,Survivalist,SUPPORT
+explorer,Explorer,perk_explorer,PROGRESS,SKILL,wilderness,great_outdoors,,SKILL_LEVEL:wilderness:7,,COMMON,,1,,Survivalist,SUPPORT
+ambusher,Ambusher,perk_ambusher,PROGRESS,SKILL,hide,silent,,SKILL_LEVEL:hide:3,,COMMON,,1,,ROUGE,CORE
+reaper,Reaper,perk_reaper,PROGRESS,SKILL,hide,silent,,SKILL_LEVEL:hide:5,,COMMON,,1,,ROUGE,CORE
+presence_concealment,Presence Concealment,perk_presence_concealment,PROGRESS,SKILL,hide,silent,,SKILL_LEVEL:hide:7,,COMMON,,1,,ROUGE,CORE
+tough,Tough!,perk_tough,PROGRESS,SKILL,inclemence,tough,,SKILL_LEVEL:inclemence:1,,COMMON,,1,,Survivalist,SUPPORT
+thick_skinned,Thick Skinned,perk_thick_skinned,PROGRESS,SKILL,inclemence,tough,,SKILL_LEVEL:inclemence:3,,COMMON,,1,,Survivalist,SUPPORT
+magic_fortitude,Magic Fortitude,perk_magic_fortitude,PROGRESS,SKILL,inclemence,tough,,SKILL_LEVEL:inclemence:5,,COMMON,,1,,Survivalist,SUPPORT
+iron_man,Iron Man,perk_iron_man,PROGRESS,SKILL,inclemence,tough,,SKILL_LEVEL:inclemence:7,,COMMON,,1,,Survivalist,SUPPORT
+quick_hands,Quick Hands,perk_quick_hands,PROGRESS,SKILL,sleight_of_hand,quick_hands,,SKILL_LEVEL:sleight_of_hand:1,,COMMON,,1,,ROUGE,CORE
+hidden_weapons,Hidden Weapons,perk_hidden_weapons,PROGRESS,SKILL,sleight_of_hand,quick_hands,,SKILL_LEVEL:sleight_of_hand:3,,COMMON,,1,,ROUGE,CORE
+ilutionism,Ilutionism,perk_ilutionism,PROGRESS,SKILL,sleight_of_hand,quick_hands,,SKILL_LEVEL:sleight_of_hand:7,,COMMON,,1,,ROUGE,CORE
+spider_climb,Spider Climb,perk_spider_climb,PROGRESS,SKILL,climbing,clift_hanger,,SKILL_LEVEL:climbing:3,,COMMON,,1,,Survivalist,SUPPORT
+action_goat,Action Goat,perk_action_goat,PROGRESS,SKILL,climbing,clift_hanger,,SKILL_LEVEL:climbing:5,,COMMON,,1,,Survivalist,SUPPORT
+windbreaker,WindBreaker,perk_windbreaker,PROGRESS,SKILL,climbing,clift_hanger,,SKILL_LEVEL:climbing:7,,COMMON,,1,,Survivalist,SUPPORT
+elemental_wand,Elemental Wand,perk_elemental_wand,PROGRESS,SKILL,basic_mana_discipline,elemental_wand,,SKILL_LEVEL:basic_mana_discipline:1,,COMMON,,1,,MAGE,CORE
+elemental_attunement,Elemental Attunement,perk_elemental_attunement,PROGRESS,SKILL,basic_mana_discipline,elemental_wand,,SKILL_LEVEL:basic_mana_discipline:3,,COMMON,,1,,MAGE,CORE
+nature_elemental,Nature Elemental,perk_nature_elemental,PROGRESS,SKILL,basic_mana_discipline,elemental_wand,,SKILL_LEVEL:basic_mana_discipline:5,,COMMON,,1,,MAGE,CORE
+piercing_elemental,Piercing Elemental,perk_piercing_elemental,PROGRESS,SKILL,basic_mana_discipline,elemental_wand,,SKILL_LEVEL:basic_mana_discipline:7,,COMMON,,1,,MAGE,CORE
+hard_worker,Hard Worker,perk_hard_worker,PROGRESS,SKILL,minning,hard_worker,,SKILL_LEVEL:minning:1,,COMMON,,1,,Artisan,SUPPORT
+stonebreaker,Stonebreaker,perk_stonebreaker,PROGRESS,SKILL,minning,hard_worker,,SKILL_LEVEL:minning:3,,COMMON,,1,,Artisan,SUPPORT
+tireless_worker,Tireless Worker,perk_tireless_worker,PROGRESS,SKILL,minning,hard_worker,,SKILL_LEVEL:minning:7,,COMMON,,1,,Artisan,SUPPORT
+reinforcement_wand,Reinforcement Wand,perk_reinforcement_wand,PROGRESS,SKILL,basic_mana_discipline,reinforcement_wand,,SKILL_LEVEL:basic_mana_discipline:1,,COMMON,,1,,MAGE,CORE
+physical_attunement,Physical Attunement,perk_physical_attunement,PROGRESS,SKILL,basic_mana_discipline,reinforcement_wand,,SKILL_LEVEL:basic_mana_discipline:3,,COMMON,,1,,MAGE,CORE
+personal_aura,Personal Aura,perk_personal_aura,PROGRESS,SKILL,basic_mana_discipline,reinforcement_wand,,SKILL_LEVEL:basic_mana_discipline:5,,COMMON,,1,,MAGE,CORE
+reinforcemnt_expert,Reinforcemnt Expert,perk_reinforcemnt_expert,PROGRESS,SKILL,basic_mana_discipline,reinforcement_wand,,SKILL_LEVEL:basic_mana_discipline:7,,COMMON,,1,,MAGE,CORE
+tanning,Tanning,perk_tanning,PROGRESS,SKILL,handcraft_sewing_leather,tanning,,SKILL_LEVEL:handcraft_sewing_leather:1,,COMMON,,1,,Artisan,SUPPORT
+monster_weaver,Monster Weaver,perk_monster_weaver,PROGRESS,SKILL,handcraft_sewing_leather,tanning,,SKILL_LEVEL:handcraft_sewing_leather:7,,COMMON,,1,,Artisan,SUPPORT
+interference_wand,Interference Wand,perk_interference_wand,PROGRESS,SKILL,basic_mana_discipline,interference_wand,,SKILL_LEVEL:basic_mana_discipline:1,,COMMON,,1,,MAGE,CORE
+void_attunement,Void Attunement,perk_void_attunement,PROGRESS,SKILL,basic_mana_discipline,interference_wand,,SKILL_LEVEL:basic_mana_discipline:3,,COMMON,,1,,MAGE,CORE
+disruptor,Disruptor,perk_disruptor,PROGRESS,SKILL,basic_mana_discipline,interference_wand,,SKILL_LEVEL:basic_mana_discipline:5,,COMMON,,1,,MAGE,CORE
+multicast_splitting,Multicast Splitting,perk_multicast_splitting,PROGRESS,SKILL,basic_mana_discipline,interference_wand,,SKILL_LEVEL:basic_mana_discipline:7,,COMMON,,1,,MAGE,CORE
+stronger_wood,Stronger Wood,perk_stronger_wood,PROGRESS,SKILL,craft.woodwork,carpenter,,SKILL_LEVEL:craft.woodwork:3,,COMMON,,1,,Artisan,SUPPORT
+efficient_chippy,Efficient Chippy,perk_efficient_chippy,PROGRESS,SKILL,craft.woodwork,carpenter,,SKILL_LEVEL:craft.woodwork:5,,COMMON,,1,,Artisan,SUPPORT
+chanting,Chanting,perk_chanting,PROGRESS,SKILL,mana_sensitivity,mana_trance,,SKILL_LEVEL:mana_sensitivity:3,,COMMON,,1,,MAGE,CORE
+prescise_casting,Prescise Casting,perk_prescise_casting,PROGRESS,SKILL,mana_sensitivity,mana_trance,,SKILL_LEVEL:mana_sensitivity:7,,COMMON,,1,,MAGE,CORE
+tempering_hack,Tempering Hack,perk_tempering_hack,PROGRESS,SKILL,craft.metalwork,smity,,SKILL_LEVEL:craft.metalwork:3,,COMMON,,1,,Artisan,SUPPORT
+adept_smelter,Adept Smelter,perk_adept_smelter,PROGRESS,SKILL,craft.metalwork,smity,,SKILL_LEVEL:craft.metalwork:5,,COMMON,,1,,Artisan,SUPPORT
+advanced_materials,Advanced Materials,perk_advanced_materials,PROGRESS,SKILL,craft.metalwork,smity,,SKILL_LEVEL:craft.metalwork:7,,COMMON,,1,,Artisan,SUPPORT
+divided_focus,Divided Focus,perk_divided_focus,PROGRESS,SKILL,mental_focus,battle_focus,,SKILL_LEVEL:mental_focus:7,,COMMON,,1,,MAGE,CORE
+grease_monkey,Grease Monkey,perk_grease_monkey,PROGRESS,SKILL,mechanics,grease_monkey,,SKILL_LEVEL:mechanics:1,,COMMON,,1,,Engineer,SUPPORT
+quick_fix,Quick-Fix,perk_quick_fix,PROGRESS,SKILL,mechanics,grease_monkey,,SKILL_LEVEL:mechanics:3,,COMMON,,1,,Engineer,SUPPORT
+jury_rig,Jury Rig,perk_jury_rig,PROGRESS,SKILL,mechanics,grease_monkey,,SKILL_LEVEL:mechanics:5,,COMMON,,1,,Engineer,SUPPORT
+mechanist,Mechanist,perk_mechanist,PROGRESS,SKILL,mechanics,grease_monkey,,SKILL_LEVEL:mechanics:7,,COMMON,,1,,Engineer,SUPPORT
+mana_tools,Mana Tools,perk_mana_tools,PROGRESS,SKILL,magic_obj,mana_tools,,SKILL_LEVEL:magic_obj:1,,COMMON,,1,,MAGE,CORE
+multi_magic_tools,Multi Magic Tools,perk_multi_magic_tools,PROGRESS,SKILL,magic_obj,mana_tools,,SKILL_LEVEL:magic_obj:5,,COMMON,,1,,MAGE,CORE
+mana_overload,Mana Overload,perk_mana_overload,PROGRESS,SKILL,magic_obj,mana_tools,,SKILL_LEVEL:magic_obj:7,,COMMON,,1,,MAGE,CORE
+handyman,Handyman,perk_handyman,PROGRESS,SKILL,building_simple_building_digging_etc,handyman,,SKILL_LEVEL:building_simple_building_digging_etc:1,,COMMON,,1,,Engineer,SUPPORT
+cutting_corners,Cutting Corners,perk_cutting_corners,PROGRESS,SKILL,building_simple_building_digging_etc,handyman,,SKILL_LEVEL:building_simple_building_digging_etc:3,,COMMON,,1,,Engineer,SUPPORT
+demolition_expert,Demolition Expert,perk_demolition_expert,PROGRESS,SKILL,building_simple_building_digging_etc,handyman,,SKILL_LEVEL:building_simple_building_digging_etc:5,,COMMON,,1,,Engineer,SUPPORT
+constructor,Constructor,perk_constructor,PROGRESS,SKILL,building_simple_building_digging_etc,handyman,,SKILL_LEVEL:building_simple_building_digging_etc:7,,COMMON,,1,,Engineer,SUPPORT
+image_crystal,Image Crystal,perk_image_crystal,PROGRESS,SKILL,magic_obj_scyring,image_crystal,,SKILL_LEVEL:magic_obj_scyring:1,,COMMON,,1,,MAGE,CORE
+record_crystal,Record Crystal,perk_record_crystal,PROGRESS,SKILL,magic_obj_scyring,image_crystal,,SKILL_LEVEL:magic_obj_scyring:3,,COMMON,,1,,MAGE,CORE
+far_scry,Far Scry,perk_far_scry,PROGRESS,SKILL,magic_obj_scyring,image_crystal,,SKILL_LEVEL:magic_obj_scyring:5,,COMMON,,1,,MAGE,CORE
+clariaudience,Clariaudience,perk_clariaudience,PROGRESS,SKILL,magic_obj_scyring,image_crystal,,SKILL_LEVEL:magic_obj_scyring:7,,COMMON,,1,,MAGE,CORE
+structural_reading,Structural Reading,perk_structural_reading,PROGRESS,SKILL,observe,structural_reading,,SKILL_LEVEL:observe:1,,COMMON,,1,,Engineer,SUPPORT
+finder_of_flaws,Finder of Flaws,perk_finder_of_flaws,PROGRESS,SKILL,observe,structural_reading,,SKILL_LEVEL:observe:3,,COMMON,,1,,Engineer,SUPPORT
+structural_analyst,Structural Analyst,perk_structural_analyst,PROGRESS,SKILL,observe,structural_reading,,SKILL_LEVEL:observe:5,,COMMON,,1,,Engineer,SUPPORT
+demolition_man,Demolition Man,perk_demolition_man,PROGRESS,SKILL,observe,structural_reading,,SKILL_LEVEL:observe:7,,COMMON,,1,,Engineer,SUPPORT
+boost_clading,Boost Clading,perk_boost_clading,PROGRESS,SKILL,magic_obj,magic_clad,,SKILL_LEVEL:magic_obj:3,,COMMON,,1,,MAGE,CORE
+magic_bulkward,Magic Bulkward,perk_magic_bulkward,PROGRESS,SKILL,magic_obj,magic_clad,,SKILL_LEVEL:magic_obj:5,,COMMON,,1,,MAGE,CORE
+magic_defense,Magic Defense,perk_magic_defense,PROGRESS,SKILL,magic_obj,magic_clad,,SKILL_LEVEL:magic_obj:7,,COMMON,,1,,MAGE,CORE
+performer_instruments,Performer (Instruments),perk_performer_instruments,PROGRESS,SKILL,perform.music_instrument,performer_instruments,,SKILL_LEVEL:perform.music_instrument:1,,COMMON,,1,,Bard,SUPPORT
+fascinate,Fascinate,perk_fascinate,PROGRESS,SKILL,perform.music_instrument,performer_instruments,,SKILL_LEVEL:perform.music_instrument:3,,COMMON,,1,,Bard,SUPPORT
+inspiring_peformance,Inspiring Peformance,perk_inspiring_peformance,PROGRESS,SKILL,perform.music_instrument,performer_instruments,,SKILL_LEVEL:perform.music_instrument:5,,COMMON,,1,,Bard,SUPPORT
+countersong,Countersong,perk_countersong,PROGRESS,SKILL,perform.music_instrument,performer_instruments,,SKILL_LEVEL:perform.music_instrument:7,,COMMON,,1,,Bard,SUPPORT
+spirit_rood,Spirit Rood,perk_spirit_rood,PROGRESS,SKILL,piety,spirit_rood,,SKILL_LEVEL:piety:1,,COMMON,,1,,PRIEST,CORE
+shamanism,Shamanism,perk_shamanism,PROGRESS,SKILL,piety,spirit_rood,,SKILL_LEVEL:piety:3,,COMMON,,1,,PRIEST,CORE
+spirit_familiar,Spirit Familiar,perk_spirit_familiar,PROGRESS,SKILL,piety,spirit_rood,,SKILL_LEVEL:piety:5,,COMMON,,1,,PRIEST,CORE
+caller,Caller,perk_caller,PROGRESS,SKILL,piety,spirit_rood,,SKILL_LEVEL:piety:7,,COMMON,,1,,PRIEST,CORE
+performer_singing,Performer (Singing),perk_performer_singing,PROGRESS,SKILL,perform.singing,performer_singing,,SKILL_LEVEL:perform.singing:1,,COMMON,,1,,Bard,SUPPORT
+booming_voice,Booming Voice,perk_booming_voice,PROGRESS,SKILL,perform.singing,performer_singing,,SKILL_LEVEL:perform.singing:3,,COMMON,,1,,Bard,SUPPORT
+charming_peformance,Charming Peformance,perk_charming_peformance,PROGRESS,SKILL,perform.singing,performer_singing,,SKILL_LEVEL:perform.singing:5,,COMMON,,1,,Bard,SUPPORT
+heartfelt,Heartfelt,perk_heartfelt,PROGRESS,SKILL,perform.singing,performer_singing,,SKILL_LEVEL:perform.singing:7,,COMMON,,1,,Bard,SUPPORT
+truth_rood,Truth Rood,perk_truth_rood,PROGRESS,SKILL,piety,truth_rood,,SKILL_LEVEL:piety:1,,COMMON,,1,,PRIEST,CORE
+truth_scale,Truth Scale,perk_truth_scale,PROGRESS,SKILL,piety,truth_rood,,SKILL_LEVEL:piety:3,,COMMON,,1,,PRIEST,CORE
+mana_burn,Mana Burn,perk_mana_burn,PROGRESS,SKILL,piety,truth_rood,,SKILL_LEVEL:piety:5,,COMMON,,1,,PRIEST,CORE
+divine_oath,Divine Oath,perk_divine_oath,PROGRESS,SKILL,piety,truth_rood,,SKILL_LEVEL:piety:7,,COMMON,,1,,PRIEST,CORE
+performer_show,Performer (Show),perk_performer_show,PROGRESS,SKILL,perform.dancingshow,performer_show,,SKILL_LEVEL:perform.dancingshow:1,,COMMON,,1,,Bard,SUPPORT
+hands_and_feet,Hands and Feet,perk_hands_and_feet,PROGRESS,SKILL,perform.dancingshow,performer_show,,SKILL_LEVEL:perform.dancingshow:3,,COMMON,,1,,Bard,SUPPORT
+elegance_in_motion,Elegance in Motion,perk_elegance_in_motion,PROGRESS,SKILL,perform.dancingshow,performer_show,,SKILL_LEVEL:perform.dancingshow:5,,COMMON,,1,,Bard,SUPPORT
+delirium,Delirium,perk_delirium,PROGRESS,SKILL,perform.dancingshow,performer_show,,SKILL_LEVEL:perform.dancingshow:7,,COMMON,,1,,Bard,SUPPORT
+channel_rood,Channel Rood,perk_channel_rood,PROGRESS,SKILL,piety,channel_rood,,SKILL_LEVEL:piety:1,,COMMON,,1,,PRIEST,CORE
+divine_focus,Divine Focus,perk_divine_focus,PROGRESS,SKILL,piety,channel_rood,,SKILL_LEVEL:piety:3,,COMMON,,1,,PRIEST,CORE
+positive_channel,Positive Channel,perk_positive_channel,PROGRESS,SKILL,piety,channel_rood,,SKILL_LEVEL:piety:5,,COMMON,,1,,PRIEST,CORE
+visual_interpretation,Visual Interpretation,perk_visual_interpretation,PROGRESS,SKILL,craft.drawingpainting,visual_artist,,SKILL_LEVEL:craft.drawingpainting:3,,COMMON,,1,,Bard,SUPPORT
+enthraling_artwork,Enthraling Artwork,perk_enthraling_artwork,PROGRESS,SKILL,craft.drawingpainting,visual_artist,,SKILL_LEVEL:craft.drawingpainting:5,,COMMON,,1,,Bard,SUPPORT
+weird,Weird,perk_weird,PROGRESS,SKILL,craft.drawingpainting,visual_artist,,SKILL_LEVEL:craft.drawingpainting:7,,COMMON,,1,,Bard,SUPPORT
+first_aid,First Aid,perk_first_aid,PROGRESS,SKILL,healing,first_aid,,SKILL_LEVEL:healing:1,,COMMON,,1,,PRIEST,CORE
+flesh_blood,Flesh & Blood,perk_flesh_blood,PROGRESS,SKILL,healing,first_aid,,SKILL_LEVEL:healing:5,,COMMON,,1,,PRIEST,CORE
+re_vitalize,Re-Vitalize,perk_re_vitalize,PROGRESS,SKILL,healing,first_aid,,SKILL_LEVEL:healing:7,,COMMON,,1,,PRIEST,CORE
+finecraft,Finecraft,perk_finecraft,PROGRESS,SKILL,craft.sculptingengraving,carver,,SKILL_LEVEL:craft.sculptingengraving:5,,COMMON,,1,,Bard,SUPPORT
+jewelry,Jewelry,perk_jewelry,PROGRESS,SKILL,craft.sculptingengraving,carver,,SKILL_LEVEL:craft.sculptingengraving:7,,COMMON,,1,,Bard,SUPPORT
+spirit_sensitivity,Spirit Sensitivity,perk_spirit_sensitivity,PROGRESS,SKILL,spirit_sensitivity,spirit_sensitivity,,SKILL_LEVEL:spirit_sensitivity:1,,COMMON,,1,,PRIEST,CORE
+medium,Medium,perk_medium,PROGRESS,SKILL,spirit_sensitivity,spirit_sensitivity,,SKILL_LEVEL:spirit_sensitivity:3,,COMMON,,1,,PRIEST,CORE
+spirit_gate,Spirit Gate,perk_spirit_gate,PROGRESS,SKILL,spirit_sensitivity,spirit_sensitivity,,SKILL_LEVEL:spirit_sensitivity:5,,COMMON,,1,,PRIEST,CORE
+spiritual_force,Spiritual Force,perk_spiritual_force,PROGRESS,SKILL,spirit_sensitivity,spirit_sensitivity,,SKILL_LEVEL:spirit_sensitivity:7,,COMMON,,1,,PRIEST,CORE
+attention_magnet,Attention Magnet,perk_attention_magnet,PROGRESS,SKILL,acting,attention_magnet,,SKILL_LEVEL:acting:1,,COMMON,,1,,Bard,SUPPORT
+riling_the_audience,Riling the Audience,perk_riling_the_audience,PROGRESS,SKILL,acting,attention_magnet,,SKILL_LEVEL:acting:5,,COMMON,,1,,Bard,SUPPORT
+leading_the_audience,Leading the Audience,perk_leading_the_audience,PROGRESS,SKILL,acting,attention_magnet,,SKILL_LEVEL:acting:7,,COMMON,,1,,Bard,SUPPORT
+karmic_balance,Karmic Balance,perk_karmic_balance,PROGRESS,SKILL,piety,karmic_balance,,SKILL_LEVEL:piety:1,,COMMON,,1,,PRIEST,CORE
+blessed,Blessed,perk_blessed,PROGRESS,SKILL,piety,karmic_balance,,SKILL_LEVEL:piety:3,,COMMON,,1,,PRIEST,CORE
+karmic_piety,Karmic Piety,perk_karmic_piety,PROGRESS,SKILL,piety,karmic_balance,,SKILL_LEVEL:piety:5,,COMMON,,1,,PRIEST,CORE
+zeal,Zeal,perk_zeal,PROGRESS,SKILL,piety,karmic_balance,,SKILL_LEVEL:piety:7,,COMMON,,1,,PRIEST,CORE
+other_faces,Other Faces,perk_other_faces,PROGRESS,SKILL,acting,other_faces,,SKILL_LEVEL:acting:1,,COMMON,,1,,Bard,SUPPORT
+compelling_acting,Compelling Acting,perk_compelling_acting,PROGRESS,SKILL,acting,other_faces,,SKILL_LEVEL:acting:5,,COMMON,,1,,Bard,SUPPORT
+persona,Persona,perk_persona,PROGRESS,SKILL,acting,other_faces,,SKILL_LEVEL:acting:7,,COMMON,,1,,Bard,SUPPORT
+stone_fisted,Stone Fisted,perk_stone_fisted,PROGRESS,SKILL,brawling,stone_fisted,,SKILL_LEVEL:brawling:1,,COMMON,,1,,BRAWLER,CORE
+slam_down,Slam Down!,perk_slam_down,PROGRESS,SKILL,brawling,stone_fisted,,SKILL_LEVEL:brawling:5,,COMMON,,1,,BRAWLER,CORE
+circular_force,Circular Force,perk_circular_force,PROGRESS,SKILL,brawling,circular_force,,SKILL_LEVEL:brawling:1,,COMMON,,1,,BRAWLER,CORE
+quick_recover,Quick Recover,perk_quick_recover,PROGRESS,SKILL,brawling,circular_force,,SKILL_LEVEL:brawling:3,,COMMON,,1,,BRAWLER,CORE
+ground_fight,Ground Fight,perk_ground_fight,PROGRESS,SKILL,brawling,circular_force,,SKILL_LEVEL:brawling:5,,COMMON,,1,,BRAWLER,CORE
+cook,Cook,perk_cook,PROGRESS,SKILL,cooking,cook,,SKILL_LEVEL:cooking:1,,COMMON,,1,,Farmer,SUPPORT
+exotic_gourmet,Exotic Gourmet,perk_exotic_gourmet,PROGRESS,SKILL,cooking,cook,,SKILL_LEVEL:cooking:5,,COMMON,,1,,Farmer,SUPPORT
+supernatural_cuisine,Supernatural Cuisine,perk_supernatural_cuisine,PROGRESS,SKILL,cooking,cook,,SKILL_LEVEL:cooking:7,,COMMON,,1,,Farmer,SUPPORT
+calm_will,Calm Will,perk_calm_will,PROGRESS,SKILL,still_mind_focus,calm_will,,SKILL_LEVEL:still_mind_focus:1,,COMMON,,1,,BRAWLER,CORE
+inner_balance,Inner Balance,perk_inner_balance,PROGRESS,SKILL,still_mind_focus,calm_will,,SKILL_LEVEL:still_mind_focus:5,,COMMON,,1,,BRAWLER,CORE
+heavenbound,Heavenbound,perk_heavenbound,PROGRESS,SKILL,still_mind_focus,calm_will,,SKILL_LEVEL:still_mind_focus:7,,COMMON,,1,,BRAWLER,CORE
+rancher,Rancher,perk_rancher,PROGRESS,SKILL,farming,rancher,,SKILL_LEVEL:farming:1,,COMMON,,1,,Farmer,SUPPORT
+cattle_care,Cattle Care,perk_cattle_care,PROGRESS,SKILL,farming,rancher,,SKILL_LEVEL:farming:3,,COMMON,,1,,Farmer,SUPPORT
+expert_herder,Expert Herder,perk_expert_herder,PROGRESS,SKILL,farming,rancher,,SKILL_LEVEL:farming:5,,COMMON,,1,,Farmer,SUPPORT
+champion_cattle,Champion Cattle,perk_champion_cattle,PROGRESS,SKILL,farming,rancher,,SKILL_LEVEL:farming:7,,COMMON,,1,,Farmer,SUPPORT
+enemy_sonar,Enemy Sonar,perk_enemy_sonar,PROGRESS,SKILL,alert,cautious,,SKILL_LEVEL:alert:3,,COMMON,,1,,BRAWLER,CORE
+threat_reading,Threat Reading,perk_threat_reading,PROGRESS,SKILL,alert,cautious,,SKILL_LEVEL:alert:5,,COMMON,,1,,BRAWLER,CORE
+eyes_in_the_back,Eyes in the Back,perk_eyes_in_the_back,PROGRESS,SKILL,alert,cautious,,SKILL_LEVEL:alert:7,,COMMON,,1,,BRAWLER,CORE
+field_worker,Field Worker,perk_field_worker,PROGRESS,SKILL,farming,field_worker,,SKILL_LEVEL:farming:1,,COMMON,,1,,Farmer,SUPPORT
+enrich_soil,Enrich Soil,perk_enrich_soil,PROGRESS,SKILL,farming,field_worker,,SKILL_LEVEL:farming:3,,COMMON,,1,,Farmer,SUPPORT
+expert_tiller,Expert Tiller,perk_expert_tiller,PROGRESS,SKILL,farming,field_worker,,SKILL_LEVEL:farming:5,,COMMON,,1,,Farmer,SUPPORT
+quality_crops,Quality Crops,perk_quality_crops,PROGRESS,SKILL,farming,field_worker,,SKILL_LEVEL:farming:7,,COMMON,,1,,Farmer,SUPPORT
+sprinter,Sprinter,perk_sprinter,PROGRESS,SKILL,athletism,athletic,,SKILL_LEVEL:athletism:3,,COMMON,,1,,BRAWLER,CORE
+vaulter,Vaulter,perk_vaulter,PROGRESS,SKILL,athletism,athletic,,SKILL_LEVEL:athletism:5,,COMMON,,1,,BRAWLER,CORE
+free_running,Free Running,perk_free_running,PROGRESS,SKILL,athletism,athletic,,SKILL_LEVEL:athletism:7,,COMMON,,1,,BRAWLER,CORE
+artisan_food,Artisan Food,perk_artisan_food,PROGRESS,SKILL,farming,artisan_food,,SKILL_LEVEL:farming:1,,COMMON,,1,,Farmer,SUPPORT
+food_worker,Food Worker,perk_food_worker,PROGRESS,SKILL,farming,artisan_food,,SKILL_LEVEL:farming:3,,COMMON,,1,,Farmer,SUPPORT
+quality_craft,Quality Craft,perk_quality_craft,PROGRESS,SKILL,farming,artisan_food,,SKILL_LEVEL:farming:5,,COMMON,,1,,Farmer,SUPPORT
+aging,Aging,perk_aging,PROGRESS,SKILL,farming,artisan_food,,SKILL_LEVEL:farming:7,,COMMON,,1,,Farmer,SUPPORT
+power_nap,Power Nap,perk_power_nap,PROGRESS,SKILL,rest,slug,,SKILL_LEVEL:rest:3,,COMMON,,1,,BRAWLER,CORE
+deep_sleep,Deep Sleep,perk_deep_sleep,PROGRESS,SKILL,rest,slug,,SKILL_LEVEL:rest:5,,COMMON,,1,,BRAWLER,CORE
+rest_kneading,Rest Kneading,perk_rest_kneading,PROGRESS,SKILL,rest,slug,,SKILL_LEVEL:rest:7,,COMMON,,1,,BRAWLER,CORE
+animal_magnetism,Animal Magnetism,perk_animal_magnetism,PROGRESS,SKILL,animal_empathy,animal_magnetism,,SKILL_LEVEL:animal_empathy:1,,COMMON,,1,,Farmer,SUPPORT
+animal_understanding,Animal Understanding,perk_animal_understanding,PROGRESS,SKILL,animal_empathy,animal_magnetism,,SKILL_LEVEL:animal_empathy:3,,COMMON,,1,,Farmer,SUPPORT
+feroucious_loyalty,Feroucious Loyalty,perk_feroucious_loyalty,PROGRESS,SKILL,animal_empathy,animal_magnetism,,SKILL_LEVEL:animal_empathy:5,,COMMON,,1,,Farmer,SUPPORT
+shepherd,Shepherd,perk_shepherd,PROGRESS,SKILL,animal_empathy,animal_magnetism,,SKILL_LEVEL:animal_empathy:7,,COMMON,,1,,Farmer,SUPPORT
+bowman,Bowman,perk_bowman,PROGRESS,SKILL,projectile_weapons_handling,bowman,,SKILL_LEVEL:projectile_weapons_handling:1,,COMMON,,1,,EXPLORER,CORE
+run_gun,Run & Gun,perk_run_gun,PROGRESS,SKILL,projectile_weapons_handling,bowman,,SKILL_LEVEL:projectile_weapons_handling:3,,COMMON,,1,,EXPLORER,CORE
+ranger,Ranger,perk_ranger,PROGRESS,SKILL,projectile_weapons_handling,bowman,,SKILL_LEVEL:projectile_weapons_handling:5,,COMMON,,1,,EXPLORER,CORE
+long_range,Long Range,perk_long_range,PROGRESS,SKILL,projectile_weapons_handling,bowman,,SKILL_LEVEL:projectile_weapons_handling:7,,COMMON,,1,,EXPLORER,CORE
+bookworm,Bookworm,perk_bookworm,PROGRESS,SKILL,knowledge_specific,bookworm,,SKILL_LEVEL:knowledge_specific:1,,COMMON,,1,,Academic,SUPPORT
+learned,Learned,perk_learned,PROGRESS,SKILL,knowledge_specific,bookworm,,SKILL_LEVEL:knowledge_specific:3,,COMMON,,1,,Academic,SUPPORT
+researcher,Researcher,perk_researcher,PROGRESS,SKILL,knowledge_specific,bookworm,,SKILL_LEVEL:knowledge_specific:5,,COMMON,,1,,Academic,SUPPORT
+eidetic_memory,Eidetic Memory,perk_eidetic_memory,PROGRESS,SKILL,knowledge_specific,bookworm,,SKILL_LEVEL:knowledge_specific:7,,COMMON,,1,,Academic,SUPPORT
+natural_circle,Natural Circle,perk_natural_circle,PROGRESS,SKILL,nature_focus,natural_circle,,SKILL_LEVEL:nature_focus:1,,COMMON,,1,,EXPLORER,CORE
+green_purity,Green Purity,perk_green_purity,PROGRESS,SKILL,nature_focus,natural_circle,,SKILL_LEVEL:nature_focus:3,,COMMON,,1,,EXPLORER,CORE
+spirit_guide,Spirit Guide,perk_spirit_guide,PROGRESS,SKILL,nature_focus,natural_circle,,SKILL_LEVEL:nature_focus:5,,COMMON,,1,,EXPLORER,CORE
+natural_harmony,Natural Harmony,perk_natural_harmony,PROGRESS,SKILL,nature_focus,natural_circle,,SKILL_LEVEL:nature_focus:7,,COMMON,,1,,EXPLORER,CORE
+eye_to_detail,Eye to Detail,perk_eye_to_detail,PROGRESS,SKILL,investigation,eye_to_detail,,SKILL_LEVEL:investigation:1,,COMMON,,1,,Academic,SUPPORT
+inspector,Inspector,perk_inspector,PROGRESS,SKILL,investigation,eye_to_detail,,SKILL_LEVEL:investigation:3,,COMMON,,1,,Academic,SUPPORT
+reveal_secret,Reveal Secret,perk_reveal_secret,PROGRESS,SKILL,investigation,eye_to_detail,,SKILL_LEVEL:investigation:5,,COMMON,,1,,Academic,SUPPORT
+master_of_details,Master of Details,perk_master_of_details,PROGRESS,SKILL,investigation,eye_to_detail,,SKILL_LEVEL:investigation:7,,COMMON,,1,,Academic,SUPPORT
+wild_catch,Wild Catch,perk_wild_catch,PROGRESS,SKILL,farming,wild_catch,,SKILL_LEVEL:farming:1,,COMMON,,1,,EXPLORER,CORE
+tame_specialist,Tame Specialist,perk_tame_specialist,PROGRESS,SKILL,farming,wild_catch,,SKILL_LEVEL:farming:5,,COMMON,,1,,EXPLORER,CORE
+growth_correction,Growth Correction,perk_growth_correction,PROGRESS,SKILL,farming,wild_catch,,SKILL_LEVEL:farming:7,,COMMON,,1,,EXPLORER,CORE
+multi_cultural,Multi Cultural,perk_multi_cultural,PROGRESS,SKILL,linguistics,multi_cultural,,SKILL_LEVEL:linguistics:1,,COMMON,,1,,Academic,SUPPORT
+cipher,Cipher,perk_cipher,PROGRESS,SKILL,linguistics,multi_cultural,,SKILL_LEVEL:linguistics:3,,COMMON,,1,,Academic,SUPPORT
+ancient_culture,Ancient Culture,perk_ancient_culture,PROGRESS,SKILL,linguistics,multi_cultural,,SKILL_LEVEL:linguistics:5,,COMMON,,1,,Academic,SUPPORT
+cultural_assimilation,Cultural Assimilation,perk_cultural_assimilation,PROGRESS,SKILL,linguistics,multi_cultural,,SKILL_LEVEL:linguistics:7,,COMMON,,1,,Academic,SUPPORT
+hidden_traps,Hidden Traps,perk_hidden_traps,PROGRESS,SKILL,trapper,hidden_traps,,SKILL_LEVEL:trapper:1,,COMMON,,1,,EXPLORER,CORE
+trap_sence,Trap-Sence,perk_trap_sence,PROGRESS,SKILL,trapper,hidden_traps,,SKILL_LEVEL:trapper:5,,COMMON,,1,,EXPLORER,CORE
+trap_maker,Trap-Maker,perk_trap_maker,PROGRESS,SKILL,trapper,hidden_traps,,SKILL_LEVEL:trapper:7,,COMMON,,1,,EXPLORER,CORE
+green_thumb,Green Thumb,perk_green_thumb,PROGRESS,SKILL,herbalism,green_thumb,,SKILL_LEVEL:herbalism:1,,COMMON,,1,,Hunter,SUPPORT
+horticulture_101,Horticulture 101,perk_horticulture_101,PROGRESS,SKILL,herbalism,green_thumb,,SKILL_LEVEL:herbalism:3,,COMMON,,1,,Hunter,SUPPORT
+verdant_folklore,Verdant Folklore,perk_verdant_folklore,PROGRESS,SKILL,herbalism,green_thumb,,SKILL_LEVEL:herbalism:5,,COMMON,,1,,Hunter,SUPPORT
+gathering_zone,Gathering Zone,perk_gathering_zone,PROGRESS,SKILL,herbalism,green_thumb,,SKILL_LEVEL:herbalism:7,,COMMON,,1,,Hunter,SUPPORT
+keen_hearing,Keen Hearing,perk_keen_hearing,PROGRESS,SKILL,heightened_senses,keen_hearing,,SKILL_LEVEL:heightened_senses:1,,COMMON,,1,,EXPLORER,CORE
+butcher,Butcher,perk_butcher,PROGRESS,SKILL,dismantle,butcher,,SKILL_LEVEL:dismantle:1,,COMMON,,1,,Hunter,SUPPORT
+harvester,Harvester,perk_harvester,PROGRESS,SKILL,dismantle,butcher,,SKILL_LEVEL:dismantle:3,,COMMON,,1,,Hunter,SUPPORT
+old_way_gourmet,Old Way Gourmet,perk_old_way_gourmet,PROGRESS,SKILL,dismantle,butcher,,SKILL_LEVEL:dismantle:7,,COMMON,,1,,Hunter,SUPPORT
+targetting,Targetting,perk_targetting,PROGRESS,SKILL,tracking,targetting,,SKILL_LEVEL:tracking:1,,COMMON,,1,,Hunter,SUPPORT
+hunter_vision,Hunter Vision,perk_hunter_vision,PROGRESS,SKILL,tracking,targetting,,SKILL_LEVEL:tracking:3,,COMMON,,1,,Hunter,SUPPORT
+old_way_reading,Old Way Reading,perk_old_way_reading,PROGRESS,SKILL,tracking,targetting,,SKILL_LEVEL:tracking:5,,COMMON,,1,,Hunter,SUPPORT
+long_range_tracking,Long Range Tracking,perk_long_range_tracking,PROGRESS,SKILL,tracking,targetting,,SKILL_LEVEL:tracking:7,,COMMON,,1,,Hunter,SUPPORT
+the_ancient_ways,The Ancient Ways,perk_the_ancient_ways,PROGRESS,SKILL,formal_magics,the_ancient_ways,,SKILL_LEVEL:formal_magics:1,,COMMON,,1,,Mystic,SUPPORT
+occult_fan,Occult Fan,perk_occult_fan,PROGRESS,SKILL,formal_magics,the_ancient_ways,,SKILL_LEVEL:formal_magics:3,,COMMON,,1,,Mystic,SUPPORT
+ritualist,Ritualist,perk_ritualist,PROGRESS,SKILL,formal_magics,the_ancient_ways,,SKILL_LEVEL:formal_magics:5,,COMMON,,1,,Mystic,SUPPORT
+witchcraft,Witchcraft,perk_witchcraft,PROGRESS,SKILL,formal_magics,the_ancient_ways,,SKILL_LEVEL:formal_magics:7,,COMMON,,1,,Mystic,SUPPORT
+easy_mapping,Easy-Mapping,perk_easy_mapping,PROGRESS,SKILL,dungeoneer,seeker,,SKILL_LEVEL:dungeoneer:3,,COMMON,,1,,EXPLORER,CORE
+treasure_hunter,Treasure Hunter,perk_treasure_hunter,PROGRESS,SKILL,dungeoneer,seeker,,SKILL_LEVEL:dungeoneer:5,,COMMON,,1,,EXPLORER,CORE
+labyrinth_breaker,Labyrinth Breaker,perk_labyrinth_breaker,PROGRESS,SKILL,dungeoneer,seeker,,SKILL_LEVEL:dungeoneer:7,,COMMON,,1,,EXPLORER,CORE
+eye_for_magic,Eye for Magic,perk_eye_for_magic,PROGRESS,SKILL,spellcraft,eye_for_magic,,SKILL_LEVEL:spellcraft:1,,COMMON,,1,,Mystic,SUPPORT
+magic_analyst,Magic Analyst,perk_magic_analyst,PROGRESS,SKILL,spellcraft,eye_for_magic,,SKILL_LEVEL:spellcraft:3,,COMMON,,1,,Mystic,SUPPORT
+counterspell,CounterSpell,perk_counterspell,PROGRESS,SKILL,spellcraft,eye_for_magic,,SKILL_LEVEL:spellcraft:5,,COMMON,,1,,Mystic,SUPPORT
+spell_hacker,Spell Hacker,perk_spell_hacker,PROGRESS,SKILL,spellcraft,eye_for_magic,,SKILL_LEVEL:spellcraft:7,,COMMON,,1,,Mystic,SUPPORT
+star_compass,Star Compass,perk_star_compass,PROGRESS,SKILL,astrology,star_compass,,SKILL_LEVEL:astrology:1,,COMMON,,1,,Mystic,SUPPORT
+star_reader,Star Reader,perk_star_reader,PROGRESS,SKILL,astrology,star_compass,,SKILL_LEVEL:astrology:3,,COMMON,,1,,Mystic,SUPPORT
+fate_reading,Fate Reading,perk_fate_reading,PROGRESS,SKILL,astrology,star_compass,,SKILL_LEVEL:astrology:5,,COMMON,,1,,Mystic,SUPPORT
+omens,Omens,perk_omens,PROGRESS,SKILL,astrology,star_compass,,SKILL_LEVEL:astrology:7,,COMMON,,1,,Mystic,SUPPORT
+traveler,Traveler,perk_traveler,PROGRESS,SKILL,wayfarer,traveler,,SKILL_LEVEL:wayfarer:1,,COMMON,,1,,Traveller,SUPPORT
+long_walker,Long Walker,perk_long_walker,PROGRESS,SKILL,wayfarer,traveler,,SKILL_LEVEL:wayfarer:3,,COMMON,,1,,Traveller,SUPPORT
+pathguide,PathGuide,perk_pathguide,PROGRESS,SKILL,wayfarer,traveler,,SKILL_LEVEL:wayfarer:5,,COMMON,,1,,Traveller,SUPPORT
+thousand_steps,Thousand Steps,perk_thousand_steps,PROGRESS,SKILL,wayfarer,traveler,,SKILL_LEVEL:wayfarer:7,,COMMON,,1,,Traveller,SUPPORT
+familiar_mount,Familiar Mount,perk_familiar_mount,PROGRESS,SKILL,riding,familiar_mount,,SKILL_LEVEL:riding:1,,COMMON,,1,,,VERB
+experienced_rider,Experienced Rider,perk_experienced_rider,PROGRESS,SKILL,riding,familiar_mount,,SKILL_LEVEL:riding:3,,COMMON,,1,,,VERB
+one_hand_riding,One Hand Riding,perk_one_hand_riding,PROGRESS,SKILL,riding,familiar_mount,,SKILL_LEVEL:riding:5,,COMMON,,1,,,VERB
+mount_aptitude,Mount Aptitude,perk_mount_aptitude,PROGRESS,SKILL,riding,familiar_mount,,SKILL_LEVEL:riding:7,,COMMON,,1,,,VERB
+strong_back,Strong Back,perk_strong_back,PROGRESS,ATTRIBUTE,STR,strong_back,,ATTRIBUTE:STR:150,,COMMON,,1,,,VERB
+inner_strenght,Inner Strenght,perk_inner_strenght,PROGRESS,ATTRIBUTE,STR,strong_back,,ATTRIBUTE:STR:250,,COMMON,,1,,,VERB
+popular_trends,Popular Trends,perk_popular_trends,PROGRESS,SKILL,culture_lore,popular_trends,,SKILL_LEVEL:culture_lore:1,,COMMON,,1,,,VERB
+common_sense,Common Sense,perk_common_sense,PROGRESS,SKILL,culture_lore,popular_trends,,SKILL_LEVEL:culture_lore:3,,COMMON,,1,,,VERB
+popular_folklore,Popular Folklore,perk_popular_folklore,PROGRESS,SKILL,culture_lore,popular_trends,,SKILL_LEVEL:culture_lore:5,,COMMON,,1,,,VERB
+old_wisdom,Old Wisdom,perk_old_wisdom,PROGRESS,SKILL,culture_lore,popular_trends,,SKILL_LEVEL:culture_lore:7,,COMMON,,1,,,VERB
+unrestrained,Unrestrained,perk_unrestrained,PROGRESS,ATTRIBUTE,STR,unrestrained,,ATTRIBUTE:STR:150,,COMMON,,1,,,VERB
+hand_cannon,Hand Cannon,perk_hand_cannon,PROGRESS,ATTRIBUTE,STR,unrestrained,,ATTRIBUTE:STR:200,,COMMON,,1,,,VERB
+iron_bender,Iron Bender,perk_iron_bender,PROGRESS,ATTRIBUTE,STR,unrestrained,,ATTRIBUTE:STR:250,,COMMON,,1,,,VERB
+great_fortitude,Great Fortitude,perk_great_fortitude,PROGRESS,ATTRIBUTE,STR,build_up,,ATTRIBUTE:STR:200,,COMMON,,1,,,VERB
+rubbery_muscles,Rubbery Muscles,perk_rubbery_muscles,PROGRESS,ATTRIBUTE,STR,build_up,,ATTRIBUTE:STR:250,,COMMON,,1,,,VERB
+coordination,Coordination,perk_coordination,PROGRESS,ATTRIBUTE,AGI,coordination,,ATTRIBUTE:AGI:150,,COMMON,,1,,,VERB
+heightened_balance,Heightened Balance,perk_heightened_balance,PROGRESS,ATTRIBUTE,AGI,coordination,,ATTRIBUTE:AGI:200,,COMMON,,1,,,VERB
+ambidiextry,Ambidiextry,perk_ambidiextry,PROGRESS,ATTRIBUTE,AGI,coordination,,ATTRIBUTE:AGI:250,,COMMON,,1,,,VERB
+adrenaline,Adrenaline,perk_adrenaline,PROGRESS,ATTRIBUTE,AGI,adrenaline,,ATTRIBUTE:AGI:150,,COMMON,,1,,,VERB
+heightened_reflex,Heightened Reflex,perk_heightened_reflex,PROGRESS,ATTRIBUTE,AGI,adrenaline,,ATTRIBUTE:AGI:200,,COMMON,,1,,,VERB
+travel_light,Travel Light,perk_travel_light,PROGRESS,ATTRIBUTE,AGI,travel_light,,ATTRIBUTE:AGI:150,,COMMON,,1,,,VERB
+manouverability,Manouverability,perk_manouverability,PROGRESS,ATTRIBUTE,AGI,travel_light,,ATTRIBUTE:AGI:200,,COMMON,,1,,,VERB
+tunnel_serpent,Tunnel Serpent,perk_tunnel_serpent,PROGRESS,ATTRIBUTE,AGI,travel_light,,ATTRIBUTE:AGI:250,,COMMON,,1,,,VERB
+self_diagnose,Self-Diagnose,perk_self_diagnose,PROGRESS,ATTRIBUTE,PER,self_diagnose,,ATTRIBUTE:PER:150,,COMMON,,1,,,VERB
+anatomy_101,Anatomy 101,perk_anatomy_101,PROGRESS,ATTRIBUTE,PER,self_diagnose,,ATTRIBUTE:PER:200,,COMMON,,1,,,VERB
+death_sense,Death Sense,perk_death_sense,PROGRESS,ATTRIBUTE,PER,self_diagnose,,ATTRIBUTE:PER:250,,COMMON,,1,,,VERB
+low_light_vision,Low-Light Vision,perk_low_light_vision,PROGRESS,ATTRIBUTE,PER,low_light_vision,,ATTRIBUTE:PER:150,,COMMON,,1,,,VERB
+pitch,Pitch,perk_pitch,PROGRESS,ATTRIBUTE,PER,low_light_vision,,ATTRIBUTE:PER:200,,COMMON,,1,,,VERB
+blind_fighting,Blind Fighting,perk_blind_fighting,PROGRESS,ATTRIBUTE,PER,low_light_vision,,ATTRIBUTE:PER:250,,COMMON,,1,,,VERB
+idea,Idea,perk_idea,PROGRESS,ATTRIBUTE,INT,idea,,ATTRIBUTE:INT:150,,COMMON,,1,,,VERB
+calculus,Calculus,perk_calculus,PROGRESS,ATTRIBUTE,INT,idea,,ATTRIBUTE:INT:250,,COMMON,,1,,,VERB
+sharp_mind,Sharp Mind,perk_sharp_mind,PROGRESS,ATTRIBUTE,INT,self_diagnose,,ATTRIBUTE:INT:150,,COMMON,,1,,,VERB
+scrounger,Scrounger,perk_scrounger,PROGRESS,ATTRIBUTE,INT,self_diagnose,,ATTRIBUTE:INT:200,,COMMON,,1,,,VERB
+mental_strenght,Mental Strenght,perk_mental_strenght,PROGRESS,ATTRIBUTE,INT,self_diagnose,,ATTRIBUTE:INT:250,,COMMON,,1,,,VERB
+voracious_reader,Voracious Reader,perk_voracious_reader,PROGRESS,ATTRIBUTE,INT,voracious_reader,,ATTRIBUTE:INT:150,,COMMON,,1,,,VERB
+high_focus,High Focus,perk_high_focus,PROGRESS,ATTRIBUTE,INT,voracious_reader,,ATTRIBUTE:INT:200,,COMMON,,1,,,VERB
+photo_memory,Photo Memory,perk_photo_memory,PROGRESS,ATTRIBUTE,INT,voracious_reader,,ATTRIBUTE:INT:250,,COMMON,,1,,,VERB
+strong_soul,Strong Soul,perk_strong_soul,PROGRESS,ATTRIBUTE,WIL,strong_soul,,ATTRIBUTE:WIL:150,,COMMON,,1,,,VERB
+power_spot,Power Spot,perk_power_spot,PROGRESS,ATTRIBUTE,WIL,strong_soul,,ATTRIBUTE:WIL:200,,COMMON,,1,,,VERB
+mana_rejection,Mana Rejection,perk_mana_rejection,PROGRESS,ATTRIBUTE,WIL,strong_soul,,ATTRIBUTE:WIL:250,,COMMON,,1,,,VERB
+stoic,Stoic,perk_stoic,PROGRESS,ATTRIBUTE,WIL,stoic,,ATTRIBUTE:WIL:150,,COMMON,,1,,,VERB
+impartial_belief,Impartial Belief,perk_impartial_belief,PROGRESS,ATTRIBUTE,WIL,stoic,,ATTRIBUTE:WIL:200,,COMMON,,1,,,VERB
+happy_camper,Happy Camper,perk_happy_camper,PROGRESS,ATTRIBUTE,WIL,happy_camper,,ATTRIBUTE:WIL:150,,COMMON,,1,,,VERB
+pain_tolerance,Pain Tolerance,perk_pain_tolerance,PROGRESS,ATTRIBUTE,WIL,happy_camper,,ATTRIBUTE:WIL:200,,COMMON,,1,,,VERB
+iron_will,Iron Will,perk_iron_will,PROGRESS,ATTRIBUTE,WIL,happy_camper,,ATTRIBUTE:WIL:250,,COMMON,,1,,,VERB

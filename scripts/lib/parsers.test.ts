@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { parseRequirements, parseSources, parseFusionParents } from "./parsers.ts";
+import { parseRequirements, parseSources, parseFusionParents, parseAttributeBreakpoints } from "./parsers.ts";
 
 test("parseRequirements: empty field -> empty array, no errors", () => {
   const { value, errors } = parseRequirements("");
@@ -39,6 +39,12 @@ test("parseRequirements: covers all nine requirement types", () => {
   assert.deepEqual(value[4], { type: "TRAIT", target: "elemental_affinity", threshold: null });
   assert.deepEqual(value[6], { type: "CLASS", target: "warrior", threshold: null });
   assert.deepEqual(value[8], { type: "INSIGHT", target: "warrior", threshold: 200 });
+});
+
+test("parseRequirements: INSIGHT targets a class id with a numeric threshold", () => {
+  const { value, errors } = parseRequirements("INSIGHT:warrior:201");
+  assert.equal(errors.length, 0);
+  assert.deepEqual(value, [{ type: "INSIGHT", target: "warrior", threshold: 201 }]);
 });
 
 test("parseRequirements: boolean type omits threshold", () => {
@@ -165,4 +171,53 @@ test("parseFusionParents: worked example from authoring-columns.md", () => {
   const { value, errors } = parseFusionParents(field);
   assert.deepEqual(errors, []);
   assert.equal(value.length, 3);
+});
+
+test("parseAttributeBreakpoints: empty field -> empty array, no errors", () => {
+  const { value, errors } = parseAttributeBreakpoints("");
+  assert.deepEqual(value, []);
+  assert.deepEqual(errors, []);
+});
+
+test("parseAttributeBreakpoints: worked example from authoring-classes.md (Warrior)", () => {
+  const { value, errors } = parseAttributeBreakpoints("STR:250:10;STR:350:20");
+  assert.deepEqual(errors, []);
+  assert.deepEqual(value, [
+    { attribute: "STR", at: 250, insight_bonus: 10 },
+    { attribute: "STR", at: 350, insight_bonus: 20 },
+  ]);
+});
+
+test("parseAttributeBreakpoints: unknown attribute is an error", () => {
+  const { value, errors } = parseAttributeBreakpoints("CAR:250:10");
+  assert.equal(value.length, 0);
+  assert.equal(errors.length, 1);
+  assert.match(errors[0], /unknown attribute/);
+});
+
+test("parseAttributeBreakpoints: non-numeric value is an error", () => {
+  const { value, errors } = parseAttributeBreakpoints("STR:abc:10");
+  assert.equal(value.length, 0);
+  assert.equal(errors.length, 1);
+  assert.match(errors[0], /value "abc" is not a number/);
+});
+
+test("parseAttributeBreakpoints: non-numeric insight_bonus is an error", () => {
+  const { value, errors } = parseAttributeBreakpoints("STR:250:abc");
+  assert.equal(value.length, 0);
+  assert.equal(errors.length, 1);
+  assert.match(errors[0], /insight_bonus "abc" is not a number/);
+});
+
+test("parseAttributeBreakpoints: wrong field count is an error", () => {
+  const { value, errors } = parseAttributeBreakpoints("STR:250");
+  assert.equal(value.length, 0);
+  assert.equal(errors.length, 1);
+  assert.match(errors[0], /must be "ATTR:value:insight_bonus"/);
+});
+
+test("parseAttributeBreakpoints: multiple entries, one bad, keeps collecting", () => {
+  const { value, errors } = parseAttributeBreakpoints("STR:250:10;NOPE:1:1;WIL:300:15");
+  assert.equal(value.length, 2);
+  assert.equal(errors.length, 1);
 });

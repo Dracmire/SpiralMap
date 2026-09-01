@@ -1,5 +1,6 @@
 import type { Dataset, AttributeId } from "../types.ts";
 import { useBuildState, useBuildDispatch } from "../state/buildState.ts";
+import { computeClassInsights } from "../layout/insight.ts";
 
 const ATTRIBUTES: AttributeId[] = ["STR", "AGI", "INT", "PER", "WIL", "CHA"];
 
@@ -10,6 +11,7 @@ export function CharacterPanel({ dataset }: { dataset: Dataset }) {
   const sortedSkills = [...dataset.skills].sort((a, b) => a.name.localeCompare(b.name));
   const coreGroups = [...dataset.skill_groups].filter((g) => g.kind === "CORE").sort((a, b) => a.name.localeCompare(b.name));
   const supportGroups = [...dataset.skill_groups].filter((g) => g.kind === "SUPPORT").sort((a, b) => a.name.localeCompare(b.name));
+  const classInsights = computeClassInsights(dataset, build);
 
   return (
     <div className="panel character-panel">
@@ -68,6 +70,40 @@ export function CharacterPanel({ dataset }: { dataset: Dataset }) {
           ))}
         </select>
         {dataset.classes.length === 0 && <p className="hint">No classes authored yet.</p>}
+        <p className="hint">
+          Insight accrues automatically from levels in a class's aligned skills, plus any attribute
+          breakpoint met — it is never spent, only checked against each star tier's gate.
+        </p>
+        {classInsights.map((ci) => (
+          <div key={ci.classId} className="class-insight">
+            <div className="class-insight-header">
+              <strong>{ci.className}</strong>
+              <span className="class-insight-value">Insight {ci.insight}</span>
+            </div>
+            <div className="class-insight-tiers">
+              {ci.tiers.map((t) =>
+                t.star === 0 ? (
+                  <div key={t.star} className="class-tier-row">
+                    <span>Entry</span>
+                    <span className={t.generalist_reachable ? "tier-reachable" : "tier-locked"}>
+                      {t.generalist_reachable ? "reachable" : `needs ${t.generalist_shortfall} more Insight`}
+                    </span>
+                  </div>
+                ) : (
+                  <div key={t.star} className="class-tier-row">
+                    <span>{t.star}-star</span>
+                    <span className={t.generalist_reachable ? "tier-reachable" : "tier-locked"}>
+                      Generalist {t.generalist_reachable ? "reachable" : `needs ${t.generalist_shortfall} more`}
+                    </span>
+                    <span className={t.specialist_reachable ? "tier-reachable" : "tier-locked"}>
+                      Specialist {t.specialist_reachable ? "reachable" : `needs ${t.specialist_shortfall} more`}
+                    </span>
+                  </div>
+                ),
+              )}
+            </div>
+          </div>
+        ))}
       </section>
 
       <section>

@@ -4,12 +4,20 @@
  * callers turn the returned error strings into `sheet!row: message`.
  */
 
-import type { Requirement, RequirementType, Source, SourceType, ParentDisposition } from "../../schema/spiral.ts";
+import type { Requirement, RequirementType, Source, SourceType, ParentDisposition, AttributeId } from "../../schema/spiral.ts";
 
 export interface ParseResult<T> {
   value: T[];
   errors: string[];
 }
+
+export interface AttributeBreakpoint {
+  attribute: AttributeId;
+  at: number;
+  insight_bonus: number;
+}
+
+const VALID_ATTRIBUTE_IDS: ReadonlySet<string> = new Set(["STR", "AGI", "INT", "PER", "WIL", "CHA"]);
 
 const BOOLEAN_REQUIREMENT_TYPES: ReadonlySet<RequirementType> = new Set(["TRAIT", "PRIOR_NODE", "CLASS"]);
 
@@ -163,6 +171,38 @@ export function parseFusionParents(field: string): ParseResult<{ feat_id: string
       continue;
     }
     value.push({ feat_id, disposition: rawDisposition as ParentDisposition });
+  }
+
+  return { value, errors };
+}
+
+/** Attribute breakpoints: `;`-separated `ATTR:value:insight_bonus`. All three fields required. */
+export function parseAttributeBreakpoints(field: string): ParseResult<AttributeBreakpoint> {
+  const value: AttributeBreakpoint[] = [];
+  const errors: string[] = [];
+
+  for (const entry of splitEntries(field)) {
+    const parts = entry.split(":");
+    if (parts.length !== 3) {
+      errors.push(`attribute breakpoint "${entry}" must be "ATTR:value:insight_bonus"`);
+      continue;
+    }
+    const [rawAttr, rawAt, rawBonus] = parts;
+    if (!VALID_ATTRIBUTE_IDS.has(rawAttr)) {
+      errors.push(`attribute breakpoint "${entry}": unknown attribute "${rawAttr}"`);
+      continue;
+    }
+    const at = Number(rawAt);
+    if (rawAt === "" || !Number.isFinite(at)) {
+      errors.push(`attribute breakpoint "${entry}": value "${rawAt}" is not a number`);
+      continue;
+    }
+    const insight_bonus = Number(rawBonus);
+    if (rawBonus === "" || !Number.isFinite(insight_bonus)) {
+      errors.push(`attribute breakpoint "${entry}": insight_bonus "${rawBonus}" is not a number`);
+      continue;
+    }
+    value.push({ attribute: rawAttr as AttributeId, at, insight_bonus });
   }
 
   return { value, errors };

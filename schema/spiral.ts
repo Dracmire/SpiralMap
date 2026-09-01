@@ -264,8 +264,14 @@ export interface ClassTierRow {
   level_min: number;
   /** Generalist unlocks a POOL (Line), or a Keystone. */
   generalist_grant: { kind: "LINE" | "KEYSTONE"; id: string } | null;
-  /** Specialist unlocks a named sub-class outright. */
-  specialist_subclass_ids: string[];
+  /**
+   * One entry per Specialist alternative at this star (e.g. Swordsman / Barbarian /
+   * Soldier at Warrior 1-star — content/class_tiers.csv authors these as separate
+   * SPECIALIST rows sharing one star). A named subclass's own progression lives in a
+   * separate CharacterClass row (via parent_class_id); `grant` is set instead when the
+   * alternative opens a Line or Keystone directly, with no subclass fork.
+   */
+  specialist_grants: { subclass_name: string | null; grant: { kind: "LINE" | "KEYSTONE"; id: string } | null }[];
 }
 
 export interface CharacterClass {

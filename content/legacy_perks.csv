@@ -164,8 +164,8 @@ perk_ground_fight,Ground Fight,brawling_roll,grappling_effect,THRESHOLD,THRESHOL
 perk_cook,Cook,cooking_roll,cooking_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Skill Bonus -,,,,,LOW
 perk_exotic_gourmet,Exotic Gourmet,resistance_mental,cooking_effect,COVERAGE,FLAT_BONUS,ENTRY,,,obtain extra bonus from foodstuff. Some poweful monster cooking will endow with temporary passive perks,,,,,HIGH
 perk_supernatural_cuisine,Supernatural Cuisine,cooking_roll,cooking_effect,,,ENTRY,,,"the world is full of supernatural and mystical ingredients you have learned the basis of working with [IRON] ranked ingredients, this does not protect the cook or the eater from the ingredient effect, it only ensures that the cook can use the ingredient correctly. its possible to work with [BRONZE] ingredients provided that you posess the recipe",,,,,LOW
-perk_calm_will,Calm Will,resistance_mental,still_mind_focus_effect,,,ENTRY,,,Still Mind,,,,,LOW
-perk_inner_balance,Inner Balance,still_mind_focus_roll,still_mind_focus_effect,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,,,,,,LOW
+perk_calm_will,Calm Will,wil_poise,still_mind_focus_effect,FLAT_BONUS,,ENTRY,ABILITY,NATURAL,"Keeps your poise under pressure, granting a bonus to it.",,,,,HIGH
+perk_inner_balance,Inner Balance,resistance_mental,still_mind_focus_effect,FLAT_BONUS,,ENTRY,ABILITY,NATURAL,"Tolerance toward mental attacks, and enhanced rolls against temptation and charisma-based skills.",,,,,HIGH
 perk_heavenbound,Heavenbound,still_mind_focus_roll,still_mind_focus_effect,,,ENTRY,,,Heavenbound -,,,,,LOW
 perk_rancher,Rancher,farming_roll,farming_animal_husbandry_effect,THRESHOLD,,ENTRY,ABILITY,EQUIPMENT,Reduce time used when dealing with cattle,,,,,MED
 perk_cattle_care,Cattle Care,farming_roll,farming_animal_husbandry_effect,FLAT_BONUS,,ENTRY,ABILITY,EQUIPMENT,your care has incresed effects on the cattle,,,,,LOW
@@ -277,7 +277,7 @@ perk_anatomy_101,Anatomy 101,per_judgement,,COVERAGE,,ENTRY,,,you receive more i
 perk_death_sense,Death Sense,per_judgement,,COVERAGE,,ENTRY,,,you have a knack for finding threats and avoid dangerous paths.,,,,,LOW
 perk_low_light_vision,Low-Light Vision,per_senses,,PERMISSION,,ENTRY,,,"you can see better in darkness, remove some of the penalty. It does not affect total darkness or enviromental obstructions such as mist",,,,,HIGH
 perk_pitch,Pitch,per_senses,,PERMISSION,,ENTRY,,,"you have a uncanny ear for sounds, you can memorize and identify sounds easily. You can retain one sound per session",,,,,HIGH
-perk_blind_fighting,Blind Fighting,per_senses,,,,ENTRY,,,,,,,,LOW
+perk_blind_fighting,Blind Fighting,attack_roll,,THRESHOLD,,ENTRY,CIRCUMSTANTIAL,TRAINING,"Reduces the penalty for fighting with impaired visibility, allowing proper combat actions while blind.",,,,,HIGH
 perk_idea,Idea,int_inspiration,,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,Lightbulb,,,,,LOW
 perk_calculus,Calculus,int_inspiration,,THRESHOLD,,ENTRY,ABILITY,TRAINING,perform calculations instantly,,,,,LOW
 perk_sharp_mind,Sharp Mind,per_judgement,,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,"Cynical, recibes un bono de +5 contra tiradas que impliquen engaños y confusion",,,,,HIGH

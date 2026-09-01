@@ -74,7 +74,8 @@
       "is_parameterized": false,
       "instances": [],
       "group_ids": [
-        "mage"
+        "mage",
+        "sorceror"
       ],
       "description": "the main proficiency of using mana based spells and abilities of mystical origin (requieres specialization)"
     },
@@ -422,12 +423,12 @@
         "minstrel",
         "lawmaker"
       ],
-      "description": "the general knowledge of the subtleties of the current culture and common knowlesdge in your geographical zone"
+      "description": "formerly \"Common Lore\"; culture and common sense of a region. Major skill for non-human races."
     },
     {
       "id": "diplomacy",
       "name": "Diplomacy",
-      "attribute": "#N/A",
+      "attribute": "CHA",
       "alt_attribute": null,
       "macro": null,
       "kind": "SUPPORT",
@@ -458,7 +459,7 @@
     {
       "id": "dismantle",
       "name": "Dismantle",
-      "attribute": "#N/A",
+      "attribute": "AGI",
       "alt_attribute": null,
       "macro": null,
       "kind": "SUPPORT",
@@ -1270,6 +1271,16 @@
         "discipline",
         "intimidation",
         "battle"
+      ],
+      "discount_pct": 25
+    },
+    {
+      "id": "sorceror",
+      "name": "SORCEROR",
+      "kind": "CORE",
+      "key_attribute": "CHA",
+      "member_skill_ids": [
+        "basic_mana_discipline"
       ],
       "discount_pct": 25
     }
@@ -5500,12 +5511,12 @@
     {
       "id": "perk_calm_will",
       "name": "Calm Will",
-      "subject": "resistance_mental",
-      "family": "",
+      "subject": "wil_poise",
+      "family": "FLAT_BONUS",
       "tier": "ENTRY",
-      "bonus_category": null,
-      "bonus_type": null,
-      "text": "Still Mind",
+      "bonus_category": "ABILITY",
+      "bonus_type": "NATURAL",
+      "text": "Keeps your poise under pressure, granting a bonus to it.",
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
@@ -5515,12 +5526,12 @@
     {
       "id": "perk_inner_balance",
       "name": "Inner Balance",
-      "subject": "still_mind_focus_roll",
+      "subject": "resistance_mental",
       "family": "FLAT_BONUS",
       "tier": "ENTRY",
       "bonus_category": "ABILITY",
-      "bonus_type": "TRAINING",
-      "text": "",
+      "bonus_type": "NATURAL",
+      "text": "Tolerance toward mental attacks, and enhanced rolls against temptation and charisma-based skills.",
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
@@ -7218,12 +7229,12 @@
     {
       "id": "perk_blind_fighting",
       "name": "Blind Fighting",
-      "subject": "per_senses",
-      "family": "",
+      "subject": "attack_roll",
+      "family": "THRESHOLD",
       "tier": "ENTRY",
-      "bonus_category": null,
-      "bonus_type": null,
-      "text": "",
+      "bonus_category": "CIRCUMSTANTIAL",
+      "bonus_type": "TRAINING",
+      "text": "Reduces the penalty for fighting with impaired visibility, allowing proper combat actions while blind.",
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
@@ -8270,6 +8281,70 @@
       "derived_tier": "ENTRY"
     },
     {
+      "id": "influencer",
+      "name": "Influencer",
+      "perk_ids": [
+        "perk_influencer"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "court"
+      },
+      "practice_root_id": "influencer",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "court",
+          "threshold": 1
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "High Class",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "suggestion",
+      "name": "Suggestion",
+      "perk_ids": [
+        "perk_suggestion"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "court"
+      },
+      "practice_root_id": "influencer",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "court",
+          "threshold": 5
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "High Class",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
       "id": "shieldbearer",
       "name": "Shieldbearer",
       "perk_ids": [
@@ -9006,6 +9081,102 @@
       "derived_tier": "ENTRY"
     },
     {
+      "id": "shrewd_merchant",
+      "name": "Shrewd Merchant",
+      "perk_ids": [
+        "perk_shrewd_merchant"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "comerce"
+      },
+      "practice_root_id": "businessman",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "comerce",
+          "threshold": 3
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Merchant",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "trust_is_everything",
+      "name": "Trust is Everything",
+      "perk_ids": [
+        "perk_trust_is_everything"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "comerce"
+      },
+      "practice_root_id": "businessman",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "comerce",
+          "threshold": 5
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Merchant",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "midas_touch",
+      "name": "Midas Touch",
+      "perk_ids": [
+        "perk_midas_touch"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "comerce"
+      },
+      "practice_root_id": "businessman",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "comerce",
+          "threshold": 7
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Merchant",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
       "id": "knife_thrower",
       "name": "Knife Thrower",
       "perk_ids": [
@@ -9582,6 +9753,134 @@
       "derived_tier": "ENTRY"
     },
     {
+      "id": "tough",
+      "name": "Tough!",
+      "perk_ids": [
+        "perk_tough"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "inclemence"
+      },
+      "practice_root_id": "tough",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "inclemence",
+          "threshold": 1
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Survivalist",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "thick_skinned",
+      "name": "Thick Skinned",
+      "perk_ids": [
+        "perk_thick_skinned"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "inclemence"
+      },
+      "practice_root_id": "tough",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "inclemence",
+          "threshold": 3
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Survivalist",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "magic_fortitude",
+      "name": "Magic Fortitude",
+      "perk_ids": [
+        "perk_magic_fortitude"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "inclemence"
+      },
+      "practice_root_id": "tough",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "inclemence",
+          "threshold": 5
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Survivalist",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "iron_man",
+      "name": "Iron Man",
+      "perk_ids": [
+        "perk_iron_man"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "inclemence"
+      },
+      "practice_root_id": "tough",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "inclemence",
+          "threshold": 7
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Survivalist",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
       "id": "quick_hands",
       "name": "Quick Hands",
       "perk_ids": [
@@ -10126,6 +10425,70 @@
       "derived_tier": "ENTRY"
     },
     {
+      "id": "tanning",
+      "name": "Tanning",
+      "perk_ids": [
+        "perk_tanning"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "handcraft_sewing_leather"
+      },
+      "practice_root_id": "tanning",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "handcraft_sewing_leather",
+          "threshold": 1
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Artisan",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "monster_weaver",
+      "name": "Monster Weaver",
+      "perk_ids": [
+        "perk_monster_weaver"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "handcraft_sewing_leather"
+      },
+      "practice_root_id": "tanning",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "handcraft_sewing_leather",
+          "threshold": 7
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Artisan",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
       "id": "interference_wand",
       "name": "Interference Wand",
       "perk_ids": [
@@ -10264,7 +10627,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "craft"
+        "id": "craft.woodwork"
       },
       "practice_root_id": "carpenter",
       "fusion_root_id": null,
@@ -10272,7 +10635,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "craft.Woodwork",
+          "target": "craft.woodwork",
           "threshold": 3
         }
       ],
@@ -10296,7 +10659,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "craft"
+        "id": "craft.woodwork"
       },
       "practice_root_id": "carpenter",
       "fusion_root_id": null,
@@ -10304,7 +10667,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "craft.Woodwork",
+          "target": "craft.woodwork",
           "threshold": 5
         }
       ],
@@ -10392,7 +10755,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "craft"
+        "id": "craft.metalwork"
       },
       "practice_root_id": "smity",
       "fusion_root_id": null,
@@ -10400,7 +10763,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "craft.Metalwork",
+          "target": "craft.metalwork",
           "threshold": 3
         }
       ],
@@ -10424,7 +10787,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "craft"
+        "id": "craft.metalwork"
       },
       "practice_root_id": "smity",
       "fusion_root_id": null,
@@ -10432,7 +10795,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "craft.Metalwork",
+          "target": "craft.metalwork",
           "threshold": 5
         }
       ],
@@ -10456,7 +10819,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "craft"
+        "id": "craft.metalwork"
       },
       "practice_root_id": "smity",
       "fusion_root_id": null,
@@ -10464,7 +10827,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "craft.Metalwork",
+          "target": "craft.metalwork",
           "threshold": 7
         }
       ],
@@ -10734,6 +11097,390 @@
       "derived_tier": "ENTRY"
     },
     {
+      "id": "handyman",
+      "name": "Handyman",
+      "perk_ids": [
+        "perk_handyman"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "building_simple_building_digging_etc"
+      },
+      "practice_root_id": "handyman",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "building_simple_building_digging_etc",
+          "threshold": 1
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Engineer",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "cutting_corners",
+      "name": "Cutting Corners",
+      "perk_ids": [
+        "perk_cutting_corners"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "building_simple_building_digging_etc"
+      },
+      "practice_root_id": "handyman",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "building_simple_building_digging_etc",
+          "threshold": 3
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Engineer",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "demolition_expert",
+      "name": "Demolition Expert",
+      "perk_ids": [
+        "perk_demolition_expert"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "building_simple_building_digging_etc"
+      },
+      "practice_root_id": "handyman",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "building_simple_building_digging_etc",
+          "threshold": 5
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Engineer",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "constructor",
+      "name": "Constructor",
+      "perk_ids": [
+        "perk_constructor"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "building_simple_building_digging_etc"
+      },
+      "practice_root_id": "handyman",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "building_simple_building_digging_etc",
+          "threshold": 7
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Engineer",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "image_crystal",
+      "name": "Image Crystal",
+      "perk_ids": [
+        "perk_image_crystal"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "magic_obj_scyring"
+      },
+      "practice_root_id": "image_crystal",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "magic_obj_scyring",
+          "threshold": 1
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "MAGE",
+      "block": "CORE",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "record_crystal",
+      "name": "Record Crystal",
+      "perk_ids": [
+        "perk_record_crystal"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "magic_obj_scyring"
+      },
+      "practice_root_id": "image_crystal",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "magic_obj_scyring",
+          "threshold": 3
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "MAGE",
+      "block": "CORE",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "far_scry",
+      "name": "Far Scry",
+      "perk_ids": [
+        "perk_far_scry"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "magic_obj_scyring"
+      },
+      "practice_root_id": "image_crystal",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "magic_obj_scyring",
+          "threshold": 5
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "MAGE",
+      "block": "CORE",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "clariaudience",
+      "name": "Clariaudience",
+      "perk_ids": [
+        "perk_clariaudience"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "magic_obj_scyring"
+      },
+      "practice_root_id": "image_crystal",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "magic_obj_scyring",
+          "threshold": 7
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "MAGE",
+      "block": "CORE",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "structural_reading",
+      "name": "Structural Reading",
+      "perk_ids": [
+        "perk_structural_reading"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "observe"
+      },
+      "practice_root_id": "structural_reading",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "observe",
+          "threshold": 1
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Engineer",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "finder_of_flaws",
+      "name": "Finder of Flaws",
+      "perk_ids": [
+        "perk_finder_of_flaws"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "observe"
+      },
+      "practice_root_id": "structural_reading",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "observe",
+          "threshold": 3
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Engineer",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "structural_analyst",
+      "name": "Structural Analyst",
+      "perk_ids": [
+        "perk_structural_analyst"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "observe"
+      },
+      "practice_root_id": "structural_reading",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "observe",
+          "threshold": 5
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Engineer",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "demolition_man",
+      "name": "Demolition Man",
+      "perk_ids": [
+        "perk_demolition_man"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "observe"
+      },
+      "practice_root_id": "structural_reading",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "observe",
+          "threshold": 7
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "Engineer",
+      "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
       "id": "boost_clading",
       "name": "Boost Clading",
       "perk_ids": [
@@ -10840,7 +11587,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform"
+        "id": "perform.music_instrument"
       },
       "practice_root_id": "performer_instruments",
       "fusion_root_id": null,
@@ -10848,7 +11595,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform.Music Instrument",
+          "target": "perform.music_instrument",
           "threshold": 1
         }
       ],
@@ -10872,7 +11619,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform"
+        "id": "perform.music_instrument"
       },
       "practice_root_id": "performer_instruments",
       "fusion_root_id": null,
@@ -10880,7 +11627,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform.Music Instrument",
+          "target": "perform.music_instrument",
           "threshold": 3
         }
       ],
@@ -10904,7 +11651,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform"
+        "id": "perform.music_instrument"
       },
       "practice_root_id": "performer_instruments",
       "fusion_root_id": null,
@@ -10912,7 +11659,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform.Music Instrument",
+          "target": "perform.music_instrument",
           "threshold": 5
         }
       ],
@@ -10936,7 +11683,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform"
+        "id": "perform.music_instrument"
       },
       "practice_root_id": "performer_instruments",
       "fusion_root_id": null,
@@ -10944,7 +11691,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform.Music Instrument",
+          "target": "perform.music_instrument",
           "threshold": 7
         }
       ],
@@ -11096,7 +11843,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform"
+        "id": "perform.singing"
       },
       "practice_root_id": "performer_singing",
       "fusion_root_id": null,
@@ -11104,7 +11851,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform.Singing",
+          "target": "perform.singing",
           "threshold": 1
         }
       ],
@@ -11128,7 +11875,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform"
+        "id": "perform.singing"
       },
       "practice_root_id": "performer_singing",
       "fusion_root_id": null,
@@ -11136,7 +11883,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform.Singing",
+          "target": "perform.singing",
           "threshold": 3
         }
       ],
@@ -11160,7 +11907,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform"
+        "id": "perform.singing"
       },
       "practice_root_id": "performer_singing",
       "fusion_root_id": null,
@@ -11168,7 +11915,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform.Singing",
+          "target": "perform.singing",
           "threshold": 5
         }
       ],
@@ -11192,7 +11939,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform"
+        "id": "perform.singing"
       },
       "practice_root_id": "performer_singing",
       "fusion_root_id": null,
@@ -11200,7 +11947,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform.Singing",
+          "target": "perform.singing",
           "threshold": 7
         }
       ],
@@ -11352,7 +12099,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform"
+        "id": "perform.dancingshow"
       },
       "practice_root_id": "performer_show",
       "fusion_root_id": null,
@@ -11360,7 +12107,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform.Dancing/Show",
+          "target": "perform.dancingshow",
           "threshold": 1
         }
       ],
@@ -11384,7 +12131,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform"
+        "id": "perform.dancingshow"
       },
       "practice_root_id": "performer_show",
       "fusion_root_id": null,
@@ -11392,7 +12139,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform.Dancing/Show",
+          "target": "perform.dancingshow",
           "threshold": 3
         }
       ],
@@ -11416,7 +12163,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform"
+        "id": "perform.dancingshow"
       },
       "practice_root_id": "performer_show",
       "fusion_root_id": null,
@@ -11424,7 +12171,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform.Dancing/Show",
+          "target": "perform.dancingshow",
           "threshold": 5
         }
       ],
@@ -11448,7 +12195,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "perform"
+        "id": "perform.dancingshow"
       },
       "practice_root_id": "performer_show",
       "fusion_root_id": null,
@@ -11456,7 +12203,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "perform.Dancing/Show",
+          "target": "perform.dancingshow",
           "threshold": 7
         }
       ],
@@ -11576,7 +12323,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "craft"
+        "id": "craft.drawingpainting"
       },
       "practice_root_id": "visual_artist",
       "fusion_root_id": null,
@@ -11584,7 +12331,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "craft.Drawing/Painting",
+          "target": "craft.drawingpainting",
           "threshold": 3
         }
       ],
@@ -11608,7 +12355,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "craft"
+        "id": "craft.drawingpainting"
       },
       "practice_root_id": "visual_artist",
       "fusion_root_id": null,
@@ -11616,7 +12363,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "craft.Drawing/Painting",
+          "target": "craft.drawingpainting",
           "threshold": 5
         }
       ],
@@ -11640,7 +12387,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "craft"
+        "id": "craft.drawingpainting"
       },
       "practice_root_id": "visual_artist",
       "fusion_root_id": null,
@@ -11648,7 +12395,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "craft.Drawing/Painting",
+          "target": "craft.drawingpainting",
           "threshold": 7
         }
       ],
@@ -11768,7 +12515,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "craft"
+        "id": "craft.sculptingengraving"
       },
       "practice_root_id": "carver",
       "fusion_root_id": null,
@@ -11776,7 +12523,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "craft.Sculpting/Engraving",
+          "target": "craft.sculptingengraving",
           "threshold": 5
         }
       ],
@@ -11800,7 +12547,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "craft"
+        "id": "craft.sculptingengraving"
       },
       "practice_root_id": "carver",
       "fusion_root_id": null,
@@ -11808,7 +12555,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "craft.Sculpting/Engraving",
+          "target": "craft.sculptingengraving",
           "threshold": 7
         }
       ],
@@ -14382,6 +15129,38 @@
       "derived_tier": "ENTRY"
     },
     {
+      "id": "keen_hearing",
+      "name": "Keen Hearing",
+      "perk_ids": [
+        "perk_keen_hearing"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "heightened_senses"
+      },
+      "practice_root_id": "keen_hearing",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "heightened_senses",
+          "threshold": 1
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "EXPLORER",
+      "block": "CORE",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
       "id": "butcher",
       "name": "Butcher",
       "perk_ids": [
@@ -14730,6 +15509,102 @@
       "boundary": "",
       "skill_group": "Mystic",
       "block": "SUPPORT",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "easy_mapping",
+      "name": "Easy-Mapping",
+      "perk_ids": [
+        "perk_easy_mapping"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "dungeoneer"
+      },
+      "practice_root_id": "seeker",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "dungeoneer",
+          "threshold": 3
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "EXPLORER",
+      "block": "CORE",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "treasure_hunter",
+      "name": "Treasure Hunter",
+      "perk_ids": [
+        "perk_treasure_hunter"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "dungeoneer"
+      },
+      "practice_root_id": "seeker",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "dungeoneer",
+          "threshold": 5
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "EXPLORER",
+      "block": "CORE",
+      "is_anti_perk": false,
+      "derived_tier": "ENTRY"
+    },
+    {
+      "id": "labyrinth_breaker",
+      "name": "Labyrinth Breaker",
+      "perk_ids": [
+        "perk_labyrinth_breaker"
+      ],
+      "job": [
+        "PROGRESS"
+      ],
+      "authority_root": {
+        "type": "SKILL",
+        "id": "dungeoneer"
+      },
+      "practice_root_id": "seeker",
+      "fusion_root_id": null,
+      "sources": [],
+      "requirements": [
+        {
+          "type": "SKILL_LEVEL",
+          "target": "dungeoneer",
+          "threshold": 7
+        }
+      ],
+      "rarity": "COMMON",
+      "zone_id": null,
+      "cp_cost": 1,
+      "boundary": "",
+      "skill_group": "EXPLORER",
+      "block": "CORE",
       "is_anti_perk": false,
       "derived_tier": "ENTRY"
     },
@@ -15314,7 +16189,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "common_lore"
+        "id": "culture_lore"
       },
       "practice_root_id": "popular_trends",
       "fusion_root_id": null,
@@ -15322,7 +16197,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "common_lore",
+          "target": "culture_lore",
           "threshold": 1
         }
       ],
@@ -15345,7 +16220,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "common_lore"
+        "id": "culture_lore"
       },
       "practice_root_id": "popular_trends",
       "fusion_root_id": null,
@@ -15353,7 +16228,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "common_lore",
+          "target": "culture_lore",
           "threshold": 3
         }
       ],
@@ -15376,7 +16251,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "common_lore"
+        "id": "culture_lore"
       },
       "practice_root_id": "popular_trends",
       "fusion_root_id": null,
@@ -15384,7 +16259,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "common_lore",
+          "target": "culture_lore",
           "threshold": 5
         }
       ],
@@ -15407,7 +16282,7 @@
       ],
       "authority_root": {
         "type": "SKILL",
-        "id": "common_lore"
+        "id": "culture_lore"
       },
       "practice_root_id": "popular_trends",
       "fusion_root_id": null,
@@ -15415,7 +16290,7 @@
       "requirements": [
         {
           "type": "SKILL_LEVEL",
-          "target": "common_lore",
+          "target": "culture_lore",
           "threshold": 7
         }
       ],
@@ -16834,9 +17709,129 @@
     }
   ],
   "traits": [],
-  "classes": [],
-  "unlock_lines": [],
-  "keystones": [],
+  "classes": [
+    {
+      "id": "warrior",
+      "name": "Warrior",
+      "aligned_skill_ids": [
+        "melee_weapons_handling",
+        "full_armor_handling",
+        "discipline",
+        "battle",
+        "athletism"
+      ],
+      "aligned_attribute_breakpoints": [
+        {
+          "attribute": "STR",
+          "at": 250,
+          "insight_bonus": 10
+        },
+        {
+          "attribute": "STR",
+          "at": 350,
+          "insight_bonus": 20
+        }
+      ],
+      "tiers": [
+        {
+          "star": 0,
+          "insight_generalist": 0,
+          "insight_specialist": 0,
+          "level_min": 1,
+          "generalist_grant": null,
+          "specialist_grants": []
+        },
+        {
+          "star": 1,
+          "insight_generalist": 100,
+          "insight_specialist": 101,
+          "level_min": 10,
+          "generalist_grant": {
+            "kind": "LINE",
+            "id": "line_warrior_1"
+          },
+          "specialist_grants": [
+            {
+              "subclass_name": "Swordsman",
+              "grant": null
+            },
+            {
+              "subclass_name": "Barbarian",
+              "grant": null
+            },
+            {
+              "subclass_name": "Soldier",
+              "grant": null
+            }
+          ]
+        },
+        {
+          "star": 2,
+          "insight_generalist": 200,
+          "insight_specialist": 201,
+          "level_min": 20,
+          "generalist_grant": {
+            "kind": "LINE",
+            "id": "line_warrior_2"
+          },
+          "specialist_grants": [
+            {
+              "subclass_name": null,
+              "grant": {
+                "kind": "KEYSTONE",
+                "id": "key_weapon_focus"
+              }
+            }
+          ]
+        }
+      ],
+      "max_level": 50,
+      "parent_class_id": null,
+      "tier_kind": "CORE",
+      "zone_id": null,
+      "description": "Gateway class to every combat factor. Insight accrues from aligned combat skills plus Strength breakpoints."
+    }
+  ],
+  "unlock_lines": [
+    {
+      "id": "line_warrior_1",
+      "name": "Warrior Line 1",
+      "class_id": "warrior",
+      "member_feat_ids": [
+        "vanguard",
+        "stout_defender",
+        "thundering"
+      ],
+      "star": 1,
+      "description": "Pool of feats a Generalist Warrior may draw from at 1-star."
+    }
+  ],
+  "keystones": [
+    {
+      "id": "key_weapon_focus",
+      "name": "Weapon Focus Keystone",
+      "class_id": "warrior",
+      "requirements": [
+        {
+          "type": "INSIGHT",
+          "target": "warrior",
+          "threshold": 201
+        },
+        {
+          "type": "SKILL_LEVEL",
+          "target": "melee_weapons_handling",
+          "threshold": 10
+        }
+      ],
+      "perk_ids": [
+        "perk_weapon_focus_keystone"
+      ],
+      "boundary": "Applies only to the declared weapon family. Grants no new action.",
+      "star": 2,
+      "cp_cost": 1,
+      "description": "Class-track capstone. Reached by Insight, not by CP chain."
+    }
+  ],
   "effect_ladder": [
     {
       "family": "COVERAGE",
@@ -18170,7 +19165,7 @@
     }
   ],
   "_valid": false,
-  "_error_count": 80,
-  "_warning_count": 694,
+  "_error_count": 76,
+  "_warning_count": 774,
   "_draft": true
 }

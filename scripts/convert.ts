@@ -22,6 +22,7 @@ import { parseCsv, stringifyCsv, type CsvRow } from "./lib/csv.ts";
 import { parseRequirements, parseSources, parseFusionParents } from "./lib/parsers.ts";
 import { maxTier, skillLevelToTier } from "./lib/tier.ts";
 import { loadReferenceData } from "./adapters/reference.ts";
+import { loadClassContent } from "./adapters/classes.ts";
 import type {
   Perk,
   Feat,
@@ -387,17 +388,27 @@ const subjects = subjectsCsv.rows.map((r) => ({
 const subjectsById = new Map(subjects.map((s) => [s.id, s]));
 
 // ─────────────────────────────────────────────────────────────
+// Class content (classes/class_tiers/unlock_lines/keystones) — see
+// docs/authoring-classes.md and scripts/adapters/classes.ts for the 7 validation
+// rules and the long-format-CSV -> wide-ClassTierRow grouping.
+// ─────────────────────────────────────────────────────────────
+
+const classContent = loadClassContent(CONTENT_DIR, skillsById, featsById);
+classContent.errors.forEach((m) => errors.push(m)); // already sheet!row-formatted by the adapter
+
+// ─────────────────────────────────────────────────────────────
 // Rule 1: every id referenced by another sheet exists.
 // Scope: perk_ids, PRIOR_NODE targets, fusion parents' feat_id, SKILL_LEVEL targets,
 // authority_root_id (SKILL type), ATTRIBUTE/ATTRIBUTE_CEILING targets against the
-// fixed attribute code set. CLASS/CLASS_TIER/INSIGHT/TRAIT targets are checked too,
-// but classes[]/traits[] are stubbed empty this phase, so those legitimately fail
-// unless the content never uses them. Unresolved SKILL references from legacy_*.csv
-// are downgraded to warnings under --draft (pending content/skill_reconciliation.csv).
+// fixed attribute code set. CLASS/CLASS_TIER/INSIGHT targets now resolve against real
+// classes[]; TRAIT targets are checked too, but traits[] is stubbed empty this phase,
+// so those legitimately fail unless the content never uses them. Unresolved SKILL
+// references from legacy_*.csv are downgraded to warnings under --draft (pending
+// content/skill_reconciliation.csv).
 // ─────────────────────────────────────────────────────────────
 
 const ATTRIBUTE_CODES = new Set(["STR", "AGI", "INT", "PER", "WIL", "CHA"]);
-const classesById = new Map<string, unknown>(); // stubbed []
+const classesById = new Map(classContent.classes.map((c) => [c.id, c]));
 const traitsById = new Map<string, unknown>(); // stubbed []
 
 /**
@@ -780,9 +791,9 @@ const dataset: SpiralDataset & { _valid: boolean; _draft?: boolean; _error_count
   feats,
   fusions,
   traits: [],
-  classes: [],
-  unlock_lines: [],
-  keystones: [],
+  classes: classContent.classes,
+  unlock_lines: classContent.unlock_lines,
+  keystones: classContent.keystones,
   effect_ladder: [...ladderByPair.values()],
   skill_level_table: reference.skill_level_table,
   subjects,

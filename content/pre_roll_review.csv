@@ -1,0 +1,41 @@
+perk_id,name,subject,text
+perk_animal_magnetism,Animal Magnetism,animal_empathy_roll,Skill Bonus -
+perk_animal_understanding,Animal Understanding,animal_empathy_roll,"your comunication with animals is upgraded, they can follow simple instructions"
+perk_artisan_food,Artisan Food,farming_roll,"offer a correction value on creating a single item of artisan foods stuff category such as beer, winemaking, honey and other produce"
+perk_blessed,Blessed,piety_roll,Inner Light
+perk_cattle_care,Cattle Care,farming_roll,your care has incresed effects on the cattle
+perk_cook,Cook,cooking_roll,Skill Bonus -
+perk_delirium,Delirium,perform_roll,Enter a state of delirium where your performance is greatly enhaced
+perk_enemy_sonar,Enemy Sonar,alert_roll,Increases Area
+perk_enthraling_artwork,Enthraling Artwork,craft_roll,"it captures the user and gives inmersion experience, Buff, Debuff, or scare the user accordingly"
+perk_experienced_rider,Experienced Rider,riding_roll,Skill bonus -
+perk_flow_of_battle,Flow of Battle,battle_roll,"bonus to large scale battle roll,"
+perk_food_worker,Food Worker,farming_roll,Skill Bonus -
+perk_grease_monkey,Grease Monkey,mechanics_roll,Skill Bonus
+perk_green_purity,Green Purity,nature_focus_roll,you are endowed with natural's blessings and your body is stronger aganist external ills such as poison and other forms of natural hazzards.
+perk_green_thumb,Green Thumb,herbalism_roll,Skill Bonus -
+perk_handyman,Handyman,building_simple_building_digging_etc_roll,Heal a increaed amount of HP from structures
+perk_harvester,Harvester,dismantle_roll,Skill Bonus -
+perk_heartfelt,Heartfelt,perform_roll,Transmit emotions more vividly. (Your emotional state offer from +1 to +5 to score and the audience emotion may amplify the effects)
+perk_image_crystal,Image Crystal,magic_obj_scyring_roll,its much easier to see imágenes when using a crystal ball for scrying. Bonus when performing any visualization feat with scrying
+perk_inspector,Inspector,investigation_roll,Skill Bonus -
+perk_karmic_balance,Karmic Balance,piety_roll,Impartial Balance
+perk_keen_hearing,Keen Hearing,heightened_senses_roll,Bonus Sense: Ear
+perk_labyrinth_breaker,Labyrinth Breaker,dungeoneer_roll,"you never get lost in a labyrinth or any maze, you have a extra +5 when dealing with physical mazes and other confusing architecture,"
+perk_learned,Learned,knowledge_specific_roll,Skill Bonus -
+perk_long_range,Long Range,projectile_weapons_handling_roll,Long Range Shoot - Increases Range
+perk_long_walker,Long Walker,wayfarer_roll,Skill bonus -
+perk_mana_burn,Mana Burn,piety_roll,Mana Burn
+perk_occult_fan,Occult Fan,formal_magics_roll,Skill Bonus -
+perk_performer_instruments,Performer (Instruments),perform_roll,Bonus Skill
+perk_performer_show,Performer (Show),perform_roll,Bonus Skill
+perk_performer_singing,Performer (Singing),perform_roll,Bonus Skill
+perk_star_reader,Star Reader,astrology_roll,Skill Bonus -
+perk_stonebreaker,Stonebreaker,minning_roll,Obtain increased resource from surface level minning ( increases in proportional to the base amount)
+perk_tame_specialist,Tame Specialist,farming_roll,you have a bonus toward a single type of creature when dealing in control and management.
+perk_targetting,Targetting,tracking_roll,Skill Bonus -
+perk_trap_locks,Trap-Locks,lockpick_roll,bonus aganist trapped locks when performing lockpicks
+perk_trap_sence,Trap-Sence,trapper_roll,Bonus Dismantle Trap -
+perk_treasure_hunter,Treasure Hunter,dungeoneer_roll,"you now how to get the most out of a dungeon exploration, you increase the loot from the dungeon. In any roll between traps or rewards mechanism you get a second roll"
+perk_vaulter,Vaulter,athletism_roll,Jump Distance Up
+perk_zeal,Zeal,piety_roll,Conviction -

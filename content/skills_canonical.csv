@@ -22,10 +22,10 @@ bluff,Bluff,CHA,,,SUPPORT,BRAWLER;Minstrel,FALSE,
 climbing,Climbing,STR,,,SUPPORT,,FALSE,
 cooking,Cooking,WIL,,,SUPPORT,,FALSE,
 craft,Craft,INT,,,SUPPORT,,TRUE,"must declare specialty: Metalwork, Woodwork, Drawing/Painting, Sculpting/Engraving. Specialized industries are zone-local."
-culture_lore,Culture Lore,INT,,,SUPPORT,BARD;Minstrel,FALSE,
-diplomacy,Diplomacy,#N/A,,,SUPPORT,,FALSE,
+culture_lore,Culture Lore,INT,,,SUPPORT,BARD;Minstrel,FALSE,"formerly ""Common Lore""; culture and common sense of a region. Major skill for non-human races."
+diplomacy,Diplomacy,CHA,,,SUPPORT,,FALSE,
 discipline,Discipline,WIL,,,SUPPORT,PRIEST;WARRIOR,FALSE,
-dismantle,Dismantle,#N/A,,,SUPPORT,,FALSE,
+dismantle,Dismantle,AGI,,,SUPPORT,,FALSE,
 farming,Farming,WIL,,,SUPPORT,,FALSE,
 formal_magics,Formal Magics,INT,,,SUPPORT,,FALSE,
 haggle,Haggle,CHA,,,SUPPORT,,FALSE,

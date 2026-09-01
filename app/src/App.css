@@ -162,6 +162,46 @@ body {
   color: #9a9aa4;
 }
 
+.class-insight {
+  margin-top: 10px;
+  padding: 8px;
+  background: #16171d;
+  border: 1px solid #2a2b33;
+  border-radius: 6px;
+}
+.class-insight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+.class-insight-value {
+  color: #7fb0e8;
+  font-variant-numeric: tabular-nums;
+}
+.class-insight-tiers {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 6px;
+}
+.class-tier-row {
+  display: flex;
+  gap: 8px;
+  font-size: 11px;
+  color: #9a9aa4;
+}
+.class-tier-row > span:first-child {
+  flex: 0 0 48px;
+  color: #7a7a84;
+}
+.tier-reachable {
+  color: #7fdc8a;
+}
+.tier-locked {
+  color: #9a9aa4;
+}
+
 .detail-header {
   display: flex;
   align-items: center;
