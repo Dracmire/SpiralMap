@@ -2496,16 +2496,6 @@
       "description": "the skill to protect your rest quality against disturbances while ensuring a greater recovery"
     },
     {
-      "id": "meditation_basic",
-      "name": "Meditation (Basic)",
-      "parent_skill_id": "rest",
-      "attribute": "STR",
-      "kind": "SUPPORT",
-      "gate_level": 10,
-      "rarity": "COMMON",
-      "description": "an alternative form of rest that allows for a shallow loss of conciousness in exchange of less rest quality but larger lucidity"
-    },
-    {
       "id": "agriculture",
       "name": "Agriculture",
       "parent_skill_id": "farming",
@@ -6876,7 +6866,7 @@
     {
       "id": "perk_strong_back",
       "name": "Strong Back",
-      "subject": "",
+      "subject": "str_burden",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -6885,13 +6875,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "burden_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_inner_strenght",
       "name": "Inner Strenght",
-      "subject": "",
+      "subject": "str_burden",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -6901,7 +6890,6 @@
       "counterweight": null,
       "enhanced_threshold": null,
       "enhanced_text": null,
-      "subject_suggested": "burden_effect",
       "family_suggested": "THRESHOLD"
     },
     {
@@ -6970,7 +6958,7 @@
     {
       "id": "perk_unrestrained",
       "name": "Unrestrained",
-      "subject": "",
+      "subject": "str_arm_strenght",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -6980,13 +6968,12 @@
       "counterweight": null,
       "enhanced_threshold": null,
       "enhanced_text": null,
-      "subject_suggested": "arm_strenght_effect",
       "family_suggested": "FLAT_BONUS"
     },
     {
       "id": "perk_hand_cannon",
       "name": "Hand Cannon",
-      "subject": "",
+      "subject": "str_arm_strenght",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -6995,13 +6982,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "arm_strenght_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_iron_bender",
       "name": "Iron Bender",
-      "subject": "",
+      "subject": "str_arm_strenght",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7011,13 +6997,12 @@
       "counterweight": null,
       "enhanced_threshold": null,
       "enhanced_text": null,
-      "subject_suggested": "arm_strenght_effect",
       "family_suggested": "FLAT_BONUS"
     },
     {
       "id": "perk_great_fortitude",
       "name": "Great Fortitude",
-      "subject": "",
+      "subject": "str_muscle",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7027,13 +7012,12 @@
       "counterweight": null,
       "enhanced_threshold": null,
       "enhanced_text": null,
-      "subject_suggested": "muscle_effect",
       "family_suggested": "FLAT_BONUS"
     },
     {
       "id": "perk_rubbery_muscles",
       "name": "Rubbery Muscles",
-      "subject": "",
+      "subject": "str_muscle",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7042,13 +7026,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "muscle_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_coordination",
       "name": "Coordination",
-      "subject": "",
+      "subject": "agi_coordination",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7058,13 +7041,12 @@
       "counterweight": null,
       "enhanced_threshold": null,
       "enhanced_text": null,
-      "subject_suggested": "coordination_effect",
       "family_suggested": "FLAT_BONUS"
     },
     {
       "id": "perk_heightened_balance",
       "name": "Heightened Balance",
-      "subject": "",
+      "subject": "agi_coordination",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7074,13 +7056,12 @@
       "counterweight": null,
       "enhanced_threshold": null,
       "enhanced_text": null,
-      "subject_suggested": "coordination_effect",
       "family_suggested": "FLAT_BONUS"
     },
     {
       "id": "perk_ambidiextry",
       "name": "Ambidiextry",
-      "subject": "",
+      "subject": "agi_coordination",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7090,13 +7071,12 @@
       "counterweight": null,
       "enhanced_threshold": null,
       "enhanced_text": null,
-      "subject_suggested": "coordination_effect",
       "family_suggested": "THRESHOLD"
     },
     {
       "id": "perk_adrenaline",
       "name": "Adrenaline",
-      "subject": "",
+      "subject": "agi_reaction",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7105,13 +7085,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "reaction_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_heightened_reflex",
       "name": "Heightened Reflex",
-      "subject": "",
+      "subject": "agi_reaction",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7121,13 +7100,12 @@
       "counterweight": null,
       "enhanced_threshold": null,
       "enhanced_text": null,
-      "subject_suggested": "reaction_effect",
       "family_suggested": "FLAT_BONUS"
     },
     {
       "id": "perk_travel_light",
       "name": "Travel Light",
-      "subject": "",
+      "subject": "agi_movement",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7136,13 +7114,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "movement_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_manouverability",
       "name": "Manouverability",
-      "subject": "",
+      "subject": "agi_movement",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7152,13 +7129,12 @@
       "counterweight": null,
       "enhanced_threshold": null,
       "enhanced_text": null,
-      "subject_suggested": "movement_effect",
       "family_suggested": "THRESHOLD"
     },
     {
       "id": "perk_tunnel_serpent",
       "name": "Tunnel Serpent",
-      "subject": "",
+      "subject": "agi_movement",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7167,13 +7143,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "movement_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_self_diagnose",
       "name": "Self-Diagnose",
-      "subject": "",
+      "subject": "per_judgement",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7182,13 +7157,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "judgement_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_anatomy_101",
       "name": "Anatomy 101",
-      "subject": "",
+      "subject": "per_judgement",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7197,13 +7171,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "judgement_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_death_sense",
       "name": "Death Sense",
-      "subject": "",
+      "subject": "per_judgement",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7212,13 +7185,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "judgement_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_low_light_vision",
       "name": "Low-Light Vision",
-      "subject": "",
+      "subject": "per_senses",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7227,13 +7199,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "senses_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_pitch",
       "name": "Pitch",
-      "subject": "",
+      "subject": "per_senses",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7242,13 +7213,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "senses_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_blind_fighting",
       "name": "Blind Fighting",
-      "subject": "",
+      "subject": "per_senses",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7257,13 +7227,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "senses_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_idea",
       "name": "Idea",
-      "subject": "",
+      "subject": "int_inspiration",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7272,13 +7241,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "inspiration_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_calculus",
       "name": "Calculus",
-      "subject": "",
+      "subject": "int_inspiration",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7287,13 +7255,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "inspiration_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_sharp_mind",
       "name": "Sharp Mind",
-      "subject": "",
+      "subject": "per_judgement",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7303,13 +7270,12 @@
       "counterweight": null,
       "enhanced_threshold": null,
       "enhanced_text": null,
-      "subject_suggested": "judgement_effect",
       "family_suggested": "FLAT_BONUS"
     },
     {
       "id": "perk_scrounger",
       "name": "Scrounger",
-      "subject": "",
+      "subject": "per_judgement",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7318,13 +7284,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "judgement_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_mental_strenght",
       "name": "Mental Strenght",
-      "subject": "",
+      "subject": "per_judgement",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7333,13 +7298,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "judgement_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_voracious_reader",
       "name": "Voracious Reader",
-      "subject": "",
+      "subject": "int_focus",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7348,13 +7312,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "focus_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_high_focus",
       "name": "High Focus",
-      "subject": "",
+      "subject": "int_focus",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7363,13 +7326,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "focus_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_photo_memory",
       "name": "Photo Memory",
-      "subject": "",
+      "subject": "int_focus",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7378,13 +7340,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "focus_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_strong_soul",
       "name": "Strong Soul",
-      "subject": "",
+      "subject": "wil_supernatural",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7393,13 +7354,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "supernatural_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_power_spot",
       "name": "Power Spot",
-      "subject": "",
+      "subject": "wil_supernatural",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7408,13 +7368,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "supernatural_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_mana_rejection",
       "name": "Mana Rejection",
-      "subject": "",
+      "subject": "wil_supernatural",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7423,13 +7382,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "supernatural_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_stoic",
       "name": "Stoic",
-      "subject": "",
+      "subject": "wil_poise",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7439,13 +7397,12 @@
       "counterweight": null,
       "enhanced_threshold": null,
       "enhanced_text": null,
-      "subject_suggested": "poise_effect",
       "family_suggested": "FLAT_BONUS"
     },
     {
       "id": "perk_impartial_belief",
       "name": "Impartial Belief",
-      "subject": "",
+      "subject": "wil_poise",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7454,13 +7411,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "poise_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_happy_camper",
       "name": "Happy Camper",
-      "subject": "",
+      "subject": "wil_fortitude",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7469,13 +7425,12 @@
       "boundary": "",
       "counterweight": null,
       "enhanced_threshold": null,
-      "enhanced_text": null,
-      "subject_suggested": "fortitude_effect"
+      "enhanced_text": null
     },
     {
       "id": "perk_pain_tolerance",
       "name": "Pain Tolerance",
-      "subject": "",
+      "subject": "wil_fortitude",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7485,13 +7440,12 @@
       "counterweight": null,
       "enhanced_threshold": null,
       "enhanced_text": null,
-      "subject_suggested": "fortitude_effect",
       "family_suggested": "THRESHOLD"
     },
     {
       "id": "perk_iron_will",
       "name": "Iron Will",
-      "subject": "",
+      "subject": "wil_fortitude",
       "family": "",
       "tier": "ENTRY",
       "bonus_category": null,
@@ -7501,7 +7455,6 @@
       "counterweight": null,
       "enhanced_threshold": null,
       "enhanced_text": null,
-      "subject_suggested": "fortitude_effect",
       "family_suggested": "FLAT_BONUS"
     }
   ],
@@ -17739,7 +17692,7 @@
   ],
   "subjects": [],
   "_valid": false,
-  "_error_count": 150,
-  "_warning_count": 1261,
+  "_error_count": 117,
+  "_warning_count": 1224,
   "_draft": true
 }
