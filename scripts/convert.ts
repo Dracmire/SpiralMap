@@ -128,12 +128,15 @@ function requireField(sink: Sink, sheet: string, row: number, r: CsvRow, field: 
   }
 }
 
-const NON_NUMERIC_FAMILIES = new Set(["PERMISSION", "RELIABILITY"]);
+// Only FLAT_BONUS and THRESHOLD grant a stackable numeric value. COVERAGE (set union,
+// not a sum), PERMISSION and RELIABILITY (no value at all), and SUBSTITUTION (you either
+// substitute or you don't) never need bonus_category/bonus_type.
+const NUMERIC_FAMILIES = new Set(["FLAT_BONUS", "THRESHOLD"]);
 
 eachRow(perkSheets, (r, sheet, row) => {
   for (const f of ["id", "name", "tier", "text"]) requireField(err, sheet, row, r, f);
   requireField(draftSink("family", sheet), sheet, row, r, "family");
-  if (r.family && !NON_NUMERIC_FAMILIES.has(r.family)) {
+  if (r.family && NUMERIC_FAMILIES.has(r.family)) {
     requireField(err, sheet, row, r, "bonus_category");
     requireField(err, sheet, row, r, "bonus_type");
   }

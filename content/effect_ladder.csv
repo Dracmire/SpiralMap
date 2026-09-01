@@ -1,0 +1,7 @@
+family,tier,value_text,numeric_value
+COVERAGE,ENTRY,one extra target/topic,
+FLAT_BONUS,ENTRY,+1,1
+PERMISSION,ENTRY,permitted,
+RELIABILITY,ENTRY,conditional -> reliable,
+SUBSTITUTION,ENTRY,substituted in a bounded context,
+THRESHOLD,ENTRY,-1 step,

@@ -32,7 +32,10 @@ Rules that apply everywhere:
 
 `bonus_category` + `bonus_type` drive stacking. Two perks with the same `subject` **and** same
 `bonus_type` keep only the highest. Same `subject`, different `bonus_type` — they sum.
-Leave both blank for non-numeric families (PERMISSION, RELIABILITY) that grant no stackable value.
+Only **FLAT_BONUS** and **THRESHOLD** grant a stackable numeric value — leave both columns
+blank for the other four families: COVERAGE (extra info + extra info is a set union, not a
+sum), PERMISSION and RELIABILITY (no value to stack), and SUBSTITUTION (you either substitute
+or you don't).
 
 ### Extraction-only conventions (not authored columns, not read by `convert.ts`'s schema checks)
 
@@ -119,9 +122,11 @@ references it** — this is the coherence lever.
 | `value_text` | rendered into the perk card, e.g. `+1`, `automatic`, `all qualifying targets` |
 | `numeric_value` | blank for non-numeric families |
 
-> ⚠ This table does not exist yet. It is open question #1 in Savepoint v0.2, and the
-> Authoring GDD v2 §12 flags clause-tier equivalence as unproven. Author it thin first
-> (FLAT_BONUS only), let the vertical slice pressure-test it, then extend.
+> `content/effect_ladder.csv` now exists — 6 rows, all ENTRY tier (every legacy feat gates
+> at skill 1-7). `numeric_value` is authored for FLAT_BONUS only so far; the other five
+> families' `value_text` is set but `numeric_value` is still an open author decision.
+> Savepoint v0.2's open question #1 and Authoring GDD v2 §12's clause-tier-equivalence
+> concern are what's being pressure-tested — extend past ENTRY once that holds up.
 
 ## `subjects.csv`
 
