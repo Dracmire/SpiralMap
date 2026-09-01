@@ -1,296 +1,296 @@
-id,name,subject,subject_suggested,family,family_suggested,tier,bonus_category,bonus_type,text,boundary,counterweight,enhanced_threshold,enhanced_text
-perk_vanguard,Vanguard,,heavy_weapons_handling_effect,,PERMISSION,ENTRY,,,"Heavy Proficiency - Apertura de Maestria de ARMAS (o) Añade 20 pts de maestria de armas a una pre-existente solo aplicable a armas que usan el atributo STR , solo un tipo de Arma es elegido. Ej: Hachas, Martillos, Espadas, etc",,,,
-perk_bigger_is_better,Bigger is Better,,heavy_weapons_handling_effect,,,ENTRY,,,Heavy Arms -,,,,
-perk_thundering,Thundering,,heavy_weapons_handling_effect,,FLAT_BONUS,ENTRY,,,"Thundering - Amplificas efectos basados en impacto como Stun, Knockback y Presion. Mientras esten basados en el Atributo de Fuerza (STR) y provenga de un ataque fisico de melee",,,,
-perk_penetrating_force,Penetrating Force,,heavy_weapons_handling_effect,,,ENTRY,,,"Penetrate -No te pueden detener!, tus ataques basados en Fuerza a melee ignoran 5 pts de armadura y 5 pts de reduccion de daño",,,,
-perk_emphatic,Emphatic,,sense_motive_effect,,FLAT_BONUS,ENTRY,,,Sensitive - Extra information,,,,
-perk_false_bane,False Bane,,sense_motive_effect,,FLAT_BONUS,ENTRY,,,bonus aganist deceptions and bluffs,,,,
-perk_deep_reading,Deep Reading,,sense_motive_effect,,,ENTRY,,,"Obtain information from corporal deamenor and from simple observation, interaction is not needed",,,,
-perk_heavy_fitted,Heavy Fitted,,heavy_armor_handling_effect,,,ENTRY,,,Heavy Armor Proficieny -,,,,
-perk_stout_defender,Stout Defender,,heavy_armor_handling_effect,,,ENTRY,,,Reduce your damage by dispelling in the ground. You cannot move but you gain higher damage reduction,,,,
-perk_influencer,Influencer,,court_effect,,FLAT_BONUS,ENTRY,,,your words have the power to inspire people. By preaching or speaking people may be inspired gaining a moral bonus,,,,
-perk_suggestion,Suggestion,,court_effect,,,ENTRY,,,"your words have a power to subly steer people toward certain throughts or implant ideas, higher intelligence makes it harder. It lowers the dificulty of suble and disguised interactions",,,,
-perk_shieldbearer,Shieldbearer,,shield_effect,,,ENTRY,,,Shield Proficieny -,,,,
-perk_stone_block,Stone Block,,shield_effect,,FLAT_BONUS,ENTRY,,,increases shield stopping power when not moving that same round,,,,
-perk_moving_block,Moving Block,,shield_effect,,THRESHOLD,ENTRY,,,reduce penalty to block while moving,,,,
-perk_stubborn_shield,Stubborn Shield,,shield_effect,,,ENTRY,,,shield perceives less damage from each block (as shield receive damage when used for blocking),,,,
-perk_attitude_change,Attitude Change,,diplomacy_effect,,,ENTRY,,,"Diplomacy can be used to influence a NPC character’s attitude. The NPC character’s initial attitude based on circumstances can be steered toward a more positive or negative outcome. There are 5 types (Hostile, Unfriendly, Indifferent, Friendly, Helpful)",,,,
-perk_corageous_heart,Corageous Heart,,discipline_effect,,FLAT_BONUS,ENTRY,,,Fear Resistance -,,,,
-perk_nerves_of_steel,Nerves of Steel,,discipline_effect,,,ENTRY,,,Coolheaded,,,,
-perk_fighting_spirit,Fighting Spirit,,discipline_effect,,,ENTRY,,,Fighting Spirit,,,,
-perk_word_in_the_street,Word in the Street,,streetwise_effect,,FLAT_BONUS,ENTRY,,,"Obtain extra info, not aplicable to high class events",,,,
-perk_street_vigilance,Street Vigilance,,streetwise_effect,,FLAT_BONUS,ENTRY,,,"You can place up to your PER +1 alerts on different topics, keeping tabs on people or realtime development. You will get the info with some delay depending on your check. This is limited to Low class zones, and uses 2 slots or 3 slots to investigate medium social class zones. its imposible to use in high class zones",,,,
-perk_background_check,Background Check,,streetwise_effect,,,ENTRY,,,Obtain more specific info about a single person or a single item.,,,,
-perk_lasting_impression,Lasting Impression,,intimidation_effect,,,ENTRY,,,when succesful your victims become marked and easily scared for several time units with a maximum of a week,,,,
-perk_terrifying_presence,Terrifying Presence,,intimidation_effect,,,ENTRY,,,Render a victim incapable of actions for a few rounds ( only lower or equal levels),,,,
-perk_pokerface,Pokerface,,bluff_effect,,,ENTRY,,,you can shield information about you from scrutiny,,,,
-perk_spin_a_tale,Spin a Tale,,bluff_effect,,FLAT_BONUS,ENTRY,,,you can make rather belivable tales with rather long and complex stories. The DM grants from +1 to +10 depending on the player explaining a tale.,,,,
-perk_teamwork,Teamwork,,battle_effect,,,ENTRY,,,Reduce dificulty when performing simultaneous or coordinated actions,,,,
-perk_flow_of_battle,Flow of Battle,,battle_effect,,FLAT_BONUS,ENTRY,,,"bonus to large scale battle roll,",,,,
-perk_a_subtle_push,A Subtle Push,,temptation_effect,,,ENTRY,,,you can make seduction or bribery attempts once per scene without begin detected. There is a hide factor equal to the temptation rating,,,,
-perk_charmer,Charmer,,temptation_effect,,,ENTRY,,,"once they come, they cannot forget about you. You can charm your customers by appealing to their greed or lust. A charmed victim is much more favorable to you and greatly lowers his defenses",,,,
-perk_fencer,Fencer,,light_weapons_handling_effect,,PERMISSION,ENTRY,,,"Light Proficiency - Apertura de Maestria de ARMAS (o) Añade 20 pts de maestria de armas a una pre-existente solo aplicable a armas que usan el atributo AGI , solo un tipo de Arma es elegido. Ej: Hachas, Martillos, Espadas, etc",,,,
-perk_weapon_finnesse,Weapon Finnesse,,light_weapons_handling_effect,,,ENTRY,,,AGI based Damage -,,,,
-perk_blade_of_lightness,Blade of Lightness,,light_weapons_handling_effect,,,ENTRY,,,Fast Attribute,,,,
-perk_sharpened,Sharpened,,light_weapons_handling_effect,,FLAT_BONUS,ENTRY,,,"Sharp - Amplificas efectos basados en Corte como Bleeding, Wound y Vorpal. Mientras esten basados en el Atributo de AGILIDAD (AGI) y provenga de un ataque fisico de melee",,,,
-perk_shrewd_merchant,Shrewd Merchant,,comerce_effect,,,ENTRY,,,"you pay extreme atention to details, you are good at deals and can read the hidden motives of a deal. Obtain more info from a deal, reduce dificulty when looking for a scam",,,,
-perk_trust_is_everything,Trust is Everything,,comerce_effect,,,ENTRY,,,you start with base higher reputation and trust in business matter,,,,
-perk_midas_touch,Midas Touch,,comerce_effect,,FLAT_BONUS,ENTRY,,,Increase Profit,,,,
-perk_knife_thrower,Knife Thrower,,throwing_weapons_handling_effect,,PERMISSION,ENTRY,,,"Throwing Proficiency - Apertura de Maestria de ARMAS (o) Añade 20 pts de maestria de armas a una pre-existente solo aplicable a armas que usan el atributo AGI , solo un tipo de Arma es elegido. Ej: Hachas, Martillos, Espadas, etc",,,,
-perk_bullseye,Bullseye,,throwing_weapons_handling_effect,,,ENTRY,,,-,,,,
-perk_trick_throw,Trick Throw,,throwing_weapons_handling_effect,,,ENTRY,,,Penalty Reduction -,,,,
-perk_blinding_speed,Blinding Speed,,throwing_weapons_handling_effect,,,ENTRY,,,High Speed Attack -,,,,
-perk_reserved_warez,Reserved Warez,,haggle_effect,,,ENTRY,,,"Makes the merchant offer more special wares, Gives access to special, undisclosed or usually non-accesible warez",,,,
-perk_black_market,Black Market,,haggle_effect,,,ENTRY,,,"You can sell or purchase, special and ilicit goods. This is important to sell stolen goods",,,,
-perk_light_fitted,Light Fitted,,light_armor_handling_effect,,,ENTRY,,,Light Armor Proficieny -,,,,
-perk_elastic_defense,Elastic Defense,,light_armor_handling_effect,,FLAT_BONUS,ENTRY,,,"use your armor to redirect some of the impact, you can reduce damage of physical impacts by 3 pts, you NEED to move during this round for it to work, if inmovile the bonus becomes inaplicable. This can be taken multiple times to a max equal to the armor own armor rating",,,,
-perk_unhindered,Unhindered,,light_armor_handling_effect,,,ENTRY,,,Reduces armor penalty on the user actions,,,,
-perk_identify,Identify,,apraisal_effect,,,ENTRY,,,"Reveal item basic nature, status and purpuses",,,,
-perk_eye_of_judgement,Eye of Judgement,,apraisal_effect,,FLAT_BONUS,ENTRY,,,extra Item Information,,,,
-perk_trap_locks,Trap-Locks,,lockpick_effect,,FLAT_BONUS,ENTRY,,,bonus aganist trapped locks when performing lockpicks,,,,
-perk_great_outdoors,Great Outdoors,,wilderness_effect,,,ENTRY,,,Reduce faigue consumption and penalty when in non-civilized enviroments,,,,
-perk_rudimentary_wisdom,Rudimentary Wisdom,,wilderness_effect,,FLAT_BONUS,ENTRY,,,Use Survival skill in order to use natural resource to craft makeshift comodities. Bonus to other skills with natual background such as herbalis,,,,
-perk_explorer,Explorer,,wilderness_effect,,,ENTRY,,,"* Reveal nearby points of interest, also, lower encounters in natural enviroment",,,,
-perk_ambusher,Ambusher,,hide_effect,,,ENTRY,,,Defenseless Target -,,,,
-perk_reaper,Reaper,,hide_effect,,,ENTRY,,,Coup de Grace -,,,,
-perk_presence_concealment,Presence Concealment,,hide_effect,,THRESHOLD,ENTRY,,,"you have a very thin presence and most of the time are ignored. Add 5 of dificulty when detecting the user using non magical, indirect means of search such as extraordinary sences such as sence of smell, intuition, etc",,,,
-perk_tough,Tough!,,inclemence_effect,,,ENTRY,,,* Hardened -,,,,
-perk_thick_skinned,Thick Skinned,,inclemence_effect,,,ENTRY,,,Climatic Tolerance -,,,,
-perk_magic_fortitude,Magic Fortitude,,inclemence_effect,,,ENTRY,,,Mana Tolerance -,,,,
-perk_iron_man,Iron Man,,inclemence_effect,,THRESHOLD,ENTRY,,,IronMan - Improve movement speed and reduce penalty when overburdened,,,,
-perk_quick_hands,Quick Hands,,sleight_of_hand_effect,,,ENTRY,,,Quick Hands -,,,,
-perk_hidden_weapons,Hidden Weapons,,sleight_of_hand_effect,,,ENTRY,,,Unexpected Attack -,,,,
-perk_ilutionism,Ilutionism,,sleight_of_hand_effect,,,ENTRY,,,Artful & Subtle -,,,,
-perk_spider_climb,Spider Climb,,climbing_effect,,,ENTRY,,,"Increses Speed of Climbing, Reduces dificulty of horizontal movement",,,,
-perk_action_goat,Action Goat,,climbing_effect,,,ENTRY,,,Allows actions while climbing and reduces penalty on movement such as jumping,,,,
-perk_windbreaker,WindBreaker,,climbing_effect,,,ENTRY,,,Reduces wind and climate penalty on climber,,,,
-perk_elemental_wand,Elemental Wand,,basic_single_elementalism_effect,,,ENTRY,,,Element Activator -,,,,
-perk_elemental_attunement,Elemental Attunement,,basic_single_elementalism_effect,,,ENTRY,,,Element Boost -,,,,
-perk_nature_elemental,Nature Elemental,,basic_single_elementalism_effect,,,ENTRY,,,Elemental Catalyst -,,,,
-perk_piercing_elemental,Piercing Elemental,,basic_single_elementalism_effect,,THRESHOLD,ENTRY,,,Ignore Defenses -,,,,
-perk_hard_worker,Hard Worker,,minning_effect,,THRESHOLD,ENTRY,,,Reduce Fatigue rating per block of work,,,,
-perk_stonebreaker,Stonebreaker,,minning_effect,,FLAT_BONUS,ENTRY,,,Obtain increased resource from surface level minning ( increases in proportional to the base amount),,,,
-perk_tireless_worker,Tireless Worker,,minning_effect,,,ENTRY,,,Greatly reduces fatigue rating from hard labour,,,,
-perk_reinforcement_wand,Reinforcement Wand,,basic_reinforcement_magic_effect,,,ENTRY,,,Reinforcement Activator -,,,,
-perk_physical_attunement,Physical Attunement,,basic_reinforcement_magic_effect,,,ENTRY,,,Physical Aura -,,,,
-perk_personal_aura,Personal Aura,,basic_reinforcement_magic_effect,,,ENTRY,,,Self-Boost -,,,,
-perk_reinforcemnt_expert,Reinforcemnt Expert,,basic_reinforcement_magic_effect,,,ENTRY,,,"Reduce halve cost, Reduce Learning",,,,
-perk_tanning,Tanning,,handcraft_sewing_leather_effect,,FLAT_BONUS,ENTRY,,,"A bonus to the quality and time of tanning leathers, the quality increases",,,,
-perk_monster_weaver,Monster Weaver,,handcraft_sewing_leather_effect,,,ENTRY,,,"Allows the use of unusual monster materials such as nerves, tendons and other fiber like elements in the correct way",,,,
-perk_interference_wand,Interference Wand,,basic_interference_magic_effect,,,ENTRY,,,Interference Activator -,,,,
-perk_void_attunement,Void Attunement,,basic_interference_magic_effect,,FLAT_BONUS,ENTRY,,,"you are good at dispelling and scatering magic, you receive a bonus when cancelling, dispelling or scattering magic, c'mon feed the void",,,,
-perk_disruptor,Disruptor,,basic_interference_magic_effect,,,ENTRY,,,"Disrupting Plus - add disruption propieties to spells, when hiting a natural target it lowers their intiative when casting or using any form of external MANA",,,,
-perk_multicast_splitting,Multicast Splitting,,basic_interference_magic_effect,,,ENTRY,,,"by using magic disruption within the user, its posible to split the flow of mana, allowing to multicast several spells at the same time, the user atemp to multicast might fail if the user generates too many spells.",,,,
-perk_stronger_wood,Stronger Wood,,craft_woodwork_effect,,FLAT_BONUS,ENTRY,,,increases the durability and overall max weight strenght of a wooden tool,,,,
-perk_efficient_chippy,Efficient Chippy,,craft_woodwork_effect,,,ENTRY,,,use less materials and time to produce the same results,,,,
-perk_chanting,Chanting,,mana_sensitivity_effect,,,ENTRY,,,Shortened Chanting -,,,,
-perk_prescise_casting,Prescise Casting,,mana_sensitivity_effect,,,ENTRY,,,Quick Casting,,,,
-perk_tempering_hack,Tempering Hack,,craft_metalwork_effect,,FLAT_BONUS,ENTRY,,,"allows a bonus to repaired weapons, tempering gives weapon temporar bonuses",,,,
-perk_adept_smelter,Adept Smelter,,craft_metalwork_effect,,,ENTRY,,,"you know how t get the best from smelting metals and draining away their impurities, you get better quality and more metals.",,,,
-perk_advanced_materials,Advanced Materials,,craft_metalwork_effect,,,ENTRY,,,"you can work with one more type of material, such as steel, corumdium, monster bone, etc. Only [Iron] ranked materials",,,,
-perk_divided_focus,Divided Focus,,concentration_effect,,,ENTRY,,,you can split your focus into 2 different actions of complete different nature with reduced effectivity for both actions.,,,,
-perk_grease_monkey,Grease Monkey,,mechanics_effect,,FLAT_BONUS,ENTRY,,,Skill Bonus,,,,
-perk_quick_fix,Quick-Fix,,mechanics_effect,,,ENTRY,,,Able to perform a temporal repair on a critical moment,,,,
-perk_jury_rig,Jury Rig,,mechanics_effect,,,ENTRY,,,Use similar materials to fix or build something. This loosens up the restrictions on materials for mechanics.,,,,
-perk_mechanist,Mechanist,,mechanics_effect,,,ENTRY,,,Give access to more complex machines and high level technology,,,,
-perk_mana_tools,Mana Tools,,magic_obj_common_effect,,,ENTRY,,,Easy Activation,,,,
-perk_multi_magic_tools,Multi Magic Tools,,magic_obj_common_effect,,THRESHOLD,ENTRY,,,"reduce penalty when using 2 or more objects simultaneously, its nesesary to say that a object used this way halves its effects and cosumes double mana",,,,
-perk_mana_overload,Mana Overload,,magic_obj_common_effect,,FLAT_BONUS,ENTRY,,,"you are good at dealing with overloaded items, either for difusing the overload or purpursefully accelerating the collapse. Bonus to roll",,,,
-perk_handyman,Handyman,,building_simple_building_digging_etc_effect,,,ENTRY,,,Heal a increaed amount of HP from structures,,,,
-perk_cutting_corners,Cutting Corners,,building_simple_building_digging_etc_effect,,,ENTRY,,,Reduce the amount of materials needed,,,,
-perk_demolition_expert,Demolition Expert,,building_simple_building_digging_etc_effect,,PERMISSION,ENTRY,,,Building Damage Proficiency -,,,,
-perk_constructor,Constructor,,building_simple_building_digging_etc_effect,,,ENTRY,,,Give access to more complex structures,,,,
-perk_image_crystal,Image Crystal,,magic_obj_scyring_effect,,FLAT_BONUS,ENTRY,,,its much easier to see imágenes when using a crystal ball for scrying. Bonus when performing any visualization feat with scrying,,,,
-perk_record_crystal,Record Crystal,,magic_obj_scyring_effect,,,ENTRY,,,"you can record images in a crystal ball, the crystalball becomes useless for scrying",,,,
-perk_far_scry,Far Scry,,magic_obj_scyring_effect,,,ENTRY,,,"you can scry farther, less penalty when peforming scrying at a greater range",,,,
-perk_clariaudience,Clariaudience,,magic_obj_scyring_effect,,,ENTRY,,,"Scrying can usually only manage images, but thanks to your skill, you can somehow capture sound. It cannot capture whispers or a when people are talking in low voices",,,,
-perk_structural_reading,Structural Reading,,observe_effect,,,ENTRY,,,Obtain more info,,,,
-perk_finder_of_flaws,Finder of Flaws,,observe_effect,,,ENTRY,,,Structural flaws become visible,,,,
-perk_structural_analyst,Structural Analyst,,observe_effect,,FLAT_BONUS,ENTRY,,,Skill Bonus,,,,
-perk_demolition_man,Demolition Man,,observe_effect,,FLAT_BONUS,ENTRY,,,Increase Material Damage -,,,,
-perk_boost_clading,Boost Clading,,magic_obj_shield_effect,,,ENTRY,,,you can add some mana to the magic clad effect to temporarily boost it for a single round this consumes a simple action or a move action,,,,
-perk_magic_bulkward,Magic Bulkward,,magic_obj_shield_effect,,,ENTRY,,,you can add multiple defensive magic objects to a single pool of energy shield. This does not mean you can exceed your own magical object limit,,,,
-perk_magic_defense,Magic Defense,,magic_obj_shield_effect,,,ENTRY,,,"you blow out your magic clad score in order to block a single magical attack, note that if successful the magic attack becomes void and collapses, but if failing for any value the magical attack is simply not affected at all, its an all or nothing defense. the higher the defense score the higher the defense value",,,,
-perk_performer_instruments,Performer (Instruments),,perform_music_instrument_effect,,FLAT_BONUS,ENTRY,,,Bonus Skill,,,,
-perk_fascinate,Fascinate,,perform_music_instrument_effect,,,ENTRY,,,"use his music or poetics to cause one or more creatures to become fascinated with him. Each creature to be fascinated must be within 90 feet, able to see and hear the bard, and able to pay attention to him. The bard must also be able to see the creature.",,,,
-perk_inspiring_peformance,Inspiring Peformance,,perform_music_instrument_effect,,,ENTRY,,,Boost Allies using music,,,,
-perk_countersong,Countersong,,perform_music_instrument_effect,,,ENTRY,,,music or poetics to counter magical effects that depend on sound (but not spells that simply have verbal components),,,,
-perk_spirit_rood,Spirit Rood,,spiritism_faith_effect,,,ENTRY,,,Spirit Activator -,,,,
-perk_shamanism,Shamanism,,spiritism_faith_effect,,,ENTRY,,,Spirit Charm -,,,,
-perk_spirit_familiar,Spirit Familiar,,spiritism_faith_effect,,,ENTRY,,,Spirit Guardian -,,,,
-perk_caller,Caller,,spiritism_faith_effect,,,ENTRY,,,Summon Unit Boost,,,,
-perk_performer_singing,Performer (Singing),,perform_singing_effect,,FLAT_BONUS,ENTRY,,,Bonus Skill,,,,
-perk_booming_voice,Booming Voice,,perform_singing_effect,,,ENTRY,,,"you voice can reach farther, its posible to affect a larger audience",,,,
-perk_charming_peformance,Charming Peformance,,perform_singing_effect,,,ENTRY,,,charm a smaller and closer audience,,,,
-perk_heartfelt,Heartfelt,,perform_singing_effect,,FLAT_BONUS,ENTRY,,,Transmit emotions more vividly. (Your emotional state offer from +1 to +5 to score and the audience emotion may amplify the effects),,,,
-perk_truth_rood,Truth Rood,,truth_faith_effect,,,ENTRY,,,Truth Activator -,,,,
-perk_truth_scale,Truth Scale,,truth_faith_effect,,,ENTRY,,,Divine Scale Armor,,,,
-perk_mana_burn,Mana Burn,,truth_faith_effect,,,ENTRY,,,Mana Burn,,,,
-perk_divine_oath,Divine Oath,,truth_faith_effect,,,ENTRY,,,Oath to the Gods,,,,
-perk_performer_show,Performer (Show),,perform_dancing_show_effect,,FLAT_BONUS,ENTRY,,,Bonus Skill,,,,
-perk_hands_and_feet,Hands and Feet,,perform_dancing_show_effect,,,ENTRY,,,you can perform other actions while dancing,,,,
-perk_elegance_in_motion,Elegance in Motion,,perform_dancing_show_effect,,FLAT_BONUS,ENTRY,,,"your movements are refined and graceful, you get a bonus +5 in the quality or aesthetics",,,,
-perk_delirium,Delirium,,perform_dancing_show_effect,,,ENTRY,,,Enter a state of delirium where your performance is greatly enhaced,,,,
-perk_channel_rood,Channel Rood,,holy_light_faith_effect,,,ENTRY,,,Channel Activator -,,,,
-perk_divine_focus,Divine Focus,,holy_light_faith_effect,,,ENTRY,,,Altar Focus -,,,,
-perk_positive_channel,Positive Channel,,holy_light_faith_effect,,,ENTRY,,,Divine Aspect (Lesser) -,,,,
-perk_visual_interpretation,Visual Interpretation,,artcraft_drawing_painting_etc_effect,,,ENTRY,,,"you can absorb and interpret visual patterns, this makes it easy to remember visual images and then represent them. The player can record images and then represent them more accurately.",,,,
-perk_enthraling_artwork,Enthraling Artwork,,artcraft_drawing_painting_etc_effect,,,ENTRY,,,"it captures the user and gives inmersion experience, Buff, Debuff, or scare the user accordingly",,,,
-perk_weird,Weird,,artcraft_drawing_painting_etc_effect,,,ENTRY,,,Your work confuse people and affect their sanity,,,,
-perk_first_aid,First Aid,,healing_effect,,,ENTRY,,,Allow to perform first aid in battle without turning the target and the user into a sitting duck,,,,
-perk_flesh_blood,Flesh & Blood,,healing_effect,,,ENTRY,,,"Reduces penalty when dealing with open wound injuries such as bleeding. Allows the healer to restore a small amount of ""WOUND"" type damage by taking one time unit for treatment",,,,
-perk_re_vitalize,Re-Vitalize,,healing_effect,,,ENTRY,,,you can restore unconcious characters which has more than 0 HP and reset stun and dizzy effects,,,,
-perk_finecraft,Finecraft,,artcraft_sculpting_engraving_etc_effect,,,ENTRY,,,you can perform finecraft or the work of fine detail and highly detail engraving and sculping,,,,
-perk_jewelry,Jewelry,,artcraft_sculpting_engraving_etc_effect,,,ENTRY,,,you can craft simple jewels or add gemstones and jewels by engraving,,,,
-perk_spirit_sensitivity,Spirit Sensitivity,,spirit_sensitivity_effect,,,ENTRY,,,Spirit Vision -,,,,
-perk_medium,Medium,,spirit_sensitivity_effect,,,ENTRY,,,Ghost Whisperer,,,,
-perk_spirit_gate,Spirit Gate,,spirit_sensitivity_effect,,,ENTRY,,,Draw Spirit,,,,
-perk_spiritual_force,Spiritual Force,,spirit_sensitivity_effect,,,ENTRY,,,Spiritual Bane -,,,,
-perk_attention_magnet,Attention Magnet,,acting_circus_entertainer_effect,,,ENTRY,,,attract more audiene,,,,
-perk_riling_the_audience,Riling the Audience,,acting_circus_entertainer_effect,,FLAT_BONUS,ENTRY,,,"by commenting or making simple appeals you can increase or decrease the public fervor and overall moral. When making a roll, obtain a free rise to rile the audience",,,,
-perk_leading_the_audience,Leading the Audience,,acting_circus_entertainer_effect,,,ENTRY,,,"You can lead the public attention, fervor and even hate toward someone, this a temporal state which may redirect hostility or goodwill towards a target person. However, the audience must be able to clearly see the target, and if the roll is contested aganist the target reputation and charisma, where a higher charisma is easier to receive the lead",,,,
-perk_karmic_balance,Karmic Balance,,piety_effect,,,ENTRY,,,Impartial Balance,,,,
-perk_blessed,Blessed,,piety_effect,,,ENTRY,,,Inner Light,,,,
-perk_karmic_piety,Karmic Piety,,piety_effect,,,ENTRY,,,Personal Rule,,,,
-perk_zeal,Zeal,,piety_effect,,,ENTRY,,,Conviction -,,,,
-perk_other_faces,Other Faces,,acting_theatre_comedy_etc_effect,,FLAT_BONUS,ENTRY,,,increases quality and detail of disguises. Add +5 to disguise base score,,,,
-perk_compelling_acting,Compelling Acting,,acting_theatre_comedy_etc_effect,,FLAT_BONUS,ENTRY,,,"your acting perfomance is capable of moving the hearts of people, its tear jerker or vivid. Increases the believability of your acting on the public, it increases effect depending on play",,,,
-perk_persona,Persona,,acting_theatre_comedy_etc_effect,,,ENTRY,,,"after work and study, you can craft a pseudo personality which can be weared like a mask, it last for a full week since creation, and allows the user to weak different alignements and even data.",,,,
-perk_stone_fisted,Stone Fisted,,brawling_effect,,FLAT_BONUS,ENTRY,,,increase bare hande damage,,,,
-perk_slam_down,Slam Down!,,brawling_effect,,,ENTRY,,,you attacks have a probability of knocking down an enemy,,,,
-perk_circular_force,Circular Force,,grappling_effect,,,ENTRY,,,"you are adept at throws and projections, reduce dificulty when using a throw",,,,
-perk_quick_recover,Quick Recover,,grappling_effect,,,ENTRY,,,Quick Recover -,,,,
-perk_ground_fight,Ground Fight,,grappling_effect,,THRESHOLD,ENTRY,,,"you are adept at fighting while laying or siting in the ground, reduce penalty while peforming grapling in the ground",,,,
-perk_cook,Cook,,cooking_effect,,FLAT_BONUS,ENTRY,,,Skill Bonus -,,,,
-perk_exotic_gourmet,Exotic Gourmet,,cooking_effect,,FLAT_BONUS,ENTRY,,,obtain extra bonus from foodstuff. Some poweful monster cooking will endow with temporary passive perks,,,,
-perk_supernatural_cuisine,Supernatural Cuisine,,cooking_effect,,,ENTRY,,,"the world is full of supernatural and mystical ingredients you have learned the basis of working with [IRON] ranked ingredients, this does not protect the cook or the eater from the ingredient effect, it only ensures that the cook can use the ingredient correctly. its possible to work with [BRONZE] ingredients provided that you posess the recipe",,,,
-perk_calm_will,Calm Will,,still_mind_focus_effect,,,ENTRY,,,Still Mind,,,,
-perk_inner_balance,Inner Balance,,still_mind_focus_effect,,,ENTRY,,,,,,,
-perk_heavenbound,Heavenbound,,still_mind_focus_effect,,,ENTRY,,,Heavenbound -,,,,
-perk_rancher,Rancher,,farming_animal_husbandry_effect,,,ENTRY,,,Reduce time used when dealing with cattle,,,,
-perk_cattle_care,Cattle Care,,farming_animal_husbandry_effect,,,ENTRY,,,your care has incresed effects on the cattle,,,,
-perk_expert_herder,Expert Herder,,farming_animal_husbandry_effect,,,ENTRY,,,you can obtain more produce from animals,,,,
-perk_champion_cattle,Champion Cattle,,farming_animal_husbandry_effect,,,ENTRY,,,"you can architect and direct the care of a cattle in order to empower it, the produce from such cattle becomes much better",,,,
-perk_enemy_sonar,Enemy Sonar,,alert_effect,,FLAT_BONUS,ENTRY,,,Increases Area,,,,
-perk_threat_reading,Threat Reading,,alert_effect,,,ENTRY,,,reads info from threat,,,,
-perk_eyes_in_the_back,Eyes in the Back,,alert_effect,,,ENTRY,,,Penalties Ambrush,,,,
-perk_field_worker,Field Worker,,farming_plant_crops_effect,,THRESHOLD,ENTRY,,,Reduce fatigue percived by Farming,,,,
-perk_enrich_soil,Enrich Soil,,farming_plant_crops_effect,,,ENTRY,,,"you can enhace the local soil using different means, mainly fertilizers. You can craft fertilizer and use simple means to enrich it",,,,
-perk_expert_tiller,Expert Tiller,,farming_plant_crops_effect,,,ENTRY,,,"you can perform farming duties in less time than it would normally, reduce a % of the time invested",,,,
-perk_quality_crops,Quality Crops,,farming_plant_crops_effect,,,ENTRY,,,Increses the base quality of crops,,,,
-perk_sprinter,Sprinter,,athletism_effect,,FLAT_BONUS,ENTRY,,,Bonus Movement Rate -,,,,
-perk_vaulter,Vaulter,,athletism_effect,,,ENTRY,,,Jump Distance Up,,,,
-perk_free_running,Free Running,,athletism_effect,,RELIABILITY,ENTRY,,,While running or joggling you can dodge partial obstacles automatically,,,,
-perk_artisan_food,Artisan Food,,farming_artisan_goods_effect,,,ENTRY,,,"offer a correction value on creating a single item of artisan foods stuff category such as beer, winemaking, honey and other produce",,,,
-perk_food_worker,Food Worker,,farming_artisan_goods_effect,,FLAT_BONUS,ENTRY,,,Skill Bonus -,,,,
-perk_quality_craft,Quality Craft,,farming_artisan_goods_effect,,FLAT_BONUS,ENTRY,,,Increases quality of produced foodstuff,,,,
-perk_aging,Aging,,farming_artisan_goods_effect,,FLAT_BONUS,ENTRY,,,A process where food becomes more expensive and rare as time goes on. Increases rarity and price of produce,,,,
-perk_power_nap,Power Nap,,rest_effect,,,ENTRY,,,"you can rest and recover miraculously in a very short amount of time, reduce resting from a whole night to a few hours.",,,,
-perk_deep_sleep,Deep Sleep,,rest_effect,,THRESHOLD,ENTRY,,,"you can enter a deeper sleep, which recovers a lot more and ignores events with a defensive value for the sleep status",,,,
-perk_rest_kneading,Rest Kneading,,rest_effect,,,ENTRY,,,you can apply your knowledge of resting to others to provide a higher quality of rest,,,,
-perk_animal_magnetism,Animal Magnetism,,animal_empathy_effect,,FLAT_BONUS,ENTRY,,,Skill Bonus -,,,,
-perk_animal_understanding,Animal Understanding,,animal_empathy_effect,,,ENTRY,,,"your comunication with animals is upgraded, they can follow simple instructions",,,,
-perk_feroucious_loyalty,Feroucious Loyalty,,animal_empathy_effect,,,ENTRY,,,"your animal companions will be boosted when defending you, they will also take the initiative to protect you",,,,
-perk_shepherd,Shepherd,,animal_empathy_effect,,,ENTRY,,,you can affect a wide group of animals,,,,
-perk_bowman,Bowman,,projectile_weapons_handling_effect,,PERMISSION,ENTRY,,,"Projectile Proficiency - Apertura de Maestria de ARMAS (o) Añade 20 pts de maestria de armas a una pre-existente solo aplicable a armas que usan el atributo AGI , solo un tipo de Arma es elegido. Ej: Hachas, Martillos, Espadas, etc",,,,
-perk_run_gun,Run & Gun,,projectile_weapons_handling_effect,,,ENTRY,,,"* Walk and Shot, Penalty Reduction",,,,
-perk_ranger,Ranger,,projectile_weapons_handling_effect,,,ENTRY,,,Shot and Take Cover -,,,,
-perk_long_range,Long Range,,projectile_weapons_handling_effect,,FLAT_BONUS,ENTRY,,,Long Range Shoot - Increases Range,,,,
-perk_bookworm,Bookworm,,knowledge_specific_effect,,,ENTRY,,,Literary Comprehencion,,,,
-perk_learned,Learned,,knowledge_specific_effect,,FLAT_BONUS,ENTRY,,,Skill Bonus -,,,,
-perk_researcher,Researcher,,knowledge_specific_effect,,,ENTRY,,,when researching you obtain more info,,,,
-perk_eidetic_memory,Eidetic Memory,,knowledge_specific_effect,,,ENTRY,,,Heightened Retention,,,,
-perk_natural_circle,Natural Circle,,nature_focus_effect,,,ENTRY,,,"you have a speciality terrain enviroment, when dealing with this terrain you get a free raise on any skill interacting with the enviroment.",,,,
-perk_green_purity,Green Purity,,nature_focus_effect,,,ENTRY,,,you are endowed with natural's blessings and your body is stronger aganist external ills such as poison and other forms of natural hazzards.,,,,
-perk_spirit_guide,Spirit Guide,,nature_focus_effect,,PERMISSION,ENTRY,,,"you may attract a spirit guide, a spirit animal capable of guidance",,,,
-perk_natural_harmony,Natural Harmony,,nature_focus_effect,,THRESHOLD,ENTRY,,,"as long as you keep calm and composed, you can blend in natural enviroments, animals will consider you less of a threat and some predators will simply ignore you. This skill brings bonus when you are within natural enviroments, in game terms animals and some monsters will have a bonus ""reaction adjustement"" toward the user, in some extreme cases animals might even attack those who hold ill will towards the user",,,,
-perk_eye_to_detail,Eye to Detail,,investigation_effect,,,ENTRY,,,Obtain more information from a single clue,,,,
-perk_inspector,Inspector,,investigation_effect,,FLAT_BONUS,ENTRY,,,Skill Bonus -,,,,
-perk_reveal_secret,Reveal Secret,,investigation_effect,,,ENTRY,,,"you have a higher chance to find hidden doors, comparments, or simple clues",,,,
-perk_master_of_details,Master of Details,,investigation_effect,,,ENTRY,,,"deduce details others overlooked. When close some details will be highlighted for the player. The player must examine details closely for them to be highlighted, otherwise, they will be overlooked. This feat grants a lot of information, an much of this can be useless for a investigation case, so its up to the player to use it. For example: a murder was made by a left handed criminal, however this is invisible unless the player examines the inury directly to obtain more details",,,,
-perk_wild_catch,Wild Catch,,taming_effect,,,ENTRY,,,"you are adept at catching wild animals or monsters, it lowers the requieriments needed for a tame",,,,
-perk_tame_specialist,Tame Specialist,,taming_effect,,FLAT_BONUS,ENTRY,,,you have a bonus toward a single type of creature when dealing in control and management.,,,,
-perk_growth_correction,Growth Correction,,taming_effect,,FLAT_BONUS,ENTRY,,,"each level and growth phase one of your tamed creatures obtain, will add a small bonus to the creature gains, the total gains is about 20%",,,,
-perk_multi_cultural,Multi Cultural,,linguistics_effect,,,ENTRY,,,Translator,,,,
-perk_cipher,Cipher,,linguistics_effect,,,ENTRY,,,Encode or Decode,,,,
-perk_ancient_culture,Ancient Culture,,linguistics_effect,,,ENTRY,,,Ancient Language,,,,
-perk_cultural_assimilation,Cultural Assimilation,,linguistics_effect,,,ENTRY,,,Obtain New Languages FAST,,,,
-perk_hidden_traps,Hidden Traps,,trapper_effect,,,ENTRY,,,"Trap obtain hide propiety when aplicable. Roll Trapper skill again to check the level of ""hide"", it must be in a place who offers some manner of cover",,,,
-perk_trap_sence,Trap-Sence,,trapper_effect,,FLAT_BONUS,ENTRY,,,Bonus Dismantle Trap -,,,,
-perk_trap_maker,Trap-Maker,,trapper_effect,,,ENTRY,,,Assamble improvised traps,,,,
-perk_green_thumb,Green Thumb,,herbalism_effect,,FLAT_BONUS,ENTRY,,,Skill Bonus -,,,,
-perk_horticulture_101,Horticulture 101,,herbalism_effect,,,ENTRY,,,Obtain more resources from a single instance,,,,
-perk_verdant_folklore,Verdant Folklore,,herbalism_effect,,,ENTRY,,,Special information,,,,
-perk_gathering_zone,Gathering Zone,,herbalism_effect,,,ENTRY,,,Find Resources in area,,,,
-perk_keen_hearing,Keen Hearing,,heightened_senses_effect,,FLAT_BONUS,ENTRY,,,Bonus Sense: Ear,,,,
-perk_butcher,Butcher,,dismantle_effect,,,ENTRY,,,obtain more booty,,,,
-perk_harvester,Harvester,,dismantle_effect,,FLAT_BONUS,ENTRY,,,Skill Bonus -,,,,
-perk_old_way_gourmet,Old Way Gourmet,,dismantle_effect,,,ENTRY,,,obtain quality booty,,,,
-perk_targetting,Targetting,,tracking_effect,,FLAT_BONUS,ENTRY,,,Skill Bonus -,,,,
-perk_hunter_vision,Hunter Vision,,tracking_effect,,,ENTRY,,,virtual mark on target,,,,
-perk_old_way_reading,Old Way Reading,,tracking_effect,,,ENTRY,,,obtain more info from tracks and trails,,,,
-perk_long_range_tracking,Long Range Tracking,,tracking_effect,,,ENTRY,,,keep trailing for a long tme,,,,
-perk_the_ancient_ways,The Ancient Ways,,formal_magics_effect,,,ENTRY,,,Common Symbology,,,,
-perk_occult_fan,Occult Fan,,formal_magics_effect,,FLAT_BONUS,ENTRY,,,Skill Bonus -,,,,
-perk_ritualist,Ritualist,,formal_magics_effect,,,ENTRY,,,"Enable use of Rituals, add Formal magic score to ritual performance",,,,
-perk_witchcraft,Witchcraft,,formal_magics_effect,,,ENTRY,,,Acquiere one type of Witchcraft,,,,
-perk_easy_mapping,Easy-Mapping,,dungeoneer_effect,,,ENTRY,,,"as long as you dont perform actions which requiere all of your focus, you can perform mapping actions while moving or performing other actions, give that you keep your hands busy and have the correct supplies",,,,
-perk_treasure_hunter,Treasure Hunter,,dungeoneer_effect,,FLAT_BONUS,ENTRY,,,"you now how to get the most out of a dungeon exploration, you increase the loot from the dungeon. In any roll between traps or rewards mechanism you get a second roll",,,,
-perk_labyrinth_breaker,Labyrinth Breaker,,dungeoneer_effect,,FLAT_BONUS,ENTRY,,,"you never get lost in a labyrinth or any maze, you have a extra +5 when dealing with physical mazes and other confusing architecture,",,,,
-perk_eye_for_magic,Eye for Magic,,spellcraft_effect,,,ENTRY,,,Free spellcaft action on a round where you are casting a spell,,,,
-perk_magic_analyst,Magic Analyst,,spellcraft_effect,,FLAT_BONUS,ENTRY,,,Skill Bonus -,,,,
-perk_counterspell,CounterSpell,,spellcraft_effect,,,ENTRY,,,Spellcasting as a Defensive Action -,,,,
-perk_spell_hacker,Spell Hacker,,spellcraft_effect,,,ENTRY,,,reduce dificulty to interfere with spells,,,,
-perk_star_compass,Star Compass,,astrology_effect,,,ENTRY,,,More Accurate & Longer Guidance Duration -,,,,
-perk_star_reader,Star Reader,,astrology_effect,,FLAT_BONUS,ENTRY,,,Skill Bonus -,,,,
-perk_fate_reading,Fate Reading,,astrology_effect,,,ENTRY,,,obtain personal info on FATE,,,,
-perk_omens,Omens,,astrology_effect,,,ENTRY,,,offer guidance to luck,,,,
-perk_traveler,Traveler,,wayfarer_effect,,,ENTRY,,,Travel Fatigue Reduction -,,,,
-perk_long_walker,Long Walker,,wayfarer_effect,,FLAT_BONUS,ENTRY,,,Skill bonus -,,,,
-perk_pathguide,PathGuide,,wayfarer_effect,,,ENTRY,,,Travel reduces bad encounters and raises good encounters,,,,
-perk_thousand_steps,Thousand Steps,,wayfarer_effect,,,ENTRY,,,Reduce Travel Time,,,,
-perk_familiar_mount,Familiar Mount,,riding_effect,,FLAT_BONUS,ENTRY,,,Specific Earth or Sea mount bonus stability. No need to Roll each time they perform a combat action,,,,
-perk_experienced_rider,Experienced Rider,,riding_effect,,FLAT_BONUS,ENTRY,,,Skill bonus -,,,,
-perk_one_hand_riding,One Hand Riding,,riding_effect,,,ENTRY,,,May perform common actions while riding,,,,
-perk_mount_aptitude,Mount Aptitude,,riding_effect,,COVERAGE,ENTRY,,,"Mount Awakens a Unique Passive Feat, every mount has different feats, the quality of the mount insides on the rank of the feat",,,,
-perk_strong_back,Strong Back,str_burden,,,,ENTRY,,,Weight Carry,,,,
-perk_inner_strenght,Inner Strenght,str_burden,,,THRESHOLD,ENTRY,,,Reduce Fatigue Penalty,,,,
-perk_popular_trends,Popular Trends,,common_lore_effect,,,ENTRY,,,"in any country of your culture, you can easily obtain lore about local authorities and hidden authorities, stuff like who is who and most of the common taboos. This is a information gathering perk where you can easily obtain local info or detect anomalies within a locality. This does not work outside your culture zone of influence or in cities with mixed cultures",,,,
-perk_common_sense,Common Sense,,common_lore_effect,,PERMISSION,ENTRY,,,"Allows you to correctly gasp how people will react to certain actions, and specific reputation gained from such. Its easy to win a communit friendship if you know how to gain it.",,,,
-perk_popular_folklore,Popular Folklore,,common_lore_effect,,FLAT_BONUS,ENTRY,,,obtain extra info on any historical or mythical question regarding a specific zone within your country. This includes rites and special local ettiquetes if any. This does not provide etiquete but rather gives an insight on such,,,,
-perk_old_wisdom,Old Wisdom,,common_lore_effect,,COVERAGE,ENTRY,,,"the old ways had manners to deal with almost everything, you can tap on ancient hints once per session per each 200 pts of will power +1",,,,
-perk_unrestrained,Unrestrained,str_arm_strenght,,,FLAT_BONUS,ENTRY,,,"you are hard to capture and hard to bind, any penalty by restriction is reduced. And escape attempts get a bonus",,,,
-perk_hand_cannon,Hand Cannon,str_arm_strenght,,,,ENTRY,,,"you can throw, Really farther and stronger the your average person, anything thrown with your ""Bare Hands"" counts for this",,,,
-perk_iron_bender,Iron Bender,str_arm_strenght,,,FLAT_BONUS,ENTRY,,,reduce the material resistance of up to iron and lesser materials (meaning that materials above iron are not affected),,,,
-perk_great_fortitude,Great Fortitude,str_muscle,,,FLAT_BONUS,ENTRY,,,you have Great Fortitude bonus on any defensive roll where your physical prowess is tested,,,,
-perk_rubbery_muscles,Rubbery Muscles,str_muscle,,,,ENTRY,,,"you have great muscles, they feel like leather or rubber. Only when defending you get a natural damage reduction",,,,
-perk_coordination,Coordination,agi_coordination,,,FLAT_BONUS,ENTRY,,,Chew gum and walk - Bonus when performing simultaneous actions,,,,
-perk_heightened_balance,Heightened Balance,agi_coordination,,,FLAT_BONUS,ENTRY,,,Bonus Stability -,,,,
-perk_ambidiextry,Ambidiextry,agi_coordination,,,THRESHOLD,ENTRY,,,reduce penalty when using both hands,,,,
-perk_adrenaline,Adrenaline,agi_reaction,,,,ENTRY,,,when you a natural 10 in a initiative roll or when you are in less than 10% of your HP. you get second movement phase for half you alloted melee movement,,,,
-perk_heightened_reflex,Heightened Reflex,agi_reaction,,,FLAT_BONUS,ENTRY,,,you have High reflexes bonus on any defensive roll where your reaction is tested,,,,
-perk_travel_light,Travel Light,agi_movement,,,,ENTRY,,,"si usas armadura ligera o ninguna armadura y no estas cargado mas del 50% de tu peso maximo, tu indice de movimiento aumenta en 3 pts",,,,
-perk_manouverability,Manouverability,agi_movement,,,THRESHOLD,ENTRY,,,"reduce penalty when twisting, turning and changing your movements",,,,
-perk_tunnel_serpent,Tunnel Serpent,agi_movement,,,,ENTRY,,,Eres considerado un tamaño menos para efecto de moverte por tuneles o rendijas,,,,
-perk_self_diagnose,Self-Diagnose,per_judgement,,,,ENTRY,,,"you have an acurate grasp of your own body and state, you can evaluate your own condition",,,,
-perk_anatomy_101,Anatomy 101,per_judgement,,,,ENTRY,,,you receive more info about your opponents health and physical condition in combat or high tension instances,,,,
-perk_death_sense,Death Sense,per_judgement,,,,ENTRY,,,you have a knack for finding threats and avoid dangerous paths.,,,,
-perk_low_light_vision,Low-Light Vision,per_senses,,,,ENTRY,,,"you can see better in darkness, remove some of the penalty. It does not affect total darkness or enviromental obstructions such as mist",,,,
-perk_pitch,Pitch,per_senses,,,,ENTRY,,,"you have a uncanny ear for sounds, you can memorize and identify sounds easily. You can retain one sound per session",,,,
-perk_blind_fighting,Blind Fighting,per_senses,,,,ENTRY,,,,,,,
-perk_idea,Idea,int_inspiration,,,,ENTRY,,,Lightbulb,,,,
-perk_calculus,Calculus,int_inspiration,,,,ENTRY,,,perform calculations instantly,,,,
-perk_sharp_mind,Sharp Mind,per_judgement,,,FLAT_BONUS,ENTRY,,,"Cynical, recibes un bono de +5 contra tiradas que impliquen engaños y confusion",,,,
-perk_scrounger,Scrounger,per_judgement,,,,ENTRY,,,"when searching for loot you can find more things, you are really throught in your search!. It also benefits dismantle and other similar events",,,,
-perk_mental_strenght,Mental Strenght,per_judgement,,,,ENTRY,,,Mental Recovery,,,,
-perk_voracious_reader,Voracious Reader,int_focus,,,,ENTRY,,,"you are a beast to read written material, you cut in half any time dedicated to reading",,,,
-perk_high_focus,High Focus,int_focus,,,,ENTRY,,,"when focused you are not completely out of it, this allows you maintain a higher degree of movility, defense and interactivity than normal people",,,,
-perk_photo_memory,Photo Memory,int_focus,,,,ENTRY,,,"you can memorize one image per session, the recorded scene its quite clear and when used can ask the DM to retell the scene or ask for more details. When the session ends the memory is lost",,,,
-perk_strong_soul,Strong Soul,wil_supernatural,,,,ENTRY,,,Strong Soul -,,,,
-perk_power_spot,Power Spot,wil_supernatural,,,,ENTRY,,,Leyline Discovery -,,,,
-perk_mana_rejection,Mana Rejection,wil_supernatural,,,,ENTRY,,,"you reject mana by sheer will, reducing magic based damage",,,,
-perk_stoic,Stoic,wil_poise,,,FLAT_BONUS,ENTRY,,,"you gain a bonus based on your alignement, this bonus counters actions that go against your alignment. Thus a evil character may resist ""Redeption"" if the player wishes so",,,,
-perk_impartial_belief,Impartial Belief,wil_poise,,,,ENTRY,,,you try your best to be impartial and not judgemental,,,,
-perk_happy_camper,Happy Camper,wil_fortitude,,,,ENTRY,,,the stress and penalty for living and travelling on a wilderness is reduced,,,,
-perk_pain_tolerance,Pain Tolerance,wil_fortitude,,,THRESHOLD,ENTRY,,,"when resisting pain, injury and wound you can reduce the penalty.",,,,
-perk_iron_will,Iron Will,wil_fortitude,,,FLAT_BONUS,ENTRY,,,"you have an iron will, bonus on any defensive roll where you will is tested",,,,
+id,name,subject,subject_suggested,family,family_suggested,tier,bonus_category,bonus_type,text,boundary,counterweight,enhanced_threshold,enhanced_text,confidence
+perk_vanguard,Vanguard,melee_weapons_handling_roll,heavy_weapons_handling_effect,PERMISSION,PERMISSION,ENTRY,,,"Heavy Proficiency - Apertura de Maestria de ARMAS (o) Añade 20 pts de maestria de armas a una pre-existente solo aplicable a armas que usan el atributo STR , solo un tipo de Arma es elegido. Ej: Hachas, Martillos, Espadas, etc",,,,,MED
+perk_bigger_is_better,Bigger is Better,melee_weapons_handling_roll,heavy_weapons_handling_effect,,,ENTRY,,,Heavy Arms -,,,,,LOW
+perk_thundering,Thundering,damage,heavy_weapons_handling_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,"Thundering - Amplificas efectos basados en impacto como Stun, Knockback y Presion. Mientras esten basados en el Atributo de Fuerza (STR) y provenga de un ataque fisico de melee",,,,,HIGH
+perk_penetrating_force,Penetrating Force,damage,heavy_weapons_handling_effect,THRESHOLD,,ENTRY,,,"Penetrate -No te pueden detener!, tus ataques basados en Fuerza a melee ignoran 5 pts de armadura y 5 pts de reduccion de daño",,,,,HIGH
+perk_emphatic,Emphatic,social_insight,sense_motive_effect,COVERAGE,FLAT_BONUS,ENTRY,,,Sensitive - Extra information,,,,,HIGH
+perk_false_bane,False Bane,social_deception,sense_motive_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,CIRCUMSTANTIAL,TRAINING,bonus aganist deceptions and bluffs,,,,,HIGH
+perk_deep_reading,Deep Reading,social_insight,sense_motive_effect,COVERAGE,,ENTRY,,,"Obtain information from corporal deamenor and from simple observation, interaction is not needed",,,,,LOW
+perk_heavy_fitted,Heavy Fitted,armor_protection,heavy_armor_handling_effect,PERMISSION,,ENTRY,,,Heavy Armor Proficieny -,,,,,MED
+perk_stout_defender,Stout Defender,damage,heavy_armor_handling_effect,FLAT_BONUS,,ENTRY,ABILITY,TERRAIN,Reduce your damage by dispelling in the ground. You cannot move but you gain higher damage reduction,,,,,HIGH
+perk_influencer,Influencer,social_influence,court_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,CIRCUMSTANTIAL,MORALE,your words have the power to inspire people. By preaching or speaking people may be inspired gaining a moral bonus,,,,,HIGH
+perk_suggestion,Suggestion,social_influence,court_effect,FLAT_BONUS,,ENTRY,CIRCUMSTANTIAL,TRAINING,"your words have a power to subly steer people toward certain throughts or implant ideas, higher intelligence makes it harder. It lowers the dificulty of suble and disguised interactions",,,,,HIGH
+perk_shieldbearer,Shieldbearer,block,shield_effect,PERMISSION,,ENTRY,,,Shield Proficieny -,,,,,LOW
+perk_stone_block,Stone Block,block,shield_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,ARMOR,increases shield stopping power when not moving that same round,,,,,HIGH
+perk_moving_block,Moving Block,block,shield_effect,THRESHOLD,THRESHOLD,ENTRY,,,reduce penalty to block while moving,,,,,HIGH
+perk_stubborn_shield,Stubborn Shield,damage,shield_effect,THRESHOLD,,ENTRY,,,shield perceives less damage from each block (as shield receive damage when used for blocking),,,,,HIGH
+perk_attitude_change,Attitude Change,social_influence,diplomacy_effect,PERMISSION,,ENTRY,,,"Diplomacy can be used to influence a NPC character’s attitude. The NPC character’s initial attitude based on circumstances can be steered toward a more positive or negative outcome. There are 5 types (Hostile, Unfriendly, Indifferent, Friendly, Helpful)",,,,,HIGH
+perk_corageous_heart,Corageous Heart,resistance_fear,discipline_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,MORALE,Fear Resistance -,,,,,LOW
+perk_nerves_of_steel,Nerves of Steel,resistance_mental,discipline_effect,RELIABILITY,,ENTRY,,,Coolheaded,,,,,LOW
+perk_fighting_spirit,Fighting Spirit,summon_power,discipline_effect,RELIABILITY,,ENTRY,,,Fighting Spirit,,,,,LOW
+perk_word_in_the_street,Word in the Street,information_gain,streetwise_effect,COVERAGE,FLAT_BONUS,ENTRY,,,"Obtain extra info, not aplicable to high class events",,,,,HIGH
+perk_street_vigilance,Street Vigilance,resistance_mental,streetwise_effect,PERMISSION,FLAT_BONUS,ENTRY,,,"You can place up to your PER +1 alerts on different topics, keeping tabs on people or realtime development. You will get the info with some delay depending on your check. This is limited to Low class zones, and uses 2 slots or 3 slots to investigate medium social class zones. its imposible to use in high class zones",,,,,HIGH
+perk_background_check,Background Check,information_gain,streetwise_effect,COVERAGE,,ENTRY,,,Obtain more specific info about a single person or a single item.,,,,,HIGH
+perk_lasting_impression,Lasting Impression,intimidation_roll,intimidation_effect,RELIABILITY,,ENTRY,,,when succesful your victims become marked and easily scared for several time units with a maximum of a week,,,,,MED
+perk_terrifying_presence,Terrifying Presence,intimidation_roll,intimidation_effect,PERMISSION,,ENTRY,,,Render a victim incapable of actions for a few rounds ( only lower or equal levels),,,,,MED
+perk_pokerface,Pokerface,block,bluff_effect,PERMISSION,,ENTRY,,,you can shield information about you from scrutiny,,,,,HIGH
+perk_spin_a_tale,Spin a Tale,bluff_roll,bluff_effect,PERMISSION,FLAT_BONUS,ENTRY,,,you can make rather belivable tales with rather long and complex stories. The DM grants from +1 to +10 depending on the player explaining a tale.,,,,,MED
+perk_teamwork,Teamwork,battle_roll,battle_effect,THRESHOLD,,ENTRY,,,Reduce dificulty when performing simultaneous or coordinated actions,,,,,MED
+perk_flow_of_battle,Flow of Battle,battle_roll,battle_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,"bonus to large scale battle roll,",,,,,MED
+perk_a_subtle_push,A Subtle Push,social_deception,temptation_effect,PERMISSION,,ENTRY,,,you can make seduction or bribery attempts once per scene without begin detected. There is a hide factor equal to the temptation rating,,,,,HIGH
+perk_charmer,Charmer,defense,temptation_effect,PERMISSION,,ENTRY,,,"once they come, they cannot forget about you. You can charm your customers by appealing to their greed or lust. A charmed victim is much more favorable to you and greatly lowers his defenses",,,,,HIGH
+perk_fencer,Fencer,light_weapons_handling_roll,light_weapons_handling_effect,PERMISSION,PERMISSION,ENTRY,,,"Light Proficiency - Apertura de Maestria de ARMAS (o) Añade 20 pts de maestria de armas a una pre-existente solo aplicable a armas que usan el atributo AGI , solo un tipo de Arma es elegido. Ej: Hachas, Martillos, Espadas, etc",,,,,MED
+perk_weapon_finnesse,Weapon Finnesse,damage,light_weapons_handling_effect,SUBSTITUTION,,ENTRY,,,AGI based Damage -,,,,,LOW
+perk_blade_of_lightness,Blade of Lightness,movement_speed,light_weapons_handling_effect,SUBSTITUTION,,ENTRY,,,Fast Attribute,,,,,LOW
+perk_sharpened,Sharpened,vitality,light_weapons_handling_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,"Sharp - Amplificas efectos basados en Corte como Bleeding, Wound y Vorpal. Mientras esten basados en el Atributo de AGILIDAD (AGI) y provenga de un ataque fisico de melee",,,,,HIGH
+perk_shrewd_merchant,Shrewd Merchant,casting_speed,comerce_effect,COVERAGE,,ENTRY,,,"you pay extreme atention to details, you are good at deals and can read the hidden motives of a deal. Obtain more info from a deal, reduce dificulty when looking for a scam",,,,,HIGH
+perk_trust_is_everything,Trust is Everything,comerce_roll,comerce_effect,PERMISSION,,ENTRY,,,you start with base higher reputation and trust in business matter,,,,,MED
+perk_midas_touch,Midas Touch,profit,comerce_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,CIRCUMSTANTIAL,TRAINING,Increase Profit,,,,,LOW
+perk_knife_thrower,Knife Thrower,projectile_weapons_handling_roll,throwing_weapons_handling_effect,PERMISSION,PERMISSION,ENTRY,,,"Throwing Proficiency - Apertura de Maestria de ARMAS (o) Añade 20 pts de maestria de armas a una pre-existente solo aplicable a armas que usan el atributo AGI , solo un tipo de Arma es elegido. Ej: Hachas, Martillos, Espadas, etc",,,,,MED
+perk_bullseye,Bullseye,attack_roll,throwing_weapons_handling_effect,,,ENTRY,,,-,,,,,LOW
+perk_trick_throw,Trick Throw,projectile_weapons_handling_roll,throwing_weapons_handling_effect,THRESHOLD,,ENTRY,,,Penalty Reduction -,,,,,LOW
+perk_blinding_speed,Blinding Speed,attack_roll,throwing_weapons_handling_effect,,,ENTRY,,,High Speed Attack -,,,,,LOW
+perk_reserved_warez,Reserved Warez,casting_speed,haggle_effect,PERMISSION,,ENTRY,,,"Makes the merchant offer more special wares, Gives access to special, undisclosed or usually non-accesible warez",,,,,HIGH
+perk_black_market,Black Market,haggle_roll,haggle_effect,PERMISSION,,ENTRY,,,"You can sell or purchase, special and ilicit goods. This is important to sell stolen goods",,,,,MED
+perk_light_fitted,Light Fitted,armor_protection,light_armor_handling_effect,PERMISSION,,ENTRY,,,Light Armor Proficieny -,,,,,MED
+perk_elastic_defense,Elastic Defense,damage,light_armor_handling_effect,SUBSTITUTION,FLAT_BONUS,ENTRY,,,"use your armor to redirect some of the impact, you can reduce damage of physical impacts by 3 pts, you NEED to move during this round for it to work, if inmovile the bonus becomes inaplicable. This can be taken multiple times to a max equal to the armor own armor rating",,,,,HIGH
+perk_unhindered,Unhindered,armor_protection,light_armor_handling_effect,THRESHOLD,,ENTRY,,,Reduces armor penalty on the user actions,,,,,HIGH
+perk_identify,Identify,apraisal_roll,apraisal_effect,COVERAGE,,ENTRY,,,"Reveal item basic nature, status and purpuses",,,,,MED
+perk_eye_of_judgement,Eye of Judgement,information_gain,apraisal_effect,COVERAGE,FLAT_BONUS,ENTRY,,,extra Item Information,,,,,MED
+perk_trap_locks,Trap-Locks,lockpick_roll,lockpick_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,bonus aganist trapped locks when performing lockpicks,,,,,MED
+perk_great_outdoors,Great Outdoors,wilderness_roll,wilderness_effect,THRESHOLD,,ENTRY,,,Reduce faigue consumption and penalty when in non-civilized enviroments,,,,,LOW
+perk_rudimentary_wisdom,Rudimentary Wisdom,craft_quality,wilderness_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TERRAIN,Use Survival skill in order to use natural resource to craft makeshift comodities. Bonus to other skills with natual background such as herbalis,,,,,HIGH
+perk_explorer,Explorer,information_gain,wilderness_effect,COVERAGE,,ENTRY,,,"* Reveal nearby points of interest, also, lower encounters in natural enviroment",,,,,HIGH
+perk_ambusher,Ambusher,defense,hide_effect,THRESHOLD,,ENTRY,,,Defenseless Target -,,,,,MED
+perk_reaper,Reaper,attack_roll,hide_effect,THRESHOLD,,ENTRY,,,Coup de Grace -,,,,,LOW
+perk_presence_concealment,Presence Concealment,detection,hide_effect,THRESHOLD,THRESHOLD,ENTRY,,,"you have a very thin presence and most of the time are ignored. Add 5 of dificulty when detecting the user using non magical, indirect means of search such as extraordinary sences such as sence of smell, intuition, etc",,,,,HIGH
+perk_tough,Tough!,armor_protection,inclemence_effect,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,* Hardened -,,,,,LOW
+perk_thick_skinned,Thick Skinned,armor_protection,inclemence_effect,FLAT_BONUS,,ENTRY,ABILITY,TERRAIN,Climatic Tolerance -,,,,,MED
+perk_magic_fortitude,Magic Fortitude,resistance_mana,inclemence_effect,FLAT_BONUS,,ENTRY,ABILITY,MAGIC,Mana Tolerance -,,,,,LOW
+perk_iron_man,Iron Man,movement_speed,inclemence_effect,THRESHOLD,THRESHOLD,ENTRY,,,IronMan - Improve movement speed and reduce penalty when overburdened,,,,,HIGH
+perk_quick_hands,Quick Hands,sleight_of_hand_roll,sleight_of_hand_effect,THRESHOLD,,ENTRY,,,Quick Hands -,,,,,LOW
+perk_hidden_weapons,Hidden Weapons,attack_roll,sleight_of_hand_effect,,,ENTRY,,,Unexpected Attack -,,,,,LOW
+perk_ilutionism,Ilutionism,social_deception,sleight_of_hand_effect,,,ENTRY,,,Artful & Subtle -,,,,,LOW
+perk_spider_climb,Spider Climb,movement_speed,climbing_effect,THRESHOLD,,ENTRY,,,"Increses Speed of Climbing, Reduces dificulty of horizontal movement",,,,,HIGH
+perk_action_goat,Action Goat,movement_speed,climbing_effect,THRESHOLD,,ENTRY,,,Allows actions while climbing and reduces penalty on movement such as jumping,,,,,HIGH
+perk_windbreaker,WindBreaker,resistance_climate,climbing_effect,THRESHOLD,,ENTRY,,,Reduces wind and climate penalty on climber,,,,,HIGH
+perk_elemental_wand,Elemental Wand,resistance_mental,basic_single_elementalism_effect,PERMISSION,,ENTRY,,,Element Activator -,,,,,LOW
+perk_elemental_attunement,Elemental Attunement,resistance_mental,basic_single_elementalism_effect,FLAT_BONUS,,ENTRY,ABILITY,MAGIC,Element Boost -,,,,,LOW
+perk_nature_elemental,Nature Elemental,resistance_mental,basic_single_elementalism_effect,FLAT_BONUS,,ENTRY,ABILITY,MAGIC,Elemental Catalyst -,,,,,MED
+perk_piercing_elemental,Piercing Elemental,defense,basic_single_elementalism_effect,THRESHOLD,THRESHOLD,ENTRY,,,Ignore Defenses -,,,,,LOW
+perk_hard_worker,Hard Worker,block,minning_effect,THRESHOLD,THRESHOLD,ENTRY,,,Reduce Fatigue rating per block of work,,,,,HIGH
+perk_stonebreaker,Stonebreaker,minning_roll,minning_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Obtain increased resource from surface level minning ( increases in proportional to the base amount),,,,,MED
+perk_tireless_worker,Tireless Worker,endurance,minning_effect,THRESHOLD,,ENTRY,,,Greatly reduces fatigue rating from hard labour,,,,,HIGH
+perk_reinforcement_wand,Reinforcement Wand,information_gain,basic_reinforcement_magic_effect,PERMISSION,,ENTRY,,,Reinforcement Activator -,,,,,HIGH
+perk_physical_attunement,Physical Attunement,spell_effect,basic_reinforcement_magic_effect,FLAT_BONUS,,ENTRY,ABILITY,MAGIC,Physical Aura -,,,,,LOW
+perk_personal_aura,Personal Aura,spell_effect,basic_reinforcement_magic_effect,FLAT_BONUS,,ENTRY,ABILITY,MAGIC,Self-Boost -,,,,,LOW
+perk_reinforcemnt_expert,Reinforcemnt Expert,information_gain,basic_reinforcement_magic_effect,THRESHOLD,,ENTRY,,,"Reduce halve cost, Reduce Learning",,,,,HIGH
+perk_tanning,Tanning,craft_quality,handcraft_sewing_leather_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,"A bonus to the quality and time of tanning leathers, the quality increases",,,,,HIGH
+perk_monster_weaver,Monster Weaver,resistance_mental,handcraft_sewing_leather_effect,PERMISSION,,ENTRY,,,"Allows the use of unusual monster materials such as nerves, tendons and other fiber like elements in the correct way",,,,,HIGH
+perk_interference_wand,Interference Wand,basic_mana_discipline_roll,basic_interference_magic_effect,PERMISSION,,ENTRY,,,Interference Activator -,,,,,MED
+perk_void_attunement,Void Attunement,spell_effect,basic_interference_magic_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,MAGIC,"you are good at dispelling and scatering magic, you receive a bonus when cancelling, dispelling or scattering magic, c'mon feed the void",,,,,HIGH
+perk_disruptor,Disruptor,casting_speed,basic_interference_magic_effect,FLAT_BONUS,,ENTRY,ABILITY,MAGIC,"Disrupting Plus - add disruption propieties to spells, when hiting a natural target it lowers their intiative when casting or using any form of external MANA",,,,,HIGH
+perk_multicast_splitting,Multicast Splitting,casting_speed,basic_interference_magic_effect,,,ENTRY,,,"by using magic disruption within the user, its posible to split the flow of mana, allowing to multicast several spells at the same time, the user atemp to multicast might fail if the user generates too many spells.",,,,,LOW
+perk_stronger_wood,Stronger Wood,carry_capacity,craft_woodwork_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,EQUIPMENT,increases the durability and overall max weight strenght of a wooden tool,,,,,HIGH
+perk_efficient_chippy,Efficient Chippy,craft_roll,craft_woodwork_effect,THRESHOLD,,ENTRY,,,use less materials and time to produce the same results,,,,,MED
+perk_chanting,Chanting,casting_speed,mana_sensitivity_effect,THRESHOLD,,ENTRY,,,Shortened Chanting -,,,,,MED
+perk_prescise_casting,Prescise Casting,casting_speed,mana_sensitivity_effect,THRESHOLD,,ENTRY,,,Quick Casting,,,,,LOW
+perk_tempering_hack,Tempering Hack,craft_quality,craft_metalwork_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,EQUIPMENT,"allows a bonus to repaired weapons, tempering gives weapon temporar bonuses",,,,,HIGH
+perk_adept_smelter,Adept Smelter,craft_quality,craft_metalwork_effect,PERMISSION,,ENTRY,,,"you know how t get the best from smelting metals and draining away their impurities, you get better quality and more metals.",,,,,HIGH
+perk_advanced_materials,Advanced Materials,craft_roll,craft_metalwork_effect,COVERAGE,,ENTRY,,,"you can work with one more type of material, such as steel, corumdium, monster bone, etc. Only [Iron] ranked materials",,,,,MED
+perk_divided_focus,Divided Focus,mental_focus_roll,concentration_effect,COVERAGE,,ENTRY,,,you can split your focus into 2 different actions of complete different nature with reduced effectivity for both actions.,,,,,MED
+perk_grease_monkey,Grease Monkey,mechanics_roll,mechanics_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Skill Bonus,,,,,LOW
+perk_quick_fix,Quick-Fix,craft_quality,mechanics_effect,THRESHOLD,,ENTRY,,,Able to perform a temporal repair on a critical moment,,,,,HIGH
+perk_jury_rig,Jury Rig,craft_quality,mechanics_effect,THRESHOLD,,ENTRY,,,Use similar materials to fix or build something. This loosens up the restrictions on materials for mechanics.,,,,,HIGH
+perk_mechanist,Mechanist,mechanics_roll,mechanics_effect,PERMISSION,,ENTRY,,,Give access to more complex machines and high level technology,,,,,MED
+perk_mana_tools,Mana Tools,mana_cost,magic_obj_common_effect,,,ENTRY,,,Easy Activation,,,,,LOW
+perk_multi_magic_tools,Multi Magic Tools,craft_quality,magic_obj_common_effect,THRESHOLD,THRESHOLD,ENTRY,,,"reduce penalty when using 2 or more objects simultaneously, its nesesary to say that a object used this way halves its effects and cosumes double mana",,,,,HIGH
+perk_mana_overload,Mana Overload,carry_capacity,magic_obj_common_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,MAGIC,"you are good at dealing with overloaded items, either for difusing the overload or purpursefully accelerating the collapse. Bonus to roll",,,,,HIGH
+perk_handyman,Handyman,building_simple_building_digging_etc_roll,building_simple_building_digging_etc_effect,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,Heal a increaed amount of HP from structures,,,,,MED
+perk_cutting_corners,Cutting Corners,building_simple_building_digging_etc_roll,building_simple_building_digging_etc_effect,THRESHOLD,,ENTRY,,,Reduce the amount of materials needed,,,,,MED
+perk_demolition_expert,Demolition Expert,damage,building_simple_building_digging_etc_effect,PERMISSION,PERMISSION,ENTRY,,,Building Damage Proficiency -,,,,,HIGH
+perk_constructor,Constructor,building_simple_building_digging_etc_roll,building_simple_building_digging_etc_effect,PERMISSION,,ENTRY,,,Give access to more complex structures,,,,,MED
+perk_image_crystal,Image Crystal,magic_obj_scyring_roll,magic_obj_scyring_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,its much easier to see imágenes when using a crystal ball for scrying. Bonus when performing any visualization feat with scrying,,,,,MED
+perk_record_crystal,Record Crystal,magic_obj_scyring_roll,magic_obj_scyring_effect,PERMISSION,,ENTRY,,,"you can record images in a crystal ball, the crystalball becomes useless for scrying",,,,,MED
+perk_far_scry,Far Scry,magic_obj_scyring_roll,magic_obj_scyring_effect,PERMISSION,,ENTRY,,,"you can scry farther, less penalty when peforming scrying at a greater range",,,,,MED
+perk_clariaudience,Clariaudience,magic_obj_scyring_roll,magic_obj_scyring_effect,PERMISSION,,ENTRY,,,"Scrying can usually only manage images, but thanks to your skill, you can somehow capture sound. It cannot capture whispers or a when people are talking in low voices",,,,,MED
+perk_structural_reading,Structural Reading,information_gain,observe_effect,COVERAGE,,ENTRY,,,Obtain more info,,,,,LOW
+perk_finder_of_flaws,Finder of Flaws,observe_roll,observe_effect,COVERAGE,,ENTRY,,,Structural flaws become visible,,,,,LOW
+perk_structural_analyst,Structural Analyst,information_gain,observe_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,CIRCUMSTANTIAL,TRAINING,Skill Bonus,,,,,LOW
+perk_demolition_man,Demolition Man,damage,observe_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,EQUIPMENT,Increase Material Damage -,,,,,HIGH
+perk_boost_clading,Boost Clading,magic_obj_roll,magic_obj_shield_effect,PERMISSION,,ENTRY,,,you can add some mana to the magic clad effect to temporarily boost it for a single round this consumes a simple action or a move action,,,,,MED
+perk_magic_bulkward,Magic Bulkward,block,magic_obj_shield_effect,COVERAGE,,ENTRY,,,you can add multiple defensive magic objects to a single pool of energy shield. This does not mean you can exceed your own magical object limit,,,,,HIGH
+perk_magic_defense,Magic Defense,block,magic_obj_shield_effect,FLAT_BONUS,,ENTRY,ABILITY,MAGIC,"you blow out your magic clad score in order to block a single magical attack, note that if successful the magic attack becomes void and collapses, but if failing for any value the magical attack is simply not affected at all, its an all or nothing defense. the higher the defense score the higher the defense value",,,,,HIGH
+perk_performer_instruments,Performer (Instruments),perform_roll,perform_music_instrument_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Bonus Skill,,,,,LOW
+perk_fascinate,Fascinate,perform_roll,perform_music_instrument_effect,PERMISSION,,ENTRY,,,"use his music or poetics to cause one or more creatures to become fascinated with him. Each creature to be fascinated must be within 90 feet, able to see and hear the bard, and able to pay attention to him. The bard must also be able to see the creature.",,,,,MED
+perk_inspiring_peformance,Inspiring Peformance,social_deception,perform_music_instrument_effect,FLAT_BONUS,,ENTRY,CIRCUMSTANTIAL,TRAINING,Boost Allies using music,,,,,MED
+perk_countersong,Countersong,spell_effect,perform_music_instrument_effect,FLAT_BONUS,,ENTRY,ABILITY,MAGIC,music or poetics to counter magical effects that depend on sound (but not spells that simply have verbal components),,,,,LOW
+perk_spirit_rood,Spirit Rood,summon_power,spiritism_faith_effect,PERMISSION,,ENTRY,,,Spirit Activator -,,,,,LOW
+perk_shamanism,Shamanism,summon_power,spiritism_faith_effect,,,ENTRY,,,Spirit Charm -,,,,,LOW
+perk_spirit_familiar,Spirit Familiar,summon_power,spiritism_faith_effect,,,ENTRY,,,Spirit Guardian -,,,,,LOW
+perk_caller,Caller,summon_power,spiritism_faith_effect,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,Summon Unit Boost,,,,,LOW
+perk_performer_singing,Performer (Singing),perform_roll,perform_singing_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Bonus Skill,,,,,LOW
+perk_booming_voice,Booming Voice,perform_roll,perform_singing_effect,COVERAGE,,ENTRY,,,"you voice can reach farther, its posible to affect a larger audience",,,,,LOW
+perk_charming_peformance,Charming Peformance,perform_roll,perform_singing_effect,COVERAGE,,ENTRY,,,charm a smaller and closer audience,,,,,LOW
+perk_heartfelt,Heartfelt,perform_roll,perform_singing_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Transmit emotions more vividly. (Your emotional state offer from +1 to +5 to score and the audience emotion may amplify the effects),,,,,MED
+perk_truth_rood,Truth Rood,piety_roll,truth_faith_effect,PERMISSION,,ENTRY,,,Truth Activator -,,,,,LOW
+perk_truth_scale,Truth Scale,armor_protection,truth_faith_effect,,,ENTRY,,,Divine Scale Armor,,,,,LOW
+perk_mana_burn,Mana Burn,piety_roll,truth_faith_effect,FLAT_BONUS,,ENTRY,ABILITY,MAGIC,Mana Burn,,,,,LOW
+perk_divine_oath,Divine Oath,piety_roll,truth_faith_effect,PERMISSION,,ENTRY,,,Oath to the Gods,,,,,LOW
+perk_performer_show,Performer (Show),perform_roll,perform_dancing_show_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Bonus Skill,,,,,LOW
+perk_hands_and_feet,Hands and Feet,perform_roll,perform_dancing_show_effect,PERMISSION,,ENTRY,,,you can perform other actions while dancing,,,,,MED
+perk_elegance_in_motion,Elegance in Motion,movement_speed,perform_dancing_show_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,"your movements are refined and graceful, you get a bonus +5 in the quality or aesthetics",,,,,HIGH
+perk_delirium,Delirium,perform_roll,perform_dancing_show_effect,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,Enter a state of delirium where your performance is greatly enhaced,,,,,LOW
+perk_channel_rood,Channel Rood,piety_roll,holy_light_faith_effect,PERMISSION,,ENTRY,,,Channel Activator -,,,,,LOW
+perk_divine_focus,Divine Focus,piety_roll,holy_light_faith_effect,,,ENTRY,,,Altar Focus -,,,,,LOW
+perk_positive_channel,Positive Channel,piety_roll,holy_light_faith_effect,,,ENTRY,,,Divine Aspect (Lesser) -,,,,,LOW
+perk_visual_interpretation,Visual Interpretation,craft_roll,artcraft_drawing_painting_etc_effect,PERMISSION,,ENTRY,,,"you can absorb and interpret visual patterns, this makes it easy to remember visual images and then represent them. The player can record images and then represent them more accurately.",,,,,MED
+perk_enthraling_artwork,Enthraling Artwork,craft_roll,artcraft_drawing_painting_etc_effect,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,"it captures the user and gives inmersion experience, Buff, Debuff, or scare the user accordingly",,,,,LOW
+perk_weird,Weird,craft_roll,artcraft_drawing_painting_etc_effect,,,ENTRY,,,Your work confuse people and affect their sanity,,,,,LOW
+perk_first_aid,First Aid,healing_roll,healing_effect,PERMISSION,,ENTRY,,,Allow to perform first aid in battle without turning the target and the user into a sitting duck,,,,,MED
+perk_flesh_blood,Flesh & Blood,damage,healing_effect,THRESHOLD,,ENTRY,,,"Reduces penalty when dealing with open wound injuries such as bleeding. Allows the healer to restore a small amount of ""WOUND"" type damage by taking one time unit for treatment",,,,,HIGH
+perk_re_vitalize,Re-Vitalize,vitality,healing_effect,PERMISSION,,ENTRY,,,you can restore unconcious characters which has more than 0 HP and reset stun and dizzy effects,,,,,HIGH
+perk_finecraft,Finecraft,craft_quality,artcraft_sculpting_engraving_etc_effect,PERMISSION,,ENTRY,,,you can perform finecraft or the work of fine detail and highly detail engraving and sculping,,,,,HIGH
+perk_jewelry,Jewelry,craft_quality,artcraft_sculpting_engraving_etc_effect,PERMISSION,,ENTRY,,,you can craft simple jewels or add gemstones and jewels by engraving,,,,,HIGH
+perk_spirit_sensitivity,Spirit Sensitivity,summon_power,spirit_sensitivity_effect,COVERAGE,,ENTRY,,,Spirit Vision -,,,,,LOW
+perk_medium,Medium,spirit_sensitivity_roll,spirit_sensitivity_effect,COVERAGE,,ENTRY,,,Ghost Whisperer,,,,,LOW
+perk_spirit_gate,Spirit Gate,summon_power,spirit_sensitivity_effect,COVERAGE,,ENTRY,,,Draw Spirit,,,,,LOW
+perk_spiritual_force,Spiritual Force,summon_power,spirit_sensitivity_effect,PERMISSION,,ENTRY,,,Spiritual Bane -,,,,,LOW
+perk_attention_magnet,Attention Magnet,acting_roll,acting_circus_entertainer_effect,,,ENTRY,,,attract more audiene,,,,,LOW
+perk_riling_the_audience,Riling the Audience,acting_roll,acting_circus_entertainer_effect,PERMISSION,FLAT_BONUS,ENTRY,,,"by commenting or making simple appeals you can increase or decrease the public fervor and overall moral. When making a roll, obtain a free rise to rile the audience",,,,,MED
+perk_leading_the_audience,Leading the Audience,resistance_mental,acting_circus_entertainer_effect,PERMISSION,,ENTRY,,,"You can lead the public attention, fervor and even hate toward someone, this a temporal state which may redirect hostility or goodwill towards a target person. However, the audience must be able to clearly see the target, and if the roll is contested aganist the target reputation and charisma, where a higher charisma is easier to receive the lead",,,,,HIGH
+perk_karmic_balance,Karmic Balance,piety_roll,piety_effect,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,Impartial Balance,,,,,LOW
+perk_blessed,Blessed,piety_roll,piety_effect,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,Inner Light,,,,,LOW
+perk_karmic_piety,Karmic Piety,piety_roll,piety_effect,,,ENTRY,,,Personal Rule,,,,,LOW
+perk_zeal,Zeal,piety_roll,piety_effect,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,Conviction -,,,,,LOW
+perk_other_faces,Other Faces,craft_quality,acting_theatre_comedy_etc_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,increases quality and detail of disguises. Add +5 to disguise base score,,,,,HIGH
+perk_compelling_acting,Compelling Acting,social_deception,acting_theatre_comedy_etc_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,CIRCUMSTANTIAL,TRAINING,"your acting perfomance is capable of moving the hearts of people, its tear jerker or vivid. Increases the believability of your acting on the public, it increases effect depending on play",,,,,HIGH
+perk_persona,Persona,craft_quality,acting_theatre_comedy_etc_effect,PERMISSION,,ENTRY,,,"after work and study, you can craft a pseudo personality which can be weared like a mask, it last for a full week since creation, and allows the user to weak different alignements and even data.",,,,,HIGH
+perk_stone_fisted,Stone Fisted,damage,brawling_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,increase bare hande damage,,,,,HIGH
+perk_slam_down,Slam Down!,brawling_roll,brawling_effect,THRESHOLD,,ENTRY,,,you attacks have a probability of knocking down an enemy,,,,,LOW
+perk_circular_force,Circular Force,brawling_roll,grappling_effect,THRESHOLD,,ENTRY,,,"you are adept at throws and projections, reduce dificulty when using a throw",,,,,MED
+perk_quick_recover,Quick Recover,brawling_roll,grappling_effect,THRESHOLD,,ENTRY,,,Quick Recover -,,,,,LOW
+perk_ground_fight,Ground Fight,brawling_roll,grappling_effect,THRESHOLD,THRESHOLD,ENTRY,,,"you are adept at fighting while laying or siting in the ground, reduce penalty while peforming grapling in the ground",,,,,MED
+perk_cook,Cook,cooking_roll,cooking_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Skill Bonus -,,,,,LOW
+perk_exotic_gourmet,Exotic Gourmet,resistance_mental,cooking_effect,COVERAGE,FLAT_BONUS,ENTRY,,,obtain extra bonus from foodstuff. Some poweful monster cooking will endow with temporary passive perks,,,,,HIGH
+perk_supernatural_cuisine,Supernatural Cuisine,cooking_roll,cooking_effect,,,ENTRY,,,"the world is full of supernatural and mystical ingredients you have learned the basis of working with [IRON] ranked ingredients, this does not protect the cook or the eater from the ingredient effect, it only ensures that the cook can use the ingredient correctly. its possible to work with [BRONZE] ingredients provided that you posess the recipe",,,,,LOW
+perk_calm_will,Calm Will,resistance_mental,still_mind_focus_effect,,,ENTRY,,,Still Mind,,,,,LOW
+perk_inner_balance,Inner Balance,still_mind_focus_roll,still_mind_focus_effect,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,,,,,,LOW
+perk_heavenbound,Heavenbound,still_mind_focus_roll,still_mind_focus_effect,,,ENTRY,,,Heavenbound -,,,,,LOW
+perk_rancher,Rancher,farming_roll,farming_animal_husbandry_effect,THRESHOLD,,ENTRY,,,Reduce time used when dealing with cattle,,,,,MED
+perk_cattle_care,Cattle Care,farming_roll,farming_animal_husbandry_effect,FLAT_BONUS,,ENTRY,ABILITY,EQUIPMENT,your care has incresed effects on the cattle,,,,,LOW
+perk_expert_herder,Expert Herder,farming_roll,farming_animal_husbandry_effect,COVERAGE,,ENTRY,,,you can obtain more produce from animals,,,,,MED
+perk_champion_cattle,Champion Cattle,farming_roll,farming_animal_husbandry_effect,PERMISSION,,ENTRY,,,"you can architect and direct the care of a cattle in order to empower it, the produce from such cattle becomes much better",,,,,MED
+perk_enemy_sonar,Enemy Sonar,alert_roll,alert_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Increases Area,,,,,LOW
+perk_threat_reading,Threat Reading,information_gain,alert_effect,COVERAGE,,ENTRY,,,reads info from threat,,,,,LOW
+perk_eyes_in_the_back,Eyes in the Back,alert_roll,alert_effect,THRESHOLD,,ENTRY,,,Penalties Ambrush,,,,,LOW
+perk_field_worker,Field Worker,endurance,farming_plant_crops_effect,THRESHOLD,THRESHOLD,ENTRY,,,Reduce fatigue percived by Farming,,,,,HIGH
+perk_enrich_soil,Enrich Soil,craft_quality,farming_plant_crops_effect,PERMISSION,,ENTRY,,,"you can enhace the local soil using different means, mainly fertilizers. You can craft fertilizer and use simple means to enrich it",,,,,HIGH
+perk_expert_tiller,Expert Tiller,farming_roll,farming_plant_crops_effect,THRESHOLD,,ENTRY,,,"you can perform farming duties in less time than it would normally, reduce a % of the time invested",,,,,MED
+perk_quality_crops,Quality Crops,craft_quality,farming_plant_crops_effect,FLAT_BONUS,,ENTRY,ABILITY,EQUIPMENT,Increses the base quality of crops,,,,,LOW
+perk_sprinter,Sprinter,movement_speed,athletism_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Bonus Movement Rate -,,,,,MED
+perk_vaulter,Vaulter,athletism_roll,athletism_effect,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,Jump Distance Up,,,,,LOW
+perk_free_running,Free Running,defense,athletism_effect,PERMISSION,RELIABILITY,ENTRY,,,While running or joggling you can dodge partial obstacles automatically,,,,,HIGH
+perk_artisan_food,Artisan Food,farming_roll,farming_artisan_goods_effect,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,"offer a correction value on creating a single item of artisan foods stuff category such as beer, winemaking, honey and other produce",,,,,LOW
+perk_food_worker,Food Worker,farming_roll,farming_artisan_goods_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Skill Bonus -,,,,,LOW
+perk_quality_craft,Quality Craft,craft_quality,farming_artisan_goods_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Increases quality of produced foodstuff,,,,,HIGH
+perk_aging,Aging,profit,farming_artisan_goods_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,CIRCUMSTANTIAL,TRAINING,A process where food becomes more expensive and rare as time goes on. Increases rarity and price of produce,,,,,HIGH
+perk_power_nap,Power Nap,rest_roll,rest_effect,PERMISSION,,ENTRY,,,"you can rest and recover miraculously in a very short amount of time, reduce resting from a whole night to a few hours.",,,,,MED
+perk_deep_sleep,Deep Sleep,rest_roll,rest_effect,THRESHOLD,THRESHOLD,ENTRY,,,"you can enter a deeper sleep, which recovers a lot more and ignores events with a defensive value for the sleep status",,,,,MED
+perk_rest_kneading,Rest Kneading,information_gain,rest_effect,PERMISSION,,ENTRY,,,you can apply your knowledge of resting to others to provide a higher quality of rest,,,,,HIGH
+perk_animal_magnetism,Animal Magnetism,animal_empathy_roll,animal_empathy_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Skill Bonus -,,,,,LOW
+perk_animal_understanding,Animal Understanding,animal_empathy_roll,animal_empathy_effect,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,"your comunication with animals is upgraded, they can follow simple instructions",,,,,LOW
+perk_feroucious_loyalty,Feroucious Loyalty,initiative,animal_empathy_effect,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,"your animal companions will be boosted when defending you, they will also take the initiative to protect you",,,,,HIGH
+perk_shepherd,Shepherd,animal_empathy_roll,animal_empathy_effect,PERMISSION,,ENTRY,,,you can affect a wide group of animals,,,,,MED
+perk_bowman,Bowman,projectile_weapons_handling_roll,projectile_weapons_handling_effect,PERMISSION,PERMISSION,ENTRY,,,"Projectile Proficiency - Apertura de Maestria de ARMAS (o) Añade 20 pts de maestria de armas a una pre-existente solo aplicable a armas que usan el atributo AGI , solo un tipo de Arma es elegido. Ej: Hachas, Martillos, Espadas, etc",,,,,MED
+perk_run_gun,Run & Gun,projectile_weapons_handling_roll,projectile_weapons_handling_effect,THRESHOLD,,ENTRY,,,"* Walk and Shot, Penalty Reduction",,,,,MED
+perk_ranger,Ranger,projectile_weapons_handling_roll,projectile_weapons_handling_effect,,,ENTRY,,,Shot and Take Cover -,,,,,LOW
+perk_long_range,Long Range,projectile_weapons_handling_roll,projectile_weapons_handling_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Long Range Shoot - Increases Range,,,,,MED
+perk_bookworm,Bookworm,knowledge_specific_roll,knowledge_specific_effect,COVERAGE,,ENTRY,,,Literary Comprehencion,,,,,LOW
+perk_learned,Learned,knowledge_specific_roll,knowledge_specific_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Skill Bonus -,,,,,LOW
+perk_researcher,Researcher,information_gain,knowledge_specific_effect,COVERAGE,,ENTRY,,,when researching you obtain more info,,,,,HIGH
+perk_eidetic_memory,Eidetic Memory,knowledge_specific_roll,knowledge_specific_effect,COVERAGE,,ENTRY,,,Heightened Retention,,,,,LOW
+perk_natural_circle,Natural Circle,nature_focus_roll,nature_focus_effect,COVERAGE,,ENTRY,,,"you have a speciality terrain enviroment, when dealing with this terrain you get a free raise on any skill interacting with the enviroment.",,,,,LOW
+perk_green_purity,Green Purity,nature_focus_roll,nature_focus_effect,FLAT_BONUS,,ENTRY,ABILITY,NATURAL,you are endowed with natural's blessings and your body is stronger aganist external ills such as poison and other forms of natural hazzards.,,,,,LOW
+perk_spirit_guide,Spirit Guide,summon_power,nature_focus_effect,PERMISSION,PERMISSION,ENTRY,,,"you may attract a spirit guide, a spirit animal capable of guidance",,,,,HIGH
+perk_natural_harmony,Natural Harmony,initiative,nature_focus_effect,THRESHOLD,THRESHOLD,ENTRY,,,"as long as you keep calm and composed, you can blend in natural enviroments, animals will consider you less of a threat and some predators will simply ignore you. This skill brings bonus when you are within natural enviroments, in game terms animals and some monsters will have a bonus ""reaction adjustement"" toward the user, in some extreme cases animals might even attack those who hold ill will towards the user",,,,,HIGH
+perk_eye_to_detail,Eye to Detail,information_gain,investigation_effect,COVERAGE,,ENTRY,,,Obtain more information from a single clue,,,,,HIGH
+perk_inspector,Inspector,investigation_roll,investigation_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Skill Bonus -,,,,,LOW
+perk_reveal_secret,Reveal Secret,stealth,investigation_effect,COVERAGE,,ENTRY,,,"you have a higher chance to find hidden doors, comparments, or simple clues",,,,,HIGH
+perk_master_of_details,Master of Details,resistance_mental,investigation_effect,COVERAGE,,ENTRY,,,"deduce details others overlooked. When close some details will be highlighted for the player. The player must examine details closely for them to be highlighted, otherwise, they will be overlooked. This feat grants a lot of information, an much of this can be useless for a investigation case, so its up to the player to use it. For example: a murder was made by a left handed criminal, however this is invisible unless the player examines the inury directly to obtain more details",,,,,HIGH
+perk_wild_catch,Wild Catch,farming_roll,taming_effect,,,ENTRY,,,"you are adept at catching wild animals or monsters, it lowers the requieriments needed for a tame",,,,,LOW
+perk_tame_specialist,Tame Specialist,farming_roll,taming_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,MAGIC,you have a bonus toward a single type of creature when dealing in control and management.,,,,,MED
+perk_growth_correction,Growth Correction,resistance_mental,taming_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,"each level and growth phase one of your tamed creatures obtain, will add a small bonus to the creature gains, the total gains is about 20%",,,,,HIGH
+perk_multi_cultural,Multi Cultural,linguistics_roll,linguistics_effect,COVERAGE,,ENTRY,,,Translator,,,,,LOW
+perk_cipher,Cipher,linguistics_roll,linguistics_effect,COVERAGE,,ENTRY,,,Encode or Decode,,,,,LOW
+perk_ancient_culture,Ancient Culture,linguistics_roll,linguistics_effect,COVERAGE,,ENTRY,,,Ancient Language,,,,,LOW
+perk_cultural_assimilation,Cultural Assimilation,movement_speed,linguistics_effect,COVERAGE,,ENTRY,,,Obtain New Languages FAST,,,,,LOW
+perk_hidden_traps,Hidden Traps,stealth,trapper_effect,,,ENTRY,,,"Trap obtain hide propiety when aplicable. Roll Trapper skill again to check the level of ""hide"", it must be in a place who offers some manner of cover",,,,,LOW
+perk_trap_sence,Trap-Sence,trapper_roll,trapper_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Bonus Dismantle Trap -,,,,,MED
+perk_trap_maker,Trap-Maker,trapper_roll,trapper_effect,PERMISSION,,ENTRY,,,Assamble improvised traps,,,,,LOW
+perk_green_thumb,Green Thumb,herbalism_roll,herbalism_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Skill Bonus -,,,,,LOW
+perk_horticulture_101,Horticulture 101,herbalism_roll,herbalism_effect,COVERAGE,,ENTRY,,,Obtain more resources from a single instance,,,,,MED
+perk_verdant_folklore,Verdant Folklore,information_gain,herbalism_effect,COVERAGE,,ENTRY,,,Special information,,,,,LOW
+perk_gathering_zone,Gathering Zone,herbalism_roll,herbalism_effect,COVERAGE,,ENTRY,,,Find Resources in area,,,,,LOW
+perk_keen_hearing,Keen Hearing,heightened_senses_roll,heightened_senses_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Bonus Sense: Ear,,,,,LOW
+perk_butcher,Butcher,dismantle_roll,dismantle_effect,COVERAGE,,ENTRY,,,obtain more booty,,,,,LOW
+perk_harvester,Harvester,dismantle_roll,dismantle_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Skill Bonus -,,,,,LOW
+perk_old_way_gourmet,Old Way Gourmet,craft_quality,dismantle_effect,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,obtain quality booty,,,,,LOW
+perk_targetting,Targetting,tracking_roll,tracking_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Skill Bonus -,,,,,LOW
+perk_hunter_vision,Hunter Vision,tracking_roll,tracking_effect,COVERAGE,,ENTRY,,,virtual mark on target,,,,,LOW
+perk_old_way_reading,Old Way Reading,information_gain,tracking_effect,COVERAGE,,ENTRY,,,obtain more info from tracks and trails,,,,,HIGH
+perk_long_range_tracking,Long Range Tracking,tracking_roll,tracking_effect,COVERAGE,,ENTRY,,,keep trailing for a long tme,,,,,LOW
+perk_the_ancient_ways,The Ancient Ways,formal_magics_roll,formal_magics_effect,COVERAGE,,ENTRY,,,Common Symbology,,,,,LOW
+perk_occult_fan,Occult Fan,formal_magics_roll,formal_magics_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Skill Bonus -,,,,,LOW
+perk_ritualist,Ritualist,formal_magics_roll,formal_magics_effect,PERMISSION,,ENTRY,,,"Enable use of Rituals, add Formal magic score to ritual performance",,,,,LOW
+perk_witchcraft,Witchcraft,craft_quality,formal_magics_effect,PERMISSION,,ENTRY,,,Acquiere one type of Witchcraft,,,,,LOW
+perk_easy_mapping,Easy-Mapping,social_deception,dungeoneer_effect,PERMISSION,,ENTRY,,,"as long as you dont perform actions which requiere all of your focus, you can perform mapping actions while moving or performing other actions, give that you keep your hands busy and have the correct supplies",,,,,HIGH
+perk_treasure_hunter,Treasure Hunter,dungeoneer_roll,dungeoneer_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,"you now how to get the most out of a dungeon exploration, you increase the loot from the dungeon. In any roll between traps or rewards mechanism you get a second roll",,,,,MED
+perk_labyrinth_breaker,Labyrinth Breaker,dungeoneer_roll,dungeoneer_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,NATURAL,"you never get lost in a labyrinth or any maze, you have a extra +5 when dealing with physical mazes and other confusing architecture,",,,,,MED
+perk_eye_for_magic,Eye for Magic,casting_speed,spellcraft_effect,PERMISSION,,ENTRY,,,Free spellcaft action on a round where you are casting a spell,,,,,LOW
+perk_magic_analyst,Magic Analyst,information_gain,spellcraft_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,CIRCUMSTANTIAL,MAGIC,Skill Bonus -,,,,,LOW
+perk_counterspell,CounterSpell,casting_speed,spellcraft_effect,PERMISSION,,ENTRY,,,Spellcasting as a Defensive Action -,,,,,LOW
+perk_spell_hacker,Spell Hacker,spell_effect,spellcraft_effect,THRESHOLD,,ENTRY,,,reduce dificulty to interfere with spells,,,,,HIGH
+perk_star_compass,Star Compass,astrology_roll,astrology_effect,COVERAGE,,ENTRY,,,More Accurate & Longer Guidance Duration -,,,,,LOW
+perk_star_reader,Star Reader,astrology_roll,astrology_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Skill Bonus -,,,,,LOW
+perk_fate_reading,Fate Reading,information_gain,astrology_effect,COVERAGE,,ENTRY,,,obtain personal info on FATE,,,,,LOW
+perk_omens,Omens,astrology_roll,astrology_effect,COVERAGE,,ENTRY,,,offer guidance to luck,,,,,LOW
+perk_traveler,Traveler,endurance,wayfarer_effect,THRESHOLD,,ENTRY,,,Travel Fatigue Reduction -,,,,,LOW
+perk_long_walker,Long Walker,wayfarer_roll,wayfarer_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Skill bonus -,,,,,LOW
+perk_pathguide,PathGuide,wayfarer_roll,wayfarer_effect,THRESHOLD,,ENTRY,,,Travel reduces bad encounters and raises good encounters,,,,,LOW
+perk_thousand_steps,Thousand Steps,wayfarer_roll,wayfarer_effect,THRESHOLD,,ENTRY,,,Reduce Travel Time,,,,,LOW
+perk_familiar_mount,Familiar Mount,summon_power,riding_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Specific Earth or Sea mount bonus stability. No need to Roll each time they perform a combat action,,,,,HIGH
+perk_experienced_rider,Experienced Rider,riding_roll,riding_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Skill bonus -,,,,,LOW
+perk_one_hand_riding,One Hand Riding,riding_roll,riding_effect,PERMISSION,,ENTRY,,,May perform common actions while riding,,,,,LOW
+perk_mount_aptitude,Mount Aptitude,craft_quality,riding_effect,COVERAGE,COVERAGE,ENTRY,,,"Mount Awakens a Unique Passive Feat, every mount has different feats, the quality of the mount insides on the rank of the feat",,,,,HIGH
+perk_strong_back,Strong Back,str_burden,,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,Weight Carry,,,,,LOW
+perk_inner_strenght,Inner Strenght,str_burden,,THRESHOLD,THRESHOLD,ENTRY,,,Reduce Fatigue Penalty,,,,,MED
+perk_popular_trends,Popular Trends,social_influence,common_lore_effect,PERMISSION,,ENTRY,,,"in any country of your culture, you can easily obtain lore about local authorities and hidden authorities, stuff like who is who and most of the common taboos. This is a information gathering perk where you can easily obtain local info or detect anomalies within a locality. This does not work outside your culture zone of influence or in cities with mixed cultures",,,,,HIGH
+perk_common_sense,Common Sense,resistance_mental,common_lore_effect,PERMISSION,PERMISSION,ENTRY,,,"Allows you to correctly gasp how people will react to certain actions, and specific reputation gained from such. Its easy to win a communit friendship if you know how to gain it.",,,,,HIGH
+perk_popular_folklore,Popular Folklore,information_gain,common_lore_effect,COVERAGE,FLAT_BONUS,ENTRY,,,obtain extra info on any historical or mythical question regarding a specific zone within your country. This includes rites and special local ettiquetes if any. This does not provide etiquete but rather gives an insight on such,,,,,HIGH
+perk_old_wisdom,Old Wisdom,resistance_mental,common_lore_effect,PERMISSION,COVERAGE,ENTRY,,,"the old ways had manners to deal with almost everything, you can tap on ancient hints once per session per each 200 pts of will power +1",,,,,HIGH
+perk_unrestrained,Unrestrained,str_arm_strenght,,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,"you are hard to capture and hard to bind, any penalty by restriction is reduced. And escape attempts get a bonus",,,,,HIGH
+perk_hand_cannon,Hand Cannon,str_arm_strenght,,PERMISSION,,ENTRY,,,"you can throw, Really farther and stronger the your average person, anything thrown with your ""Bare Hands"" counts for this",,,,,HIGH
+perk_iron_bender,Iron Bender,str_arm_strenght,,THRESHOLD,FLAT_BONUS,ENTRY,,,reduce the material resistance of up to iron and lesser materials (meaning that materials above iron are not affected),,,,,HIGH
+perk_great_fortitude,Great Fortitude,str_muscle,,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,NATURAL,you have Great Fortitude bonus on any defensive roll where your physical prowess is tested,,,,,HIGH
+perk_rubbery_muscles,Rubbery Muscles,str_muscle,,THRESHOLD,,ENTRY,,,"you have great muscles, they feel like leather or rubber. Only when defending you get a natural damage reduction",,,,,LOW
+perk_coordination,Coordination,agi_coordination,,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Chew gum and walk - Bonus when performing simultaneous actions,,,,,HIGH
+perk_heightened_balance,Heightened Balance,agi_coordination,,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,Bonus Stability -,,,,,LOW
+perk_ambidiextry,Ambidiextry,agi_coordination,,THRESHOLD,THRESHOLD,ENTRY,,,reduce penalty when using both hands,,,,,HIGH
+perk_adrenaline,Adrenaline,agi_reaction,,THRESHOLD,,ENTRY,,,when you a natural 10 in a initiative roll or when you are in less than 10% of your HP. you get second movement phase for half you alloted melee movement,,,,,LOW
+perk_heightened_reflex,Heightened Reflex,agi_reaction,,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,you have High reflexes bonus on any defensive roll where your reaction is tested,,,,,HIGH
+perk_travel_light,Travel Light,agi_movement,,FLAT_BONUS,,ENTRY,ABILITY,TERRAIN,"si usas armadura ligera o ninguna armadura y no estas cargado mas del 50% de tu peso maximo, tu indice de movimiento aumenta en 3 pts",,,,,LOW
+perk_manouverability,Manouverability,agi_movement,,THRESHOLD,THRESHOLD,ENTRY,,,"reduce penalty when twisting, turning and changing your movements",,,,,HIGH
+perk_tunnel_serpent,Tunnel Serpent,agi_movement,,THRESHOLD,,ENTRY,,,Eres considerado un tamaño menos para efecto de moverte por tuneles o rendijas,,,,,LOW
+perk_self_diagnose,Self-Diagnose,per_judgement,,PERMISSION,,ENTRY,,,"you have an acurate grasp of your own body and state, you can evaluate your own condition",,,,,HIGH
+perk_anatomy_101,Anatomy 101,per_judgement,,COVERAGE,,ENTRY,,,you receive more info about your opponents health and physical condition in combat or high tension instances,,,,,HIGH
+perk_death_sense,Death Sense,per_judgement,,COVERAGE,,ENTRY,,,you have a knack for finding threats and avoid dangerous paths.,,,,,LOW
+perk_low_light_vision,Low-Light Vision,per_senses,,PERMISSION,,ENTRY,,,"you can see better in darkness, remove some of the penalty. It does not affect total darkness or enviromental obstructions such as mist",,,,,HIGH
+perk_pitch,Pitch,per_senses,,PERMISSION,,ENTRY,,,"you have a uncanny ear for sounds, you can memorize and identify sounds easily. You can retain one sound per session",,,,,HIGH
+perk_blind_fighting,Blind Fighting,per_senses,,,,ENTRY,,,,,,,,LOW
+perk_idea,Idea,int_inspiration,,FLAT_BONUS,,ENTRY,ABILITY,TRAINING,Lightbulb,,,,,LOW
+perk_calculus,Calculus,int_inspiration,,THRESHOLD,,ENTRY,,,perform calculations instantly,,,,,LOW
+perk_sharp_mind,Sharp Mind,per_judgement,,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,"Cynical, recibes un bono de +5 contra tiradas que impliquen engaños y confusion",,,,,HIGH
+perk_scrounger,Scrounger,per_judgement,,PERMISSION,,ENTRY,,,"when searching for loot you can find more things, you are really throught in your search!. It also benefits dismantle and other similar events",,,,,HIGH
+perk_mental_strenght,Mental Strenght,per_judgement,,,,ENTRY,,,Mental Recovery,,,,,LOW
+perk_voracious_reader,Voracious Reader,int_focus,,COVERAGE,,ENTRY,,,"you are a beast to read written material, you cut in half any time dedicated to reading",,,,,LOW
+perk_high_focus,High Focus,int_focus,,PERMISSION,,ENTRY,,,"when focused you are not completely out of it, this allows you maintain a higher degree of movility, defense and interactivity than normal people",,,,,HIGH
+perk_photo_memory,Photo Memory,int_focus,,PERMISSION,,ENTRY,,,"you can memorize one image per session, the recorded scene its quite clear and when used can ask the DM to retell the scene or ask for more details. When the session ends the memory is lost",,,,,HIGH
+perk_strong_soul,Strong Soul,wil_supernatural,,FLAT_BONUS,,ENTRY,ABILITY,MORALE,Strong Soul -,,,,,LOW
+perk_power_spot,Power Spot,wil_supernatural,,COVERAGE,,ENTRY,,,Leyline Discovery -,,,,,LOW
+perk_mana_rejection,Mana Rejection,wil_supernatural,,THRESHOLD,,ENTRY,,,"you reject mana by sheer will, reducing magic based damage",,,,,LOW
+perk_stoic,Stoic,wil_poise,,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,"you gain a bonus based on your alignement, this bonus counters actions that go against your alignment. Thus a evil character may resist ""Redeption"" if the player wishes so",,,,,HIGH
+perk_impartial_belief,Impartial Belief,wil_poise,,,,ENTRY,,,you try your best to be impartial and not judgemental,,,,,LOW
+perk_happy_camper,Happy Camper,wil_fortitude,,THRESHOLD,,ENTRY,,,the stress and penalty for living and travelling on a wilderness is reduced,,,,,LOW
+perk_pain_tolerance,Pain Tolerance,wil_fortitude,,THRESHOLD,THRESHOLD,ENTRY,,,"when resisting pain, injury and wound you can reduce the penalty.",,,,,HIGH
+perk_iron_will,Iron Will,wil_fortitude,,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,"you have an iron will, bonus on any defensive roll where you will is tested",,,,,HIGH

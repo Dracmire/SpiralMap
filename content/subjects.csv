@@ -1,0 +1,89 @@
+id,name,category
+attack_roll,Attack roll,ABILITY
+damage,Damage dealt,ABILITY
+defense,Defense / avoidance,ABILITY
+block,Blocking with a shield,ABILITY
+armor_protection,Armor protection value,ABILITY
+initiative,Initiative / acting order,ABILITY
+movement_speed,Movement speed,ABILITY
+carry_capacity,Carry capacity / burden,ABILITY
+endurance,Endurance / fatigue,ABILITY
+vitality,Vitality / hit points,ABILITY
+resistance_fear,Resistance to fear,ABILITY
+resistance_climate,Resistance to climate,ABILITY
+resistance_mana,Resistance to mana effects,ABILITY
+resistance_pain,Resistance to pain / stun,ABILITY
+resistance_mental,Resistance to mental influence,ABILITY
+casting_speed,Casting speed,ABILITY
+mana_cost,Mana cost,ABILITY
+spell_effect,Spell effect magnitude,ABILITY
+social_influence,Persuading or inspiring others,CIRCUMSTANTIAL
+social_deception,Deceiving or misdirecting,CIRCUMSTANTIAL
+social_insight,Reading people and motives,CIRCUMSTANTIAL
+information_gain,Information obtained,CIRCUMSTANTIAL
+detection,Noticing and detecting,CIRCUMSTANTIAL
+stealth,Remaining unnoticed,CIRCUMSTANTIAL
+profit,Money and profit,CIRCUMSTANTIAL
+craft_quality,Crafted output quality,ABILITY
+summon_power,Summoned or called allies,ABILITY
+agi_coordination,Agi Coordination,ABILITY
+agi_movement,Agi Movement,ABILITY
+agi_reaction,Agi Reaction,ABILITY
+int_focus,Int Focus,ABILITY
+int_inspiration,Int Inspiration,ABILITY
+per_judgement,Per Judgement,ABILITY
+per_senses,Per Senses,ABILITY
+str_arm_strenght,Str Arm Strenght,ABILITY
+str_burden,Str Burden,ABILITY
+str_muscle,Str Muscle,ABILITY
+wil_fortitude,Wil Fortitude,ABILITY
+wil_poise,Wil Poise,ABILITY
+wil_supernatural,Wil Supernatural,ABILITY
+acting_roll,Acting Roll,ABILITY
+alert_roll,Alert Roll,ABILITY
+animal_empathy_roll,Animal Empathy Roll,ABILITY
+apraisal_roll,Apraisal Roll,ABILITY
+astrology_roll,Astrology Roll,ABILITY
+athletism_roll,Athletism Roll,ABILITY
+basic_mana_discipline_roll,Basic Mana Discipline Roll,ABILITY
+battle_roll,Battle Roll,ABILITY
+bluff_roll,Bluff Roll,ABILITY
+brawling_roll,Brawling Roll,ABILITY
+building_simple_building_digging_etc_roll,Building Simple Building Digging Etc Roll,ABILITY
+comerce_roll,Comerce Roll,ABILITY
+cooking_roll,Cooking Roll,ABILITY
+craft_roll,Craft Roll,ABILITY
+dismantle_roll,Dismantle Roll,ABILITY
+dungeoneer_roll,Dungeoneer Roll,ABILITY
+farming_roll,Farming Roll,ABILITY
+formal_magics_roll,Formal Magics Roll,ABILITY
+haggle_roll,Haggle Roll,ABILITY
+healing_roll,Healing Roll,ABILITY
+heightened_senses_roll,Heightened Senses Roll,ABILITY
+herbalism_roll,Herbalism Roll,ABILITY
+intimidation_roll,Intimidation Roll,ABILITY
+investigation_roll,Investigation Roll,ABILITY
+knowledge_specific_roll,Knowledge Specific Roll,ABILITY
+light_weapons_handling_roll,Light Weapons Handling Roll,ABILITY
+linguistics_roll,Linguistics Roll,ABILITY
+lockpick_roll,Lockpick Roll,ABILITY
+magic_obj_roll,Magic Obj Roll,ABILITY
+magic_obj_scyring_roll,Magic Obj Scyring Roll,ABILITY
+mechanics_roll,Mechanics Roll,ABILITY
+melee_weapons_handling_roll,Melee Weapons Handling Roll,ABILITY
+mental_focus_roll,Mental Focus Roll,ABILITY
+minning_roll,Minning Roll,ABILITY
+nature_focus_roll,Nature Focus Roll,ABILITY
+observe_roll,Observe Roll,ABILITY
+perform_roll,Perform Roll,ABILITY
+piety_roll,Piety Roll,ABILITY
+projectile_weapons_handling_roll,Projectile Weapons Handling Roll,ABILITY
+rest_roll,Rest Roll,ABILITY
+riding_roll,Riding Roll,ABILITY
+sleight_of_hand_roll,Sleight Of Hand Roll,ABILITY
+spirit_sensitivity_roll,Spirit Sensitivity Roll,ABILITY
+still_mind_focus_roll,Still Mind Focus Roll,ABILITY
+tracking_roll,Tracking Roll,ABILITY
+trapper_roll,Trapper Roll,ABILITY
+wayfarer_roll,Wayfarer Roll,ABILITY
+wilderness_roll,Wilderness Roll,ABILITY
