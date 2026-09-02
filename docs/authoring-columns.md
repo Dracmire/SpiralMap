@@ -27,10 +27,27 @@ Rules that apply everywhere:
 | `text` | yes | player-facing clause |
 | `boundary` | yes | **required** — the nearest thing this does NOT grant |
 | `counterweight` | no | authored drawback for unusually strong or trait-like perks; blank when none |
+| `enhanced_threshold` | no | for perks that escalate on a secondary threshold (e.g. Anti Perks strengthening further below their ceiling); blank when the perk has no escalation tier |
+| `enhanced_text` | no | prose for the escalated effect; blank when `enhanced_threshold` is blank |
 
 `bonus_category` + `bonus_type` drive stacking. Two perks with the same `subject` **and** same
 `bonus_type` keep only the highest. Same `subject`, different `bonus_type` — they sum.
-Leave both blank for non-numeric families (PERMISSION, RELIABILITY) that grant no stackable value.
+Only **FLAT_BONUS** and **THRESHOLD** grant a stackable numeric value — leave both columns
+blank for the other four families: COVERAGE (extra info + extra info is a set union, not a
+sum), PERMISSION and RELIABILITY (no value to stack), and SUBSTITUTION (you either substitute
+or you don't).
+
+### Extraction-only conventions (not authored columns, not read by `convert.ts`'s schema checks)
+
+A extraction pass that can't responsibly commit to a design call (which effect family, which tier,
+which subject a perk belongs to) leaves the real column blank and instead writes a `*_suggested`
+column alongside it — `family_suggested`, `tier_suggested`, `subject_suggested` — as a starting
+point for the author to confirm or correct. These are conveniences for the human doing the CSV
+fixup pass, not part of the authored schema; `convert.ts` never reads them for validation, and a
+blank `family`/`tier`/`subject` still fails the normal required-column check until the real value
+is filled in. Likewise, an extraction pass may propose new subjects into `content/subjects.proposed.csv`
+without ever writing to `content/subjects.csv` itself — promoting a proposed subject into the real,
+validated `subjects.csv` is an authoring decision, not something extraction does automatically.
 
 ## `feats.csv`
 
@@ -73,6 +90,7 @@ Example: `parents = sword_focus:INTEGRATED;sword_guard:INTEGRATED;combat_initiat
 
 ```
 SKILL_LEVEL:melee_weapons:9
+SKILL_LEVEL:craft.Woodwork:3  <- parameterized skill, specific instance (period, not colon — colon is this syntax's own field separator)
 ATTRIBUTE:STR:300
 ATTRIBUTE_CEILING:CHA:120      <- Anti Perks only
 TRAIT:elemental_affinity
@@ -104,9 +122,11 @@ references it** — this is the coherence lever.
 | `value_text` | rendered into the perk card, e.g. `+1`, `automatic`, `all qualifying targets` |
 | `numeric_value` | blank for non-numeric families |
 
-> ⚠ This table does not exist yet. It is open question #1 in Savepoint v0.2, and the
-> Authoring GDD v2 §12 flags clause-tier equivalence as unproven. Author it thin first
-> (FLAT_BONUS only), let the vertical slice pressure-test it, then extend.
+> `content/effect_ladder.csv` now exists — 6 rows, all ENTRY tier (every legacy feat gates
+> at skill 1-7). `numeric_value` is authored for FLAT_BONUS only so far; the other five
+> families' `value_text` is set but `numeric_value` is still an open author decision.
+> Savepoint v0.2's open question #1 and Authoring GDD v2 §12's clause-tier-equivalence
+> concern are what's being pressure-tested — extend past ENTRY once that holds up.
 
 ## `subjects.csv`
 
@@ -131,7 +151,10 @@ Two known fixes still pending: normalize `CAR` → `CHA` (16 rows), and add `Wil
 
 Transcribed from SpiralDemo Hoja 1. Confirmed authored data, levels 1–50.
 Columns: `level`, `success_tn`, `great_tn`, `epic_tn`, `heroic_tn`, `explosion_gate`,
-`dice_pool`, `cp_cost`, `cp_cost_accum`, `mastery_label`, `cp_discount`, `knowledge_tier`.
+`effect_bonus`, `dice_pool`, `mastery_label`, `unlock`, `cp_cost`, `cp_accum`,
+`cp_cost_mastery`, `cp_accum_mastery`, `knowledge_tier`. (Corrected against the real file —
+there is no separate `cp_discount` column; the mastery discount is the delta between
+`cp_cost`/`cp_accum` and their `_mastery` counterparts.)
 
 Leave a TN blank once its band has retired. Retirement happens at the Knowledge-tier
 boundary (11, 26, 41), not a fixed number of levels after hitting the floor of 5.
@@ -146,7 +169,11 @@ boundary (11, 26, 41), not a fixed number of levels after hitting the floor of 5
 4. Feats hold 1–3 perks.
 5. No perk is owned by more than one active header.
 6. No requirement cycles.
-7. `ATTRIBUTE_CEILING` appears only on Anti Perks.
+7. `ATTRIBUTE_CEILING` appears only on Anti Perks. (`is_anti_perk` is *derived from* whether a feat
+   carries an `ATTRIBUTE_CEILING` requirement, which makes the rule's literal wording tautological —
+   implemented instead as a contradiction check: the same attribute may not carry both a plain
+   `ATTRIBUTE` floor and an `ATTRIBUTE_CEILING` on one feat where `floor >= ceiling`, an impossible
+   range. A floor strictly below the ceiling is a valid band and is not flagged.)
 8. Every perk and feat has a non-empty `boundary`.
 9. Fusion parents all exist and each carries a disposition.
 10. `TRANSFORMATIVE_CONVERSION` has a `target_trait_id`; no other operator does.

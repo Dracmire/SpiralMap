@@ -1,0 +1,47 @@
+skill_id,description
+athletism,the simple handling of your body nimbleness including general cardio and gymnastics
+dismantle,"proficiency into dismantling plants, animals and monsters to extract ingredients and byproducts"
+hide,"the ability to hide efficiently, it only allows to hide without movement"
+riding,the proficiency into using horses and other similar land riding mounts
+sleight_of_hand,the use of hand deft movements in cunning ways to peform hand tricks
+acting,performing a complete interpretation of a pre-made role/script
+animal_empathy,the ability to deal with animals and manage them without the use of force
+bluff,"proficiency in lying, flattering or gaslighting others in social environments"
+diplomacy,the ability to mediate or converse in a formal manner in social environments
+haggle,the ability to negotiate the trade of goods or advantages in a social environment
+intimidation,the ability to threaten others by using simple words and bodily language
+perform,the ability to express yourself with body language and produce basic music improvising with sounds
+spirit_sensitivity,the ability to sense spirits and interact with the unseen supernatural world in a simple manner
+astrology,the proficiency to gaze into the stars and other omens and derive some abstract fortune from it
+craft,the specialized ability to craft items usign specific tools (this ability needs to be specialized)
+culture_lore,the general knowledge of the subtleties of the current culture and common knowlesdge in your geographical zone
+formal_magics,"the knowledge to use basic forms, traces, drawings and simple materials to perform very basic magic under the right conditions"
+herbalism,the knowledge about simple herbs and other natural plant resources
+linguistics,the ability to understand foreign languages and decipher all manners of
+lockpick,the ability to picklocks and open closed doors and other mechanism by using simple tools
+mechanics,proficiency in all manners of simple machinery and their usage
+trapper,the ability to either use and place simple traps efficiently or disable them
+alert,keen senses capable of perceiving direct threats and other unseen dangers
+battle,basic tactical understanding and common battle practices for warriors
+investigation,the ability to derive secrets and research related content to pursue a specific truth
+sense_motive,the proficiency to understand social nuances and understand a person interests in a social environment
+spellcraft,the knowledge about general spells and magical phenomena in a way where its easy to adress them
+streetwise,proficiency in the dealings of the low ranks as well as the ability to extract information from it
+tracking,proficiency following trails and tracks of land walking creatures in natural environments
+climbing,physical prowess to climb into high places by using ledges and natural terrain roughness
+handicraft,"proficiency in all manners of simple crafting (non-specific), useful from repairs to crafting of improvised items, the medieval equivalent of DIY"
+inclemence,the physical ability to endure harsh environmental conditions and adapt to diferent
+minning,"proficiency on excavating soil, rock mining and general landwork in a efficient manner, its very physical work"
+rest,the ability to rest in a deeper and more efficient manner aiming to block out disturbances
+cooking,"proficiency in cooking simple meals using common materials, it produces consumable items"
+discipline,the ability to ignore and endure distractions and feints in combat to heighten your combat focus
+farming,the production ability to work the land in order to generate produce in long terms
+healing,the basic medical skill to treat simple wounds and other physical traumas
+mental_focus,the ability to keep your mental focus while enduring damages and distractions to the user
+wayfarer,the knowledge of the land and the ability to recognize signs of potential road dangers
+brawling,The main proficiency of physical close quarter combat using bare hands
+nature_focus,the main proficiency of using natural abilities and commune with nature
+basic_mana_discipline,the main proficiency of using mana based spells and abilities of mystical origin (requieres specialization)
+mana_sensitivity,the main proficiency of attuning oneself with mana in your surroundings and commune with it
+piety,The main proficiency for attuning oneself with divine power and commune with it
+still_mind_focus,The main proficiency for self discipline and attaining clarity on combat

@@ -1,0 +1,24 @@
+id,name,perk_ids,job,authority_root_type,authority_root_id,practice_root_id,fusion_root_id,requirements,sources,rarity,zone_id,cp_cost,boundary,skill_group,block,future_parent_id,note
+influencer,Influencer,perk_influencer,PROGRESS,SKILL,court,influencer,,SKILL_LEVEL:court:1,,COMMON,,1,,High Class,SUPPORT,sense_motive,"heraldry + social defence; high rank, not entry"
+suggestion,Suggestion,perk_suggestion,PROGRESS,SKILL,court,influencer,,SKILL_LEVEL:court:5,,COMMON,,1,,High Class,SUPPORT,sense_motive,"heraldry + social defence; high rank, not entry"
+shrewd_merchant,Shrewd Merchant,perk_shrewd_merchant,PROGRESS,SKILL,comerce,businessman,,SKILL_LEVEL:comerce:3,,COMMON,,1,,Merchant,SUPPORT,haggle,or derived from Knowledge
+trust_is_everything,Trust is Everything,perk_trust_is_everything,PROGRESS,SKILL,comerce,businessman,,SKILL_LEVEL:comerce:5,,COMMON,,1,,Merchant,SUPPORT,haggle,or derived from Knowledge
+midas_touch,Midas Touch,perk_midas_touch,PROGRESS,SKILL,comerce,businessman,,SKILL_LEVEL:comerce:7,,COMMON,,1,,Merchant,SUPPORT,haggle,or derived from Knowledge
+tough,Tough!,perk_tough,PROGRESS,SKILL,inclemence,tough,,SKILL_LEVEL:inclemence:1,,COMMON,,1,,Survivalist,SUPPORT,,no genuine actions; later branch
+thick_skinned,Thick Skinned,perk_thick_skinned,PROGRESS,SKILL,inclemence,tough,,SKILL_LEVEL:inclemence:3,,COMMON,,1,,Survivalist,SUPPORT,,no genuine actions; later branch
+magic_fortitude,Magic Fortitude,perk_magic_fortitude,PROGRESS,SKILL,inclemence,tough,,SKILL_LEVEL:inclemence:5,,COMMON,,1,,Survivalist,SUPPORT,,no genuine actions; later branch
+iron_man,Iron Man,perk_iron_man,PROGRESS,SKILL,inclemence,tough,,SKILL_LEVEL:inclemence:7,,COMMON,,1,,Survivalist,SUPPORT,,no genuine actions; later branch
+tanning,Tanning,perk_tanning,PROGRESS,SKILL,handcraft_sewing_leather,tanning,,SKILL_LEVEL:handcraft_sewing_leather:1,,COMMON,,1,,Artisan,SUPPORT,handicraft,HandiCraft later branch (burden reduction)
+monster_weaver,Monster Weaver,perk_monster_weaver,PROGRESS,SKILL,handcraft_sewing_leather,tanning,,SKILL_LEVEL:handcraft_sewing_leather:7,,COMMON,,1,,Artisan,SUPPORT,handicraft,HandiCraft later branch (burden reduction)
+handyman,Handyman,perk_handyman,PROGRESS,SKILL,building_simple_building_digging_etc,handyman,,SKILL_LEVEL:building_simple_building_digging_etc:1,,COMMON,,1,,Engineer,SUPPORT,craft,absorbed by Craft and Minning
+cutting_corners,Cutting Corners,perk_cutting_corners,PROGRESS,SKILL,building_simple_building_digging_etc,handyman,,SKILL_LEVEL:building_simple_building_digging_etc:3,,COMMON,,1,,Engineer,SUPPORT,craft,absorbed by Craft and Minning
+demolition_expert,Demolition Expert,perk_demolition_expert,PROGRESS,SKILL,building_simple_building_digging_etc,handyman,,SKILL_LEVEL:building_simple_building_digging_etc:5,,COMMON,,1,,Engineer,SUPPORT,craft,absorbed by Craft and Minning
+constructor,Constructor,perk_constructor,PROGRESS,SKILL,building_simple_building_digging_etc,handyman,,SKILL_LEVEL:building_simple_building_digging_etc:7,,COMMON,,1,,Engineer,SUPPORT,craft,absorbed by Craft and Minning
+image_crystal,Image Crystal,perk_image_crystal,PROGRESS,SKILL,magic_obj_scyring,image_crystal,,SKILL_LEVEL:magic_obj_scyring:1,,COMMON,,1,,MAGE,CORE,magic_obj,specific of Magic Obj
+record_crystal,Record Crystal,perk_record_crystal,PROGRESS,SKILL,magic_obj_scyring,image_crystal,,SKILL_LEVEL:magic_obj_scyring:3,,COMMON,,1,,MAGE,CORE,magic_obj,specific of Magic Obj
+far_scry,Far Scry,perk_far_scry,PROGRESS,SKILL,magic_obj_scyring,image_crystal,,SKILL_LEVEL:magic_obj_scyring:5,,COMMON,,1,,MAGE,CORE,magic_obj,specific of Magic Obj
+clariaudience,Clariaudience,perk_clariaudience,PROGRESS,SKILL,magic_obj_scyring,image_crystal,,SKILL_LEVEL:magic_obj_scyring:7,,COMMON,,1,,MAGE,CORE,magic_obj,specific of Magic Obj
+keen_hearing,Keen Hearing,perk_keen_hearing,PROGRESS,SKILL,heightened_senses,keen_hearing,,SKILL_LEVEL:heightened_senses:1,,COMMON,,1,,EXPLORER,CORE,alert,advanced Alert branch
+easy_mapping,Easy-Mapping,perk_easy_mapping,PROGRESS,SKILL,dungeoneer,seeker,,SKILL_LEVEL:dungeoneer:3,,COMMON,,1,,EXPLORER,CORE,wilderness,also Wayfarer branches
+treasure_hunter,Treasure Hunter,perk_treasure_hunter,PROGRESS,SKILL,dungeoneer,seeker,,SKILL_LEVEL:dungeoneer:5,,COMMON,,1,,EXPLORER,CORE,wilderness,also Wayfarer branches
+labyrinth_breaker,Labyrinth Breaker,perk_labyrinth_breaker,PROGRESS,SKILL,dungeoneer,seeker,,SKILL_LEVEL:dungeoneer:7,,COMMON,,1,,EXPLORER,CORE,wilderness,also Wayfarer branches

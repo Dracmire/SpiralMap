@@ -1,0 +1,80 @@
+legacy_skill_id,legacy_skill_name,feat_count,disposition,canonical_id,canonical_name,future_parent_id,future_parent_name,instance,matched_by,note
+heavy_weapons_handling,Heavy Weapons Handling,4,MAP,melee_weapons_handling,Melee Weapons Handling,,,,AUTHOR_STATED,renamed
+shield,Shield,4,MAP,full_armor_handling,Full Armor Handling,,,,AUTHOR_STATED,absorbed; shield branch comes later
+light_weapons_handling,Light Weapons Handling,4,MAP,light_weapons_handling,Light Weapons Handling,,,,AUTHOR_STATED,
+throwing_weapons_handling,Throwing Weapons Handling,4,MAP,projectile_weapons_handling,Projectile Weapons Handling,,,,AUTHOR_STATED,also reachable as Light Weapons -> Throwing Blades branch
+inclemence,Inclemence,4,BRANCH_LATER,,,,,,AUTHOR_STATED,no genuine actions; later branch
+basic_single_elementalism,Basic Single Elementalism,4,MAP,basic_mana_discipline,Basic Mana Discipline,,,,AUTHOR_STATED,grouped
+basic_reinforcement_magic,Basic Reinforcement Magic,4,MAP,basic_mana_discipline,Basic Mana Discipline,,,,AUTHOR_STATED,grouped
+basic_interference_magic,Basic Interference Magic,4,MAP,basic_mana_discipline,Basic Mana Discipline,,,,AUTHOR_STATED,grouped
+mechanics,Mechanics,4,MAP,mechanics,Mechanics,,,,EXACT,
+building_simple_building_digging_etc,Building Simple Building Digging Etc,4,BRANCH_LATER,,,craft,Craft,,AUTHOR_STATED,absorbed by Craft and Minning
+magic_obj_scyring,Magic Obj Scyring,4,BRANCH_LATER,,,magic_obj,Magic Obj,,AUTHOR_STATED,specific of Magic Obj
+observe,Observe,4,DISCARD,,,,,,AUTHOR_STATED,"wildcard, not thematized; returns as Alert -> Heightened Senses"
+perform_music_instrument,Perform Music Instrument,4,MAP_INSTANCE,perform,Perform,,,Music Instrument,AUTHOR_STATED,declared specialty
+spiritism_faith,Spiritism Faith,4,MAP,piety,Piety,,,,AUTHOR_STATED,all faiths need Piety base
+perform_singing,Perform Singing,4,MAP_INSTANCE,perform,Perform,,,Singing,AUTHOR_STATED,declared specialty
+truth_faith,Truth Faith,4,MAP,piety,Piety,,,,AUTHOR_STATED,all faiths need Piety base
+perform_dancing_show,Perform Dancing Show,4,MAP_INSTANCE,perform,Perform,,,Dancing/Show,AUTHOR_STATED,declared specialty
+spirit_sensitivity,Spirit Sensitivity,4,MAP,spirit_sensitivity,Spirit Sensitivity,,,,EXACT,
+piety,Piety,4,MAP,piety,Piety,,,,AUTHOR_STATED,all faiths need Piety base
+farming_animal_husbandry,Farming Animal Husbandry,4,MAP,farming,Farming,,,,AUTHOR_STATED,"collapsed: wide entry, narrow branches"
+farming_plant_crops,Farming Plant Crops,4,MAP,farming,Farming,,,,AUTHOR_STATED,collapsed
+farming_artisan_goods,Farming Artisan Goods,4,MAP,farming,Farming,,,,AUTHOR_STATED,collapsed
+animal_empathy,Animal Empathy,4,MAP,animal_empathy,Animal Empathy,,,,EXACT,
+projectile_weapons_handling,Projectile Weapons Handling,4,MAP,projectile_weapons_handling,Projectile Weapons Handling,,,,EXACT,
+knowledge_specific,Knowledge Specific,4,MAP,knowledge_specific,Knowledge (Specific),,,,EXACT,
+nature_focus,Nature Focus,4,MAP,nature_focus,"Nature, Focus",,,,EXACT,
+investigation,Investigation,4,MAP,investigation,Investigation,,,,EXACT,
+linguistics,Linguistics,4,MAP,linguistics,Linguistics,,,,EXACT,
+herbalism,Herbalism,4,MAP,herbalism,Herbalism,,,,EXACT,
+tracking,Tracking,4,MAP,tracking,Tracking,,,,EXACT,
+formal_magics,Formal Magics,4,MAP,formal_magics,Formal Magics,,,,EXACT,
+spellcraft,Spellcraft,4,MAP,spellcraft,Spellcraft,,,,EXACT,
+astrology,Astrology,4,MAP,astrology,Astrology,,,,EXACT,
+wayfarer,Wayfarer,4,MAP,wayfarer,Wayfarer,,,,EXACT,
+sense_motive,Sense Motive,3,MAP,sense_motive,Sense Motive,,,,EXACT,
+discipline,Discipline,3,MAP,discipline,Discipline,,,,EXACT,
+streetwise,Streetwise,3,MAP,streetwise,Streetwise,,,,EXACT,
+comerce,Comerce,3,BRANCH_LATER,,,haggle,Haggle,,AUTHOR_STATED,or derived from Knowledge
+light_armor_handling,Light Armor Handling,3,MAP,light_armor_handling,Light Armor Handling,,,,EXACT,
+wilderness,Wilderness,3,MAP,wilderness,Wilderness,,,,EXACT,
+hide,Hide,3,MAP,hide,Hide,,,,EXACT,
+sleight_of_hand,Sleight Of Hand,3,MAP,sleight_of_hand,Sleight of Hand,,,,EXACT,
+climbing,Climbing,3,MAP,climbing,Climbing,,,,EXACT,
+minning,Minning,3,MAP,minning,Minning,,,,EXACT,
+craft_metalwork,Craft Metalwork,3,MAP_INSTANCE,craft,Craft,,,Metalwork,AUTHOR_STATED,"specialized industry, zone-local"
+magic_obj_common,Magic Obj Common,3,MAP,magic_obj,Magic Obj,,,,FUZZY_0.73,
+magic_obj_shield,Magic Obj Shield,3,MAP,magic_obj,Magic Obj,,,,FUZZY_0.73,
+holy_light_faith,Holy Light Faith,3,MAP,piety,Piety,,,,AUTHOR_STATED,all faiths need Piety base
+artcraft_drawing_painting_etc,Artcraft Drawing Painting Etc,3,MAP_INSTANCE,craft,Craft,,,Drawing/Painting,AUTHOR_STATED,Art folded into Craft as a declared specialization
+healing,Healing,3,MAP,healing,Healing,,,,EXACT,
+acting_circus_entertainer,Acting Circus Entertainer,3,MAP,acting,Acting,,,,AUTHOR_STATED,collapsed
+acting_theatre_comedy_etc,Acting Theatre Comedy Etc,3,MAP,acting,Acting,,,,AUTHOR_STATED,collapsed
+grappling,Grappling,3,MAP,brawling,Brawling,,,,FUZZY_0.71,
+cooking,Cooking,3,MAP,cooking,Cooking,,,,EXACT,
+still_mind_focus,Still Mind Focus,3,MAP,still_mind_focus,"Still Mind, Focus",,,,EXACT,
+alert,Alert,3,MAP,alert,Alert,,,,EXACT,
+athletism,Athletism,3,MAP,athletism,Athletism,,,,EXACT,
+rest,Rest,3,MAP,rest,REST,,,,EXACT,
+taming,Taming,3,MAP,farming,Farming,,,,FUZZY_0.77,
+trapper,Trapper,3,MAP,trapper,Trapper,,,,EXACT,
+dismantle,Dismantle,3,MAP,dismantle,Dismantle,,,,EXACT,
+dungeoneer,Dungeoneer,3,BRANCH_LATER,,,wilderness,Wilderness,,AUTHOR_STATED,also Wayfarer branches
+heavy_armor_handling,Heavy Armor Handling,2,MAP,full_armor_handling,Full Armor Handling,,,,AUTHOR_STATED,renamed; covers armor + shields
+court,Court,2,BRANCH_LATER,,,sense_motive,Sense Motive,,AUTHOR_STATED,"heraldry + social defence; high rank, not entry"
+intimidation,Intimidation,2,MAP,intimidation,Intimidation,,,,EXACT,
+bluff,Bluff,2,MAP,bluff,Bluff,,,,EXACT,
+battle,Battle,2,MAP,battle,Battle,,,,EXACT,
+temptation,Temptation,2,MAP,bluff,Bluff,,,,AUTHOR_STATED,needs social touch to influence
+haggle,Haggle,2,MAP,haggle,Haggle,,,,EXACT,
+apraisal,Apraisal,2,MAP,apraisal,Apraisal,,,,EXACT,
+handcraft_sewing_leather,Handcraft Sewing Leather,2,BRANCH_LATER,,,handicraft,HandiCraft,,AUTHOR_STATED,HandiCraft later branch (burden reduction)
+craft_woodwork,Craft Woodwork,2,MAP_INSTANCE,craft,Craft,,,Woodwork,AUTHOR_STATED,"specialized industry, zone-local"
+mana_sensitivity,Mana Sensitivity,2,MAP,mana_sensitivity,Mana Sensitivity,,,,EXACT,
+artcraft_sculpting_engraving_etc,Artcraft Sculpting Engraving Etc,2,MAP_INSTANCE,craft,Craft,,,Sculpting/Engraving,AUTHOR_STATED,Art folded into Craft as a declared specialization
+brawling,Brawling,2,MAP,brawling,Brawling,,,,EXACT,
+diplomacy,Diplomacy,1,MAP,diplomacy,Diplomacy,,,,EXACT,
+lockpick,Lockpick,1,MAP,lockpick,Lockpick,,,,EXACT,
+concentration,Concentration,1,MAP,mental_focus,Mental Focus,,,,AUTHOR_STATED,
+heightened_senses,Heightened Senses,1,BRANCH_LATER,,,alert,Alert,,AUTHOR_STATED,advanced Alert branch
