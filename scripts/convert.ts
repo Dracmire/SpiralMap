@@ -22,7 +22,7 @@ import { parseCsv, stringifyCsv, type CsvRow } from "./lib/csv.ts";
 import { parseRequirements, parseSources, parseFusionParents } from "./lib/parsers.ts";
 import { maxTier, skillLevelToTier } from "./lib/tier.ts";
 import { loadReferenceData } from "./adapters/reference.ts";
-import { loadClassContent } from "./adapters/classes.ts";
+import { loadClassLadder } from "./adapters/class_ladder.ts";
 import type {
   Perk,
   Feat,
@@ -388,27 +388,32 @@ const subjects = subjectsCsv.rows.map((r) => ({
 const subjectsById = new Map(subjects.map((s) => [s.id, s]));
 
 // ─────────────────────────────────────────────────────────────
-// Class content (classes/class_tiers/unlock_lines/keystones) — see
-// docs/authoring-classes.md and scripts/adapters/classes.ts for the 7 validation
-// rules and the long-format-CSV -> wide-ClassTierRow grouping.
+// Class ladder (content/class_ladder.csv) — 8 trees, star 0-3. Supersedes Phase 6's
+// classes.csv/class_tiers.csv/unlock_lines.csv/keystones.csv (deleted — that shape
+// didn't match the real data). SpiralDataset.classes/unlock_lines/keystones go back
+// to empty stubs: Insight (CharacterClass.aligned_skill_ids/aligned_attribute_
+// breakpoints) is a real, unrelated mechanic that this phase doesn't touch, but
+// nothing currently authors that shape either.
 // ─────────────────────────────────────────────────────────────
 
-const classContent = loadClassContent(CONTENT_DIR, skillsById, featsById);
-classContent.errors.forEach((m) => errors.push(m)); // already sheet!row-formatted by the adapter
+const classLadderResult = loadClassLadder(CONTENT_DIR);
+classLadderResult.errors.forEach((m) => errors.push(m)); // already sheet!row-formatted by the adapter
 
 // ─────────────────────────────────────────────────────────────
 // Rule 1: every id referenced by another sheet exists.
 // Scope: perk_ids, PRIOR_NODE targets, fusion parents' feat_id, SKILL_LEVEL targets,
 // authority_root_id (SKILL type), ATTRIBUTE/ATTRIBUTE_CEILING targets against the
-// fixed attribute code set. CLASS/CLASS_TIER/INSIGHT targets now resolve against real
-// classes[]; TRAIT targets are checked too, but traits[] is stubbed empty this phase,
-// so those legitimately fail unless the content never uses them. Unresolved SKILL
-// references from legacy_*.csv are downgraded to warnings under --draft (pending
-// content/skill_reconciliation.csv).
+// fixed attribute code set. CLASS/CLASS_TIER/INSIGHT targets check against classes[]
+// (empty this phase — see above, so those legitimately fail unless unused). CRITERIA
+// targets check against class_ladder.csv's real class ids instead. TRAIT targets are
+// checked too, but traits[] is stubbed empty this phase, so those legitimately fail
+// unless the content never uses them. Unresolved SKILL references from legacy_*.csv
+// are downgraded to warnings under --draft (pending content/skill_reconciliation.csv).
 // ─────────────────────────────────────────────────────────────
 
 const ATTRIBUTE_CODES = new Set(["STR", "AGI", "INT", "PER", "WIL", "CHA"]);
-const classesById = new Map(classContent.classes.map((c) => [c.id, c]));
+const classesById = new Map<string, unknown>(); // stubbed [] — see class ladder comment above
+const classLadderById = new Map(classLadderResult.classes.map((c) => [c.id, c]));
 const traitsById = new Map<string, unknown>(); // stubbed []
 
 /**
@@ -455,6 +460,9 @@ function checkRequirementTargets(sheet: string, row: number, requirements: Requi
         break;
       case "VERB":
         // no dedicated verb-id sheet ingested this phase; not checked.
+        break;
+      case "CRITERIA":
+        if (!classLadderById.has(req.target)) err(sheet, row, `requirement CRITERIA references unknown class_ladder.csv class "${req.target}"`);
         break;
     }
   }
@@ -791,9 +799,10 @@ const dataset: SpiralDataset & { _valid: boolean; _draft?: boolean; _error_count
   feats,
   fusions,
   traits: [],
-  classes: classContent.classes,
-  unlock_lines: classContent.unlock_lines,
-  keystones: classContent.keystones,
+  classes: [],
+  unlock_lines: [],
+  keystones: [],
+  class_ladder: classLadderResult.classes,
   effect_ladder: [...ladderByPair.values()],
   skill_level_table: reference.skill_level_table,
   subjects,

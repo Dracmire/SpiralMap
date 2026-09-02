@@ -1,4 +1,0 @@
-line_id,name,class_id,star,member_feat_ids,description
-line_warrior_1,Warrior Line 1,warrior,1,vanguard;stout_defender;thundering,Pool of feats a Generalist Warrior may draw from at 1-star.
-line_warrior_2,Warrior Line 2,warrior,2,,PLACEHOLDER — resolves class_tiers.csv's star-2 GENERALIST grant_id; member_feat_ids not yet authored, left blank rather than guessed.
-,,,,,

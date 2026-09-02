@@ -35,6 +35,13 @@ export function CostPanel({ dataset }: { dataset: Dataset }) {
         <span>Saved by group discount</span>
         <span>{cost.skill_discount_saved}</span>
       </div>
+      <div className={cost.fate_over_budget ? "cost-row cost-fate cost-over-budget" : "cost-row cost-fate"}>
+        <span>FATE spent</span>
+        <span>
+          {cost.fate_spent} / {cost.fate_max}
+          {cost.fate_over_budget && " — over budget"}
+        </span>
+      </div>
 
       {cost.skill_lines.length > 0 && (
         <>

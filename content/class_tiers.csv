@@ -1,9 +1,0 @@
-class_id,star,path,insight_required,level_min,grant_kind,grant_id,subclass_name,notes
-warrior,0,ENTRY,0,1,,,,Entry Warrior. No fork yet.
-warrior,1,GENERALIST,100,10,LINE,line_warrior_1,,Unlocks Line 1 pool.
-warrior,1,SPECIALIST,101,10,SUBCLASS,,Swordsman,One of Swordsman / Barbarian / Soldier.
-warrior,1,SPECIALIST,101,10,SUBCLASS,,Barbarian,
-warrior,1,SPECIALIST,101,10,SUBCLASS,,Soldier,
-warrior,2,GENERALIST,200,20,LINE,line_warrior_2,,
-warrior,2,SPECIALIST,201,20,KEYSTONE,key_weapon_focus,,
-,,,,,,,,

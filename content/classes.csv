@@ -1,3 +1,0 @@
-class_id,name,tier_kind,parent_class_id,aligned_skill_ids,attribute_breakpoints,max_level,zone_id,description
-warrior,Warrior,CORE,,melee_weapons_handling;full_armor_handling;discipline;battle;athletism,STR:250:10;STR:350:20,50,,Gateway class to every combat factor. Insight accrues from aligned combat skills plus Strength breakpoints.
-,,,,,,,,

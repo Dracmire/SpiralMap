@@ -26,12 +26,17 @@ export function exportBuildToMarkdown(state: BuildState): string {
     lines.push(`- ${id}`);
   }
   lines.push("");
+  lines.push("## Criteria Ticked");
+  for (const [id, ticked] of Object.entries(state.criteria_ticked)) {
+    if (ticked) lines.push(`- ${id}`);
+  }
+  lines.push("");
   return lines.join("\n");
 }
 
 export function importBuildFromMarkdown(text: string): BuildState {
   const state = emptyBuildState();
-  let section: "skills" | "attributes" | "feats" | null = null;
+  let section: "skills" | "attributes" | "feats" | "criteria" | null = null;
 
   for (const rawLine of text.split("\n")) {
     const line = rawLine.trim();
@@ -45,6 +50,10 @@ export function importBuildFromMarkdown(text: string): BuildState {
     }
     if (line === "## Feats") {
       section = "feats";
+      continue;
+    }
+    if (line === "## Criteria Ticked") {
+      section = "criteria";
       continue;
     }
     if (line.startsWith("## ")) {
@@ -70,6 +79,8 @@ export function importBuildFromMarkdown(text: string): BuildState {
       (state.attributes as Record<string, number>)[kv[1]] = Number(kv[2]) || 0;
     } else if (section === "feats" && line.startsWith("- ")) {
       state.feat_ids.push(line.slice(2).trim());
+    } else if (section === "criteria" && line.startsWith("- ")) {
+      state.criteria_ticked[line.slice(2).trim()] = true;
     }
   }
 

@@ -60,11 +60,24 @@ export function DetailCard({ dataset, nodeId }: { dataset: Dataset; nodeId: stri
       <h3>Requirement closure {allSatisfied ? "✓ all met" : ""}</h3>
       {closure.length === 0 && <p className="hint">No requirements.</p>}
       <ul className="closure-list">
-        {closure.map((item, i) => (
-          <li key={i} className={item.satisfied ? "req-met" : "req-unmet"}>
-            <span className="req-dot">{item.satisfied ? "●" : "○"}</span> {item.label}
-          </li>
-        ))}
+        {closure.map((item, i) =>
+          item.requirement.type === "CRITERIA" ? (
+            <li key={i} className={item.satisfied ? "req-met" : "req-unmet"}>
+              <label className="req-criteria">
+                <input
+                  type="checkbox"
+                  checked={item.satisfied}
+                  onChange={() => dispatch({ type: "TOGGLE_CRITERIA", criteriaId: item.requirement.target })}
+                />{" "}
+                {item.label}
+              </label>
+            </li>
+          ) : (
+            <li key={i} className={item.satisfied ? "req-met" : "req-unmet"}>
+              <span className="req-dot">{item.satisfied ? "●" : "○"}</span> {item.label}
+            </li>
+          ),
+        )}
       </ul>
 
       <button

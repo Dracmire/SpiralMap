@@ -10,6 +10,7 @@ export function emptyBuildState(): BuildState {
     class_id: null,
     feat_ids: [],
     declared_group_ids: [],
+    criteria_ticked: {},
   };
 }
 
@@ -20,6 +21,7 @@ export type BuildAction =
   | { type: "TOGGLE_TRAIT"; traitId: string }
   | { type: "TOGGLE_FEAT"; featId: string }
   | { type: "TOGGLE_GROUP"; groupId: string }
+  | { type: "TOGGLE_CRITERIA"; criteriaId: string }
   | { type: "REPLACE_STATE"; state: BuildState };
 
 export function buildReducer(state: BuildState, action: BuildAction): BuildState {
@@ -50,6 +52,14 @@ export function buildReducer(state: BuildState, action: BuildAction): BuildState
         declared_group_ids: state.declared_group_ids.includes(action.groupId)
           ? state.declared_group_ids.filter((g) => g !== action.groupId)
           : [...state.declared_group_ids, action.groupId],
+      };
+    case "TOGGLE_CRITERIA":
+      return {
+        ...state,
+        criteria_ticked: {
+          ...state.criteria_ticked,
+          [action.criteriaId]: !state.criteria_ticked[action.criteriaId],
+        },
       };
     case "REPLACE_STATE":
       return action.state;

@@ -82,13 +82,17 @@ export type RequirementType =
   | "PRIOR_NODE"
   | "CLASS"
   | "CLASS_TIER"
-  | "INSIGHT";           // added: Class star-rank track gates on Insight, not CP
+  | "INSIGHT"            // added: Class star-rank track gates on Insight, not CP
+  | "CRITERIA";          // added: a checkable quest counter (Phase 7 class ladder), boolean,
+                          // ticked manually in play — not evaluated from any other BuildState field
 
 export interface Requirement {
   type: RequirementType;
-  /** id of the target node/attribute/trait. For INSIGHT, the class_id. */
+  /** id of the target node/attribute/trait. For INSIGHT, the class_id. For CRITERIA, a
+   * stable criteria id (the class_ladder.csv row's class_id — one criteria clause per row). */
   target: string;
-  /** Numeric floor, or ceiling when type is ATTRIBUTE_CEILING. Null for boolean types. */
+  /** Numeric floor, or ceiling when type is ATTRIBUTE_CEILING. Null for boolean types
+   * (including CRITERIA — it's ticked complete or not, no threshold). */
   threshold: number | null;
 }
 
@@ -255,6 +259,15 @@ export interface Trait {
 
 // ─────────────────────────────────────────────────────────────
 // CLASS  (output AND input — parallel Insight track)
+//
+// Phase 7: no content currently authors CharacterClass/ClassTierRow/UnlockLine/
+// Keystone (content/classes.csv & friends were a Generalist/Specialist template
+// that turned out not to match the real class structure, and were deleted).
+// These types stay — Insight (below, see aligned_skill_ids/aligned_attribute_
+// breakpoints) is a real, separate mechanic from the class ladder's criteria
+// track and is explicitly not superseded — but classes[]/unlock_lines[]/
+// keystones[] are empty until real content targets this shape again. The
+// actual class progression now lives in LadderClass / SpiralDataset.class_ladder.
 // ─────────────────────────────────────────────────────────────
 
 export interface ClassTierRow {
@@ -301,6 +314,49 @@ export interface Keystone {
   requirements: Requirement[];
   perk_ids: string[];
   boundary: string;
+}
+
+export type ParentRule = "ROOT" | "SLOT_PAIR" | "ANY_LOWER_STAR_IN_TREE" | "ANY_2STAR_IN_TREE";
+
+/**
+ * One rank in one of the eight class trees (content/class_ladder.csv). Star 0 is a
+ * tree's entry class (no parent, no gates); stars 1-3 sit in one of up to seven
+ * lettered branch slots, two variants per slot. `parent_class_id` is a literal id
+ * only for ROOT and SLOT_PAIR rows; ANY_LOWER_STAR_IN_TREE / ANY_2STAR_IN_TREE rows
+ * carry "*" instead and resolve dynamically — see resolveParentIds in
+ * scripts/adapters/class_ladder.ts, reused by the app for display.
+ *
+ * This gates on CRITERIA (a completed quest) + LEVEL (levels gained since taking the
+ * class) + PRICE (1 level of XP, plus fate_cost FATE) — Insight (CharacterClass,
+ * above) gates a different, unrelated track.
+ */
+export interface LadderClass {
+  id: string;
+  name: string;
+  star: 0 | 1 | 2 | 3;
+  tree_id: string;
+  branch_slot: string;
+  variant: number;
+  /** Literal for ROOT/SLOT_PAIR; null for star 0 (no parent) and for wildcard rows
+   * (parent_rule decides the resolved set instead). */
+  parent_class_id: string | null;
+  /** Null only for star 0 — the tree root has no parent and no rule. */
+  parent_rule: ParentRule | null;
+  attribute_tag: AttributeId | "VAR" | null;
+  /** Added to the character's level cap on taking this class. Null for star 0. */
+  level_cap_gain: number | null;
+  /** FATE spent to take this class via a trainer (the cheap route). Null for star 0. */
+  fate_cost: number | null;
+  /** Levels of XP spent to take this class — authored as a constant 1 ("1 full level"). Null for star 0. */
+  level_cost: number | null;
+  /** The quest to complete. Null when criteria_source is NOT_APPLICABLE (star 0) or
+   * PENDING (author hasn't written it yet) — render "criteria not yet authored", never
+   * invent one. */
+  criteria: string | null;
+  criteria_source: "NOT_APPLICABLE" | "PENDING" | "SUGGESTED" | "AUTHORED" | null;
+  grants: string | null;
+  description: string | null;
+  is_monster_class: boolean;
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -364,6 +420,7 @@ export interface SpiralDataset {
   classes: CharacterClass[];
   unlock_lines: UnlockLine[];
   keystones: Keystone[];
+  class_ladder: LadderClass[];
   effect_ladder: EffectLadderStep[];
   skill_level_table: SkillLevelRow[];
   /** controlled vocabulary — every Perk.subject must appear here */
@@ -386,6 +443,9 @@ export interface BuildState {
    * (Savepoint v0.2 §8) only applies to a skill purchase while its group is declared
    * here; skills outside every declared group are loose purchases at full price. */
   declared_group_ids: string[];
+  /** CRITERIA requirement ticks — keyed by the requirement's `target` (a class_ladder.csv
+   * class_id). Tracked in play, ticked manually; true once the player marks it complete. */
+  criteria_ticked: Record<string, boolean>;
 }
 
 /** One row of the compound-advantages panel after stacking resolution. */

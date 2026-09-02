@@ -1,3 +1,0 @@
-keystone_id,name,class_id,star,requirements,perk_ids,cp_cost,boundary,description
-key_weapon_focus,Weapon Focus Keystone,warrior,2,INSIGHT:warrior:201;SKILL_LEVEL:melee_weapons_handling:10,perk_weapon_focus_keystone,1,Applies only to the declared weapon family. Grants no new action.,"Class-track capstone. Reached by Insight, not by CP chain."
-,,,,,,,,

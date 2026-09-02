@@ -11,6 +11,9 @@ export interface SkillCostLine {
   discounted: number;
 }
 
+/** FATE starts at 1 and accumulates to this max (Phase 7) — a build that spends past it is flagged. */
+export const FATE_MAX = 5;
+
 export interface CostSummary {
   cp_total: number;
   xp_owed: number;
@@ -18,6 +21,9 @@ export interface CostSummary {
   skill_cp_discounted: number;
   skill_discount_saved: number;
   skill_lines: SkillCostLine[];
+  fate_spent: number;
+  fate_max: number;
+  fate_over_budget: boolean;
 }
 
 /**
@@ -63,6 +69,12 @@ export function computeCost(ownedNodes: FeatOrFusion[], build: BuildState, datas
 
   skill_lines.sort((a, b) => a.skillName.localeCompare(b.skillName));
 
+  // Phase 7 is display/validation only for class acquisition (BuildState carries no
+  // class_ladder purchase list yet) — so there is nothing to sum fate_cost from. This
+  // stays 0 until class selection/purchasing is built; the FATE_MAX/over-budget flag
+  // is wired now so the cost panel and this check don't need revisiting then.
+  const fate_spent = 0;
+
   return {
     cp_total,
     xp_owed,
@@ -70,5 +82,8 @@ export function computeCost(ownedNodes: FeatOrFusion[], build: BuildState, datas
     skill_cp_discounted,
     skill_discount_saved: skill_cp_baseline - skill_cp_discounted,
     skill_lines,
+    fate_spent,
+    fate_max: FATE_MAX,
+    fate_over_budget: fate_spent > FATE_MAX,
   };
 }

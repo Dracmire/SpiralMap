@@ -53,6 +53,10 @@ export function describeRequirement(req: Requirement, dataset: Dataset): string 
       return `Class ${req.target} ≥ tier ${req.threshold}`;
     case "INSIGHT":
       return `Insight (${req.target}) ≥ ${req.threshold}`;
+    case "CRITERIA": {
+      const cls = dataset.class_ladder.find((c) => c.id === req.target);
+      return cls?.criteria ?? "Criteria not yet authored";
+    }
     default:
       return `${req.type}: ${req.target}`;
   }
@@ -79,6 +83,8 @@ export function evaluateRequirement(req: Requirement, build: BuildState): boolea
     case "INSIGHT":
       // Insight isn't computed this phase (classes[] is empty) — always unmet, not silently true.
       return false;
+    case "CRITERIA":
+      return build.criteria_ticked[req.target] ?? false;
     case "VERB":
       // No per-verb character state modeled this phase — always unmet, not silently true.
       return false;

@@ -1,8 +1,11 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { dataset } from "./data/dataset.ts";
 import { computeLayout } from "./layout/layoutGraph.ts";
+import { computeClassLayout } from "./layout/classLayout.ts";
 import { evaluateRequirement } from "./layout/requirementClosure.ts";
 import { Canvas } from "./components/Canvas.tsx";
+import { ClassCanvas } from "./components/ClassCanvas.tsx";
+import { ClassDetailCard } from "./components/ClassDetailCard.tsx";
 import { CharacterPanel } from "./components/CharacterPanel.tsx";
 import { DetailCard } from "./components/DetailCard.tsx";
 import { AdvantagesPanel } from "./components/AdvantagesPanel.tsx";
@@ -14,11 +17,13 @@ import { decodeBuildFromUrl, encodeBuildToUrl } from "./state/urlEncode.ts";
 import "@xyflow/react/dist/style.css";
 import "./App.css";
 
-type Mode = "build" | "author";
+type Mode = "build" | "classes" | "author";
 
 export default function App() {
   const [mode, setMode] = useState<Mode>("build");
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
+  const [selectedClassId, setSelectedClassId] = useState<string | null>(null);
+  const [showMonsterClasses, setShowMonsterClasses] = useState(false);
   const [build, dispatch] = useBuildReducer(decodeBuildFromUrl() ?? emptyBuildState());
 
   useEffect(() => {
@@ -26,6 +31,7 @@ export default function App() {
   }, [build]);
 
   const layout = useMemo(() => computeLayout(dataset), []);
+  const classLayout = useMemo(() => computeClassLayout(dataset), []);
 
   const nodesById = useMemo(() => {
     const map = new Map<string, (typeof dataset.feats)[number]>();
@@ -61,6 +67,9 @@ export default function App() {
               <button className={mode === "build" ? "active" : ""} onClick={() => setMode("build")}>
                 Build
               </button>
+              <button className={mode === "classes" ? "active" : ""} onClick={() => setMode("classes")}>
+                Classes
+              </button>
               <button className={mode === "author" ? "active" : ""} onClick={() => setMode("author")}>
                 Author
               </button>
@@ -85,6 +94,33 @@ export default function App() {
                 <AdvantagesPanel dataset={dataset} />
                 <CostPanel dataset={dataset} />
                 <SaveLoad />
+              </div>
+            </div>
+          ) : mode === "classes" ? (
+            <div className="app-body author-body">
+              <div className="canvas-area" style={{ display: "flex", flexDirection: "column" }}>
+                <div className="canvas-toolbar">
+                  <label>
+                    <input
+                      type="checkbox"
+                      checked={showMonsterClasses}
+                      onChange={(e) => setShowMonsterClasses(e.target.checked)}
+                    />{" "}
+                    Show monster classes (is_monster_class)
+                  </label>
+                </div>
+                <div style={{ flex: 1, minHeight: 0 }}>
+                  <ClassCanvas
+                    dataset={dataset}
+                    layout={classLayout}
+                    selectedNodeId={selectedClassId}
+                    onSelectNode={setSelectedClassId}
+                    showMonsterClasses={showMonsterClasses}
+                  />
+                </div>
+              </div>
+              <div className="right-column">
+                <ClassDetailCard dataset={dataset} classId={selectedClassId} />
               </div>
             </div>
           ) : (

@@ -47,6 +47,19 @@ test("parseRequirements: INSIGHT targets a class id with a numeric threshold", (
   assert.deepEqual(value, [{ type: "INSIGHT", target: "warrior", threshold: 201 }]);
 });
 
+test("parseRequirements: CRITERIA is a boolean type (no threshold)", () => {
+  const { value, errors } = parseRequirements("CRITERIA:swordman");
+  assert.equal(errors.length, 0);
+  assert.deepEqual(value, [{ type: "CRITERIA", target: "swordman", threshold: null }]);
+});
+
+test("parseRequirements: CRITERIA rejects a threshold", () => {
+  const { value, errors } = parseRequirements("CRITERIA:swordman:5");
+  assert.equal(value.length, 0);
+  assert.equal(errors.length, 1);
+  assert.match(errors[0], /boolean type and takes no threshold/);
+});
+
 test("parseRequirements: boolean type omits threshold", () => {
   const { value, errors } = parseRequirements("TRAIT:elemental_affinity");
   assert.equal(errors.length, 0);

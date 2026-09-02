@@ -5,9 +5,10 @@ import type {
   Fusion as SchemaFusion,
   AttributeId,
   Requirement,
+  LadderClass,
 } from "../../schema/spiral.ts";
 
-export type { AttributeId, Requirement };
+export type { AttributeId, Requirement, LadderClass };
 
 /** perks.csv/legacy_perks.csv carry these as non-schema passthrough — never validated. */
 export type Perk = SchemaPerk & { subject_suggested?: string; family_suggested?: string };

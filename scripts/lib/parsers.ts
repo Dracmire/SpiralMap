@@ -19,7 +19,7 @@ export interface AttributeBreakpoint {
 
 const VALID_ATTRIBUTE_IDS: ReadonlySet<string> = new Set(["STR", "AGI", "INT", "PER", "WIL", "CHA"]);
 
-const BOOLEAN_REQUIREMENT_TYPES: ReadonlySet<RequirementType> = new Set(["TRAIT", "PRIOR_NODE", "CLASS"]);
+const BOOLEAN_REQUIREMENT_TYPES: ReadonlySet<RequirementType> = new Set(["TRAIT", "PRIOR_NODE", "CLASS", "CRITERIA"]);
 
 const REQUIREMENT_TYPES: ReadonlySet<RequirementType> = new Set([
   "SKILL_LEVEL",
@@ -31,6 +31,7 @@ const REQUIREMENT_TYPES: ReadonlySet<RequirementType> = new Set([
   "CLASS",
   "CLASS_TIER",
   "INSIGHT",
+  "CRITERIA",
 ]);
 
 const SOURCE_TYPES: ReadonlySet<SourceType> = new Set(["TRAINER", "TOME", "GUILD", "CLASS", "TRAIT", "BREAKTHROUGH"]);

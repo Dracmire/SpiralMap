@@ -35,9 +35,16 @@ export function decodeBuildFromUrl(): BuildState | null {
     const json = decodeURIComponent(atob(encoded));
     const parsed: unknown = JSON.parse(json);
     if (!isValidBuildState(parsed)) return null;
-    // A link saved before declared_group_ids existed — default to none declared
-    // rather than rejecting the whole link.
-    return { ...parsed, declared_group_ids: Array.isArray(parsed.declared_group_ids) ? parsed.declared_group_ids : [] };
+    // A link saved before declared_group_ids/criteria_ticked existed — default to
+    // none declared/ticked rather than rejecting the whole link.
+    return {
+      ...parsed,
+      declared_group_ids: Array.isArray(parsed.declared_group_ids) ? parsed.declared_group_ids : [],
+      criteria_ticked:
+        !!parsed.criteria_ticked && typeof parsed.criteria_ticked === "object" && !Array.isArray(parsed.criteria_ticked)
+          ? (parsed.criteria_ticked as Record<string, boolean>)
+          : {},
+    };
   } catch {
     return null;
   }
