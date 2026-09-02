@@ -122,6 +122,8 @@ export function loadClassLadder(contentDir: string): ClassLadderResult {
       grants: parseOptionalString(r.grants),
       description: parseOptionalString(r.description),
       is_monster_class: r.is_monster_class?.trim().toUpperCase() === "Y",
+      // Free-text author provenance note — passed through verbatim, never validated.
+      data_issue: parseOptionalString(r.data_issue),
     };
   });
 

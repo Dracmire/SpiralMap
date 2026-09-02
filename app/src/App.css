@@ -220,6 +220,15 @@ body {
 .badge-fusion {
   background: #6a5a2a;
 }
+.badge-suggested {
+  background: transparent;
+  border: 1px solid #6a6a74;
+  color: #9a9aa4;
+  font-style: italic;
+}
+.data-issue {
+  color: #d9a84a;
+}
 .rarity {
   font-size: 11px;
   color: #9a9aa4;

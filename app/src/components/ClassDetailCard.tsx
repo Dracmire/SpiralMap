@@ -43,6 +43,11 @@ export function ClassDetailCard({ dataset, classId }: { dataset: Dataset; classI
       <p className="feat-boundary">
         <strong>Grants:</strong> {cls.grants || <em>not yet authored</em>}
       </p>
+      {cls.data_issue && (
+        <p className="feat-boundary data-issue">
+          <strong>Data issue:</strong> {cls.data_issue}
+        </p>
+      )}
 
       {cls.star === 0 ? (
         <p className="hint">Tree root — no acquisition gates, free entry point.</p>
@@ -61,7 +66,19 @@ export function ClassDetailCard({ dataset, classId }: { dataset: Dataset; classI
                   checked={ticked}
                   onChange={() => dispatch({ type: "TOGGLE_CRITERIA", criteriaId: cls.id })}
                 />{" "}
-                CRITERIA: {cls.criteria ?? "criteria not yet authored"}
+                CRITERIA:{" "}
+                {cls.criteria ? (
+                  <>
+                    {cls.criteria_source === "SUGGESTED" && (
+                      <span className="badge badge-suggested" title="Drafted as scaffolding, not written by the project owner">
+                        SUGGESTED
+                      </span>
+                    )}{" "}
+                    {cls.criteria}
+                  </>
+                ) : (
+                  "criteria not yet authored"
+                )}
               </label>
             </li>
             <li className="req-unmet">

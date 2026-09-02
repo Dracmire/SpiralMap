@@ -55,7 +55,8 @@ export function describeRequirement(req: Requirement, dataset: Dataset): string 
       return `Insight (${req.target}) ≥ ${req.threshold}`;
     case "CRITERIA": {
       const cls = dataset.class_ladder.find((c) => c.id === req.target);
-      return cls?.criteria ?? "Criteria not yet authored";
+      if (!cls?.criteria) return "Criteria not yet authored";
+      return cls.criteria_source === "SUGGESTED" ? `[SUGGESTED] ${cls.criteria}` : cls.criteria;
     }
     default:
       return `${req.type}: ${req.target}`;

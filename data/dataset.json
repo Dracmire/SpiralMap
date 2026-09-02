@@ -17730,7 +17730,8 @@
       "criteria_source": "NOT_APPLICABLE",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "explorer",
@@ -17749,7 +17750,8 @@
       "criteria_source": "NOT_APPLICABLE",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "swordman",
@@ -17768,7 +17770,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Advanced Knowledge (Weapon, Armor, Intimidation, Discipline)",
       "description": "The Warrior focuses on his weapon and becomes one with it",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "barbarian",
@@ -17787,7 +17790,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Advanced Knowledge (Weapon, Armor, Intimidation, Battle)",
       "description": "Warrior becomes fierce, tough, primal like a force of nature",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "soldier_infantry",
@@ -17806,7 +17810,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Advanced Knowledge ( Weapon, Armor, Battle, Discipline)",
       "description": "Warrior Combines Discipline, coordination and martial skill into one",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "apprentice_ranger",
@@ -17825,7 +17830,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Advanced Knowledge (Weapon, Armor, Intimidation, Discipline)",
       "description": "The Warrior focuses on his weapon and becomes one with it",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "gunner",
@@ -17844,7 +17850,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Advanced Knowledge (Weapon, Armor, Intimidation, Battle)",
       "description": "Warrior becomes fierce, tough, primal like a force of nature",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "apprentice_hunter",
@@ -17863,7 +17870,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Advanced Knowledge ( Weapon, Armor, Battle, Discipline)",
       "description": "Warrior Combines Discipline, coordination and martial skill into one",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "enlighted_swdman",
@@ -17882,7 +17890,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Weapon Focus Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "duelist",
@@ -17901,7 +17910,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Additional Movility Skills",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "viking",
@@ -17920,7 +17930,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Combat Skill Levels",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "bloodfury",
@@ -17939,7 +17950,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Anti-Monster Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "guardsman",
@@ -17958,7 +17970,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Defender Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "raider",
@@ -17977,7 +17990,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Combat Skill Levels",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "justiciar",
@@ -17996,7 +18010,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Additional Judgement Skills",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "vagrant",
@@ -18015,7 +18030,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Combat Skill Levels",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "man_at_arms",
@@ -18034,7 +18050,8 @@
       "criteria_source": "PENDING",
       "grants": "Multi-Weapon Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "cimmerian",
@@ -18053,7 +18070,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Ironskin Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "totem_warrior",
@@ -18072,7 +18090,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Additional Totem Skills",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "myrmidon_soldier",
@@ -18091,7 +18110,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "\"Group Combat\" Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "squad_leader",
@@ -18110,7 +18130,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Additional Leadership Skills",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "ripper",
@@ -18129,7 +18150,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "enlighted_ranger",
@@ -18148,7 +18170,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "apprentice_scout",
@@ -18167,7 +18190,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "enlighted_gunner",
@@ -18186,7 +18210,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "gunslinger",
@@ -18205,7 +18230,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "enlighted_hunter",
@@ -18224,7 +18250,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "monster_hunter",
@@ -18243,7 +18270,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "spirit_walker",
@@ -18262,7 +18290,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "manhunter",
@@ -18281,7 +18310,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "ghost_walker",
@@ -18300,7 +18330,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "cannoner",
@@ -18319,7 +18350,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "rifleman",
@@ -18338,7 +18370,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "expert_bowman",
@@ -18357,7 +18390,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "tamer",
@@ -18376,7 +18410,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "falconeer",
@@ -18395,7 +18430,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "greatswdman",
@@ -18414,7 +18450,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "gladiator",
@@ -18433,7 +18470,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "hersir",
@@ -18452,7 +18490,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "berserker",
@@ -18471,7 +18510,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "guardian",
@@ -18490,7 +18530,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "commando",
@@ -18509,7 +18550,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "grey_warden",
@@ -18528,7 +18570,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "lighting_blade",
@@ -18547,7 +18590,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "weapon_master",
@@ -18566,7 +18610,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "marauder",
@@ -18585,7 +18630,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "beast_walker",
@@ -18604,7 +18650,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "storm_trooper",
@@ -18623,7 +18670,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "warrior_commander",
@@ -18642,7 +18690,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "manslayer",
@@ -18661,7 +18710,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "superior_ranger",
@@ -18680,7 +18730,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "recon_scout",
@@ -18699,7 +18750,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "superior_gunner",
@@ -18718,7 +18770,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "peacemaker",
@@ -18737,7 +18790,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "superior_hunter",
@@ -18756,7 +18810,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "slayer",
@@ -18775,7 +18830,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "soul_linker",
@@ -18794,7 +18850,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "bounty_hunter",
@@ -18813,7 +18870,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "infiltrator",
@@ -18832,7 +18890,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "dragoon",
@@ -18851,7 +18910,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "musketeer",
@@ -18870,7 +18930,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "archer",
@@ -18889,7 +18950,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "beastmaster",
@@ -18908,7 +18970,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "sky_rider",
@@ -18927,7 +18990,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "magic_user_spr",
@@ -18946,7 +19010,8 @@
       "criteria_source": "NOT_APPLICABLE",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "magic_user_int",
@@ -18965,7 +19030,8 @@
       "criteria_source": "NOT_APPLICABLE",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "apprentice_sorcerer",
@@ -18984,7 +19050,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Advanced Knowledge (Bloodline Magic, Mana Sensitivity, Focus)",
       "description": "Awaken the magic in your blood and call the Power",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "runemage",
@@ -19003,7 +19070,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Advanced Knowledge (Any Magic, Mana Sensitivity, Magic Object)",
       "description": "Mana is the principle of the world, master it and Grow!",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "lesser_warlock",
@@ -19022,7 +19090,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Advanced Knowledge (Kaballah Magic, Magic Object, Focus)",
       "description": "Peek into the abyss and touch the world of the supernatural",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "apprentice_arcanist",
@@ -19041,7 +19110,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Advanced Knowledge (Magic Knowledge, Spellcraft, )",
       "description": "Knowledge is Power, Knowledge is Magic!",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "apprentice_mage",
@@ -19060,7 +19130,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Advanced Knowledge (Interference Magic, Elementalism, Reinforcement )",
       "description": "Seek for the mysteries of the world!",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "bestower",
@@ -19079,7 +19150,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "awakened_sorcerer",
@@ -19098,7 +19170,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Bloodline Magic levels",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "elder_kin",
@@ -19117,7 +19190,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Bloodline Awakening Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "enlighted_runemage",
@@ -19136,7 +19210,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Reinforce Magic Levels",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "mana_adept",
@@ -19155,7 +19230,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Mana Senstivity Levels",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "warlock",
@@ -19174,7 +19250,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Kabbalist Law Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "dreamgazer",
@@ -19193,7 +19270,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "DreamSense Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "fortune_teller",
@@ -19212,7 +19290,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Additional \"Divination\" skills",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "elementalist",
@@ -19231,7 +19310,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Elemental Magic Levels",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "sword_sorcerer",
@@ -19250,7 +19330,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Combat Magic Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "golem_crafter",
@@ -19269,7 +19350,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Animate Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "magic_operator",
@@ -19288,7 +19370,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Magic Object Skill Levels",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "ani_mage",
@@ -19307,7 +19390,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Animal Shift Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "witch_doctor",
@@ -19326,7 +19410,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Curse Skills Levels",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "spirit_magi",
@@ -19345,7 +19430,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Additional \"Spiritism\" skills",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "learned_arcanist",
@@ -19364,7 +19450,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Knowledge is Power Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "spell_weaver",
@@ -19383,7 +19470,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Focus skill levels",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "enlighted_mage",
@@ -19402,7 +19490,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "wandslinger",
@@ -19421,7 +19510,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "lesser_enchanter",
@@ -19440,7 +19530,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "mana_crafter",
@@ -19459,7 +19550,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "contract_mage",
@@ -19478,7 +19570,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "arcane_arrester",
@@ -19497,7 +19590,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Interference Magic Levels",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "lore_seeker",
@@ -19516,7 +19610,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "mage_specialist",
@@ -19535,7 +19630,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "lesser_conjuror",
@@ -19554,7 +19650,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "lesser_illutionist",
@@ -19573,7 +19670,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "tattoed_mage",
@@ -19592,7 +19690,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "apprentice_alchemist",
@@ -19611,7 +19710,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "true_sorcerer",
@@ -19630,7 +19730,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "blood_mage",
@@ -19649,7 +19750,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "greater_runemage",
@@ -19668,7 +19770,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "primemage",
@@ -19687,7 +19790,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "great_warlock",
@@ -19706,7 +19810,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "dream_walker",
@@ -19725,7 +19830,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "oracle",
@@ -19744,7 +19850,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "fire_lord",
@@ -19763,7 +19870,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "battlemage",
@@ -19782,7 +19890,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "magic_pupeteer",
@@ -19801,7 +19910,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "hex_artificer",
@@ -19820,7 +19930,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "shifter",
@@ -19839,7 +19950,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "cursemancer",
@@ -19858,7 +19970,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "caller",
@@ -19877,7 +19990,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "wise_arcanist",
@@ -19896,7 +20010,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "magic_researcher",
@@ -19915,7 +20030,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "superior_mage",
@@ -19934,7 +20050,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "greater_enchanter",
@@ -19953,7 +20070,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "magic_engineer",
@@ -19972,7 +20090,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "arcane_hacker",
@@ -19991,7 +20110,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "lore_keeper",
@@ -20010,7 +20130,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "magic_savant",
@@ -20029,7 +20150,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "greater_conjuror",
@@ -20048,7 +20170,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "greater_illutionist",
@@ -20067,7 +20190,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "thaumaturgist",
@@ -20086,7 +20210,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "enlighted_alchemist",
@@ -20105,7 +20230,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "merchant",
@@ -20124,7 +20250,8 @@
       "criteria_source": "NOT_APPLICABLE",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "engineer",
@@ -20143,7 +20270,8 @@
       "criteria_source": "NOT_APPLICABLE",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "appraiser",
@@ -20162,7 +20290,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Advanced (Appraisal), Additional (Investigation) Skill",
       "description": "See into the true nature of things",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "apprentice_broker",
@@ -20181,7 +20310,8 @@
       "criteria_source": "SUGGESTED",
       "grants": "Gain Advanced (Haggle), Additional (Streetwise) Skill",
       "description": "Information is both a weapon and wealth",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "grease_monkey",
@@ -20200,7 +20330,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": "the most common user of mechanical appliances",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "apprentice_gunsmith",
@@ -20219,7 +20350,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": "Uses guns and creates bullets",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "mana_mechanic",
@@ -20238,7 +20370,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "enlighted_mechanic",
@@ -20257,7 +20390,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "enlighted_gunsmith",
@@ -20276,7 +20410,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "tinkerer",
@@ -20286,7 +20421,7 @@
       "branch_slot": "E",
       "variant": 1,
       "parent_class_id": null,
-      "parent_rule": "SLOT_PAIR",
+      "parent_rule": "ANY_LOWER_STAR_IN_TREE",
       "attribute_tag": null,
       "level_cap_gain": 10,
       "fate_cost": 2,
@@ -20295,7 +20430,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": "Open-access column: this tree is narrower by setting (smaller cities/factions), so the column is reachable from any 1-star class, like slot G."
     },
     {
       "id": "identifier",
@@ -20314,7 +20450,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Appraisal Skill Levels",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "inspector",
@@ -20333,7 +20470,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Judgement Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "enlighted_broker",
@@ -20352,7 +20490,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Haggle Skill Levels",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "peddler",
@@ -20371,7 +20510,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Wandering Store Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "gambler",
@@ -20381,7 +20521,7 @@
       "branch_slot": "E",
       "variant": 1,
       "parent_class_id": null,
-      "parent_rule": "SLOT_PAIR",
+      "parent_rule": "ANY_LOWER_STAR_IN_TREE",
       "attribute_tag": null,
       "level_cap_gain": 30,
       "fate_cost": 2,
@@ -20390,7 +20530,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Additional \"Game\" Skill",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": "Open-access column: this tree is narrower by setting (smaller cities/factions), so the column is reachable from any 1-star class, like slot G."
     },
     {
       "id": "connoisseur",
@@ -20409,7 +20550,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Hidden Reading Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "apprentice_detective",
@@ -20428,7 +20570,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Investigation Skill Levels",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "whisperer",
@@ -20447,7 +20590,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Streetwise Skll Levels",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "playboy",
@@ -20457,7 +20601,7 @@
       "branch_slot": "E",
       "variant": 2,
       "parent_class_id": null,
-      "parent_rule": "SLOT_PAIR",
+      "parent_rule": "ANY_LOWER_STAR_IN_TREE",
       "attribute_tag": null,
       "level_cap_gain": 30,
       "fate_cost": 2,
@@ -20466,7 +20610,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Additional \"Temptation\" skill",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": "Open-access column: this tree is narrower by setting (smaller cities/factions), so the column is reachable from any 1-star class, like slot G."
     },
     {
       "id": "electric_monkey",
@@ -20485,7 +20630,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "clockmaker",
@@ -20504,7 +20650,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "mana_gunsmith",
@@ -20523,7 +20670,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "demolition_expert",
@@ -20542,7 +20690,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "researcher_engineer",
@@ -20552,7 +20701,7 @@
       "branch_slot": "E",
       "variant": 1,
       "parent_class_id": null,
-      "parent_rule": "SLOT_PAIR",
+      "parent_rule": "ANY_LOWER_STAR_IN_TREE",
       "attribute_tag": null,
       "level_cap_gain": 10,
       "fate_cost": 2,
@@ -20561,7 +20710,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": "Open-access column: this tree is narrower by setting (smaller cities/factions), so the column is reachable from any 1-star class, like slot G."
     },
     {
       "id": "superior_mechanic",
@@ -20580,7 +20730,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "superior_gunsmith",
@@ -20599,7 +20750,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "inventor",
@@ -20618,7 +20770,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "high_appraiser",
@@ -20637,7 +20790,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "adjudicator",
@@ -20656,7 +20810,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "high_broker",
@@ -20675,7 +20830,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "roving_trader",
@@ -20694,7 +20850,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "daredevil",
@@ -20713,7 +20870,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "antiquary",
@@ -20732,7 +20890,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "detective",
@@ -20751,7 +20910,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "rumormonger",
@@ -20770,7 +20930,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "black_widow",
@@ -20789,7 +20950,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "dynamo",
@@ -20808,7 +20970,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "enlighted_clockmaker",
@@ -20827,7 +20990,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "magic_artificer",
@@ -20846,7 +21010,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "bulldozer",
@@ -20865,7 +21030,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "scientist",
@@ -20884,7 +21050,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "ghoul",
@@ -20903,7 +21070,8 @@
       "criteria_source": "NOT_APPLICABLE",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "corpse_eater",
@@ -20922,7 +21090,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "stalker_ghoul",
@@ -20941,7 +21110,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "corpse_eating_demon",
@@ -20960,7 +21130,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Strenghtened Body, Mutations",
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "brain_eater",
@@ -20979,7 +21150,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Gain memories and even skills",
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "geist_stalker",
@@ -20998,7 +21170,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Fast & Silent Wallclimb",
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "pale_horror",
@@ -21017,7 +21190,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Large Living Dead Boost",
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "black_ghoul",
@@ -21027,7 +21201,7 @@
       "branch_slot": "E",
       "variant": 1,
       "parent_class_id": null,
-      "parent_rule": "SLOT_PAIR",
+      "parent_rule": "ANY_LOWER_STAR_IN_TREE",
       "attribute_tag": null,
       "level_cap_gain": 10,
       "fate_cost": 2,
@@ -21036,7 +21210,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Variant RARE Ability",
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": "Open-access column: this tree is narrower by setting (smaller cities/factions), so the column is reachable from any 1-star class, like slot G."
     },
     {
       "id": "ghul_kin",
@@ -21055,7 +21230,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "necro_ghoul",
@@ -21074,7 +21250,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "aereal_horror",
@@ -21093,7 +21270,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "mimic_stalker",
@@ -21112,7 +21290,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "glowing_ghoul",
@@ -21122,7 +21301,7 @@
       "branch_slot": "E",
       "variant": 2,
       "parent_class_id": null,
-      "parent_rule": "SLOT_PAIR",
+      "parent_rule": "ANY_LOWER_STAR_IN_TREE",
       "attribute_tag": null,
       "level_cap_gain": null,
       "fate_cost": 2,
@@ -21131,7 +21310,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": "Open-access column: this tree is narrower by setting (smaller cities/factions), so the column is reachable from any 1-star class, like slot G."
     },
     {
       "id": "greater_corpse_eating_demon",
@@ -21150,7 +21330,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "evil_braniac_ghoul",
@@ -21169,7 +21350,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "nemesis_ghoul",
@@ -21188,7 +21370,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "nosferatu_ghoul",
@@ -21207,7 +21390,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "black_crowned_ghoul",
@@ -21226,7 +21410,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "soultaker_ghoul",
@@ -21245,7 +21430,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "ghoul_meister",
@@ -21264,7 +21450,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "grimwing",
@@ -21283,7 +21470,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "faceless_horror",
@@ -21302,7 +21490,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "eldritch_ghoul",
@@ -21321,7 +21510,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": true
+      "is_monster_class": true,
+      "data_issue": null
     },
     {
       "id": "dark_acolyte",
@@ -21340,7 +21530,8 @@
       "criteria_source": "NOT_APPLICABLE",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "dark_cleric",
@@ -21359,7 +21550,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": "Praise to the Dark, Become its vessel, Become its hand!",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "apprentice_shaman",
@@ -21378,7 +21570,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": "Awaken to the spiritual, call your spirits from beyond!",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "seer",
@@ -21397,7 +21590,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": "Peer into the world of the supernatural!",
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "advanced_dark_truth_divine_piety_healing_skills",
@@ -21416,7 +21610,8 @@
       "criteria_source": "AUTHORED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "advanced_dark_spirit_divine_spirit_sensitivity_piety_skills",
@@ -21435,7 +21630,8 @@
       "criteria_source": "AUTHORED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "advanced_dark_truth_divine_spirit_sensitivity_healing_skills",
@@ -21454,7 +21650,8 @@
       "criteria_source": "AUTHORED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "shadow_priestess",
@@ -21473,7 +21670,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Dark Divine skill Level",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "dark_exorcist",
@@ -21492,7 +21690,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Exorsism Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "dark_shaman",
@@ -21511,7 +21710,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Spirit Divine skill Level",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "shadow_herald",
@@ -21530,7 +21730,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Nature Additional Skill",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "enlighted_seer",
@@ -21549,7 +21750,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Truth Divine skill levels",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "psych_medium",
@@ -21568,7 +21770,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Psych Awakening Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "karmic_scholar",
@@ -21587,7 +21790,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Karmic Enlightment Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "battle_templar",
@@ -21606,7 +21810,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Battle Piety Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "bloodmoon_martyr",
@@ -21625,7 +21830,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Holy Moon Blood Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "fade_channeler",
@@ -21644,7 +21850,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Visage of Divinity Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "dark_monk",
@@ -21663,7 +21870,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Enlighted Dark Physique Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "plague_doctor",
@@ -21682,7 +21890,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Shadow Control Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "doom_preacher",
@@ -21701,7 +21910,8 @@
       "criteria_source": "AUTHORED",
       "grants": "Words of Doom Keystone",
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "high_priestess",
@@ -21720,7 +21930,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "shadow_inquisitor",
@@ -21739,7 +21950,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "great_shaman",
@@ -21758,11 +21970,12 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
-      "id": "ghost_walker",
-      "name": "Ghost Walker",
+      "id": "dark_acolyte_slot_d_3star_UNNAMED",
+      "name": "(unnamed — copy error)",
       "star": 3,
       "tree_id": "dark_acolyte",
       "branch_slot": "D",
@@ -21773,11 +21986,12 @@
       "level_cap_gain": 10,
       "fate_cost": 3,
       "level_cost": 1,
-      "criteria": "Scout and return from 100 hostile locations without once being detected",
-      "criteria_source": "SUGGESTED",
+      "criteria": null,
+      "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": "Source duplicated \"Ghost Walker\" from the Explorer tree. Correct name unknown; needs authoring."
     },
     {
       "id": "shadow_oracle",
@@ -21796,7 +22010,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "dark_mystic",
@@ -21815,7 +22030,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "onmyouji",
@@ -21834,7 +22050,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "dark_valkyrie",
@@ -21853,7 +22070,8 @@
       "criteria_source": "PENDING",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "holy_maiden",
@@ -21872,7 +22090,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "dream_eater",
@@ -21891,7 +22110,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "divinate_divine_vessel",
@@ -21910,7 +22130,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "psych_ascetic",
@@ -21929,7 +22150,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "spirit_doctor",
@@ -21948,7 +22170,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     },
     {
       "id": "raven_herald",
@@ -21967,7 +22190,8 @@
       "criteria_source": "SUGGESTED",
       "grants": null,
       "description": null,
-      "is_monster_class": false
+      "is_monster_class": false,
+      "data_issue": null
     }
   ],
   "effect_ladder": [
@@ -23303,7 +23527,7 @@
     }
   ],
   "_valid": false,
-  "_error_count": 91,
+  "_error_count": 75,
   "_warning_count": 774,
   "_draft": true
 }

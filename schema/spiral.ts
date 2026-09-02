@@ -357,6 +357,9 @@ export interface LadderClass {
   grants: string | null;
   description: string | null;
   is_monster_class: boolean;
+  /** Free-text provenance note from the author (e.g. a source-transcription error).
+   * Passed through as-is — never validated, never invented. */
+  data_issue: string | null;
 }
 
 // ─────────────────────────────────────────────────────────────
