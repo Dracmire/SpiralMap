@@ -17804,6 +17804,14 @@
       ],
       "star": 1,
       "description": "Pool of feats a Generalist Warrior may draw from at 1-star."
+    },
+    {
+      "id": "line_warrior_2",
+      "name": "Warrior Line 2",
+      "class_id": "warrior",
+      "member_feat_ids": [],
+      "star": 2,
+      "description": "PLACEHOLDER — resolves class_tiers.csv's star-2 GENERALIST grant_id; member_feat_ids not yet authored"
     }
   ],
   "keystones": [
@@ -19165,7 +19173,7 @@
     }
   ],
   "_valid": false,
-  "_error_count": 76,
+  "_error_count": 75,
   "_warning_count": 774,
   "_draft": true
 }
