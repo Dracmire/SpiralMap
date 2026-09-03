@@ -148,19 +148,14 @@ references it** — this is the coherence lever.
 | `value_text` | rendered into the perk card, e.g. `+1`, `automatic`, `all qualifying targets` |
 | `numeric_value` | blank for non-numeric families |
 
-> `content/effect_ladder.csv` now exists — 6 rows, all ENTRY tier (every legacy feat gates
-> at skill 1-7). `numeric_value` is authored for FLAT_BONUS only so far; the other five
+> `content/effect_ladder.csv` — 14 rows. The original 6 are all ENTRY tier (every legacy feat
+> gates at skill 1-7); `numeric_value` is authored for FLAT_BONUS only, the other five
 > families' `value_text` is set but `numeric_value` is still an open author decision.
 > Savepoint v0.2's open question #1 and Authoring GDD v2 §12's clause-tier-equivalence
 > concern are what's being pressure-tested — extend past ENTRY once that holds up.
->
-> **Pending (Phase 8):** the chain-progression perks (content/perks.csv rows appended from
-> chain_perks.csv) reference 7 (family, tier) pairs beyond ENTRY that don't exist yet —
-> FLAT_BONUS/INTERMEDIATE, COVERAGE/INTERMEDIATE, COVERAGE/ADVANCED, THRESHOLD/INTERMEDIATE,
-> THRESHOLD/ADVANCED, PERMISSION/INTERMEDIATE, RELIABILITY/INTERMEDIATE. Rule 3 correctly
-> reports these 9 references (some pairs are shared by more than one perk) as errors — not
-> fabricated here. Add the rungs (an `effect_ladder_additions.csv` was referenced but not
-> supplied this phase) and rule 3 clears on its own.
+> 8 more rows (INTERMEDIATE/ADVANCED, covering FLAT_BONUS, THRESHOLD, COVERAGE, RELIABILITY,
+> PERMISSION) were added to cover the chain-progression perks' (family, tier) references —
+> the file referenced but not supplied when the chain slice first landed.
 
 ## `subjects.csv`
 
@@ -182,13 +177,16 @@ Two known fixes still pending: normalize `CAR` → `CHA` (16 rows), and add `Wil
 (WIL, Support) which appears in the group map but not the skill list.
 
 `specializations.csv`'s `parent_skill` column is keyed by display name, not id — future edges
-should reference stable ids, never display names. One confirmed rename is kept as an explicit
-import alias in `scripts/adapters/reference.ts` (`"Heavy Armor" -> full_armor_handling`, the
-Warrior-cluster child-parent references, Phase 8) — still reported (as a resolved-via-alias
-note, not a dead end) so the CSV cell gets fixed eventually. This is scoped to that one confirmed
-case; the other unresolved `parent_skill` names (Projectile Weapons, Faith, Nature Focus, Melee
-Weapons, Light Weapons, Light Armor, Knowledge, Magic Object, Appraisal) are real, unconfirmed
-gaps and stay reported, not guessed at — resolving all 181 rows is a separate pass.
+should reference stable ids, never display names. Confirmed renames live as data in
+`content/specialization_parent_aliases.csv` (`legacy_parent_name`, `canonical_skill_id`, `note`)
+rather than hardcoded in `scripts/adapters/reference.ts`, so adding a newly-confirmed rename is
+a CSV edit, not a code change. Two entries so far: `"Heavy Armor" -> full_armor_handling` and
+`"Melee Weapons" -> melee_weapons_handling` (renamed from "Heavy Weapons Handling"). An aliased
+row is still reported (as a resolved-via-alias note, not a dead end) so the CSV cell gets fixed
+eventually. This stays scoped to confirmed renames only; the other unresolved `parent_skill`
+names (Projectile Weapons, Faith, Nature Focus, Light Weapons, Light Armor, Knowledge, Magic
+Object, Appraisal) are real, unconfirmed gaps and stay reported, not guessed at — resolving all
+181 rows is a separate pass.
 
 ## `skill_level_table.csv`
 

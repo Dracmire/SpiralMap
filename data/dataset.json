@@ -2277,6 +2277,56 @@
       "description": "A technique used by heavy and colosal type of armors users, made to be slow but extremely durable, its classically refered as \"tank\" type technique"
     },
     {
+      "id": "axeman_technique",
+      "name": "Axeman Technique",
+      "parent_skill_id": "melee_weapons_handling",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The specialized use of heavy axe type weapons both in one hand and two hand forms, however, only heavy axes can be used with this technique"
+    },
+    {
+      "id": "barbarian_vandal_technique",
+      "name": "Barbarian Vandal Technique",
+      "parent_skill_id": "melee_weapons_handling",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the technique used by barbarians in battle where the use of armor is sacrificed for higher movility while using either Great blades, Great Axes or Great maces. It offers bonus while not using any armor or battle cloth armor"
+    },
+    {
+      "id": "heavy_blade_technique",
+      "name": "Heavy Blade Technique",
+      "parent_skill_id": "melee_weapons_handling",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The specialized use of heavy sword type weapons both in one hand and two hand forms, however, only heavy swords can be used with this technique"
+    },
+    {
+      "id": "heavy_spear_technique",
+      "name": "Heavy Spear Technique",
+      "parent_skill_id": "melee_weapons_handling",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "The specialized use of heavy spears type weapons both in one hand and two hand forms, however, only heavy spears can be used with this technique"
+    },
+    {
+      "id": "tower_soldier_technique",
+      "name": "Tower Soldier Technique",
+      "parent_skill_id": "melee_weapons_handling",
+      "attribute": "STR",
+      "kind": "CORE",
+      "gate_level": 10,
+      "rarity": "COMMON",
+      "description": "the techique used by profesional heavy soldiers, who wield large weapons along with heavy armor. This is an entry level skill which uses only non-exotic two handed weapons such as great hammer, great sword, and heavy spear, it offers bonus while using heavy armor"
+    },
+    {
       "id": "sprinter",
       "name": "Sprinter",
       "parent_skill_id": "athletism",
@@ -3153,8 +3203,8 @@
       "subject": "vitality",
       "family": "THRESHOLD",
       "tier": "ADVANCED",
-      "bonus_category": null,
-      "bonus_type": null,
+      "bonus_category": "ABILITY",
+      "bonus_type": "NATURAL",
       "text": "You keep the composure and grounding the line already gave you, and when a wound would put you down you remain standing one further round, free of wound penalties, before the fall resolves.",
       "exclusions": "One round, once per encounter. No healing, no death prevention, no protection for allies. The fall still happens.",
       "counterweight": "At the end of that round the accumulated consequence lands in full; recovery afterwards is slower.",
@@ -22799,10 +22849,34 @@
       "numeric_value": null
     },
     {
+      "family": "COVERAGE",
+      "tier": "INTERMEDIATE",
+      "value_text": "one additional target or topic",
+      "numeric_value": null
+    },
+    {
+      "family": "COVERAGE",
+      "tier": "ADVANCED",
+      "value_text": "all qualifying targets in scope",
+      "numeric_value": null
+    },
+    {
       "family": "FLAT_BONUS",
       "tier": "ENTRY",
       "value_text": "+1",
       "numeric_value": 1
+    },
+    {
+      "family": "FLAT_BONUS",
+      "tier": "INTERMEDIATE",
+      "value_text": "+3",
+      "numeric_value": 3
+    },
+    {
+      "family": "FLAT_BONUS",
+      "tier": "ADVANCED",
+      "value_text": "+6",
+      "numeric_value": 6
     },
     {
       "family": "PERMISSION",
@@ -22811,9 +22885,21 @@
       "numeric_value": null
     },
     {
+      "family": "PERMISSION",
+      "tier": "INTERMEDIATE",
+      "value_text": "permitted in a broader circumstance",
+      "numeric_value": null
+    },
+    {
       "family": "RELIABILITY",
       "tier": "ENTRY",
       "value_text": "conditional -> reliable",
+      "numeric_value": null
+    },
+    {
+      "family": "RELIABILITY",
+      "tier": "INTERMEDIATE",
+      "value_text": "conditional becomes automatic",
       "numeric_value": null
     },
     {
@@ -22826,6 +22912,18 @@
       "family": "THRESHOLD",
       "tier": "ENTRY",
       "value_text": "-1 step",
+      "numeric_value": null
+    },
+    {
+      "family": "THRESHOLD",
+      "tier": "INTERMEDIATE",
+      "value_text": "-2 steps",
+      "numeric_value": null
+    },
+    {
+      "family": "THRESHOLD",
+      "tier": "ADVANCED",
+      "value_text": "-3 steps / major reduction",
       "numeric_value": null
     }
   ],
@@ -24124,7 +24222,7 @@
     }
   ],
   "_valid": false,
-  "_error_count": 90,
+  "_error_count": 75,
   "_warning_count": 238,
   "_draft": true
 }

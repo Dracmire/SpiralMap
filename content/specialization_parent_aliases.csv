@@ -1,0 +1,3 @@
+legacy_parent_name,canonical_skill_id,note
+Heavy Armor,full_armor_handling,renamed; covers armor and shields
+Melee Weapons,melee_weapons_handling,renamed from Heavy Weapons Handling

@@ -1,7 +1,15 @@
 family,tier,value_text,numeric_value
 COVERAGE,ENTRY,one extra target/topic,
+COVERAGE,INTERMEDIATE,one additional target or topic,
+COVERAGE,ADVANCED,all qualifying targets in scope,
 FLAT_BONUS,ENTRY,+1,1
+FLAT_BONUS,INTERMEDIATE,+3,3
+FLAT_BONUS,ADVANCED,+6,6
 PERMISSION,ENTRY,permitted,
+PERMISSION,INTERMEDIATE,permitted in a broader circumstance,
 RELIABILITY,ENTRY,conditional -> reliable,
+RELIABILITY,INTERMEDIATE,conditional becomes automatic,
 SUBSTITUTION,ENTRY,substituted in a bounded context,
 THRESHOLD,ENTRY,-1 step,
+THRESHOLD,INTERMEDIATE,-2 steps,
+THRESHOLD,ADVANCED,-3 steps / major reduction,

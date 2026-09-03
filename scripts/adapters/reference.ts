@@ -11,7 +11,8 @@
  * redundant for deriving group_ids and is only cross-checked for staleness, never
  * consumed as data; specializations.csv's parent_skill links are keyed off the old
  * skill names. A broken link is reported, not silently re-pointed, UNLESS it's one of
- * the explicit, confirmed PARENT_SKILL_ALIASES entries below (Phase 8) — even then it
+ * the explicit, confirmed rows in content/specialization_parent_aliases.csv (data, not
+ * code, so a future confirmed rename is a CSV edit, not a code change) — even then it
  * still reports, just as a resolved-via-alias note rather than an unresolved dead end).
  *
  * Known, deliberately-not-silently-fixed data issues (reported as errors — CAR/CHA
@@ -214,20 +215,41 @@ function loadSkillGroups(contentDir: string, skills: Skill[], canonicalCsv: Retu
 
 /**
  * Import aliases for parent_skill display names confirmed as a stale rename, not a
- * casing issue or a guess — resolved and scoped explicitly (Phase 8), one entry at a
- * time. NOT a general fuzzy-matcher: every other unresolved parent_skill name (there
- * are more — Projectile Weapons, Faith, Nature Focus, Melee Weapons, Light Weapons,
- * Light Armor, Knowledge, Magic Object, Appraisal) stays reported, not silently
- * patched, until each is confirmed the same way. Keyed lowercase; value is the
- * canonical skill id (not another display name — future edges reference stable ids).
+ * casing issue or a guess — resolved and scoped explicitly, one entry at a time, in
+ * content/specialization_parent_aliases.csv (data, not code, so a future confirmed
+ * rename doesn't need a code change). NOT a general fuzzy-matcher: any parent_skill
+ * name not listed there stays reported, not silently patched, until it's confirmed
+ * the same way and added as a row. Keyed lowercase; value is the canonical skill id
+ * (not another display name — future edges reference stable ids).
  */
-const PARENT_SKILL_ALIASES: ReadonlyMap<string, string> = new Map([["heavy armor", "full_armor_handling"]]);
+function loadParentSkillAliases(contentDir: string, skills: Skill[], errors: string[]): Map<string, string> {
+  const sheet = "specialization_parent_aliases.csv";
+  const path = `${contentDir}/${sheet}`;
+  const aliases = new Map<string, string>();
+  if (!existsSync(path)) return aliases;
+  const skillIds = new Set(skills.map((s) => s.id));
+  const { rows, rowNumbers } = parseCsv(readFileSync(path, "utf8"));
+  rows.forEach((r, i) => {
+    const row = rowNumbers[i];
+    if (!r.legacy_parent_name || !r.canonical_skill_id) {
+      errors.push(`${sheet}!${row}: missing required field ("legacy_parent_name" or "canonical_skill_id")`);
+      return;
+    }
+    if (!skillIds.has(r.canonical_skill_id)) {
+      errors.push(`${sheet}!${row}: canonical_skill_id "${r.canonical_skill_id}" not found in skills_canonical.csv`);
+      return;
+    }
+    aliases.set(r.legacy_parent_name.toLowerCase(), r.canonical_skill_id);
+  });
+  return aliases;
+}
 
 function loadSpecializations(contentDir: string, skills: Skill[], errors: string[]): Specialization[] {
   const sheet = "specializations.csv";
   const { rows, rowNumbers } = parseCsv(readFileSync(`${contentDir}/${sheet}`, "utf8"));
   const skillByLowerName = new Map(skills.map((s) => [s.name.toLowerCase(), s]));
   const skillById = new Map(skills.map((s) => [s.id, s]));
+  const parentSkillAliases = loadParentSkillAliases(contentDir, skills, errors);
   const seen = new Map<string, number>();
 
   const out: Specialization[] = [];
@@ -244,7 +266,7 @@ function loadSpecializations(contentDir: string, skills: Skill[], errors: string
     // rename, not a casing issue, and is reported rather than guessed at, UNLESS it's
     // a confirmed alias above.
     let parent = skillByLowerName.get(r.parent_skill.toLowerCase());
-    const aliasId = PARENT_SKILL_ALIASES.get(r.parent_skill.toLowerCase());
+    const aliasId = parentSkillAliases.get(r.parent_skill.toLowerCase());
     if (!parent && aliasId) {
       parent = skillById.get(aliasId);
       errors.push(
