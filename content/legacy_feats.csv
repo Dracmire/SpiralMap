@@ -1,4 +1,4 @@
-id,name,perk_ids,job,authority_root_type,authority_root_id,practice_root_id,fusion_root_id,requirements,sources,rarity,zone_id,cp_cost,boundary,skill_group,block
+id,name,perk_ids,job,authority_root_type,authority_root_id,practice_root_id,fusion_root_id,requirements,sources,rarity,zone_id,cp_cost,exclusions,skill_group,block
 vanguard,Vanguard,perk_vanguard,PROGRESS,SKILL,melee_weapons_handling,vanguard,,SKILL_LEVEL:melee_weapons_handling:1,,COMMON,,1,,WARRIOR,CORE
 bigger_is_better,Bigger is Better,perk_bigger_is_better,PROGRESS,SKILL,melee_weapons_handling,vanguard,,SKILL_LEVEL:melee_weapons_handling:3,,COMMON,,1,,WARRIOR,CORE
 thundering,Thundering,perk_thundering,PROGRESS,SKILL,melee_weapons_handling,vanguard,,SKILL_LEVEL:melee_weapons_handling:5,,COMMON,,1,,WARRIOR,CORE

@@ -55,12 +55,12 @@ export function AuthorPanel({ dataset, selectedNodeId, onSelectNode, layout }: A
   function exportChangedRows() {
     const perkHeader = [
       "id", "name", "subject", "subject_suggested", "family", "family_suggested", "tier", "tier_suggested",
-      "bonus_category", "bonus_type", "text", "boundary", "counterweight", "enhanced_threshold", "enhanced_text",
+      "bonus_category", "bonus_type", "text", "exclusions", "counterweight", "enhanced_threshold", "enhanced_text",
     ];
     const perkRows = Object.values(perkEdits).map((p) => ({
       id: p.id, name: p.name, subject: p.subject, subject_suggested: p.subject_suggested ?? "",
       family: p.family, family_suggested: p.family_suggested ?? "", tier: p.tier, tier_suggested: "",
-      bonus_category: p.bonus_category ?? "", bonus_type: p.bonus_type ?? "", text: p.text, boundary: p.boundary,
+      bonus_category: p.bonus_category ?? "", bonus_type: p.bonus_type ?? "", text: p.text, exclusions: p.exclusions ?? "",
       counterweight: p.counterweight ?? "", enhanced_threshold: p.enhanced_threshold?.toString() ?? "", enhanced_text: p.enhanced_text ?? "",
     }));
     if (perkRows.length > 0) {
@@ -69,14 +69,14 @@ export function AuthorPanel({ dataset, selectedNodeId, onSelectNode, layout }: A
 
     const featHeader = [
       "id", "name", "perk_ids", "job", "authority_root_type", "authority_root_id", "practice_root_id",
-      "fusion_root_id", "requirements", "sources", "rarity", "zone_id", "cp_cost", "boundary",
+      "fusion_root_id", "requirements", "sources", "rarity", "zone_id", "cp_cost", "exclusions",
     ];
     const featRow = (f: FeatOrFusion) => ({
       id: f.id, name: f.name, perk_ids: f.perk_ids.join(";"), job: f.job.join(";"),
       authority_root_type: f.authority_root.type, authority_root_id: f.authority_root.id,
       practice_root_id: f.practice_root_id ?? "", fusion_root_id: f.fusion_root_id ?? "",
       requirements: f.requirements.map((r) => `${r.type}:${r.target}${r.threshold !== null ? `:${r.threshold}` : ""}`).join(";"),
-      sources: serializeSources(f.sources), rarity: f.rarity, zone_id: f.zone_id ?? "", cp_cost: String(f.cp_cost), boundary: f.boundary,
+      sources: serializeSources(f.sources), rarity: f.rarity, zone_id: f.zone_id ?? "", cp_cost: String(f.cp_cost), exclusions: f.exclusions ?? "",
     });
 
     const allEdits = Object.values(featEdits);
@@ -85,13 +85,14 @@ export function AuthorPanel({ dataset, selectedNodeId, onSelectNode, layout }: A
       downloadTextFile("feats.changed.csv", stringifyCsv(featHeader, plainFeatRows), "text/csv");
     }
 
-    const fusionHeader = [...featHeader, "operator", "parents", "target_trait_id", "cp_refund"];
+    const fusionHeader = [...featHeader, "operator", "parents", "target_trait_id", "cp_refund", "parent_disposition_reason"];
     const fusionRows = allEdits.filter(isFusion).map((f) => ({
       ...featRow(f),
       operator: f.operator,
       parents: f.parents.map((p) => `${p.feat_id}:${p.disposition}`).join(";"),
       target_trait_id: f.target_trait_id ?? "",
       cp_refund: f.cp_refund?.toString() ?? "",
+      parent_disposition_reason: f.parent_disposition_reason ?? "",
     }));
     if (fusionRows.length > 0) {
       downloadTextFile("fusions.changed.csv", stringifyCsv(fusionHeader, fusionRows), "text/csv");
@@ -125,8 +126,8 @@ export function AuthorPanel({ dataset, selectedNodeId, onSelectNode, layout }: A
               {isFusion(feat) ? `Fusion (${feat.operator})` : "Feat"}: {feat.name}
             </h3>
             <label>
-              Boundary
-              <textarea value={feat.boundary} onChange={(e) => updateFeat(feat.id, { boundary: e.target.value })} rows={2} />
+              Exclusions (optional)
+              <textarea value={feat.exclusions ?? ""} onChange={(e) => updateFeat(feat.id, { exclusions: e.target.value || null })} rows={2} />
             </label>
             <label>
               Rarity
@@ -182,8 +183,8 @@ export function AuthorPanel({ dataset, selectedNodeId, onSelectNode, layout }: A
               </select>
             </label>
             <label>
-              Boundary
-              <textarea value={perk.boundary} onChange={(e) => updatePerk(perk.id, { boundary: e.target.value })} rows={2} />
+              Exclusions (optional)
+              <textarea value={perk.exclusions ?? ""} onChange={(e) => updatePerk(perk.id, { exclusions: e.target.value || null })} rows={2} />
             </label>
             <label>
               Text

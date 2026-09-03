@@ -1,4 +1,4 @@
-id,name,perk_ids,job,authority_root_type,authority_root_id,practice_root_id,fusion_root_id,requirements,sources,rarity,zone_id,cp_cost,boundary
+id,name,perk_ids,job,authority_root_type,authority_root_id,practice_root_id,fusion_root_id,requirements,sources,rarity,zone_id,cp_cost,exclusions
 feat_scarecrow,Scarecrow,perk_scarecrow,PROGRESS,ATTRIBUTE,CHA,practice_anti_appearance,,ATTRIBUTE_CEILING:CHA:140,,COMMON,,1,Suspends if CHA rises above 140.
 feat_harmless_fatale,Harmless Fatale,perk_harmless_fatale,PROGRESS,ATTRIBUTE,CHA,practice_anti_appearance,,ATTRIBUTE_CEILING:CHA:130,,COMMON,,1,Suspends if CHA rises above 130.
 feat_threatening_presence,Threatening Presence,perk_threatening_presence,PROGRESS,ATTRIBUTE,CHA,practice_anti_appearance,,ATTRIBUTE_CEILING:CHA:120,,UNCOMMON,,1,Suspends if CHA rises above 120.
@@ -17,3 +17,9 @@ feat_karmic_hideout,Karmic Hideout,perk_karmic_hideout,PROGRESS,ATTRIBUTE,CHA,pr
 feat_dangerous_atraction,Dangerous Atraction,perk_dangerous_atraction,PROGRESS,ATTRIBUTE,CHA,practice_anti_magnetism,,ATTRIBUTE_CEILING:CHA:140,,COMMON,,1,Suspends if CHA rises above 140.
 feat_bland,Bland,perk_bland,PROGRESS,ATTRIBUTE,CHA,practice_anti_magnetism,,ATTRIBUTE_CEILING:CHA:130,,COMMON,,1,Suspends if CHA rises above 130.
 feat_innate_troll,Innate Troll,perk_innate_troll,PROGRESS,ATTRIBUTE,CHA,practice_anti_magnetism,,ATTRIBUTE_CEILING:CHA:120,,UNCOMMON,,1,Suspends if CHA rises above 120.
+bracing_stance,Bracing Stance,perk_bracing_stance,PROGRESS,SKILL,full_armor_handling,shieldbearer,,SKILL_LEVEL:heavy_shield_technique_basic:5;PRIOR_NODE:stone_block;PRIOR_NODE:moving_block,,COMMON,,1,
+shield_wall,Shield Wall,perk_shield_wall,GLUE,SKILL,full_armor_handling,shieldbearer,,SKILL_LEVEL:heavy_shield_technique_basic:8;SKILL_LEVEL:battle:5;PRIOR_NODE:shieldbearer;PRIOR_NODE:teamwork,,COMMON,,1,Connects shield use to formation. Grants no command or formation actions.
+committed_swing,Committed Swing,perk_committed_swing,PROGRESS,SKILL,melee_weapons_handling,vanguard,,SKILL_LEVEL:heavy_blade_technique:5;PRIOR_NODE:thundering,,COMMON,,1,
+quickdraw,Quickdraw,perk_quickdraw,PROGRESS,SKILL,melee_weapons_handling,vanguard,,SKILL_LEVEL:heavy_blade_technique:5;PRIOR_NODE:vanguard,,COMMON,,1,
+crushing_followthrough,Crushing Follow-through,perk_crushing_followthrough,PROGRESS,SKILL,melee_weapons_handling,vanguard,,SKILL_LEVEL:heavy_blade_technique:10;PRIOR_NODE:bigger_is_better;PRIOR_NODE:thundering,,COMMON,,1,
+refusal,Refusal,perk_refusal,PROGRESS,SKILL,discipline,corageous_heart,,SKILL_LEVEL:martial_temperance_basic:5;PRIOR_NODE:corageous_heart;PRIOR_NODE:nerves_of_steel,,COMMON,,1,

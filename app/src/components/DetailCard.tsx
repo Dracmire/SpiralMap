@@ -42,9 +42,11 @@ export function DetailCard({ dataset, nodeId }: { dataset: Dataset; nodeId: stri
       {ownedPerks.map((perk) => (
         <div key={perk!.id} className="perk-block">
           <p className="clause">{perk!.text || <em>(no text)</em>}</p>
-          <p className="boundary">
-            <strong>Boundary:</strong> {perk!.boundary || <em>not yet authored</em>}
-          </p>
+          {perk!.exclusions && (
+            <p className="boundary">
+              <strong>Exclusions:</strong> {perk!.exclusions}
+            </p>
+          )}
           {perk!.counterweight && (
             <p className="counterweight">
               <strong>Counterweight:</strong> {perk!.counterweight}
@@ -53,9 +55,11 @@ export function DetailCard({ dataset, nodeId }: { dataset: Dataset; nodeId: stri
         </div>
       ))}
 
-      <p className="feat-boundary">
-        <strong>Feat boundary:</strong> {node.boundary || <em>not yet authored</em>}
-      </p>
+      {node.exclusions && (
+        <p className="feat-boundary">
+          <strong>Feat exclusions:</strong> {node.exclusions}
+        </p>
+      )}
 
       <h3>Requirement closure {allSatisfied ? "✓ all met" : ""}</h3>
       {closure.length === 0 && <p className="hint">No requirements.</p>}

@@ -25,10 +25,15 @@ Rules that apply everywhere:
 | `bonus_category` | if numeric | ABILITY / CIRCUMSTANTIAL / TECHNIQUE / ENVIRONMENTAL |
 | `bonus_type` | if numeric | TRAINING / TERRAIN / ARMOR / DODGE / MAGIC / MORALE / SIZE / NATURAL / EQUIPMENT / REPUTATION |
 | `text` | yes | player-facing clause |
-| `boundary` | yes | **required** — the nearest thing this does NOT grant |
+| `exclusions` | no | what this explicitly does NOT grant — write it only when the clause's wording creates a credible nearby misreading (common on GLUE/Fusion perks; rare on a simple bonus). Not a system rule — blank is the normal case, not backlog. |
 | `counterweight` | no | authored drawback for unusually strong or trait-like perks; blank when none |
 | `enhanced_threshold` | no | for perks that escalate on a secondary threshold (e.g. Anti Perks strengthening further below their ceiling); blank when the perk has no escalation tier |
 | `enhanced_text` | no | prose for the escalated effect; blank when `enhanced_threshold` is blank |
+
+**Canonical anatomy: one passive clause + one purpose.** A perk grants only what its clause
+(`text`) states — `exclusions` is a disclaimer for a specific wording risk, not a second place
+to define scope. If you find yourself listing what the perk *doesn't* do just to be thorough,
+that's a sign the clause itself is under-specified, not a missing `exclusions` entry.
 
 `bonus_category` + `bonus_type` drive stacking. Two perks with the same `subject` **and** same
 `bonus_type` keep only the highest. Same `subject`, different `bonus_type` — they sum.
@@ -58,14 +63,24 @@ validated `subjects.csv` is an authoring decision, not something extraction does
 | `job` | yes | PROGRESS / GLUE / SIMPLIFICATION, `;`-separated if several |
 | `authority_root_type` | yes | SKILL / CLASS_FEATURE / TRAIT / ATTRIBUTE |
 | `authority_root_id` | yes | |
-| `practice_root_id` | no | the family boundary; blank only for entry feats that establish one |
+| `practice_root_id` | no | the entry feat that established this practice (a literal feat/fusion id — an entry feat is commonly its own practice root); blank only for a feat establishing one for the first time |
 | `fusion_root_id` | no | set only on descendants of a Fusion |
 | `requirements` | no | see requirement mini-syntax below |
 | `sources` | no | see source mini-syntax below |
 | `rarity` | yes | COMMON / UNCOMMON / RARE / SUPERNATURAL |
 | `zone_id` | no | blank = universal |
-| `cp_cost` | yes | usually the standard header price |
-| `boundary` | yes | |
+| `cp_cost` | yes | 1 CP per feat, including fusions — cost is chain length, not tier |
+| `exclusions` | no | see perks.csv's `exclusions` — same field, same optionality, same reasoning |
+
+**Ancestry is three distinct relationships — never collapse them into one prerequisite
+field.** `authority_root_id` (owns the rules domain), `practice_root_id` (the entry feat that
+established this practice), and a `PRIOR_NODE` requirement (immediate chain entry) each answer
+a different question, and the converter validates all three resolve independently. A descendant
+several links down the chain does not need to restate the branch's base-skill requirement on
+every node — the chain of `PRIOR_NODE`s back to the practice root already guarantees it; repeat
+only the specific threshold this node adds (typically a specialization's own level, via
+`SKILL_LEVEL:<specialization_id>:<n>` — `SKILL_LEVEL` resolves against both `skills_canonical.csv`
+and `specializations.csv`).
 
 ## `fusions.csv`
 
@@ -77,10 +92,21 @@ Every `feats.csv` column, plus:
 | `parents` | yes | `feat_id:DISPOSITION;feat_id:DISPOSITION` |
 | `target_trait_id` | only for TRANSFORMATIVE_CONVERSION | |
 | `cp_refund` | no | only when the conversion explicitly grants one |
+| `parent_disposition_reason` | no | the judgment behind each parent's fate, in prose — see below |
 
 Dispositions: `INTEGRATED`, `PREREQUISITE_ONLY`, `DEFERRED_SEED`, `REJECTED`.
 
 Example: `parents = sword_focus:INTEGRATED;sword_guard:INTEGRATED;combat_initiative:DEFERRED_SEED`
+
+**Parent conservation is a judgment call, not determined by `operator`.** There is no rule that
+only `TRANSFORMATIVE_CONVERSION` removes a parent's capability. A fusion conserves parent
+capability *unless* the parent has become redundant — subsumed by numerical progression, made
+obsolete, overlapping with the new result, or transformed. The test: never remove a capability
+the player can still meaningfully use on its own. Record that judgment in
+`parent_disposition_reason` (free text, e.g. `"CONSERVE — the parent block stays independently
+useful; redirection is added, not substituted."` or `"ABSORB — its bonus is subsumed by the new
+result."`) — optional, but write it whenever a parent's fate isn't obvious from `disposition`
+alone.
 
 ---
 
@@ -127,6 +153,14 @@ references it** — this is the coherence lever.
 > families' `value_text` is set but `numeric_value` is still an open author decision.
 > Savepoint v0.2's open question #1 and Authoring GDD v2 §12's clause-tier-equivalence
 > concern are what's being pressure-tested — extend past ENTRY once that holds up.
+>
+> **Pending (Phase 8):** the chain-progression perks (content/perks.csv rows appended from
+> chain_perks.csv) reference 7 (family, tier) pairs beyond ENTRY that don't exist yet —
+> FLAT_BONUS/INTERMEDIATE, COVERAGE/INTERMEDIATE, COVERAGE/ADVANCED, THRESHOLD/INTERMEDIATE,
+> THRESHOLD/ADVANCED, PERMISSION/INTERMEDIATE, RELIABILITY/INTERMEDIATE. Rule 3 correctly
+> reports these 9 references (some pairs are shared by more than one perk) as errors — not
+> fabricated here. Add the rungs (an `effect_ladder_additions.csv` was referenced but not
+> supplied this phase) and rule 3 clears on its own.
 
 ## `subjects.csv`
 
@@ -146,6 +180,15 @@ Controlled vocabulary. Every `perks.subject` must resolve here or the build fail
 
 Two known fixes still pending: normalize `CAR` → `CHA` (16 rows), and add `Wilderness`
 (WIL, Support) which appears in the group map but not the skill list.
+
+`specializations.csv`'s `parent_skill` column is keyed by display name, not id — future edges
+should reference stable ids, never display names. One confirmed rename is kept as an explicit
+import alias in `scripts/adapters/reference.ts` (`"Heavy Armor" -> full_armor_handling`, the
+Warrior-cluster child-parent references, Phase 8) — still reported (as a resolved-via-alias
+note, not a dead end) so the CSV cell gets fixed eventually. This is scoped to that one confirmed
+case; the other unresolved `parent_skill` names (Projectile Weapons, Faith, Nature Focus, Melee
+Weapons, Light Weapons, Light Armor, Knowledge, Magic Object, Appraisal) are real, unconfirmed
+gaps and stay reported, not guessed at — resolving all 181 rows is a separate pass.
 
 ## `skill_level_table.csv`
 
@@ -174,8 +217,16 @@ boundary (11, 26, 41), not a fixed number of levels after hitting the floor of 5
    implemented instead as a contradiction check: the same attribute may not carry both a plain
    `ATTRIBUTE` floor and an `ATTRIBUTE_CEILING` on one feat where `floor >= ceiling`, an impossible
    range. A floor strictly below the ceiling is a valid band and is not flagged.)
-8. Every perk and feat has a non-empty `boundary`.
+8. ~~Every perk and feat has a non-empty `boundary`.~~ **Removed (Phase 8).** This was never a
+   system rule — it came from a v3.1 worksheet relabeling v3's "Exclusions" authoring field,
+   mistakenly made required in Phase 1. The renamed field (`exclusions`) is optional on Perk,
+   Feat, Fusion, and Keystone alike.
 9. Fusion parents all exist and each carries a disposition.
 10. `TRANSFORMATIVE_CONVERSION` has a `target_trait_id`; no other operator does.
+
+Plus one check outside the numbered list: **ancestry resolution** (Phase 8) — every feat/fusion's
+`practice_root_id`, when present, must resolve to a real feat/fusion id (unresolved refs
+downgrade to a warning under `--draft`, same as other pending-content categories).
+`authority_root_id` resolution is already covered by rule 1; `PRIOR_NODE` resolution too.
 
 Errors report as `sheet!row: message` so you fix the CSV, not the JSON.

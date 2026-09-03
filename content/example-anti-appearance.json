@@ -1,5 +1,5 @@
 {
-  "_comment": "WORKED EXAMPLE — real content from Protofeats_Renew_1_1.xlsx 'Anti' tab, Appearance theme (CHA). Proves the schema against content that already exists. Text is abridged from source; boundaries are inferred and need author confirmation.",
+  "_comment": "WORKED EXAMPLE — real content from Protofeats_Renew_1_1.xlsx 'Anti' tab, Appearance theme (CHA). Proves the schema against content that already exists. Text is abridged from source; exclusions are inferred and need author confirmation (field renamed from `boundary` in Phase 8 — see docs/authoring-columns.md).",
   "subjects": [
     {
       "id": "cha_social_reaction",
@@ -27,7 +27,7 @@
       "bonus_category": "CIRCUMSTANTIAL",
       "bonus_type": "REPUTATION",
       "text": "Your demeanour reads as dangerous. Gain a bonus on social reactions where being feared is useful.",
-      "boundary": "Does not grant Intimidation as an action, does not affect combat rolls, and cannot be suppressed at will.",
+      "exclusions": "Does not grant Intimidation as an action, does not affect combat rolls, and cannot be suppressed at will.",
       "counterweight": null
     },
     {
@@ -39,7 +39,7 @@
       "bonus_category": "CIRCUMSTANTIAL",
       "bonus_type": "REPUTATION",
       "text": "You project harmlessness. Anyone who actively acts on that impression treats you as more persuasive than your score suggests.",
-      "boundary": "Only against targets who have already accepted the impression. Grants no Bluff action and no combat benefit.",
+      "exclusions": "Only against targets who have already accepted the impression. Grants no Bluff action and no combat benefit.",
       "counterweight": "You read as unreliable; rolls that require being taken seriously suffer."
     },
     {
@@ -51,7 +51,7 @@
       "bonus_category": "CIRCUMSTANTIAL",
       "bonus_type": "REPUTATION",
       "text": "You read as a genuine threat. Animals react, guards stop you, and people avoid proximity — but fear-based leverage lands far above your score.",
-      "boundary": "Cannot be turned off. Does not grant intimidation actions, and actively penalises rolls that need trust.",
+      "exclusions": "Cannot be turned off. Does not grant intimidation actions, and actively penalises rolls that need trust.",
       "counterweight": "Cannot be suppressed. Guards detain you on sight, animals panic, and any roll requiring trust or welcome is penalised."
     },
     {
@@ -63,7 +63,7 @@
       "bonus_category": "ABILITY",
       "bonus_type": "NATURAL",
       "text": "Natural apathy and rejection insulate you: gain resistance to CHA-based attacks such as war cry, intimidation, and charm.",
-      "boundary": "Resistance only. Does not reflect, redirect, or suppress the source, and does not apply to magical compulsion.",
+      "exclusions": "Resistance only. Does not reflect, redirect, or suppress the source, and does not apply to magical compulsion.",
       "counterweight": "Social isolation is permanent and unswitchable; ordinary cooperation must be bought or coerced."
     }
   ],
@@ -94,7 +94,7 @@
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
-      "boundary": "Suspends entirely if CHA rises above 140. Remains owned and visible while suspended."
+      "exclusions": "Suspends entirely if CHA rises above 140. Remains owned and visible while suspended."
     },
     {
       "id": "feat_harmless_fatale",
@@ -122,7 +122,7 @@
       "rarity": "COMMON",
       "zone_id": null,
       "cp_cost": 1,
-      "boundary": "Suspends if CHA rises above 130."
+      "exclusions": "Suspends if CHA rises above 130."
     },
     {
       "id": "feat_threatening_presence",
@@ -150,7 +150,7 @@
       "rarity": "UNCOMMON",
       "zone_id": null,
       "cp_cost": 1,
-      "boundary": "Suspends if CHA rises above 120."
+      "exclusions": "Suspends if CHA rises above 120."
     }
   ],
   "fusions": [
@@ -204,7 +204,7 @@
       "rarity": "RARE",
       "zone_id": null,
       "cp_cost": 1,
-      "boundary": "Does not stack with its retired parents. Suspends entirely above CHA 110."
+      "exclusions": "Does not stack with its retired parents. Suspends entirely above CHA 110."
     }
   ],
   "_findings": [

@@ -2,10 +2,13 @@ import type { Dataset, Perk, Feat } from "../types.ts";
 
 /**
  * Live, per-node validation for author mode — mirrors scripts/convert.ts's rules
- * (base layer + rules 2/4/8 + the relevant slice of rule 1), duplicated here rather
+ * (base layer + rules 2/4 + the relevant slice of rule 1), duplicated here rather
  * than imported because convert.ts is a Node script (uses node:fs) that can't be
  * bundled for the browser. Keep the enum lists in sync with convert.ts/
  * docs/authoring-columns.md if either changes.
+ *
+ * Rule 8 ("every perk and feat has a non-empty boundary") was removed in Phase 8 —
+ * it was never a system rule, and the renamed field (exclusions) is optional.
  */
 
 export interface FieldIssue {
@@ -54,8 +57,6 @@ export function validatePerk(perk: Perk, dataset: Dataset): FieldIssue[] {
     else if (!BONUS_TYPES.has(perk.bonus_type)) issues.push({ field: "bonus_type", message: "not a valid bonus_type" });
   }
 
-  if (!perk.boundary) issues.push({ field: "boundary", message: "required (rule 8)" });
-
   return issues;
 }
 
@@ -85,7 +86,6 @@ export function validateFeat(feat: Feat, dataset: Dataset): FieldIssue[] {
   }
 
   if (!RARITIES.has(feat.rarity)) issues.push({ field: "rarity", message: "not a valid rarity" });
-  if (!feat.boundary) issues.push({ field: "boundary", message: "required (rule 8)" });
 
   return issues;
 }

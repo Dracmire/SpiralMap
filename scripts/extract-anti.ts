@@ -8,9 +8,9 @@
  * excluded per an explicit design decision — see the plan and the report this prints).
  *
  * Never invents design content: family/tier/subject are left blank with *_suggested
- * columns alongside them; perk boundary is left blank (not present in the source at
- * all); truncated/placeholder source text is extracted literally or left blank and
- * reported, never guessed at.
+ * columns alongside them; perk exclusions is left blank (not present in the source at
+ * all — it's optional, not required); truncated/placeholder source text is extracted
+ * literally or left blank and reported, never guessed at.
  */
 
 import ExcelJS from "exceljs";
@@ -172,7 +172,7 @@ async function main() {
         bonus_category: "",
         bonus_type: "",
         text: desc,
-        boundary: "",
+        exclusions: "",
         counterweight: counter.truncated ? "" : counter.tail,
         enhanced_threshold: bullet.threshold === null ? "" : String(bullet.threshold),
         enhanced_text: bullet.truncated ? "" : bullet.tail,
@@ -192,7 +192,7 @@ async function main() {
         rarity,
         zone_id: "",
         cp_cost: "1",
-        boundary: `Suspends if ${attr} rises above ${ceiling}.`,
+        exclusions: `Suspends if ${attr} rises above ${ceiling}.`,
       });
     }
 
@@ -249,7 +249,7 @@ async function main() {
       bonus_category: "",
       bonus_type: "",
       text: desc,
-      boundary: "",
+      exclusions: "",
       counterweight: "",
       enhanced_threshold: "",
       enhanced_text: "",
@@ -288,7 +288,7 @@ async function main() {
       rarity,
       zone_id: "",
       cp_cost: "1",
-      boundary: `Suspends if ${fusionAttr} rises above ${ceiling}.`,
+      exclusions: `Suspends if ${fusionAttr} rises above ${ceiling}.`,
       operator: "COMPRESSION",
       parents: parentsField,
       target_trait_id: "",
@@ -315,7 +315,7 @@ async function main() {
 
   const perksHeader = [
     "id", "name", "subject", "subject_suggested", "family", "family_suggested",
-    "tier", "tier_suggested", "bonus_category", "bonus_type", "text", "boundary",
+    "tier", "tier_suggested", "bonus_category", "bonus_type", "text", "exclusions",
     "counterweight", "enhanced_threshold", "enhanced_text",
   ];
   writeFileSync(`${CONTENT_DIR}/perks.csv`, stringifyCsv(perksHeader, perksRows));
@@ -323,7 +323,7 @@ async function main() {
   const featsHeader = [
     "id", "name", "perk_ids", "job", "authority_root_type", "authority_root_id",
     "practice_root_id", "fusion_root_id", "requirements", "sources", "rarity",
-    "zone_id", "cp_cost", "boundary",
+    "zone_id", "cp_cost", "exclusions",
   ];
   writeFileSync(`${CONTENT_DIR}/feats.csv`, stringifyCsv(featsHeader, featsRows));
 

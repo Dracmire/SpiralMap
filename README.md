@@ -23,9 +23,9 @@ npx tsx scripts/convert.ts [--draft] [--strict-ladder]   # content/*.csv -> data
 npx tsx --test scripts/lib/*.test.ts scripts/*.test.ts   # unit tests for the mini-syntax parsers etc.
 ```
 
-`--draft` downgrades blank `subject`/`family`/`boundary` and unresolved legacy skill
-references to warnings (the app needs a loadable dataset; those are authoring backlog,
-not defects). `data/dataset.json` is always written, even on validation failure —
+`--draft` downgrades blank `subject`/`family`, unresolved `practice_root_id` ancestry links,
+and unresolved legacy skill references to warnings (the app needs a loadable dataset; those
+are authoring backlog, not defects). `data/dataset.json` is always written, even on validation failure —
 check the printed report, or the JSON's own `_valid`/`_draft`/`_error_count`/
 `_warning_count` fields.
 

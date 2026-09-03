@@ -178,13 +178,21 @@ export interface Perk {
   bonus_type: BonusType | null;
   /** Prose shown to the player. Derived value_text from the ladder is injected. */
   text: string;
-  /** REQUIRED. What this explicitly does NOT grant. Renders on the node card. */
-  boundary: string;
+  /**
+   * OPTIONAL. What this explicitly does NOT grant — written only when the clause's
+   * wording creates a credible nearby misreading (common on GLUE/Fusion perks that
+   * touch several capabilities at once; rare on a simple flat bonus). Not a system
+   * rule: `boundary` was a Phase-1 mistake that made this required for every perk
+   * (a v3.1 worksheet had relabeled v3's "Exclusions" authoring field, and that got
+   * misread as mandatory). Canonical anatomy is one passive clause + one purpose;
+   * a perk grants only what its clause states, exclusion text or not.
+   */
+  exclusions: string | null;
   /**
    * Counterweight — an authored drawback balancing an unusually strong perk, or one
-   * behaving closer to a Trait than a Perk. Distinct from `boundary` (scope limit,
-   * always present) and from ATTRIBUTE_CEILING suspension (a requirement, not a cost).
-   * Null when the perk needs no counterweight.
+   * behaving closer to a Trait than a Perk. Distinct from `exclusions` (an optional
+   * scope-limit disclaimer) and from ATTRIBUTE_CEILING suspension (a requirement, not
+   * a cost). Null when the perk needs no counterweight.
    */
   counterweight: string | null;
   /**
@@ -223,7 +231,8 @@ export interface Feat {
   /** DERIVED at build time: true iff `requirements` contains an ATTRIBUTE_CEILING. Never authored. */
   is_anti_perk?: boolean;
 
-  boundary: string;
+  /** OPTIONAL — see Perk.exclusions; same rename, same reasoning, same Phase-1 mistake. */
+  exclusions: string | null;
 }
 
 export type FusionOperator =
@@ -234,7 +243,7 @@ export type FusionOperator =
   | "GLUE";
 
 export type ParentDisposition =
-  | "INTEGRATED"        // migrates in; emptied header retires
+  | "INTEGRATED"        // migrates into the new header's capability set
   | "PREREQUISITE_ONLY" // qualifies, contributes nothing, stays active
   | "DEFERRED_SEED"     // reserved for a later upgrade, stays active
   | "REJECTED";         // should not appear in the requirement list
@@ -246,6 +255,17 @@ export interface Fusion extends Feat {
   /** Only for TRANSFORMATIVE_CONVERSION. Terminal: CP kept as provenance only. */
   target_trait_id: string | null;
   cp_refund: number | null;
+  /**
+   * OPTIONAL. The judgment call behind each parent's fate, in prose (e.g. "CONSERVE —
+   * the parent block stays independently useful" / "ABSORB — its bonus is subsumed by
+   * the new result"). Parent conservation is NOT determined by `operator` — there is no
+   * rule that only TRANSFORMATIVE_CONVERSION removes a parent's capability. A fusion
+   * conserves parent capability unless the parent has become redundant: subsumed by
+   * numerical progression, made obsolete, overlapping with the new result, or
+   * transformed. The test is always "does the player still have a meaningful reason to
+   * use the parent on its own" — never inferred from `operator` or `disposition` alone.
+   */
+  parent_disposition_reason: string | null;
 }
 
 export interface Trait {
@@ -313,7 +333,8 @@ export interface Keystone {
   class_id: string;
   requirements: Requirement[];
   perk_ids: string[];
-  boundary: string;
+  /** OPTIONAL — see Perk.exclusions; same rename, same reasoning. */
+  exclusions: string | null;
 }
 
 export type ParentRule = "ROOT" | "SLOT_PAIR" | "ANY_LOWER_STAR_IN_TREE" | "ANY_2STAR_IN_TREE";

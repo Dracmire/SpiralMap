@@ -10,7 +10,9 @@
  * `groups` column declared directly on each skill — group_skill_map.csv is now
  * redundant for deriving group_ids and is only cross-checked for staleness, never
  * consumed as data; specializations.csv's parent_skill links are keyed off the old
- * skill names and are reported broken, never silently re-pointed).
+ * skill names. A broken link is reported, not silently re-pointed, UNLESS it's one of
+ * the explicit, confirmed PARENT_SKILL_ALIASES entries below (Phase 8) — even then it
+ * still reports, just as a resolved-via-alias note rather than an unresolved dead end).
  *
  * Known, deliberately-not-silently-fixed data issues (reported as errors — CAR/CHA
  * and "#N/A" both still appear in skills_canonical.csv's own attribute columns) or
@@ -210,10 +212,22 @@ function loadSkillGroups(contentDir: string, skills: Skill[], canonicalCsv: Retu
   });
 }
 
+/**
+ * Import aliases for parent_skill display names confirmed as a stale rename, not a
+ * casing issue or a guess — resolved and scoped explicitly (Phase 8), one entry at a
+ * time. NOT a general fuzzy-matcher: every other unresolved parent_skill name (there
+ * are more — Projectile Weapons, Faith, Nature Focus, Melee Weapons, Light Weapons,
+ * Light Armor, Knowledge, Magic Object, Appraisal) stays reported, not silently
+ * patched, until each is confirmed the same way. Keyed lowercase; value is the
+ * canonical skill id (not another display name — future edges reference stable ids).
+ */
+const PARENT_SKILL_ALIASES: ReadonlyMap<string, string> = new Map([["heavy armor", "full_armor_handling"]]);
+
 function loadSpecializations(contentDir: string, skills: Skill[], errors: string[]): Specialization[] {
   const sheet = "specializations.csv";
   const { rows, rowNumbers } = parseCsv(readFileSync(`${contentDir}/${sheet}`, "utf8"));
   const skillByLowerName = new Map(skills.map((s) => [s.name.toLowerCase(), s]));
+  const skillById = new Map(skills.map((s) => [s.id, s]));
   const seen = new Map<string, number>();
 
   const out: Specialization[] = [];
@@ -227,8 +241,16 @@ function loadSpecializations(contentDir: string, skills: Skill[], errors: string
 
     // Case-insensitive match only (e.g. catches nothing here currently beyond casing) —
     // an abbreviated/renamed name ("Heavy Armor" vs "Full Armor Handling") is a real
-    // rename, not a casing issue, and is reported rather than guessed at.
-    const parent = skillByLowerName.get(r.parent_skill.toLowerCase());
+    // rename, not a casing issue, and is reported rather than guessed at, UNLESS it's
+    // a confirmed alias above.
+    let parent = skillByLowerName.get(r.parent_skill.toLowerCase());
+    const aliasId = PARENT_SKILL_ALIASES.get(r.parent_skill.toLowerCase());
+    if (!parent && aliasId) {
+      parent = skillById.get(aliasId);
+      errors.push(
+        `${sheet}!${row}: parent_skill "${r.parent_skill}" resolved via import alias to "${aliasId}" — legacy display name, re-point the CSV to the canonical name when convenient`,
+      );
+    }
     if (!parent) {
       errors.push(`${sheet}!${row}: parent_skill "${r.parent_skill}" not found in skills_canonical.csv (needs re-pointing — not patched automatically)`);
       return;

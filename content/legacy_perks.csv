@@ -1,4 +1,4 @@
-id,name,subject,subject_suggested,family,family_suggested,tier,bonus_category,bonus_type,text,boundary,counterweight,enhanced_threshold,enhanced_text,confidence
+id,name,subject,subject_suggested,family,family_suggested,tier,bonus_category,bonus_type,text,exclusions,counterweight,enhanced_threshold,enhanced_text,confidence
 perk_vanguard,Vanguard,melee_weapons_handling_roll,heavy_weapons_handling_effect,PERMISSION,PERMISSION,ENTRY,,,"Heavy Proficiency - Apertura de Maestria de ARMAS (o) Añade 20 pts de maestria de armas a una pre-existente solo aplicable a armas que usan el atributo STR , solo un tipo de Arma es elegido. Ej: Hachas, Martillos, Espadas, etc",,,,,MED
 perk_bigger_is_better,Bigger is Better,melee_weapons_handling_roll,heavy_weapons_handling_effect,,,ENTRY,,,Heavy Arms -,,,,,LOW
 perk_thundering,Thundering,damage,heavy_weapons_handling_effect,FLAT_BONUS,FLAT_BONUS,ENTRY,ABILITY,TRAINING,"Thundering - Amplificas efectos basados en impacto como Stun, Knockback y Presion. Mientras esten basados en el Atributo de Fuerza (STR) y provenga de un ataque fisico de melee",,,,,HIGH

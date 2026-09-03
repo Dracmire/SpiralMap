@@ -2,11 +2,13 @@
 /**
  * CSV -> data/dataset.json converter.
  *
- * Reads content/*.csv, validates against the 10 rules in docs/authoring-columns.md
- * (plus a base layer of required-column checks the rules assume, and one extra
- * decision-14 sanity check — see the plan), computes derived_tier/is_anti_perk,
- * and always writes data/dataset.json (with a non-schema `_valid` flag) even when
- * validation fails, so a partial/failing run stays inspectable.
+ * Reads content/*.csv, validates against the rules in docs/authoring-columns.md (of
+ * the original 10, rule 8 was removed in Phase 8 — see that section below; plus a
+ * base layer of required-column checks the rules assume, an ancestry-resolution
+ * check, and one extra decision-14 sanity check — see the plan), computes
+ * derived_tier/is_anti_perk, and always writes data/dataset.json (with a non-schema
+ * `_valid` flag) even when validation fails, so a partial/failing run stays
+ * inspectable.
  *
  * perks.csv/legacy_perks.csv and feats.csv/legacy_feats.csv are each treated as one
  * combined pool — validated and merged together — while errors keep citing the real
@@ -55,11 +57,12 @@ function warn(sheet: string, row: number | string, message: string) {
 }
 type Sink = (sheet: string, row: number | string, message: string) => void;
 
-/** --draft downgrades blank subject/family/boundary (any sheet) and unresolved
- * legacy skill references to warnings. Everything else stays an error. */
-function draftSink(category: "subject" | "family" | "boundary" | "skill_ref", sheet: string): Sink {
+/** --draft downgrades blank subject/family (any sheet), unresolved legacy skill
+ * references, and unresolved practice_root_id ancestry links to warnings. Everything
+ * else stays an error. */
+function draftSink(category: "subject" | "family" | "skill_ref" | "practice_root", sheet: string): Sink {
   if (!DRAFT) return err;
-  if (category === "subject" || category === "family" || category === "boundary") return warn;
+  if (category === "subject" || category === "family" || category === "practice_root") return warn;
   if (category === "skill_ref" && LEGACY_SHEETS.has(sheet)) return warn;
   return err;
 }
@@ -120,7 +123,8 @@ for (const s of [...featSheets, fusionsCsv]) {
 
 // ─────────────────────────────────────────────────────────────
 // Base layer: required-column presence
-// (boundary is owned by rule 8, subject is owned by rule 2 — not duplicated here)
+// (exclusions is optional — no rule requires it; subject is owned by rule 2, not
+// duplicated here)
 // ─────────────────────────────────────────────────────────────
 
 function requireField(sink: Sink, sheet: string, row: number, r: CsvRow, field: string) {
@@ -271,7 +275,7 @@ eachRow(perkSheets, (r, sheet, row) => {
     bonus_category: (r.bonus_category?.trim() || null) as Perk["bonus_category"],
     bonus_type: (r.bonus_type?.trim() || null) as Perk["bonus_type"],
     text: r.text ?? "",
-    boundary: r.boundary ?? "",
+    exclusions: r.exclusions?.trim() || null,
     counterweight: r.counterweight?.trim() || null,
     enhanced_threshold: parseOptionalNumericField(sheet, row, "enhanced_threshold", r.enhanced_threshold),
     enhanced_text: r.enhanced_text?.trim() || null,
@@ -331,7 +335,7 @@ function buildFeat(sheet: string, r: CsvRow, row: number): FeatOut {
     rarity: r.rarity as Feat["rarity"],
     zone_id: r.zone_id?.trim() || null,
     cp_cost,
-    boundary: r.boundary ?? "",
+    exclusions: r.exclusions?.trim() || null,
   };
   if (r.skill_group?.trim()) feat.skill_group = r.skill_group.trim();
   if (r.block?.trim()) feat.block = r.block.trim();
@@ -341,7 +345,7 @@ function buildFeat(sheet: string, r: CsvRow, row: number): FeatOut {
 const feats: FeatOut[] = [];
 eachRow(featSheets, (r, sheet, row) => feats.push(buildFeat(sheet, r, row)));
 
-const fusions: (FeatOut & Pick<Fusion, "operator" | "parents" | "target_trait_id" | "cp_refund">)[] = fusionsCsv.rows.map((r, i) => {
+const fusions: (FeatOut & Pick<Fusion, "operator" | "parents" | "target_trait_id" | "cp_refund" | "parent_disposition_reason">)[] = fusionsCsv.rows.map((r, i) => {
   const row = fusionsCsv.rowNumbers[i];
   const base = buildFeat("fusions.csv", r, row);
   const { value: parents, errors: parentErrors } = parseFusionParents(r.parents ?? "");
@@ -356,6 +360,7 @@ const fusions: (FeatOut & Pick<Fusion, "operator" | "parents" | "target_trait_id
     parents,
     target_trait_id,
     cp_refund: parseOptionalNumericField("fusions.csv", row, "cp_refund", r.cp_refund),
+    parent_disposition_reason: r.parent_disposition_reason?.trim() || null,
   };
 });
 
@@ -364,7 +369,7 @@ const featRowById = new Map<string, { sheet: string; row: number }>();
 eachRow(featSheets, (r, sheet, row) => featRowById.set(r.id, { sheet, row }));
 fusionsCsv.rows.forEach((r, i) => featRowById.set(r.id, { sheet: "fusions.csv", row: fusionsCsv.rowNumbers[i] }));
 
-const allFeats: (FeatOut | (FeatOut & Pick<Fusion, "operator" | "parents" | "target_trait_id" | "cp_refund">))[] = [...feats, ...fusions];
+const allFeats: (FeatOut | (FeatOut & Pick<Fusion, "operator" | "parents" | "target_trait_id" | "cp_refund" | "parent_disposition_reason">))[] = [...feats, ...fusions];
 const featsById = new Map(allFeats.map((f) => [f.id, f]));
 
 // ─────────────────────────────────────────────────────────────
@@ -375,6 +380,7 @@ const reference = loadReferenceData(CONTENT_DIR);
 reference.errors.forEach((m) => errors.push(m)); // already sheet!row-formatted by the adapter
 reference.notes.forEach((m) => notes.push(m));
 const skillsById = new Map(reference.skills.map((s) => [s.id, s]));
+const specializationsById = new Map(reference.specializations.map((s) => [s.id, s]));
 
 // ─────────────────────────────────────────────────────────────
 // subjects.csv (authoritative — NOT subjects.proposed.csv)
@@ -421,6 +427,14 @@ const traitsById = new Map<string, unknown>(); // stubbed []
  * skill's specific instance, "skill_id.instance" ("craft.Woodwork") — a period, not
  * a colon, since colon is the requirement mini-syntax's own field separator. Splits
  * on the FIRST period only; none of the authored instance names contain one.
+ *
+ * The bare-id form also resolves against specializations.csv, not skills_canonical.csv
+ * alone — a specialization is itself a leveled, skill-shaped entity (BuildState tracks
+ * its level the same way, keyed by id in skill_levels), and the chain-progression
+ * content (Phase 8) gates on specialization level directly (e.g.
+ * SKILL_LEVEL:heavy_shield_technique_basic:5), not only on the parent skill.
+ * Instance-qualified targets ("id.instance") only make sense for a parameterized base
+ * skill, so that check stays skill-only.
  */
 function checkRequirementTargets(sheet: string, row: number, requirements: Requirement[]) {
   for (const req of requirements) {
@@ -431,6 +445,7 @@ function checkRequirementTargets(sheet: string, row: number, requirements: Requi
         const instance = dot === -1 ? null : req.target.slice(dot + 1);
         const skill = skillsById.get(skillId);
         if (!skill) {
+          if (instance === null && specializationsById.has(skillId)) break; // resolves as a specialization level
           draftSink("skill_ref", sheet)(sheet, row, `requirement SKILL_LEVEL references unknown skill "${skillId}"`);
         } else if (instance !== null && !skill.instances.includes(instance)) {
           draftSink("skill_ref", sheet)(
@@ -446,7 +461,7 @@ function checkRequirementTargets(sheet: string, row: number, requirements: Requi
         if (!ATTRIBUTE_CODES.has(req.target)) err(sheet, row, `requirement ${req.type} references unknown attribute "${req.target}"`);
         break;
       case "PRIOR_NODE":
-        if (!featsById.has(req.target) && !perksById.has(req.target) && !reference.specializations.some((s) => s.id === req.target)) {
+        if (!featsById.has(req.target) && !perksById.has(req.target) && !specializationsById.has(req.target)) {
           err(sheet, row, `requirement PRIOR_NODE references unknown node "${req.target}"`);
         }
         break;
@@ -487,6 +502,29 @@ for (const f of fusions) {
     if (!perksById.has(pid)) err(loc.sheet, loc.row, `perk_ids references unknown perk "${pid}"`);
   }
   checkRequirementTargets(loc.sheet, loc.row, f.requirements);
+}
+
+// ─────────────────────────────────────────────────────────────
+// Ancestry resolution check (not one of the 10 numbered rules — added Phase 8).
+// Ancestry is three distinct relationships that must not collapse into one
+// prerequisite field: authority_root (owns the rules domain — checked above, part of
+// rule 1), practice_root_id (the entry feat that established this practice — checked
+// here), and PRIOR_NODE requirements (immediate chain entry — already checked by rule
+// 1's checkRequirementTargets). This only adds the practice_root_id leg, which nothing
+// validated before now. practice_root_id, when present, is a literal feat/fusion id —
+// an "entry" feat is commonly its own practice root (e.g. shieldbearer's
+// practice_root_id is "shieldbearer"). Unresolved refs downgrade to warnings under
+// --draft, same as other pending-content categories: this surfaces real, pre-existing
+// gaps in legacy_feats.csv and the Anti Perk extraction's practice_anti_* placeholder
+// values (a per-theme grouping label, not a feat id — a separate, already-flagged
+// convention mismatch from Phase 2, not fixed here).
+// ─────────────────────────────────────────────────────────────
+
+for (const f of allFeats) {
+  const loc = featRowById.get(f.id)!;
+  if (f.practice_root_id !== null && !featsById.has(f.practice_root_id)) {
+    draftSink("practice_root", loc.sheet)(loc.sheet, loc.row, `practice_root_id references unknown feat/fusion "${f.practice_root_id}"`);
+  }
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -693,18 +731,13 @@ for (const f of allFeats) {
 }
 
 // ─────────────────────────────────────────────────────────────
-// Rule 8: every perk and feat has a non-empty boundary. Downgraded to a warning
-// under --draft (any sheet) — the task's authoring backlog, not a defect.
-// ─────────────────────────────────────────────────────────────
-
-eachRow(perkSheets, (r, sheet, row) => {
-  if (!r.boundary || r.boundary.trim() === "") draftSink("boundary", sheet)(sheet, row, `missing required field "boundary"`);
-});
-for (const f of allFeats) {
-  const loc = featRowById.get(f.id)!;
-  if (!f.boundary || f.boundary.trim() === "") draftSink("boundary", loc.sheet)(loc.sheet, loc.row, `missing required field "boundary"`);
-}
-
+// Rule 8 REMOVED (Phase 8): "every perk and feat has a non-empty boundary" was never
+// a system rule. It came from a v3.1 worksheet relabeling v3's "Exclusions" authoring
+// field, mistakenly made required in Phase 1 — the source of 614 blank-boundary
+// failures (319 perks + 295 feats) under the old rule. The renamed field (Perk/Feat/
+// Fusion/Keystone.exclusions) is optional: a perk grants only what its clause states,
+// and exclusion text is written only when the wording creates a credible nearby
+// misreading — common on GLUE/Fusion, rare on a simple bonus. Nothing to validate here.
 // ─────────────────────────────────────────────────────────────
 // Rule 9: fusion parents all exist and carry a disposition (disposition validity
 // is already guaranteed by parseFusionParents rejecting unknown tokens).
